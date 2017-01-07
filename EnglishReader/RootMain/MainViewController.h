@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  EnglishReader
 //
 //  Created by QMTV on 17/1/7.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainViewController : UIViewController
 
 @end
-
