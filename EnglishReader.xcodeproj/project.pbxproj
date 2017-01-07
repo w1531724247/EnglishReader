@@ -16,6 +16,8 @@
 		5797A8D81E21038400F0BE38 /* demoText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8D71E21038400F0BE38 /* demoText.txt */; };
 		5797A8E01E21052000F0BE38 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8DF1E21052000F0BE38 /* RootNavigationController.m */; };
 		5797A8E31E21053900F0BE38 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8E21E21053900F0BE38 /* MainViewController.m */; };
+		5797A8EA1E210AB900F0BE38 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8E91E210AB900F0BE38 /* ArticleDetailViewController.m */; };
+		5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */; };
 		5D3330FFF71202D99C8AA74E /* libPods-EnglishReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,10 @@
 		5797A8DF1E21052000F0BE38 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		5797A8E11E21053900F0BE38 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5797A8E21E21053900F0BE38 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5797A8E81E210AB900F0BE38 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
+		5797A8E91E210AB900F0BE38 /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
+		5797A8EC1E210B9000F0BE38 /* ArticleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleHelper.h; sourceTree = "<group>"; };
+		5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleHelper.m; sourceTree = "<group>"; };
 		BD374FCE2CF2E483B21E9921 /* Pods-EnglishReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.debug.xcconfig"; sourceTree = "<group>"; };
 		F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +126,8 @@
 		5797A8A21E20F27600F0BE38 /* EnglishReader */ = {
 			isa = PBXGroup;
 			children = (
+				5797A8EB1E210B7A00F0BE38 /* Utility */,
+				5797A8E71E210AB900F0BE38 /* ArticleDetail */,
 				5797A8DD1E21052000F0BE38 /* RootMain */,
 				5797A8D61E21030000F0BE38 /* TextFile */,
 				5797A8A61E20F27600F0BE38 /* AppDelegate.h */,
@@ -175,6 +183,24 @@
 				5797A8E21E21053900F0BE38 /* MainViewController.m */,
 			);
 			path = RootMain;
+			sourceTree = "<group>";
+		};
+		5797A8E71E210AB900F0BE38 /* ArticleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5797A8E81E210AB900F0BE38 /* ArticleDetailViewController.h */,
+				5797A8E91E210AB900F0BE38 /* ArticleDetailViewController.m */,
+			);
+			path = ArticleDetail;
+			sourceTree = "<group>";
+		};
+		5797A8EB1E210B7A00F0BE38 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5797A8EC1E210B9000F0BE38 /* ArticleHelper.h */,
+				5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		CB982E37F391EA695AF47250 /* Frameworks */ = {
@@ -370,7 +396,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
+				5797A8EA1E210AB900F0BE38 /* ArticleDetailViewController.m in Sources */,
 				5797A8E01E21052000F0BE38 /* RootNavigationController.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
 				5797A8E31E21053900F0BE38 /* MainViewController.m in Sources */,

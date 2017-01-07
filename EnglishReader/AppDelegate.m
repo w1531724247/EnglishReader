@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootNavigationController.h"
+#import "ArticleDetailViewController.h"
 #import "MainViewController.h"
 
 @interface AppDelegate ()
@@ -19,6 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 初始化UI
+    [self performSelectorOnMainThread:@selector(setupWindow) withObject:nil waitUntilDone:YES];
+    
     return YES;
 }
 
@@ -54,7 +58,7 @@
 -(void)setupWindow{
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    MainViewController *mainVC = [[MainViewController alloc] init];
+    ArticleDetailViewController *mainVC = [[ArticleDetailViewController alloc] init];
     RootNavigationController *rootNavigationController = [[RootNavigationController alloc] initWithRootViewController:mainVC];
     
     self.window.rootViewController = rootNavigationController;
