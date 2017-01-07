@@ -47,14 +47,16 @@
             for (int j = i; j < length; j++) {
                 character = [articleText characterAtIndex:j];
                 if (!isalpha(character)) {
-                    NSRange range = NSMakeRange(i, j-i);
-                    [rangeArray addObject:[NSValue valueWithRange:range]];
-                    
-                    NSString *aChar = [NSString stringWithCString:&character encoding:NSUTF8StringEncoding];
+NSString *aChar = [NSString stringWithCString:&character encoding:NSUTF8StringEncoding];
                     if (![aChar isEqualToString:@"’"]) {
+NSRange range = NSMakeRange(i, j-i);
+                    [rangeArray addObject:[NSValue valueWithRange:range]];
                         i = j;
                         break;//某一段字母遍历完了
                     }
+                    
+                    
+                    
                 }
             }
         }
