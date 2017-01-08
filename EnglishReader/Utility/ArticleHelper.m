@@ -35,10 +35,10 @@
                          }];
     }
     
-    [attributedText addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0],
+    [attributedText addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"CourierNewPS-BoldMT" size:20.0],
                                     }
                             range:NSMakeRange(0, articleText.length)];
-    [attributedText setKern:[NSNumber numberWithFloat:1.0]];//设置字间距
+//    [attributedText setKern:[NSNumber numberWithFloat:1.0]];//设置字间距
     [attributedText setLineSpacing:8.0];//设置行间距
     
     return attributedText;
@@ -60,7 +60,6 @@
             for (int j = i; j < length; j++) {
                 character = [articleText characterAtIndex:j];
                 if (!isspace(character)) {
-                    i=j-1;
                     break;//某一段空白符遍历完了
                 }
             }
@@ -70,7 +69,6 @@
             for (int j = i; j < length; j++) {
                 character = [articleText characterAtIndex:j];
                 if (!isdigit(character)) {
-                    i=j-1;
                     break;//某一段数字遍历完了
                 }
             }
@@ -96,7 +94,6 @@
             for (int j = i; j < length; j++) {
                 character = [articleText characterAtIndex:j];
                 if (!ispunct(character)) {
-                    i=j-1;
                     break;//某一段标点符号遍历完了
                 }
             }

@@ -12,6 +12,7 @@
 #import "ArticleHelper.h"
 #import "ArticleTextView.h"
 #import "InterpreterView.h"
+#import <CoreText/CoreText.h>
 
 @interface ArticleDetailViewController ()<ArticleHelperDelegate, InterpreterViewDelegate>
 
@@ -29,8 +30,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.textView];
     self.textView.frame = self.view.bounds;
-    
+
+    // 创建TextView，添加attributed str
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demoText" ofType:@"txt"];
+    
     self.textView.attributedText = [self.articleHleper analyseArticleWithFilePath:filePath];
     
     [self hiddenInterpreterView];

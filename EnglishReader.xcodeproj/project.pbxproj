@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57119F361E21F1FB00B929EB /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F351E21F1FB00B929EB /* ArticleTextView.m */; };
-		57119F391E21F61D00B929EB /* InterpreterViewLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F381E21F61D00B929EB /* InterpreterViewLocal.m */; };
 		57119F411E220F3A00B929EB /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F401E220F3A00B929EB /* APIManager.m */; };
-		57119F451E22160E00B929EB /* InterpreterViewNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F441E22160E00B929EB /* InterpreterViewNetwork.m */; };
 		57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */; };
-		57119F4B1E22239000B929EB /* InterpreterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F4A1E22239000B929EB /* InterpreterView.m */; };
-		57119F4E1E2223A200B929EB /* InterpreterViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F4D1E2223A200B929EB /* InterpreterViewHeaderView.m */; };
+		57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F511E22310600B929EB /* ArticleDetailViewController.m */; };
+		57119F5E1E22310600B929EB /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F541E22310600B929EB /* ArticleTextView.m */; };
+		57119F5F1E22310600B929EB /* InterpreterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F561E22310600B929EB /* InterpreterView.m */; };
+		57119F601E22310600B929EB /* InterpreterViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F581E22310600B929EB /* InterpreterViewHeaderView.m */; };
+		57119F611E22310600B929EB /* InterpreterViewLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F5A1E22310600B929EB /* InterpreterViewLocal.m */; };
+		57119F621E22310600B929EB /* InterpreterViewNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F5C1E22310600B929EB /* InterpreterViewNetwork.m */; };
+		57119F641E22400300B929EB /* 收入证明.docx in Resources */ = {isa = PBXBuildFile; fileRef = 57119F631E22400300B929EB /* 收入证明.docx */; };
+		57119F661E22413E00B929EB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57119F651E22413E00B929EB /* CoreText.framework */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -23,7 +26,6 @@
 		5797A8D81E21038400F0BE38 /* demoText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8D71E21038400F0BE38 /* demoText.txt */; };
 		5797A8E01E21052000F0BE38 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8DF1E21052000F0BE38 /* RootNavigationController.m */; };
 		5797A8E31E21053900F0BE38 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8E21E21053900F0BE38 /* MainViewController.m */; };
-		5797A8EA1E210AB900F0BE38 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8E91E210AB900F0BE38 /* ArticleDetailViewController.m */; };
 		5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */; };
 		5D3330FFF71202D99C8AA74E /* libPods-EnglishReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */; };
 /* End PBXBuildFile section */
@@ -47,22 +49,26 @@
 
 /* Begin PBXFileReference section */
 		0C00EBF68E03656A2F86647F /* Pods-EnglishReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.release.xcconfig"; sourceTree = "<group>"; };
-		57119F341E21F1FB00B929EB /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTextView.h; sourceTree = "<group>"; };
-		57119F351E21F1FB00B929EB /* ArticleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTextView.m; sourceTree = "<group>"; };
-		57119F371E21F61D00B929EB /* InterpreterViewLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewLocal.h; sourceTree = "<group>"; };
-		57119F381E21F61D00B929EB /* InterpreterViewLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewLocal.m; sourceTree = "<group>"; };
 		57119F3D1E220E5200B929EB /* DefineKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKeys.h; sourceTree = "<group>"; };
 		57119F3F1E220F3A00B929EB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		57119F401E220F3A00B929EB /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		57119F421E220F9100B929EB /* APIManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManagerProtocol.h; sourceTree = "<group>"; };
-		57119F431E22160E00B929EB /* InterpreterViewNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewNetwork.h; sourceTree = "<group>"; };
-		57119F441E22160E00B929EB /* InterpreterViewNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewNetwork.m; sourceTree = "<group>"; };
 		57119F461E221DB300B929EB /* NSDictionary+JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONHelper.h"; sourceTree = "<group>"; };
 		57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONHelper.m"; sourceTree = "<group>"; };
-		57119F491E22239000B929EB /* InterpreterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterView.h; sourceTree = "<group>"; };
-		57119F4A1E22239000B929EB /* InterpreterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterView.m; sourceTree = "<group>"; };
-		57119F4C1E2223A200B929EB /* InterpreterViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewHeaderView.h; sourceTree = "<group>"; };
-		57119F4D1E2223A200B929EB /* InterpreterViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewHeaderView.m; sourceTree = "<group>"; };
+		57119F501E22310600B929EB /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
+		57119F511E22310600B929EB /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
+		57119F531E22310600B929EB /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTextView.h; sourceTree = "<group>"; };
+		57119F541E22310600B929EB /* ArticleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTextView.m; sourceTree = "<group>"; };
+		57119F551E22310600B929EB /* InterpreterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterView.h; sourceTree = "<group>"; };
+		57119F561E22310600B929EB /* InterpreterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterView.m; sourceTree = "<group>"; };
+		57119F571E22310600B929EB /* InterpreterViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewHeaderView.h; sourceTree = "<group>"; };
+		57119F581E22310600B929EB /* InterpreterViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewHeaderView.m; sourceTree = "<group>"; };
+		57119F591E22310600B929EB /* InterpreterViewLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewLocal.h; sourceTree = "<group>"; };
+		57119F5A1E22310600B929EB /* InterpreterViewLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewLocal.m; sourceTree = "<group>"; };
+		57119F5B1E22310600B929EB /* InterpreterViewNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewNetwork.h; sourceTree = "<group>"; };
+		57119F5C1E22310600B929EB /* InterpreterViewNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewNetwork.m; sourceTree = "<group>"; };
+		57119F631E22400300B929EB /* 收入证明.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "收入证明.docx"; sourceTree = "<group>"; };
+		57119F651E22413E00B929EB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,8 +87,6 @@
 		5797A8DF1E21052000F0BE38 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		5797A8E11E21053900F0BE38 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5797A8E21E21053900F0BE38 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		5797A8E81E210AB900F0BE38 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
-		5797A8E91E210AB900F0BE38 /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
 		5797A8EC1E210B9000F0BE38 /* ArticleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleHelper.h; sourceTree = "<group>"; };
 		5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleHelper.m; sourceTree = "<group>"; };
 		BD374FCE2CF2E483B21E9921 /* Pods-EnglishReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57119F661E22413E00B929EB /* CoreText.framework in Frameworks */,
 				5D3330FFF71202D99C8AA74E /* libPods-EnglishReader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +152,32 @@
 				57119F421E220F9100B929EB /* APIManagerProtocol.h */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		57119F4F1E22310600B929EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57119F501E22310600B929EB /* ArticleDetailViewController.h */,
+				57119F511E22310600B929EB /* ArticleDetailViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		57119F521E22310600B929EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57119F531E22310600B929EB /* ArticleTextView.h */,
+				57119F541E22310600B929EB /* ArticleTextView.m */,
+				57119F551E22310600B929EB /* InterpreterView.h */,
+				57119F561E22310600B929EB /* InterpreterView.m */,
+				57119F571E22310600B929EB /* InterpreterViewHeaderView.h */,
+				57119F581E22310600B929EB /* InterpreterViewHeaderView.m */,
+				57119F591E22310600B929EB /* InterpreterViewLocal.h */,
+				57119F5A1E22310600B929EB /* InterpreterViewLocal.m */,
+				57119F5B1E22310600B929EB /* InterpreterViewNetwork.h */,
+				57119F5C1E22310600B929EB /* InterpreterViewNetwork.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5797A8971E20F27500F0BE38 = {
@@ -220,6 +251,7 @@
 		5797A8D61E21030000F0BE38 /* TextFile */ = {
 			isa = PBXGroup;
 			children = (
+				57119F631E22400300B929EB /* 收入证明.docx */,
 				5797A8D71E21038400F0BE38 /* demoText.txt */,
 			);
 			path = TextFile;
@@ -239,18 +271,8 @@
 		5797A8E71E210AB900F0BE38 /* ArticleDetail */ = {
 			isa = PBXGroup;
 			children = (
-				5797A8E81E210AB900F0BE38 /* ArticleDetailViewController.h */,
-				5797A8E91E210AB900F0BE38 /* ArticleDetailViewController.m */,
-				57119F341E21F1FB00B929EB /* ArticleTextView.h */,
-				57119F351E21F1FB00B929EB /* ArticleTextView.m */,
-				57119F491E22239000B929EB /* InterpreterView.h */,
-				57119F4A1E22239000B929EB /* InterpreterView.m */,
-				57119F4C1E2223A200B929EB /* InterpreterViewHeaderView.h */,
-				57119F4D1E2223A200B929EB /* InterpreterViewHeaderView.m */,
-				57119F371E21F61D00B929EB /* InterpreterViewLocal.h */,
-				57119F381E21F61D00B929EB /* InterpreterViewLocal.m */,
-				57119F431E22160E00B929EB /* InterpreterViewNetwork.h */,
-				57119F441E22160E00B929EB /* InterpreterViewNetwork.m */,
+				57119F4F1E22310600B929EB /* Controllers */,
+				57119F521E22310600B929EB /* Views */,
 			);
 			path = ArticleDetail;
 			sourceTree = "<group>";
@@ -269,6 +291,7 @@
 		CB982E37F391EA695AF47250 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57119F651E22413E00B929EB /* CoreText.framework */,
 				F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */,
 			);
 			name = Frameworks;
@@ -387,6 +410,7 @@
 				5797A8D81E21038400F0BE38 /* demoText.txt in Resources */,
 				5797A8B31E20F27600F0BE38 /* LaunchScreen.storyboard in Resources */,
 				5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */,
+				57119F641E22400300B929EB /* 收入证明.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,19 +483,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57119F601E22310600B929EB /* InterpreterViewHeaderView.m in Sources */,
 				5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */,
-				57119F4E1E2223A200B929EB /* InterpreterViewHeaderView.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
-				57119F4B1E22239000B929EB /* InterpreterView.m in Sources */,
-				5797A8EA1E210AB900F0BE38 /* ArticleDetailViewController.m in Sources */,
+				57119F5F1E22310600B929EB /* InterpreterView.m in Sources */,
+				57119F5E1E22310600B929EB /* ArticleTextView.m in Sources */,
 				57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */,
-				57119F391E21F61D00B929EB /* InterpreterViewLocal.m in Sources */,
 				5797A8E01E21052000F0BE38 /* RootNavigationController.m in Sources */,
-				57119F451E22160E00B929EB /* InterpreterViewNetwork.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
-				57119F361E21F1FB00B929EB /* ArticleTextView.m in Sources */,
+				57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */,
 				5797A8E31E21053900F0BE38 /* MainViewController.m in Sources */,
+				57119F621E22310600B929EB /* InterpreterViewNetwork.m in Sources */,
+				57119F611E22310600B929EB /* InterpreterViewLocal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
