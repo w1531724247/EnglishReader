@@ -12,6 +12,8 @@
 		57119F411E220F3A00B929EB /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F401E220F3A00B929EB /* APIManager.m */; };
 		57119F451E22160E00B929EB /* InterpreterViewNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F441E22160E00B929EB /* InterpreterViewNetwork.m */; };
 		57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */; };
+		57119F4B1E22239000B929EB /* InterpreterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F4A1E22239000B929EB /* InterpreterView.m */; };
+		57119F4E1E2223A200B929EB /* InterpreterViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F4D1E2223A200B929EB /* InterpreterViewHeaderView.m */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -57,6 +59,10 @@
 		57119F441E22160E00B929EB /* InterpreterViewNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewNetwork.m; sourceTree = "<group>"; };
 		57119F461E221DB300B929EB /* NSDictionary+JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONHelper.h"; sourceTree = "<group>"; };
 		57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONHelper.m"; sourceTree = "<group>"; };
+		57119F491E22239000B929EB /* InterpreterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterView.h; sourceTree = "<group>"; };
+		57119F4A1E22239000B929EB /* InterpreterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterView.m; sourceTree = "<group>"; };
+		57119F4C1E2223A200B929EB /* InterpreterViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewHeaderView.h; sourceTree = "<group>"; };
+		57119F4D1E2223A200B929EB /* InterpreterViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewHeaderView.m; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -237,6 +243,10 @@
 				5797A8E91E210AB900F0BE38 /* ArticleDetailViewController.m */,
 				57119F341E21F1FB00B929EB /* ArticleTextView.h */,
 				57119F351E21F1FB00B929EB /* ArticleTextView.m */,
+				57119F491E22239000B929EB /* InterpreterView.h */,
+				57119F4A1E22239000B929EB /* InterpreterView.m */,
+				57119F4C1E2223A200B929EB /* InterpreterViewHeaderView.h */,
+				57119F4D1E2223A200B929EB /* InterpreterViewHeaderView.m */,
 				57119F371E21F61D00B929EB /* InterpreterViewLocal.h */,
 				57119F381E21F61D00B929EB /* InterpreterViewLocal.m */,
 				57119F431E22160E00B929EB /* InterpreterViewNetwork.h */,
@@ -450,8 +460,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */,
+				57119F4E1E2223A200B929EB /* InterpreterViewHeaderView.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
+				57119F4B1E22239000B929EB /* InterpreterView.m in Sources */,
 				5797A8EA1E210AB900F0BE38 /* ArticleDetailViewController.m in Sources */,
 				57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */,
 				57119F391E21F61D00B929EB /* InterpreterViewLocal.m in Sources */,

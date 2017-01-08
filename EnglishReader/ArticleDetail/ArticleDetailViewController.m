@@ -6,22 +6,18 @@
 //  Copyright © 2017年 LFC. All rights reserved.
 //
 
-#define kWebViewHeight 200.0
+#define kWebViewHeight 250.0
 
 #import "ArticleDetailViewController.h"
 #import "ArticleHelper.h"
 #import "ArticleTextView.h"
-#import "InterpreterViewLocal.h"
-#import "InterpreterViewNetwork.h"
-#import <UIKit/UIReferenceLibraryViewController.h>
+#import "InterpreterView.h"
 
-@interface ArticleDetailViewController ()<ArticleHelperDelegate>
+@interface ArticleDetailViewController ()<ArticleHelperDelegate, InterpreterViewDelegate>
 
 @property (nonatomic, strong) ArticleHelper *articleHleper;
 @property (nonatomic, strong) ArticleTextView *textView;
-@property (nonatomic, strong) InterpreterViewNetwork *interpreterViewNet;
-@property (nonatomic, strong) InterpreterViewLocal *interpreterViewLocal;
-@property (nonatomic, strong) UIView *interpreterView;
+@property (nonatomic, strong) InterpreterView *interpreterView;
 
 @end
 
@@ -37,7 +33,7 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demoText" ofType:@"txt"];
     self.textView.attributedText = [self.articleHleper analyseArticleWithFilePath:filePath];
     
-    [self setupInterpreterView];
+    [self hiddenInterpreterView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,47 +43,46 @@
 
 #pragma mark ----- delegate
 - (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text {
-    if ([UIReferenceLibraryViewController dictionaryHasDefinitionForTerm:text]) {
-        [self.interpreterViewLocal interpretWithText:text];
-        self.interpreterView = self.interpreterViewLocal;
-    } else {
-        [self.interpreterViewNet interpretWithText:text];
-        self.interpreterView = self.interpreterViewNet;
-    }
-
+    [self.interpreterView interpretWithText:text];
     [self showInterpreterView];
 }
 
-#pragma mark ----- private
+- (void)interpreterView:(InterpreterView *)interpreterView closeButtonDidTouch:(id)sender {
+    [self hiddenInterpreterView];
+}
 
+#pragma mark ----- private
 -  (void)showInterpreterView {
-    [self setupInterpreterView];
+    CGFloat interpreterViewX = 0.0;
+    CGFloat interpreterViewY = CGRectGetHeight(self.view.frame) - kWebViewHeight;
+    CGFloat interpreterViewW = CGRectGetWidth(self.view.frame);
+    CGFloat interpreterViewH = kWebViewHeight;
+    CGRect frame = CGRectMake(interpreterViewX, interpreterViewY, interpreterViewW, interpreterViewH);
     
-    [UIView animateWithDuration:0.2 animations:^{
-        CGFloat interpreterViewH = kWebViewHeight;
-        CGFloat interpreterViewX = 0.0;
-        CGFloat interpreterViewY = CGRectGetHeight(self.view.frame) - interpreterViewH;
-        CGFloat interpreterViewW = CGRectGetWidth(self.view.frame);
-        self.interpreterView.frame = CGRectMake(interpreterViewX, interpreterViewY, interpreterViewW, interpreterViewH);
+    [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.interpreterView.frame = frame;
     } completion:^(BOOL finished) {
         
     }];
 }
 
-- (void)setupInterpreterView {
-    if (!_interpreterViewLocal) {
-        [self.view addSubview:self.interpreterViewLocal];
-    }
-    
-    if (!_interpreterViewNet) {
-        [self.view addSubview:self.interpreterViewNet];
-    }
-    
+- (void)hiddenInterpreterView {
     CGFloat interpreterViewX = 0.0;
     CGFloat interpreterViewY = CGRectGetHeight(self.view.frame);
     CGFloat interpreterViewW = CGRectGetWidth(self.view.frame);
     CGFloat interpreterViewH = kWebViewHeight;
-    self.interpreterViewLocal.frame = self.interpreterViewNet.frame = CGRectMake(interpreterViewX, interpreterViewY, interpreterViewW, interpreterViewH);
+    CGRect frame = CGRectMake(interpreterViewX, interpreterViewY, interpreterViewW, interpreterViewH);
+    
+    if (!_interpreterView) {
+        [self.view addSubview:self.interpreterView];
+        self.interpreterView.frame = frame;
+    } else {
+        [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.interpreterView.frame = frame;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
 }
 
 #pragma mark ----- getter
@@ -109,20 +104,13 @@
     return _textView;
 }
 
-- (InterpreterViewNetwork *)interpreterViewNet {
-    if (!_interpreterViewNet) {
-        _interpreterViewNet = [[InterpreterViewNetwork alloc] init];
+- (InterpreterView *)interpreterView {
+    if (!_interpreterView) {
+        _interpreterView = [[InterpreterView alloc] init];
+        _interpreterView.delegate = self;
     }
     
-    return _interpreterViewNet;
-}
-
-- (InterpreterViewLocal *)interpreterViewLocal {
-    if (!_interpreterViewLocal) {
-        _interpreterViewLocal = [[InterpreterViewLocal alloc] init];
-    }
-    
-    return _interpreterViewLocal;
+    return _interpreterView;
 }
 
 @end
