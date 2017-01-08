@@ -8,17 +8,50 @@
 
 #import "ArticleHelper.h"
 #import <ctype.h>
+#import "YYKit.h"
 
 @implementation ArticleHelper
 
-- (NSArray *)analyseArticleWithFilePath:(NSString *)filePath {
+#pragma amrk ------ public
+
+- (NSAttributedString *)analyseArticleWithFilePath:(NSString *)filePath {
     NSError *error;
     NSString *articleText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
     if (error) {
         NSLog(@"解析文章出错!");
     }
-    NSMutableArray *rangeArray = [NSMutableArray array];
+    NSArray *rangeArray = [self analyseArticleText:articleText];
     
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:articleText];
+    
+    __weak typeof(self) weakSelf = self;
+    for (NSValue *value in rangeArray) {
+        NSRange range = [value rangeValue];
+        [attributedText setTextHighlightRange:range
+                             color:[UIColor blackColor]
+                   backgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]
+                         tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
+                             [weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];
+                         }];
+    }
+    
+    [attributedText addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0],
+                                    }
+                            range:NSMakeRange(0, articleText.length)];
+    [attributedText setKern:[NSNumber numberWithFloat:1.0]];//设置字间距
+    [attributedText setLineSpacing:8.0];//设置行间距
+    
+    return attributedText;
+}
+
+#pragma amrk ------ private
+
+- (NSArray *)analyseArticleText:(NSString *)articleText {
+    if (![articleText isKindOfClass:[NSString class]]) {
+        return [NSArray array];
+    }
+    
+    NSMutableArray *rangeArray = [NSMutableArray array];
     NSInteger length = articleText.length;
     for (int i = 0; i < length; i++) {//遍历每一个字符串, 判断它的类型
         char character = [articleText characterAtIndex:i];
@@ -27,7 +60,7 @@
             for (int j = i; j < length; j++) {
                 character = [articleText characterAtIndex:j];
                 if (!isspace(character)) {
-                    i = j;
+                    i=j-1;
                     break;//某一段空白符遍历完了
                 }
             }
@@ -37,7 +70,7 @@
             for (int j = i; j < length; j++) {
                 character = [articleText characterAtIndex:j];
                 if (!isdigit(character)) {
-                    i = j;
+                    i=j-1;
                     break;//某一段数字遍历完了
                 }
             }
@@ -47,16 +80,14 @@
             for (int j = i; j < length; j++) {
                 character = [articleText characterAtIndex:j];
                 if (!isalpha(character)) {
-NSString *aChar = [NSString stringWithCString:&character encoding:NSUTF8StringEncoding];
-                    if (![aChar isEqualToString:@"’"]) {
-NSRange range = NSMakeRange(i, j-i);
-                    [rangeArray addObject:[NSValue valueWithRange:range]];
+                    NSString *smpStr = [NSString stringWithUTF8String:"’"];
+                    NSString *currentString = [articleText substringWithRange:NSMakeRange(j, 1)];
+                    if (![currentString isEqualToString:smpStr]) {
+                        NSRange range = NSMakeRange(i, j-i);
+                        [rangeArray addObject:[NSValue valueWithRange:range]];
                         i = j;
                         break;//某一段字母遍历完了
                     }
-                    
-                    
-                    
                 }
             }
         }
@@ -65,7 +96,7 @@ NSRange range = NSMakeRange(i, j-i);
             for (int j = i; j < length; j++) {
                 character = [articleText characterAtIndex:j];
                 if (!ispunct(character)) {
-                    i = j;
+                    i=j-1;
                     break;//某一段标点符号遍历完了
                 }
             }
@@ -73,6 +104,13 @@ NSRange range = NSMakeRange(i, j-i);
     }
     
     return [NSArray arrayWithArray:rangeArray];
+}
+
+#pragma mark ---- action
+- (void)textDidTouch:(NSString *)text {
+    if ([self.delegate respondsToSelector:@selector(articleHelper:textDidTouch:)]) {
+        [self.delegate articleHelper:self textDidTouch:text];
+    }
 }
 
 @end

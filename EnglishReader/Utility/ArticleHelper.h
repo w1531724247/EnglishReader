@@ -8,8 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol ArticleHelperDelegate;
+
 @interface ArticleHelper : NSObject
 
-- (NSArray *)analyseArticleWithFilePath:(NSString *)filePath;
+@property (nonatomic, weak) id<ArticleHelperDelegate> delegate;
+- (NSAttributedString *)analyseArticleWithFilePath:(NSString *)filePath;
 
 @end
+
+@protocol ArticleHelperDelegate <NSObject>
+@optional
+- (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text;
+
+@end
+
