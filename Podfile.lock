@@ -61,6 +61,7 @@ PODS:
   - VTMagic (1.2.4):
     - VTMagic/Core (= 1.2.4)
   - VTMagic/Core (1.2.4)
+  - WebViewJavascriptBridge (5.0.5)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -79,6 +80,7 @@ DEPENDENCIES:
   - RATreeView
   - SCLAlertView-Objective-C
   - VTMagic
+  - WebViewJavascriptBridge (~> 5.0)
   - YYKit
 
 SPEC CHECKSUMS:
@@ -96,8 +98,9 @@ SPEC CHECKSUMS:
   SCLAlertView-Objective-C: ca78280817e66e74366b78579350dee2ff277e23
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
+  WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 268a9e2bef7c5cb336b1ba3b61adf57a42af85f3
+PODFILE CHECKSUM: 6d0829a56852cdfaf77c795c38e4475ade464767
 
 COCOAPODS: 1.0.1

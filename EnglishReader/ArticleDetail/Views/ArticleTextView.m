@@ -32,9 +32,9 @@
     [super setAttributedText:attributedText];
     
     CGFloat backgroundImageViewX = 0.0;
-    CGFloat backgroundImageViewY = -CGRectGetHeight(self.frame)/2;
+    CGFloat backgroundImageViewY = -CGRectGetHeight(self.frame);
     CGFloat backgroundImageViewW = CGRectGetWidth(self.frame);
-    CGFloat backgroundImageViewH = self.contentSize.height + CGRectGetHeight(self.frame);
+    CGFloat backgroundImageViewH = self.contentSize.height + CGRectGetHeight(self.frame)*2;
     self.backgroundImageView.frame = CGRectMake(backgroundImageViewX, backgroundImageViewY, backgroundImageViewW, backgroundImageViewH);
 }
 

@@ -6,8 +6,8 @@
 //  Copyright © 2017年 LFC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "VTMagicController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : VTMagicController
 
 @end

@@ -11,6 +11,9 @@
 		570878071E226618004D3AD5 /* paper_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878031E226618004D3AD5 /* paper_2.jpg */; };
 		570878081E226618004D3AD5 /* paper_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878041E226618004D3AD5 /* paper_3.jpg */; };
 		570878091E226618004D3AD5 /* paper_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878051E226618004D3AD5 /* paper_4.jpg */; };
+		570DC5621E23AD3A00E24D1D /* DocumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */; };
+		570DC5651E23B08100E24D1D /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5641E23B08100E24D1D /* UIColor+Extention.m */; };
+		570DC5671E23B22400E24D1D /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 570DC5661E23B22400E24D1D /* Resource */; };
 		57119F411E220F3A00B929EB /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F401E220F3A00B929EB /* APIManager.m */; };
 		57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */; };
 		57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F511E22310600B929EB /* ArticleDetailViewController.m */; };
@@ -115,6 +118,7 @@
 		57180F891E235E8E00FFD097 /* V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F331E235E8E00FFD097 /* V */; };
 		57180F8B1E2363C300FFD097 /* AppleScript.docset in Resources */ = {isa = PBXBuildFile; fileRef = 57180F8A1E2363C300FFD097 /* AppleScript.docset */; };
 		57180F8D1E236C8D00FFD097 /* bodyText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57180F8C1E236C8D00FFD097 /* bodyText.txt */; };
+		57180F921E23900F00FFD097 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 57180F901E23900F00FFD097 /* ExampleApp.html */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -151,6 +155,11 @@
 		570878031E226618004D3AD5 /* paper_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_2.jpg; sourceTree = "<group>"; };
 		570878041E226618004D3AD5 /* paper_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_3.jpg; sourceTree = "<group>"; };
 		570878051E226618004D3AD5 /* paper_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_4.jpg; sourceTree = "<group>"; };
+		570DC5601E23AD3A00E24D1D /* DocumentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListViewController.h; sourceTree = "<group>"; };
+		570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListViewController.m; sourceTree = "<group>"; };
+		570DC5631E23B08100E24D1D /* UIColor+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
+		570DC5641E23B08100E24D1D /* UIColor+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
+		570DC5661E23B22400E24D1D /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
 		57119F3D1E220E5200B929EB /* DefineKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKeys.h; sourceTree = "<group>"; };
 		57119F3F1E220F3A00B929EB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		57119F401E220F3A00B929EB /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
@@ -266,6 +275,7 @@
 		57180F331E235E8E00FFD097 /* V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = V; sourceTree = "<group>"; };
 		57180F8A1E2363C300FFD097 /* AppleScript.docset */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppleScript.docset; sourceTree = "<group>"; };
 		57180F8C1E236C8D00FFD097 /* bodyText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bodyText.txt; sourceTree = "<group>"; };
+		57180F901E23900F00FFD097 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -352,6 +362,31 @@
 				570878051E226618004D3AD5 /* paper_4.jpg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		570DC55D1E23AD2700E24D1D /* DocumentList */ = {
+			isa = PBXGroup;
+			children = (
+				570DC55E1E23AD2700E24D1D /* Controllers */,
+				570DC55F1E23AD2700E24D1D /* Views */,
+			);
+			path = DocumentList;
+			sourceTree = "<group>";
+		};
+		570DC55E1E23AD2700E24D1D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				570DC5601E23AD3A00E24D1D /* DocumentListViewController.h */,
+				570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		570DC55F1E23AD2700E24D1D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		57119F3A1E220E0A00B929EB /* Resources */ = {
@@ -532,6 +567,8 @@
 		5797A8A21E20F27600F0BE38 /* EnglishReader */ = {
 			isa = PBXGroup;
 			children = (
+				570DC5661E23B22400E24D1D /* Resource */,
+				570DC55D1E23AD2700E24D1D /* DocumentList */,
 				57180ED21E23596B00FFD097 /* Extention */,
 				570878011E226618004D3AD5 /* Images */,
 				570877FF1E225B0B004D3AD5 /* Setting */,
@@ -581,6 +618,7 @@
 		5797A8D61E21030000F0BE38 /* TextFile */ = {
 			isa = PBXGroup;
 			children = (
+				57180F901E23900F00FFD097 /* ExampleApp.html */,
 				57180F8C1E236C8D00FFD097 /* bodyText.txt */,
 				57180F8A1E2363C300FFD097 /* AppleScript.docset */,
 				57180ECD1E2337D200FFD097 /* demoText.pdf */,
@@ -621,6 +659,8 @@
 				57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */,
 				57180EC61E23276200FFD097 /* UIWebView+JS.h */,
 				57180EC71E23276200FFD097 /* UIWebView+JS.m */,
+				570DC5631E23B08100E24D1D /* UIColor+Extention.h */,
+				570DC5641E23B08100E24D1D /* UIColor+Extention.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -826,6 +866,7 @@
 				57180F3E1E235E8E00FFD097 /* Add-RKSJ-V in Resources */,
 				57180F741E235E8E00FFD097 /* KSCpc-EUC-UCS2 in Resources */,
 				57180F3C1E235E8E00FFD097 /* 90pv-RKSJ-UCS2C in Resources */,
+				570DC5671E23B22400E24D1D /* Resource in Resources */,
 				57180F371E235E8E00FFD097 /* 90ms-RKSJ-V in Resources */,
 				57180F4B1E235E8E00FFD097 /* CNS-EUC-H in Resources */,
 				57180ECA1E23359100FFD097 /* demoText.html in Resources */,
@@ -840,6 +881,7 @@
 				57180F711E235E8E00FFD097 /* KSCms-UHC-UCS2 in Resources */,
 				57180F691E235E8E00FFD097 /* H in Resources */,
 				57180F5B1E235E8E00FFD097 /* GB-EUC-V in Resources */,
+				57180F921E23900F00FFD097 /* ExampleApp.html in Resources */,
 				57180F841E235E8E00FFD097 /* UniJIS-UTF16-V in Resources */,
 				57180F781E235E8E00FFD097 /* UniCNS-UCS2-V in Resources */,
 				57180F491E235E8E00FFD097 /* B5pc-UCS2C in Resources */,
@@ -917,10 +959,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				57119F601E22310600B929EB /* InterpreterViewHeaderView.m in Sources */,
+				570DC5621E23AD3A00E24D1D /* DocumentListViewController.m in Sources */,
 				5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
 				57119F5F1E22310600B929EB /* InterpreterView.m in Sources */,
+				570DC5651E23B08100E24D1D /* UIColor+Extention.m in Sources */,
 				57119F5E1E22310600B929EB /* ArticleTextView.m in Sources */,
 				57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */,
 				5797A8E01E21052000F0BE38 /* RootNavigationController.m in Sources */,

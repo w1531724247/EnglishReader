@@ -14,5 +14,6 @@ target 'EnglishReader' do
     pod 'AFNetworking'
     pod 'FMDB'
     pod 'VTMagic'
+    pod 'WebViewJavascriptBridge', '~> 5.0'
 end
 

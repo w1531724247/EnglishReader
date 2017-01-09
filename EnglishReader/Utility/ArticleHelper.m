@@ -15,6 +15,9 @@
 @interface ArticleHelper ()<UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, assign, readwrite) NSInteger totalPage;//总页数
+@property (nonatomic, assign, readwrite) NSInteger currentPage;//总页数
+@property (nonatomic, strong) NSMutableArray *pageOfText;//每1万个字符为一页, 每一页为一个元素
 
 @end
 
@@ -361,6 +364,10 @@
     if ([self.delegate respondsToSelector:@selector(articleHelper:handleSuccessedWithActionText:)]) {
         [self.delegate articleHelper:self handleSuccessedWithActionText:actionText];
     }
+    
+    [self.webView seperatWords];
+//    [[UIApplication sharedApplication].keyWindow addSubview:self.webView];
+//    self.webView.frame = [UIApplication sharedApplication].keyWindow.bounds;
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
@@ -384,6 +391,14 @@
     }
     
     return _webView;
+}
+
+- (NSMutableArray *)pageOfText {
+    if (!_pageOfText) {
+        _pageOfText = [NSMutableArray array];
+    }
+    
+    return _pageOfText;
 }
 
 

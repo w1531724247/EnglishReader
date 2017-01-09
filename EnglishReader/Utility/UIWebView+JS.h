@@ -18,5 +18,6 @@
 - (NSString *)HTMLString;
 //获取当前webView上显示的文本bodyText
 - (NSString *)bodyText;
-
+//分割每一个单词
+- (void)seperatWords;
 @end

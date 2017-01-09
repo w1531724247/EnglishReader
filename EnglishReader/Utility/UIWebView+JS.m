@@ -38,4 +38,17 @@
     return bodyText;
 }
 
+//分割每一个单词
+- (void)seperatWords {
+    [self stringByEvaluatingJavaScriptFromString:@"function wrapWords(element) {\
+                          var html = element.innerHTML;\
+                          var words = html.split(/ /);\
+                          var newHtml = '';\
+                          for (var i = 0; i < words.length; i++) {\
+                              newHtml += '<span>' + words[i] + '</span> ';\
+                          }\
+                          element.innerHTML = newHtml;\
+                          }"];
+}
+
 @end

@@ -13,8 +13,13 @@
 @interface ArticleHelper : NSObject
 
 @property (nonatomic, weak) id<ArticleHelperDelegate> delegate;
+@property (nonatomic, assign, readonly) NSInteger totalPage;//总页数
+@property (nonatomic, assign, readonly) NSInteger currentPage;//总页数
+
 //处理文件
 - (void)handleFileWithPath:(NSString *)filePath;
+//获取page页的文本
+- (NSAttributedString *)actionTextWithPage:(NSInteger)page;
 
 @end
 
@@ -27,5 +32,6 @@
 - (void)articleHelper:(ArticleHelper *)helper handleFailureWithError:(NSError *)error;
 //文本被点击后的回调
 - (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text;
+
 @end
 
