@@ -30,8 +30,12 @@
 
 - (void)setAttributedText:(NSAttributedString *)attributedText {
     [super setAttributedText:attributedText];
-
-    self.backgroundImageView.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(self.frame), self.contentSize.height);
+    
+    CGFloat backgroundImageViewX = 0.0;
+    CGFloat backgroundImageViewY = -CGRectGetHeight(self.frame)/2;
+    CGFloat backgroundImageViewW = CGRectGetWidth(self.frame);
+    CGFloat backgroundImageViewH = self.contentSize.height + CGRectGetHeight(self.frame);
+    self.backgroundImageView.frame = CGRectMake(backgroundImageViewX, backgroundImageViewY, backgroundImageViewW, backgroundImageViewH);
 }
 
 #pragma mark ----- getter

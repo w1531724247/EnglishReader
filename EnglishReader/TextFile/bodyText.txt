@@ -1,0 +1,332 @@
+NextPrevious
+Class Reference
+
+A class is a category for objects that share characteristics. AppleScript defines classes for common objects used in AppleScript scripts, such as aliases, Boolean values, integers, text, and so on.
+
+Each object in a script is an instance of a specific class and has the same properties (including the class property), can contain the same kinds of elements, and supports the same kinds of operations and coercions as other objects of that type. Objects that are instances of AppleScript types can be used anywhere in a script—they don’t need to be within a tell block that specifies an application.
+
+Scriptable applications also define their own classes, such as windows and documents, which commonly contain properties and elements based on many of the basic AppleScript classes described in this chapter. Scripts obtain these objects in the context of the applications that define them. For more information on the class types applications typically support, see “Standard Classes” in Technical Note TN2106, Scripting Interface Guidelines.
+
+alias
+A persistent reference to an existing file, folder, or volume in the file system.
+
+For related information, see file, POSIX file, and “Aliases and Files.”
+
+Properties of alias objects
+class
+ 	Access:	read only
+ 	Class:	class
+ 	The class identifier for the object. The value is always alias.
+POSIX path
+ 	Access:	read only
+ 	Class:	text
+ 	The POSIX-style path to the object.
+
+
+Coercions Supported
+AppleScript supports coercion of an alias object to a text object or single-item list.
+
+Examples
+set zApp to choose application as alias -- (then choose Finder.app)
+--result: alias "Leopard:System:Library:CoreServices:Finder.app:"
+class of zApp --result: alias
+zApp as text --result: "Leopard:System:Library:CoreServices:Finder.app:"
+zApp as list --result: {alias "Leopard:System:Library:CoreServices:Finder.app:"}
+You can use the POSIX path property to obtain a POSIX-style path to the item referred to by an alias:
+
+POSIX path of zApp --result: "/System/Library/CoreServices/Finder.app/"
+Discussion
+You can only create an alias to a file or folder that already exists.
+
+Special Considerations
+AppleScript 2.0 attempts to resolve aliases only when you run a script. However, in earlier versions, AppleScript attempts to resolve aliases at compile time.
+
+application
+An application on a local machine or an available server.
+
+An application object in a script has all of the properties described here, which are handled by AppleScript. It may have additional properties, depending on the specific application it refers to.
+
+Properties of application objects
+class
+ 	Access:	read only
+ 	Class:	class
+ 	The class identifier for the object. The value is always application.
+frontmost
+ 	Access:	read only
+ 	Class:	boolean
+ 	Is the application frontmost?
+ 	Starting in AppleScript 2.0, accessing an application’s frontmost property returns a Boolean value without launching the application or sending it an event.
+ 	The value of frontmost for background-only applications, UI element applications such as System Events, and applications that are not running is always false.
+id
+ 	Access:	read only
+ 	Class:	text
+ 	The application’s bundle identifier (the default) or its four-character signature code. (New in AppleScript 2.0.)
+ 	For example, the bundle identifier for the TextEdit application is "com.apple.TextEdit". Its four-character signature code is 'ttxt'. If you ask for an application object’s id property, you will get the bundle identifier version, unless the application does not have a bundle identifier and does have a signature code.
+name
+ 	Access:	read only
+ 	Class:	text
+ 	The application’s name.
+ 	Starting in AppleScript 2.0, accessing an application’s name property returns the application name as text without launching the application or sending it an event.
+running
+ 	Access:	read only
+ 	Class:	boolean
+ 	Is the application running? (New in AppleScript 2.0.)
+ 	Accessing an application’s running property returns a Boolean value without launching the application or sending it an event.
+ 	You can also ask the System Events utility application whether an application is running. While it requires more lines in your script to do so, that option is available in earlier versions of the Mac OS.
+version
+ 	Access:	read only
+ 	Class:	text
+ 	The application’s version.
+ 	Starting in AppleScript 2.0, accessing this property returns the application version as text without launching the application or sending it an event.
+
+
+Coercions Supported
+AppleScript supports coercion of an application object to a single-item list.
+
+Examples
+You can determine whether an application on the current computer is running without launching it (this won’t work if your target is on a remote computer):
+
+tell application "iTunes" -- doesn't automatically launch app
+    if it is running then
+        pause
+    end if
+end tell
+You can also use this format:
+
+if application "iTunes" is running
+    tell application "iTunes" to pause
+end if
+The following statements specify the TextEdit application by, respectively, its signature, its bundle id, and by a POSIX path to a specific version of TextEdit:
+
+application id "ttxt"
+application id "com.apple.TextEdit"
+application "/Applications/TextEdit.app"
+You can target a remote application with a tell statement. For details, see “Remote Applications”.
+
+Special Considerations
+Starting in OS X v10.5, there are several changes in application behavior:
+
+Applications launch hidden.
+AppleScript has always launched applications if it needed to in order to send them a command. However, they would always launch visibly, which could be visually disruptive. AppleScript now launches applications hidden by default. They will not be visible unless the script explicitly says otherwise using activate.
+
+Applications are located lazily.
+When running a script, AppleScript will not attempt to locate an application until it needs to in order to send it a command. This means that a compiled script or script application may contain references to applications that do not exist on the user’s system, but AppleScript will not ask where the missing applications are until it encounters a relevant tell block. Previous versions of AppleScript would attempt to locate every referenced application before running the script.
+
+When opening a script for editing, AppleScript will attempt to locate all the referenced applications in the entire script, which may mean asking where one is. Pressing the Cancel button only cancels the search for that application; the script will continue opening normally, though custom terminology for that application will display as raw codes. In older versions, pressing Cancel would cancel opening the script.
+
+Applications are located and re-located dynamically.
+Object specifiers that refer to applications, including those in tell blocks, are evaluated every time a script runs. This alleviates problems with scripts getting “stuck” to a particular copy of an application.
+
+In prior versions of AppleScript, use of the new built-in application properties will fall back to sending an event to the application, but the application may not handle these properties in the same way, or handle them at all. (Most applications will handle name, version, and frontmost; id and running are uncommon.) The other new features described above require AppleScript 2.0.
+
+boolean
+A logical truth value.
+
+A boolean object evaluates to one of the AppleScript constants true or false. A Boolean expression contains one or more boolean objects and evaluates to true or false.
+
+Properties of boolean objects
+class
+ 	Access:	read only
+ 	Class:	class
+ 	The class identifier for the object. The value is always boolean.
+
+
+Operators
+The operators that take boolean objects as operands are and, or, not, &, =, and ≠, as well as their text equivalents: is equal to, is not equal to, equals, and so on.
+
+The = operator returns true if both operands evaluate to the same value (either true or false); the ≠ operator returns true if the operands evaluate to different values.
+
+The binary operators and and or take boolean objects as operands and return Boolean values. An and operation, such as (2 > 1) and (4 > 3), has the value true if both its operands are true, and false otherwise. An or operation, such as (theString = "Yes") or (today = "Tuesday"), has the value true if either of its operands is true.
+
+The unary not operator changes a true value to false or a false value to true.
+
+The concatenation operator (&) creates a list containing the two boolean values on either side of it; for example:
+
+true & false --result: {true, false}
+For additional information on these operators, see “Operators Reference.”
+
+Coercions Supported
+AppleScript supports coercion of a boolean object to a single-item list, a text object, or an integer.
+
+Examples
+The following are simple Boolean expressions:
+
+true
+false
+paragraphCount > 2
+AppleScript supplies the Boolean constants true and false to serve as the result of evaluating a Boolean operation. But scripts rarely need to use these literals explicitly because a Boolean expression itself evaluates to a Boolean value. For example, consider the following two script snippets:
+
+if companyName is equal to "Acme Baking" then
+    return true
+else
+    return false
+end if
+ 
+return companyName is equal to "Acme Baking"
+The second, simpler version, just returns the value of the Boolean comparison companyName is equal to "Acme Baking", so it doesn’t need to use a Boolean constant.
+
+Discussion
+When you pass a Boolean value as a parameter to a command, the form may change when you compile the command. For example, the following line
+
+choose folder showing package contents true
+is converted to this when compiled by AppleScript:
+
+choose folder with showing package contents
+It is standard for AppleScript to compile parameter expressions from the Boolean form (such as showing package contents true or invisibles false) into the with form (with showing package contents or without invisibles, respectively).
+
+class
+Specifies the class of an object or value.
+
+All classes have a class property that specifies the class type. The value of the class property is an identifier.
+
+Properties of class objects
+class
+ 	Access:	read only
+ 	Class:	class
+ 	The class identifier for the object. The value of this property is always class.
+
+
+Operators
+The operators that take class identifier values as operands are &, =, ≠, and as.
+
+The coercion operator as takes an object of one class type and coerces it to an object of a type specified by a class identifier. For example, the following statement coerces a text object into a corresponding real:
+
+"1.5" as real --result: 1.5
+Coercions Supported
+AppleScript supports coercion of a class identifier to a single-item list or a text object.
+
+Examples
+Asking for the class of a type such as integer results in a value of class:
+
+class of text --result: class
+class of integer --result: class
+Here is the class of a boolean literal:
+
+class of true --result: boolean
+And here are some additional examples:
+
+class of "Some text" --result: text
+class of {1, 2, "hello"} --result: list
+constant
+A word with a predefined value.
+
+Constants are generally used for enumerated types. You cannot define constants in scripts; constants can be defined only by applications and by AppleScript. See “Global Constants in AppleScript” for more information.
+
+Properties of constant objects
+class
+ 	Access:	read-only
+ 	Class:	class
+ 	The class identifier for the object. The value of this property is always constant.
+
+
+Operators
+The operators that take constant objects as operands are &, =, ≠, and as.
+
+Coercions Supported
+AppleScript supports coercion of a constant object to a single-item list or a text object.
+
+Examples
+One place you use constants defined by AppleScript is in text comparisons performed with considering or ignoring statements (described in considering / ignoring (text comparison)). For example, in the following script statements, punctuation, hyphens, and white space are constants:
+
+considering punctuation but ignoring hyphens and white space
+    "bet-the farm," = "BetTheFarm," --result: true
+end considering
+class of hyphens --result: constant
+The final statement shows that the class of hyphens is constant.
+
+Discussion
+Constants are not text strings, and they must not be surrounded by quotation marks.
+
+Literal constants are defined in “Literals and Constants.”
+
+In addition to the constants defined by AppleScript, applications often define enumerated types to be used for command parameters or property values. For example, the iTunes search command defines these constants for specifying the search area:
+
+albums
+all
+artists
+composers
+displayed
+songs
+date
+Specifies the day of the week, the date (month, day of the month, and year), and the time (hours, minutes, and seconds).
+
+To get the current date, use the command current date:
+
+set theDate to current date
+--result: "Friday, November 9, 2007 11:35:50 AM"
+You can get and set the different parts of a date object through the date and time properties described below.
+
+When you compile a script, AppleScript displays date and time values according to the format specified in System Preferences.
+
+Properties of date objects
+class
+ 	Access:	read only
+ 	Class:	class
+ 	The class identifier for the object. The value of this property is always date.
+day
+ 	Access:	read/write
+ 	Class:	integer
+ 	Specifies the day of the month of a date object.
+weekday
+ 	Access:	read only
+ 	Class:	constant
+ 	Specifies the day of the week of a date object, with one of these constants: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.
+month
+ 	Access:	read/write
+ 	Class:	constant
+ 	Specifies the month of the year of a date object, with one of the constants January, February, March, April, May, June, July, August, September, October, November, or December.
+year
+ 	Access:	read/write
+ 	Class:	integer
+ 	Specifies the year of a date object; for example, 2004.
+time
+ 	Access:	read/write
+ 	Class:	integer
+ 	Specifies the number of seconds since midnight of a date object; for example, 2700 is equivalent to 12:45 AM (2700 / 60 seconds = 45 minutes).
+date string
+ 	Access:	read only
+ 	Class:	text
+ 	A text object that specifies the date portion of a date object; for example, "Friday, November 9, 2007".
+ 	To obtain a compact version of the date, use short date string . For example, short date string of (current date) --result: "1/27/08".
+time string
+ 	Access:	read only
+ 	Class:	text
+ 	A text object that specifies the time portion of a date object; for example, "3:20:24 PM".
+
+
+Operators
+The operators that take date object as operands are &, +, –, =, ≠, >, ≥, <, ≤, comes before, comes after, and as. In expressions containing >, ≥, <, ≤, comes before, or comes after, a later time is greater than an earlier time.
+
+AppleScript supports the following operations on date objects with the + and – operators:
+
+date + timeDifference
+--result: date
+date - date
+--result: timeDifference
+date - timeDifference
+--result: date
+where timeDifference is an integer value specifying a time difference in seconds. To simplify the notation of time differences, you can also use one or more of these of these constants:
+
+minutes
+    60
+hours
+    60 * minutes
+days
+    24 * hours
+weeks
+    7 * days
+Here’s an example:
+
+date "Friday, November 9, 2007" + 4 * days + 3 * hours + 2 *  minutes
+--result: date "Tuesday, November 13, 2007 3:02:00 AM"
+To express a time difference in more convenient form, divide the number of seconds by the appropriate constant:
+
+31449600 / weeks --result: 52.0
+To get an integral number of hours, days, and so on, use the div operator:
+
+151200 div days --result: 1
+To get the difference, in seconds, between the current time and Greenwich mean time, use the time to GMT command.
+
+Coercions Supported
+AppleScript supports coercion of a date object to a single-item list or a text object.
+

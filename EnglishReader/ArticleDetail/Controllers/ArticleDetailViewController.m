@@ -31,7 +31,7 @@
     [self.view addSubview:self.textView];
     self.textView.frame = self.view.bounds;
 
-    [self.articleHleper handleFileWithPath:[[NSBundle mainBundle] pathForResource:@"demoText" ofType:@"pdf"]];
+    [self.articleHleper handleFileWithPath:[[NSBundle mainBundle] pathForResource:@"bodyText" ofType:@"txt"]];
     [self hiddenInterpreterView];
 }
 
@@ -47,8 +47,7 @@
 }
 
 - (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text {
-    [self.interpreterView interpretWithText:text];
-    [self showInterpreterView];
+    [self showInterpreterViewWithText:text];
 }
 
 #pragma mark ----- InterpreterViewDelegate
@@ -56,10 +55,8 @@
     [self hiddenInterpreterView];
 }
 
-
-
 #pragma mark ----- private
--  (void)showInterpreterView {
+-  (void)showInterpreterViewWithText:(NSString *)text {
     CGFloat interpreterViewX = 0.0;
     CGFloat interpreterViewY = CGRectGetHeight(self.view.frame) - kWebViewHeight;
     CGFloat interpreterViewW = CGRectGetWidth(self.view.frame);
@@ -69,7 +66,7 @@
     [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.interpreterView.frame = frame;
     } completion:^(BOOL finished) {
-        
+        [self.interpreterView interpretWithText:text];
     }];
 }
 

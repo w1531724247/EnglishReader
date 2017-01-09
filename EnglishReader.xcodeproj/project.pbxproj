@@ -25,7 +25,6 @@
 		57180ECA1E23359100FFD097 /* demoText.html in Resources */ = {isa = PBXBuildFile; fileRef = 57180EC91E23359100FFD097 /* demoText.html */; };
 		57180ECC1E2335B600FFD097 /* demoText.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 57180ECB1E2335B600FFD097 /* demoText.rtf */; };
 		57180ECE1E2337D200FFD097 /* demoText.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 57180ECD1E2337D200FFD097 /* demoText.pdf */; };
-		57180ED11E23558500FFD097 /* demoText.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 57180ED01E23558500FFD097 /* demoText.rtfd */; };
 		57180EDA1E235CFD00FFD097 /* TET_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180ED91E235CFD00FFD097 /* TET_ios.framework */; };
 		57180EDC1E235D6C00FFD097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */; };
 		57180F341E235E8E00FFD097 /* 83pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EDE1E235E8E00FFD097 /* 83pv-RKSJ-H */; };
@@ -114,6 +113,8 @@
 		57180F871E235E8E00FFD097 /* UniKS-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F311E235E8E00FFD097 /* UniKS-UTF16-H */; };
 		57180F881E235E8E00FFD097 /* UniKS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F321E235E8E00FFD097 /* UniKS-UTF16-V */; };
 		57180F891E235E8E00FFD097 /* V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F331E235E8E00FFD097 /* V */; };
+		57180F8B1E2363C300FFD097 /* AppleScript.docset in Resources */ = {isa = PBXBuildFile; fileRef = 57180F8A1E2363C300FFD097 /* AppleScript.docset */; };
+		57180F8D1E236C8D00FFD097 /* bodyText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57180F8C1E236C8D00FFD097 /* bodyText.txt */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -175,7 +176,6 @@
 		57180EC91E23359100FFD097 /* demoText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demoText.html; sourceTree = "<group>"; };
 		57180ECB1E2335B600FFD097 /* demoText.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = demoText.rtf; sourceTree = "<group>"; };
 		57180ECD1E2337D200FFD097 /* demoText.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = demoText.pdf; sourceTree = "<group>"; };
-		57180ED01E23558500FFD097 /* demoText.rtfd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demoText.rtfd; sourceTree = "<group>"; };
 		57180ED91E235CFD00FFD097 /* TET_ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TET_ios.framework; sourceTree = "<group>"; };
 		57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		57180EDE1E235E8E00FFD097 /* 83pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "83pv-RKSJ-H"; sourceTree = "<group>"; };
@@ -264,6 +264,8 @@
 		57180F311E235E8E00FFD097 /* UniKS-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-H"; sourceTree = "<group>"; };
 		57180F321E235E8E00FFD097 /* UniKS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-V"; sourceTree = "<group>"; };
 		57180F331E235E8E00FFD097 /* V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = V; sourceTree = "<group>"; };
+		57180F8A1E2363C300FFD097 /* AppleScript.docset */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppleScript.docset; sourceTree = "<group>"; };
+		57180F8C1E236C8D00FFD097 /* bodyText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bodyText.txt; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -579,7 +581,8 @@
 		5797A8D61E21030000F0BE38 /* TextFile */ = {
 			isa = PBXGroup;
 			children = (
-				57180ED01E23558500FFD097 /* demoText.rtfd */,
+				57180F8C1E236C8D00FFD097 /* bodyText.txt */,
+				57180F8A1E2363C300FFD097 /* AppleScript.docset */,
 				57180ECD1E2337D200FFD097 /* demoText.pdf */,
 				57119F631E22400300B929EB /* demoText.docx */,
 				5797A8D71E21038400F0BE38 /* demoText.txt */,
@@ -756,6 +759,7 @@
 				57180ECE1E2337D200FFD097 /* demoText.pdf in Resources */,
 				57180F4C1E235E8E00FFD097 /* CNS-EUC-V in Resources */,
 				57180F4E1E235E8E00FFD097 /* cp936.txt in Resources */,
+				57180F8B1E2363C300FFD097 /* AppleScript.docset in Resources */,
 				57180F811E235E8E00FFD097 /* UniJIS-UCS2-HW-V in Resources */,
 				57180F481E235E8E00FFD097 /* B5pc-UCS2 in Resources */,
 				57180F521E235E8E00FFD097 /* ETen-B5-UCS2 in Resources */,
@@ -774,6 +778,7 @@
 				57180F411E235E8E00FFD097 /* Adobe-GB1-5 in Resources */,
 				57180F7D1E235E8E00FFD097 /* UniGB-UTF16-H in Resources */,
 				57180F421E235E8E00FFD097 /* Adobe-GB1-UCS2 in Resources */,
+				57180F8D1E236C8D00FFD097 /* bodyText.txt in Resources */,
 				57180F731E235E8E00FFD097 /* KSCpc-EUC-H in Resources */,
 				57180F451E235E8E00FFD097 /* Adobe-Korea1-2 in Resources */,
 				570878061E226618004D3AD5 /* paper_1.jpg in Resources */,
@@ -787,7 +792,6 @@
 				57180F351E235E8E00FFD097 /* 90ms-RKSJ-H in Resources */,
 				57180F651E235E8E00FFD097 /* GBpc-EUC-UCS2C in Resources */,
 				57180F381E235E8E00FFD097 /* 90msp-RKSJ-H in Resources */,
-				57180ED11E23558500FFD097 /* demoText.rtfd in Resources */,
 				57180F3B1E235E8E00FFD097 /* 90pv-RKSJ-UCS2 in Resources */,
 				57180F871E235E8E00FFD097 /* UniKS-UTF16-H in Resources */,
 				57180F3F1E235E8E00FFD097 /* Adobe-CNS1-6 in Resources */,

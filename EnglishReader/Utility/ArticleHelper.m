@@ -349,7 +349,7 @@
 }
 
 
-- (void) displayError: (NSString *) message {
+- (void)displayError:(NSString *)message {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"TET error" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil];
     [alertView show];
 }

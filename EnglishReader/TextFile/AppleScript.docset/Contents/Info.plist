@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+<key>CFBundleIdentifier</key>
+<string>applescript</string>
+<key>CFBundleName</key>
+<string>AppleScript</string>
+<key>DocSetPlatformFamily</key>
+<string>applescript</string><key>DashDocSetFamily</key><string>dashtoc</string>
+<key>isDashDocset</key><true/><key>dashIndexFilePath</key><string>documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html</string></dict>
+</plist>
+
