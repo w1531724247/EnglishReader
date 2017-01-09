@@ -35,6 +35,18 @@
     if ([fileExtension isEqualToString:@"docx"]) {
         [self handleMSWordWithFilePath:filePath];
     }
+    
+    if ([fileExtension isEqualToString:@"doc"]) {
+        [self handleMSWordWithFilePath:filePath];
+    }
+    
+    if ([fileExtension isEqualToString:@"rtf"]) {
+        [self handleRTFTextWithFilePath:filePath];
+    }
+    
+    if ([fileExtension isEqualToString:@"html"]) {
+        [self handleHTMLStringWithFilePath:filePath];
+    }
 }
 
 - (NSAttributedString *)actionTextWithText:(NSString *)text {
@@ -90,6 +102,18 @@
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:urlRequest];
 }
+
+//处理rtf文本
+- (void)handleRTFTextWithFilePath:(NSString *)filePath {
+
+}
+
+//处理html文本
+- (void)handleHTMLStringWithFilePath:(NSString *)filePath {
+    NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    [self.webView loadHTMLString:htmlString baseURL:nil];
+}
+
 
 - (NSArray *)analyseArticleText:(NSString *)articleText {
     if (![articleText isKindOfClass:[NSString class]]) {
