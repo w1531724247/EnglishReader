@@ -35,7 +35,7 @@
                          }];
     }
     
-    [attributedText addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"CourierNewPS-BoldMT" size:20.0],
+    [attributedText addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:20.0],
                                     }
                             range:NSMakeRange(0, articleText.length)];
 //    [attributedText setKern:[NSNumber numberWithFloat:1.0]];//设置字间距

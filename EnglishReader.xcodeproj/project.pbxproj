@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		570878061E226618004D3AD5 /* paper_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878021E226618004D3AD5 /* paper_1.jpg */; };
+		570878071E226618004D3AD5 /* paper_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878031E226618004D3AD5 /* paper_2.jpg */; };
+		570878081E226618004D3AD5 /* paper_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878041E226618004D3AD5 /* paper_3.jpg */; };
+		570878091E226618004D3AD5 /* paper_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878051E226618004D3AD5 /* paper_4.jpg */; };
 		57119F411E220F3A00B929EB /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F401E220F3A00B929EB /* APIManager.m */; };
 		57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */; };
 		57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F511E22310600B929EB /* ArticleDetailViewController.m */; };
@@ -49,6 +53,10 @@
 
 /* Begin PBXFileReference section */
 		0C00EBF68E03656A2F86647F /* Pods-EnglishReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.release.xcconfig"; sourceTree = "<group>"; };
+		570878021E226618004D3AD5 /* paper_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_1.jpg; sourceTree = "<group>"; };
+		570878031E226618004D3AD5 /* paper_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_2.jpg; sourceTree = "<group>"; };
+		570878041E226618004D3AD5 /* paper_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_3.jpg; sourceTree = "<group>"; };
+		570878051E226618004D3AD5 /* paper_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_4.jpg; sourceTree = "<group>"; };
 		57119F3D1E220E5200B929EB /* DefineKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKeys.h; sourceTree = "<group>"; };
 		57119F3F1E220F3A00B929EB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		57119F401E220F3A00B929EB /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
@@ -129,6 +137,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		570877FF1E225B0B004D3AD5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				570878001E225B29004D3AD5 /* Controllers */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		570878001E225B29004D3AD5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		570878011E226618004D3AD5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				570878021E226618004D3AD5 /* paper_1.jpg */,
+				570878031E226618004D3AD5 /* paper_2.jpg */,
+				570878041E226618004D3AD5 /* paper_3.jpg */,
+				570878051E226618004D3AD5 /* paper_4.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		57119F3A1E220E0A00B929EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +239,8 @@
 		5797A8A21E20F27600F0BE38 /* EnglishReader */ = {
 			isa = PBXGroup;
 			children = (
+				570878011E226618004D3AD5 /* Images */,
+				570877FF1E225B0B004D3AD5 /* Setting */,
 				57119F3E1E220ECA00B929EB /* Networking */,
 				57119F3B1E220E1900B929EB /* Common */,
 				57119F3A1E220E0A00B929EB /* Resources */,
@@ -409,6 +445,10 @@
 			files = (
 				5797A8D81E21038400F0BE38 /* demoText.txt in Resources */,
 				5797A8B31E20F27600F0BE38 /* LaunchScreen.storyboard in Resources */,
+				570878061E226618004D3AD5 /* paper_1.jpg in Resources */,
+				570878071E226618004D3AD5 /* paper_2.jpg in Resources */,
+				570878081E226618004D3AD5 /* paper_3.jpg in Resources */,
+				570878091E226618004D3AD5 /* paper_4.jpg in Resources */,
 				5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */,
 				57119F641E22400300B929EB /* 收入证明.docx in Resources */,
 			);
@@ -641,7 +681,7 @@
 				INFOPLIST_FILE = EnglishReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ShouBoTV;
+				PRODUCT_BUNDLE_IDENTIFIER = QuanMinTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -655,7 +695,7 @@
 				INFOPLIST_FILE = EnglishReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ShouBoTV;
+				PRODUCT_BUNDLE_IDENTIFIER = QuanMinTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

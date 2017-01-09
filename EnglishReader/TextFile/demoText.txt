@@ -1,5 +1,9 @@
-About AVFoundation
-Important: This is a preliminary document for an API or technology in development. Apple is supplying this information to help you plan for the adoption of the technologies and programming interfaces described herein for use on Apple-branded products. This information is subject to change, and software implemented according to this document should be tested with final operating system software and final documentation. Newer versions of this document may be provided with future betas of the API or technology.
+    About AVFoundation
+    Important: This is a preliminary document for an API or technology in development. Apple is supplying this
+information to help you plan for the adoption of the technologies and programming interfaces described herein for
+use on Apple-branded products. This information is subject to change, and software implemented according to this
+document should be tested with final operating system software and final documentation. Newer versions of this
+document may be provided with future betas of the API or technology.
 
 AVFoundation is one of several frameworks that you can use to play and create time-based audiovisual media. It provides an Objective-C interface you use to work on a detailed level with time-based audiovisual data. For example, you can use it to examine, create, edit, or reencode media files. You can also get input streams from devices and manipulate video during realtime capture and playback. Figure I-1 shows the architecture on iOS.
 Figure I-1  AVFoundation stack on iOS

@@ -8,8 +8,11 @@
 
 #import "ArticleTextView.h"
 #import "YYKit.h"
+#import "Masonry.h"
+
 @interface ArticleTextView ()
 
+@property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) YYLabel *textLabel;
 
 @end
@@ -26,7 +29,11 @@
 }
 
 - (void)addSubviews {
+    [self addSubview:self.backgroundImageView];
     [self addSubview:self.textLabel];
+    
+    self.backgroundImageView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"paper_3.jpg"]];
+    self.backgroundImageView.contentMode = UIViewContentModeScaleToFill;
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText {
@@ -38,6 +45,12 @@
     self.contentSize = CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), textSize.height);
     
     self.textLabel.attributedText = attributedText;
+    
+    CGFloat backgroundImageViewX = 0.0;
+    CGFloat backgroundImageViewY = 0.0;
+    CGFloat backgroundImageViewW = CGRectGetWidth(self.frame);
+    CGFloat backgroundImageViewH = textSize.height;
+    self.backgroundImageView.frame = CGRectMake(backgroundImageViewX, backgroundImageViewY, backgroundImageViewW, backgroundImageViewH);
 }
 
 #pragma mark ----- getter
@@ -50,6 +63,14 @@
     }
     
     return _textLabel;
+}
+
+- (UIImageView *)backgroundImageView {
+    if (!_backgroundImageView) {
+        _backgroundImageView = [[UIImageView alloc] init];
+    }
+    
+    return _backgroundImageView;
 }
 
 @end
