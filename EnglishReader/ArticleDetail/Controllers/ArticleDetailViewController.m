@@ -31,28 +31,32 @@
     [self.view addSubview:self.textView];
     self.textView.frame = self.view.bounds;
 
-    // 创建TextView，添加attributed str
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"demoText" ofType:@"txt"];
-    
-    self.textView.attributedText = [self.articleHleper analyseArticleWithFilePath:filePath];
-    
+    [self.articleHleper handleFileWithPath:[[NSBundle mainBundle] pathForResource:@"demoText" ofType:@"docx"]];
     [self hiddenInterpreterView];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark ----- delegate
+#pragma mark ----- ArticleHelperDelegate
+- (void)articleHelper:(ArticleHelper *)helper handleSuccessedWithActionText:(NSAttributedString *)actionText {
+    self.textView.attributedText = actionText;
+}
+
 - (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text {
     [self.interpreterView interpretWithText:text];
     [self showInterpreterView];
 }
 
+#pragma mark ----- InterpreterViewDelegate
 - (void)interpreterView:(InterpreterView *)interpreterView closeButtonDidTouch:(id)sender {
     [self hiddenInterpreterView];
 }
+
+
 
 #pragma mark ----- private
 -  (void)showInterpreterView {

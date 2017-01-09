@@ -9,42 +9,87 @@
 #import "ArticleHelper.h"
 #import <ctype.h>
 #import "YYKit.h"
+#import "UIWebView+JS.h"
+
+@interface ArticleHelper ()<UIWebViewDelegate>
+
+@property (nonatomic, strong) UIWebView *webView;
+
+@end
 
 @implementation ArticleHelper
 
 #pragma amrk ------ public
 
-- (NSAttributedString *)analyseArticleWithFilePath:(NSString *)filePath {
-    NSError *error;
-    NSString *articleText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
-    if (error) {
-        NSLog(@"解析文章出错!");
+- (void)handleFileWithPath:(NSString *)filePath {
+    if (filePath.length < 1 || ![filePath isKindOfClass:[NSString class]]) {
+        return ;
     }
-    NSArray *rangeArray = [self analyseArticleText:articleText];
     
-    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:articleText];
+    // 获得文件的后缀名（不带'.'）
+    NSString *fileExtension = [filePath pathExtension];
+    if ([fileExtension isEqualToString:@"txt"]) {
+        [self handleTxtWithFilePath:filePath];
+    }
+    
+    if ([fileExtension isEqualToString:@"docx"]) {
+        [self handleMSWordWithFilePath:filePath];
+    }
+}
+
+- (NSAttributedString *)actionTextWithText:(NSString *)text {
+    if (text.length < 1 || ![text isKindOfClass:[NSString class]]) {
+        return [[NSAttributedString alloc] init];
+    }
+    
+    NSArray *rangeArray = [self analyseArticleText:text];
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:text];
     
     __weak typeof(self) weakSelf = self;
     for (NSValue *value in rangeArray) {
         NSRange range = [value rangeValue];
         [attributedText setTextHighlightRange:range
-                             color:[UIColor blackColor]
-                   backgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]
-                         tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
-                             [weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];
-                         }];
+                                        color:[UIColor blackColor]
+                              backgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]
+                                    tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
+                                        [weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];
+                                    }];
     }
     
     [attributedText addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:20.0],
                                     }
-                            range:NSMakeRange(0, articleText.length)];
-//    [attributedText setKern:[NSNumber numberWithFloat:1.0]];//设置字间距
+                            range:NSMakeRange(0, text.length)];
+    //    [attributedText setKern:[NSNumber numberWithFloat:1.0]];//设置字间距
     [attributedText setLineSpacing:8.0];//设置行间距
     
     return attributedText;
 }
 
 #pragma amrk ------ private
+//处理txt文本
+- (void)handleTxtWithFilePath:(NSString *)filePath {
+    NSError *error;
+    NSString *text = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+    if (error) {
+        if ([self.delegate respondsToSelector:@selector(articleHelper:handleFailureWithError:)]) {
+            [self.delegate articleHelper:self handleFailureWithError:error];
+        }
+        
+        return;
+    }
+    
+    NSAttributedString *actionText = [self actionTextWithText:text];
+    if ([self.delegate respondsToSelector:@selector(articleHelper:handleSuccessedWithActionText:)]) {
+        [self.delegate articleHelper:self handleSuccessedWithActionText:actionText];
+    }
+}
+
+//处理Mircosoft word.docx文档
+- (void)handleMSWordWithFilePath:(NSString *)filePath {
+    NSURL *url = [NSURL URLWithString:filePath];
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
+    [self.webView loadRequest:urlRequest];
+}
 
 - (NSArray *)analyseArticleText:(NSString *)articleText {
     if (![articleText isKindOfClass:[NSString class]]) {
@@ -103,11 +148,37 @@
     return [NSArray arrayWithArray:rangeArray];
 }
 
+#pragma mark ----- UIWebViewDelegate
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSString *bodyText = [webView bodyText];
+    NSAttributedString *actionText = [self actionTextWithText:bodyText];
+    if ([self.delegate respondsToSelector:@selector(articleHelper:handleSuccessedWithActionText:)]) {
+        [self.delegate articleHelper:self handleSuccessedWithActionText:actionText];
+    }
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    if ([self.delegate respondsToSelector:@selector(articleHelper:handleFailureWithError:)]) {
+        [self.delegate articleHelper:self handleFailureWithError:error];
+    }
+}
+
 #pragma mark ---- action
 - (void)textDidTouch:(NSString *)text {
     if ([self.delegate respondsToSelector:@selector(articleHelper:textDidTouch:)]) {
         [self.delegate articleHelper:self textDidTouch:text];
     }
 }
+
+#pragma mark ----- getter
+- (UIWebView *)webView {
+    if (!_webView) {
+        _webView = [[UIWebView alloc] init];
+        _webView.delegate = self;
+    }
+    
+    return _webView;
+}
+
 
 @end

@@ -13,13 +13,19 @@
 @interface ArticleHelper : NSObject
 
 @property (nonatomic, weak) id<ArticleHelperDelegate> delegate;
-- (NSAttributedString *)analyseArticleWithFilePath:(NSString *)filePath;
+//处理文件
+- (void)handleFileWithPath:(NSString *)filePath;
 
 @end
 
 @protocol ArticleHelperDelegate <NSObject>
-@optional
-- (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text;
+//处理成功后的回调
+- (void)articleHelper:(ArticleHelper *)helper handleSuccessedWithActionText:(NSAttributedString *)actionText;
 
+@optional
+//处理失败后的回调
+- (void)articleHelper:(ArticleHelper *)helper handleFailureWithError:(NSError *)error;
+//文本被点击后的回调
+- (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text;
 @end
 

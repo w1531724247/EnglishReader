@@ -19,8 +19,9 @@
 		57119F601E22310600B929EB /* InterpreterViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F581E22310600B929EB /* InterpreterViewHeaderView.m */; };
 		57119F611E22310600B929EB /* InterpreterViewLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F5A1E22310600B929EB /* InterpreterViewLocal.m */; };
 		57119F621E22310600B929EB /* InterpreterViewNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F5C1E22310600B929EB /* InterpreterViewNetwork.m */; };
-		57119F641E22400300B929EB /* 收入证明.docx in Resources */ = {isa = PBXBuildFile; fileRef = 57119F631E22400300B929EB /* 收入证明.docx */; };
+		57119F641E22400300B929EB /* demoText.docx in Resources */ = {isa = PBXBuildFile; fileRef = 57119F631E22400300B929EB /* demoText.docx */; };
 		57119F661E22413E00B929EB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57119F651E22413E00B929EB /* CoreText.framework */; };
+		57180EC81E23276200FFD097 /* UIWebView+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 57180EC71E23276200FFD097 /* UIWebView+JS.m */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -75,8 +76,10 @@
 		57119F5A1E22310600B929EB /* InterpreterViewLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewLocal.m; sourceTree = "<group>"; };
 		57119F5B1E22310600B929EB /* InterpreterViewNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewNetwork.h; sourceTree = "<group>"; };
 		57119F5C1E22310600B929EB /* InterpreterViewNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewNetwork.m; sourceTree = "<group>"; };
-		57119F631E22400300B929EB /* 收入证明.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "收入证明.docx"; sourceTree = "<group>"; };
+		57119F631E22400300B929EB /* demoText.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = demoText.docx; sourceTree = "<group>"; };
 		57119F651E22413E00B929EB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		57180EC61E23276200FFD097 /* UIWebView+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JS.h"; sourceTree = "<group>"; };
+		57180EC71E23276200FFD097 /* UIWebView+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JS.m"; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -287,7 +290,7 @@
 		5797A8D61E21030000F0BE38 /* TextFile */ = {
 			isa = PBXGroup;
 			children = (
-				57119F631E22400300B929EB /* 收入证明.docx */,
+				57119F631E22400300B929EB /* demoText.docx */,
 				5797A8D71E21038400F0BE38 /* demoText.txt */,
 			);
 			path = TextFile;
@@ -320,6 +323,8 @@
 				5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */,
 				57119F461E221DB300B929EB /* NSDictionary+JSONHelper.h */,
 				57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */,
+				57180EC61E23276200FFD097 /* UIWebView+JS.h */,
+				57180EC71E23276200FFD097 /* UIWebView+JS.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -450,7 +455,7 @@
 				570878081E226618004D3AD5 /* paper_3.jpg in Resources */,
 				570878091E226618004D3AD5 /* paper_4.jpg in Resources */,
 				5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */,
-				57119F641E22400300B929EB /* 收入证明.docx in Resources */,
+				57119F641E22400300B929EB /* demoText.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +540,7 @@
 				57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */,
 				5797A8E31E21053900F0BE38 /* MainViewController.m in Sources */,
 				57119F621E22310600B929EB /* InterpreterViewNetwork.m in Sources */,
+				57180EC81E23276200FFD097 /* UIWebView+JS.m in Sources */,
 				57119F611E22310600B929EB /* InterpreterViewLocal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

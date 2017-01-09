@@ -36,14 +36,12 @@
     if (text && [text isKindOfClass:[NSString class]] && text.length > 0) {
         [params setValue:text forKey:@"q"];//必填参数, string
     }
-    
     [params setValue:@"auto" forKey:@"from"];//必填参数, string
     [params setValue:@"zh" forKey:@"to"];//必填参数, 中文, string
     [params setValue:@(kBaiduAPPID) forKey:@"appid"];//必填参数, int
     int salt = arc4random()%1000;
     [params setValue:@(salt) forKey:@"salt"];//必填参数, 随机数, int
     [params setValue:[self getBaiduSignWithText:text salt:salt] forKey:@"sign"];//必填参数, string, appid+q+salt+密钥 的MD5值
-    
     
     [self POST:kBaiduHost parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         if ([self.delegate respondsToSelector:@selector(getInterpretFromBaiduServerSuccessed:withResponse:)]) {
