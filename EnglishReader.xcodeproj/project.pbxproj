@@ -24,6 +24,8 @@
 		57180EC81E23276200FFD097 /* UIWebView+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 57180EC71E23276200FFD097 /* UIWebView+JS.m */; };
 		57180ECA1E23359100FFD097 /* demoText.html in Resources */ = {isa = PBXBuildFile; fileRef = 57180EC91E23359100FFD097 /* demoText.html */; };
 		57180ECC1E2335B600FFD097 /* demoText.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 57180ECB1E2335B600FFD097 /* demoText.rtf */; };
+		57180ECE1E2337D200FFD097 /* demoText.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 57180ECD1E2337D200FFD097 /* demoText.pdf */; };
+		57180ED11E23558500FFD097 /* demoText.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 57180ED01E23558500FFD097 /* demoText.rtfd */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -84,6 +86,8 @@
 		57180EC71E23276200FFD097 /* UIWebView+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JS.m"; sourceTree = "<group>"; };
 		57180EC91E23359100FFD097 /* demoText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demoText.html; sourceTree = "<group>"; };
 		57180ECB1E2335B600FFD097 /* demoText.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = demoText.rtf; sourceTree = "<group>"; };
+		57180ECD1E2337D200FFD097 /* demoText.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = demoText.pdf; sourceTree = "<group>"; };
+		57180ED01E23558500FFD097 /* demoText.rtfd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demoText.rtfd; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 		5797A8D61E21030000F0BE38 /* TextFile */ = {
 			isa = PBXGroup;
 			children = (
+				57180ED01E23558500FFD097 /* demoText.rtfd */,
+				57180ECD1E2337D200FFD097 /* demoText.pdf */,
 				57119F631E22400300B929EB /* demoText.docx */,
 				5797A8D71E21038400F0BE38 /* demoText.txt */,
 				57180EC91E23359100FFD097 /* demoText.html */,
@@ -455,9 +461,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5797A8D81E21038400F0BE38 /* demoText.txt in Resources */,
+				57180ECE1E2337D200FFD097 /* demoText.pdf in Resources */,
 				5797A8B31E20F27600F0BE38 /* LaunchScreen.storyboard in Resources */,
 				570878061E226618004D3AD5 /* paper_1.jpg in Resources */,
 				570878071E226618004D3AD5 /* paper_2.jpg in Resources */,
+				57180ED11E23558500FFD097 /* demoText.rtfd in Resources */,
 				570878081E226618004D3AD5 /* paper_3.jpg in Resources */,
 				570878091E226618004D3AD5 /* paper_4.jpg in Resources */,
 				57180ECC1E2335B600FFD097 /* demoText.rtf in Resources */,

@@ -31,7 +31,7 @@
     [self.view addSubview:self.textView];
     self.textView.frame = self.view.bounds;
 
-    [self.articleHleper handleFileWithPath:[[NSBundle mainBundle] pathForResource:@"demoText" ofType:@"html"]];
+    [self.articleHleper handleFileWithPath:[[NSBundle mainBundle] pathForResource:@"demoText" ofType:@"rtfd"]];
     [self hiddenInterpreterView];
 }
 

@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YYKit.h"
 
-@interface ArticleTextView : UIScrollView
-
-@property (nonatomic, copy) NSAttributedString *attributedText;
+@interface ArticleTextView : YYTextView
 
 @end

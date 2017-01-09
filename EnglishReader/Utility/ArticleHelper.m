@@ -47,34 +47,10 @@
     if ([fileExtension isEqualToString:@"html"]) {
         [self handleHTMLStringWithFilePath:filePath];
     }
-}
-
-- (NSAttributedString *)actionTextWithText:(NSString *)text {
-    if (text.length < 1 || ![text isKindOfClass:[NSString class]]) {
-        return [[NSAttributedString alloc] init];
+    
+    if ([fileExtension isEqualToString:@"pdf"]) {
+        [self handlePDFWithFilePath:filePath];
     }
-    
-    NSArray *rangeArray = [self analyseArticleText:text];
-    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:text];
-    
-    __weak typeof(self) weakSelf = self;
-    for (NSValue *value in rangeArray) {
-        NSRange range = [value rangeValue];
-        [attributedText setTextHighlightRange:range
-                                        color:[UIColor blackColor]
-                              backgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]
-                                    tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
-                                        [weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];
-                                    }];
-    }
-    
-    [attributedText addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:20.0],
-                                    }
-                            range:NSMakeRange(0, text.length)];
-    //    [attributedText setKern:[NSNumber numberWithFloat:1.0]];//设置字间距
-    [attributedText setLineSpacing:8.0];//设置行间距
-    
-    return attributedText;
 }
 
 #pragma amrk ------ private
@@ -105,15 +81,42 @@
 
 //处理rtf文本
 - (void)handleRTFTextWithFilePath:(NSString *)filePath {
-
+    //rtf--to--NSAttributedString
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    //UILabel显示HTML文本
+    NSDictionary *docAttributes = [NSDictionary dictionary];
+    NSError *error;
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:data
+                                                                       options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType}
+                                                            documentAttributes:&docAttributes
+                                                                         error:&error];
+    NSAttributedString *actionText = [self handleAttributedText:attrStr];
+    if ([self.delegate respondsToSelector:@selector(articleHelper:handleSuccessedWithActionText:)]) {
+        [self.delegate articleHelper:self handleSuccessedWithActionText:actionText];
+    }
+    
+    /*NSAttributedString--rtf--to
+     NSAttributedString *str = [[NSAttributedString alloc] initWithString:@"YOLO" attributes:nil];
+     NSData *data = [str dataFromRange:(NSRange){0, [str length]} documentAttributes:@{NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType} error:NULL];
+     [data writeToFile:@"/me.rtf" atomically:YES];
+     */
 }
 
 //处理html文本
 - (void)handleHTMLStringWithFilePath:(NSString *)filePath {
     NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     [self.webView loadHTMLString:htmlString baseURL:nil];
+    
+    //UILabel显示HTML文本
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
 }
 
+//处理pdf文本
+- (void)handlePDFWithFilePath:(NSString *)filePath {
+    NSURL *url = [NSURL URLWithString:filePath];
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
+    [self.webView loadRequest:urlRequest];
+}
 
 - (NSArray *)analyseArticleText:(NSString *)articleText {
     if (![articleText isKindOfClass:[NSString class]]) {
@@ -170,6 +173,50 @@
     }
     
     return [NSArray arrayWithArray:rangeArray];
+}
+
+- (NSAttributedString *)actionTextWithText:(NSString *)text {
+    if (text.length < 1 || ![text isKindOfClass:[NSString class]]) {
+        return [[NSAttributedString alloc] init];
+    }
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text];
+    attributedText = [self handleAttributedText:attributedText];
+    
+    return attributedText;
+}
+
+- (NSAttributedString *)actionTextWithAttributedText:(NSAttributedString *)text {
+    if (text.length < 1 || ![text isKindOfClass:[NSString class]]) {
+        return [[NSAttributedString alloc] init];
+    }
+    
+    NSAttributedString *actionText = [self handleAttributedText:text];
+    
+    return actionText;
+}
+
+- (NSAttributedString *)handleAttributedText:(NSAttributedString *)attributedText {
+    NSArray *rangeArray = [self analyseArticleText:attributedText.string];
+
+    NSMutableAttributedString *actionText = [[NSMutableAttributedString alloc] initWithAttributedString:attributedText];
+    __weak typeof(self) weakSelf = self;
+    for (NSValue *value in rangeArray) {
+        NSRange range = [value rangeValue];
+        [actionText setTextHighlightRange:range
+                                        color:nil
+                              backgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]
+                                    tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
+                                        [weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];
+                                    }];
+    }
+    
+    [actionText addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:20.0],
+                                    }
+                            range:NSMakeRange(0, attributedText.string.length)];
+    //    [attributedText setKern:[NSNumber numberWithFloat:1.0]];//设置字间距
+    [actionText setLineSpacing:8.0];//设置行间距
+    
+    return actionText;
 }
 
 #pragma mark ----- UIWebViewDelegate
