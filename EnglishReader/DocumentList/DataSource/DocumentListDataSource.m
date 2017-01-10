@@ -11,6 +11,7 @@
 #import "DocumentListCell.h"
 #import "ArticleDetailViewController.h"
 #import "RootNavigationController.h"
+#import "YYKit.h"
 
 @interface DocumentListDataSource () 
 
@@ -74,8 +75,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ArticleDetailViewController *detailVC = [[ArticleDetailViewController alloc] init];
     detailVC.filePath = [self.filePathArray objectAtIndex:indexPath.row];
-    
-    [[RootNavigationController shareNavigationController] pushViewController:detailVC animated:YES];
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [tableView.viewController.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -115,6 +115,9 @@
 		57180F881E235E8E00FFD097 /* UniKS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F321E235E8E00FFD097 /* UniKS-UTF16-V */; };
 		57180F891E235E8E00FFD097 /* V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F331E235E8E00FFD097 /* V */; };
 		575F5E711E249F870070E850 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E701E249F870070E850 /* UIManager.m */; };
+		575F5E741E24CC780070E850 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E731E24CC780070E850 /* MainTabBarController.m */; };
+		575F5E771E24CED00070E850 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E761E24CED00070E850 /* SettingViewController.m */; };
+		575F5E7C1E24CF210070E850 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E7B1E24CF210070E850 /* WordListViewController.m */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -272,6 +275,12 @@
 		575F5E6D1E2495B20070E850 /* InterpreterContentViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterContentViewProtocol.h; sourceTree = "<group>"; };
 		575F5E6F1E249F870070E850 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIManager.h; sourceTree = "<group>"; };
 		575F5E701E249F870070E850 /* UIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIManager.m; sourceTree = "<group>"; };
+		575F5E721E24CC780070E850 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		575F5E731E24CC780070E850 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		575F5E751E24CED00070E850 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		575F5E761E24CED00070E850 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		575F5E7A1E24CF210070E850 /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
+		575F5E7B1E24CF210070E850 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -344,6 +353,8 @@
 		570878001E225B29004D3AD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				575F5E751E24CED00070E850 /* SettingViewController.h */,
+				575F5E761E24CED00070E850 /* SettingViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -552,6 +563,23 @@
 			path = UIManager;
 			sourceTree = "<group>";
 		};
+		575F5E781E24CF150070E850 /* WordList */ = {
+			isa = PBXGroup;
+			children = (
+				575F5E791E24CF150070E850 /* Controllers */,
+			);
+			path = WordList;
+			sourceTree = "<group>";
+		};
+		575F5E791E24CF150070E850 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				575F5E7A1E24CF210070E850 /* WordListViewController.h */,
+				575F5E7B1E24CF210070E850 /* WordListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5797A8971E20F27500F0BE38 = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +605,7 @@
 		5797A8A21E20F27600F0BE38 /* EnglishReader */ = {
 			isa = PBXGroup;
 			children = (
+				575F5E781E24CF150070E850 /* WordList */,
 				575F5E6E1E249F350070E850 /* UIManager */,
 				570DC55D1E23AD2700E24D1D /* DocumentList */,
 				57180ED21E23596B00FFD097 /* Extention */,
@@ -628,6 +657,8 @@
 			children = (
 				5797A8DE1E21052000F0BE38 /* RootNavigationController.h */,
 				5797A8DF1E21052000F0BE38 /* RootNavigationController.m */,
+				575F5E721E24CC780070E850 /* MainTabBarController.h */,
+				575F5E731E24CC780070E850 /* MainTabBarController.m */,
 				5797A8E11E21053900F0BE38 /* MainViewController.h */,
 				5797A8E21E21053900F0BE38 /* MainViewController.m */,
 			);
@@ -952,6 +983,8 @@
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
 				57119F5F1E22310600B929EB /* InterpreterView.m in Sources */,
+				575F5E741E24CC780070E850 /* MainTabBarController.m in Sources */,
+				575F5E771E24CED00070E850 /* SettingViewController.m in Sources */,
 				570DC5651E23B08100E24D1D /* UIColor+Extention.m in Sources */,
 				57119F5E1E22310600B929EB /* ArticleTextView.m in Sources */,
 				57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */,
@@ -959,6 +992,7 @@
 				5797A8E01E21052000F0BE38 /* RootNavigationController.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
 				57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */,
+				575F5E7C1E24CF210070E850 /* WordListViewController.m in Sources */,
 				5797A8E31E21053900F0BE38 /* MainViewController.m in Sources */,
 				57119F621E22310600B929EB /* InterpreterViewNetwork.m in Sources */,
 				570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */,

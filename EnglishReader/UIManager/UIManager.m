@@ -15,4 +15,8 @@
     return [UIColor colorWithRGB:0x333333];
 }
 
++ (UIColor *)textSelectedColor {
+    return [UIColor colorWithRGB:0xff5a52];
+}
+
 @end

@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.tableView reloadData];
+    self.title = @"文档列表";
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,8 +7,7 @@
 //
 
 #import "RootNavigationController.h"
-#import "MainViewController.h"
-#import "DocumentListViewController.h"
+#import "MainTabBarController.h"
 
 @interface RootNavigationController ()
 
@@ -21,8 +20,9 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (!_shareNavigationController) {
-            DocumentListViewController *mainVC = [[DocumentListViewController alloc] init];
+            MainTabBarController *mainVC = [[MainTabBarController alloc] init];
             _shareNavigationController = [[RootNavigationController alloc] initWithRootViewController:mainVC];
+            _shareNavigationController.navigationBarHidden = YES;
         }
     });
     
