@@ -12,7 +12,7 @@
 
 - (void)startLoadingAnimation;
 - (void)stopLoadingAnimation;
-
+- (void)dragImageUpDown:(BOOL)upDown;
 - (void)addCloseButtonEventToTarget:(nullable id)target action:(nonnull SEL)selector forControlEvents:(UIControlEvents)controlEvents;
 
 @end

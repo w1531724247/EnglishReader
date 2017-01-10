@@ -30,12 +30,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = [[self.filePath stringByDeletingPathExtension] lastPathComponent];
+    [self setupSubViews];
+    [self.articleHleper handleFileWithPath:self.filePath];
+    [self hiddenInterpreterView];
+}
+
+- (void)setupSubViews {
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.textView];
     self.textView.frame = self.view.bounds;
-
-    [self.articleHleper handleFileWithPath:self.filePath];
-    [self hiddenInterpreterView];
 }
 
 - (void)didReceiveMemoryWarning {

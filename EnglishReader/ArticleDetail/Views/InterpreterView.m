@@ -33,7 +33,6 @@
         [self addSubview:self.interpreterViewNet];
         
         [self addConstraintsToSubviews];
-        
         [self addGestureRecognizerToHeaderView];
     }
     
@@ -128,10 +127,11 @@
     CGFloat selfY;
     CGFloat selfW = CGRectGetWidth(self.superview.frame);
     CGFloat selfH;
-    
+    [self.headerView dragImageUpDown:YES];
     if (originY < [UIScreen mainScreen].bounds.size.height - 350.0) {
         selfY = 64.0;
         selfH = CGRectGetHeight(self.superview.frame) - selfY;
+        [self.headerView dragImageUpDown:NO];
     } else if (originY > [UIScreen mainScreen].bounds.size.height - 350.0 && originY < [UIScreen mainScreen].bounds.size.height - 200.0) {
         selfH = 250.0;
         selfY = CGRectGetHeight(self.superview.frame) - selfH;
@@ -151,6 +151,7 @@
 
 - (void)closeButtonDidTouch:(UIButton *)button {
     if ([self.delegate respondsToSelector:@selector(interpreterView:closeButtonDidTouch:)]) {
+        [self.headerView dragImageUpDown:YES];
         [self.delegate interpreterView:self closeButtonDidTouch:nil];
     }
 }

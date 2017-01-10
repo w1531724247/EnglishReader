@@ -8,6 +8,7 @@
 
 #import "InterpreterViewHeaderView.h"
 #import "Masonry.h"
+#import "YYKit.h"
 
 @interface InterpreterViewHeaderView ()
 
@@ -28,6 +29,26 @@
     }
     
     return self;
+}
+
+#pragma mark --- public
+
+- (void)startLoadingAnimation {
+    self.closeButton.hidden = YES;
+    [self.indicationView startAnimating];
+}
+
+- (void)stopLoadingAnimation {
+    self.closeButton.hidden = NO;
+    [self.indicationView stopAnimating];
+}
+
+- (void)dragImageUpDown:(BOOL)upDown {
+    if (upDown) {
+        [self.dragImageView setImage:[UIImage imageNamed:@"drag_up_down_indicatorImage"]];
+    } else {
+        [self.dragImageView setImage:[UIImage imageNamed:@"drag_down_indicatorImage"]];
+    }
 }
 
 #pragma mark --- action
@@ -54,16 +75,6 @@
         make.centerX.equalTo(self.closeButton.mas_centerX);
         make.centerY.equalTo(self.closeButton.mas_centerY);
     }];
-}
-
-- (void)startLoadingAnimation {
-    self.closeButton.hidden = YES;
-    [self.indicationView startAnimating];
-}
-
-- (void)stopLoadingAnimation {
-    self.closeButton.hidden = NO;
-    [self.indicationView stopAnimating];
 }
 
 #pragma mark --- getter
