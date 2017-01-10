@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>doc_name</key>
+		<string>alert_update_vertial</string>
+		<key>doc_content</key>
+		<string>哎呀。这个房间需要更新才能进去快去更新呗</string>
+		<key>doc_detail</key>
+		<string>竖屏房间更新弹窗描述</string>
+	</dict>
+	<dict>
+		<key>doc_name</key>
+		<string>withdraw</string>
+		<key>doc_content</key>
+		<string>暂不可以提现</string>
+		<key>doc_detail</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>doc_name</key>
+		<string>my_profit</string>
+		<key>doc_content</key>
+		<string>友情提示： 星光可直接提现； 牛币收益月结算。</string>
+		<key>doc_detail</key>
+		<string></string>
+	</dict>
+</array>
+</plist>

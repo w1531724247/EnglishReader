@@ -12,102 +12,12 @@
 		570878081E226618004D3AD5 /* paper_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878041E226618004D3AD5 /* paper_3.jpg */; };
 		570878091E226618004D3AD5 /* paper_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878051E226618004D3AD5 /* paper_4.jpg */; };
 		570DC5621E23AD3A00E24D1D /* DocumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */; };
-		570DC5651E23B08100E24D1D /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5641E23B08100E24D1D /* UIColor+Extention.m */; };
 		570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5691E23B33A00E24D1D /* FileManager.m */; };
 		570DC5701E23B3F800E24D1D /* DocumentListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC56F1E23B3F800E24D1D /* DocumentListDataSource.m */; };
 		570DC5731E23B68E00E24D1D /* DocumentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5721E23B68E00E24D1D /* DocumentListCell.m */; };
 		57119F411E220F3A00B929EB /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F401E220F3A00B929EB /* APIManager.m */; };
-		57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */; };
 		57119F661E22413E00B929EB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57119F651E22413E00B929EB /* CoreText.framework */; };
-		57180EC81E23276200FFD097 /* UIWebView+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 57180EC71E23276200FFD097 /* UIWebView+JS.m */; };
-		57180EDA1E235CFD00FFD097 /* TET_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180ED91E235CFD00FFD097 /* TET_ios.framework */; };
 		57180EDC1E235D6C00FFD097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */; };
-		57180F341E235E8E00FFD097 /* 83pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EDE1E235E8E00FFD097 /* 83pv-RKSJ-H */; };
-		57180F351E235E8E00FFD097 /* 90ms-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EDF1E235E8E00FFD097 /* 90ms-RKSJ-H */; };
-		57180F361E235E8E00FFD097 /* 90ms-RKSJ-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE01E235E8E00FFD097 /* 90ms-RKSJ-UCS2 */; };
-		57180F371E235E8E00FFD097 /* 90ms-RKSJ-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE11E235E8E00FFD097 /* 90ms-RKSJ-V */; };
-		57180F381E235E8E00FFD097 /* 90msp-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE21E235E8E00FFD097 /* 90msp-RKSJ-H */; };
-		57180F391E235E8E00FFD097 /* 90msp-RKSJ-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE31E235E8E00FFD097 /* 90msp-RKSJ-V */; };
-		57180F3A1E235E8E00FFD097 /* 90pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE41E235E8E00FFD097 /* 90pv-RKSJ-H */; };
-		57180F3B1E235E8E00FFD097 /* 90pv-RKSJ-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE51E235E8E00FFD097 /* 90pv-RKSJ-UCS2 */; };
-		57180F3C1E235E8E00FFD097 /* 90pv-RKSJ-UCS2C in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE61E235E8E00FFD097 /* 90pv-RKSJ-UCS2C */; };
-		57180F3D1E235E8E00FFD097 /* Add-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE71E235E8E00FFD097 /* Add-RKSJ-H */; };
-		57180F3E1E235E8E00FFD097 /* Add-RKSJ-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE81E235E8E00FFD097 /* Add-RKSJ-V */; };
-		57180F3F1E235E8E00FFD097 /* Adobe-CNS1-6 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EE91E235E8E00FFD097 /* Adobe-CNS1-6 */; };
-		57180F401E235E8E00FFD097 /* Adobe-CNS1-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EEA1E235E8E00FFD097 /* Adobe-CNS1-UCS2 */; };
-		57180F411E235E8E00FFD097 /* Adobe-GB1-5 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EEB1E235E8E00FFD097 /* Adobe-GB1-5 */; };
-		57180F421E235E8E00FFD097 /* Adobe-GB1-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EEC1E235E8E00FFD097 /* Adobe-GB1-UCS2 */; };
-		57180F431E235E8E00FFD097 /* Adobe-Japan1-6 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EED1E235E8E00FFD097 /* Adobe-Japan1-6 */; };
-		57180F441E235E8E00FFD097 /* Adobe-Japan1-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EEE1E235E8E00FFD097 /* Adobe-Japan1-UCS2 */; };
-		57180F451E235E8E00FFD097 /* Adobe-Korea1-2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EEF1E235E8E00FFD097 /* Adobe-Korea1-2 */; };
-		57180F461E235E8E00FFD097 /* Adobe-Korea1-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF01E235E8E00FFD097 /* Adobe-Korea1-UCS2 */; };
-		57180F471E235E8E00FFD097 /* B5pc-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF11E235E8E00FFD097 /* B5pc-H */; };
-		57180F481E235E8E00FFD097 /* B5pc-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF21E235E8E00FFD097 /* B5pc-UCS2 */; };
-		57180F491E235E8E00FFD097 /* B5pc-UCS2C in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF31E235E8E00FFD097 /* B5pc-UCS2C */; };
-		57180F4A1E235E8E00FFD097 /* B5pc-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF41E235E8E00FFD097 /* B5pc-V */; };
-		57180F4B1E235E8E00FFD097 /* CNS-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF51E235E8E00FFD097 /* CNS-EUC-H */; };
-		57180F4C1E235E8E00FFD097 /* CNS-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF61E235E8E00FFD097 /* CNS-EUC-V */; };
-		57180F4D1E235E8E00FFD097 /* cp932.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF71E235E8E00FFD097 /* cp932.txt */; };
-		57180F4E1E235E8E00FFD097 /* cp936.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF81E235E8E00FFD097 /* cp936.txt */; };
-		57180F4F1E235E8E00FFD097 /* cp949.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57180EF91E235E8E00FFD097 /* cp949.txt */; };
-		57180F501E235E8E00FFD097 /* cp950.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57180EFA1E235E8E00FFD097 /* cp950.txt */; };
-		57180F511E235E8E00FFD097 /* ETen-B5-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EFB1E235E8E00FFD097 /* ETen-B5-H */; };
-		57180F521E235E8E00FFD097 /* ETen-B5-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180EFC1E235E8E00FFD097 /* ETen-B5-UCS2 */; };
-		57180F531E235E8E00FFD097 /* ETen-B5-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180EFD1E235E8E00FFD097 /* ETen-B5-V */; };
-		57180F541E235E8E00FFD097 /* ETenms-B5-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EFE1E235E8E00FFD097 /* ETenms-B5-H */; };
-		57180F551E235E8E00FFD097 /* ETenms-B5-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180EFF1E235E8E00FFD097 /* ETenms-B5-V */; };
-		57180F561E235E8E00FFD097 /* EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F001E235E8E00FFD097 /* EUC-H */; };
-		57180F571E235E8E00FFD097 /* EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F011E235E8E00FFD097 /* EUC-V */; };
-		57180F581E235E8E00FFD097 /* Ext-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F021E235E8E00FFD097 /* Ext-RKSJ-H */; };
-		57180F591E235E8E00FFD097 /* Ext-RKSJ-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F031E235E8E00FFD097 /* Ext-RKSJ-V */; };
-		57180F5A1E235E8E00FFD097 /* GB-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F041E235E8E00FFD097 /* GB-EUC-H */; };
-		57180F5B1E235E8E00FFD097 /* GB-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F051E235E8E00FFD097 /* GB-EUC-V */; };
-		57180F5C1E235E8E00FFD097 /* GBK-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F061E235E8E00FFD097 /* GBK-EUC-H */; };
-		57180F5D1E235E8E00FFD097 /* GBK-EUC-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180F071E235E8E00FFD097 /* GBK-EUC-UCS2 */; };
-		57180F5E1E235E8E00FFD097 /* GBK-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F081E235E8E00FFD097 /* GBK-EUC-V */; };
-		57180F5F1E235E8E00FFD097 /* GBK2K-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F091E235E8E00FFD097 /* GBK2K-H */; };
-		57180F601E235E8E00FFD097 /* GBK2K-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F0A1E235E8E00FFD097 /* GBK2K-V */; };
-		57180F611E235E8E00FFD097 /* GBKp-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F0B1E235E8E00FFD097 /* GBKp-EUC-H */; };
-		57180F621E235E8E00FFD097 /* GBKp-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F0C1E235E8E00FFD097 /* GBKp-EUC-V */; };
-		57180F631E235E8E00FFD097 /* GBpc-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F0D1E235E8E00FFD097 /* GBpc-EUC-H */; };
-		57180F641E235E8E00FFD097 /* GBpc-EUC-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180F0E1E235E8E00FFD097 /* GBpc-EUC-UCS2 */; };
-		57180F651E235E8E00FFD097 /* GBpc-EUC-UCS2C in Resources */ = {isa = PBXBuildFile; fileRef = 57180F0F1E235E8E00FFD097 /* GBpc-EUC-UCS2C */; };
-		57180F661E235E8E00FFD097 /* GBpc-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F101E235E8E00FFD097 /* GBpc-EUC-V */; };
-		57180F671E235E8E00FFD097 /* GBT-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F111E235E8E00FFD097 /* GBT-EUC-H */; };
-		57180F681E235E8E00FFD097 /* GBT-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F121E235E8E00FFD097 /* GBT-EUC-V */; };
-		57180F691E235E8E00FFD097 /* H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F131E235E8E00FFD097 /* H */; };
-		57180F6A1E235E8E00FFD097 /* HKscs-B5-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F141E235E8E00FFD097 /* HKscs-B5-H */; };
-		57180F6B1E235E8E00FFD097 /* HKscs-B5-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F151E235E8E00FFD097 /* HKscs-B5-V */; };
-		57180F6C1E235E8E00FFD097 /* KSC-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F161E235E8E00FFD097 /* KSC-EUC-H */; };
-		57180F6D1E235E8E00FFD097 /* KSC-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F171E235E8E00FFD097 /* KSC-EUC-V */; };
-		57180F6E1E235E8E00FFD097 /* KSCms-UHC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F181E235E8E00FFD097 /* KSCms-UHC-H */; };
-		57180F6F1E235E8E00FFD097 /* KSCms-UHC-HW-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F191E235E8E00FFD097 /* KSCms-UHC-HW-H */; };
-		57180F701E235E8E00FFD097 /* KSCms-UHC-HW-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F1A1E235E8E00FFD097 /* KSCms-UHC-HW-V */; };
-		57180F711E235E8E00FFD097 /* KSCms-UHC-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180F1B1E235E8E00FFD097 /* KSCms-UHC-UCS2 */; };
-		57180F721E235E8E00FFD097 /* KSCms-UHC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F1C1E235E8E00FFD097 /* KSCms-UHC-V */; };
-		57180F731E235E8E00FFD097 /* KSCpc-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F1D1E235E8E00FFD097 /* KSCpc-EUC-H */; };
-		57180F741E235E8E00FFD097 /* KSCpc-EUC-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 57180F1E1E235E8E00FFD097 /* KSCpc-EUC-UCS2 */; };
-		57180F751E235E8E00FFD097 /* KSCpc-EUC-UCS2C in Resources */ = {isa = PBXBuildFile; fileRef = 57180F1F1E235E8E00FFD097 /* KSCpc-EUC-UCS2C */; };
-		57180F761E235E8E00FFD097 /* KSCpc-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F201E235E8E00FFD097 /* KSCpc-EUC-V */; };
-		57180F771E235E8E00FFD097 /* UniCNS-UCS2-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F211E235E8E00FFD097 /* UniCNS-UCS2-H */; };
-		57180F781E235E8E00FFD097 /* UniCNS-UCS2-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F221E235E8E00FFD097 /* UniCNS-UCS2-V */; };
-		57180F791E235E8E00FFD097 /* UniCNS-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F231E235E8E00FFD097 /* UniCNS-UTF16-H */; };
-		57180F7A1E235E8E00FFD097 /* UniCNS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F241E235E8E00FFD097 /* UniCNS-UTF16-V */; };
-		57180F7B1E235E8E00FFD097 /* UniGB-UCS2-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F251E235E8E00FFD097 /* UniGB-UCS2-H */; };
-		57180F7C1E235E8E00FFD097 /* UniGB-UCS2-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F261E235E8E00FFD097 /* UniGB-UCS2-V */; };
-		57180F7D1E235E8E00FFD097 /* UniGB-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F271E235E8E00FFD097 /* UniGB-UTF16-H */; };
-		57180F7E1E235E8E00FFD097 /* UniGB-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F281E235E8E00FFD097 /* UniGB-UTF16-V */; };
-		57180F7F1E235E8E00FFD097 /* UniJIS-UCS2-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F291E235E8E00FFD097 /* UniJIS-UCS2-H */; };
-		57180F801E235E8E00FFD097 /* UniJIS-UCS2-HW-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F2A1E235E8E00FFD097 /* UniJIS-UCS2-HW-H */; };
-		57180F811E235E8E00FFD097 /* UniJIS-UCS2-HW-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F2B1E235E8E00FFD097 /* UniJIS-UCS2-HW-V */; };
-		57180F821E235E8E00FFD097 /* UniJIS-UCS2-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F2C1E235E8E00FFD097 /* UniJIS-UCS2-V */; };
-		57180F831E235E8E00FFD097 /* UniJIS-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F2D1E235E8E00FFD097 /* UniJIS-UTF16-H */; };
-		57180F841E235E8E00FFD097 /* UniJIS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F2E1E235E8E00FFD097 /* UniJIS-UTF16-V */; };
-		57180F851E235E8E00FFD097 /* UniKS-UCS2-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F2F1E235E8E00FFD097 /* UniKS-UCS2-H */; };
-		57180F861E235E8E00FFD097 /* UniKS-UCS2-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F301E235E8E00FFD097 /* UniKS-UCS2-V */; };
-		57180F871E235E8E00FFD097 /* UniKS-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F311E235E8E00FFD097 /* UniKS-UTF16-H */; };
-		57180F881E235E8E00FFD097 /* UniKS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F321E235E8E00FFD097 /* UniKS-UTF16-V */; };
-		57180F891E235E8E00FFD097 /* V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F331E235E8E00FFD097 /* V */; };
 		575F5E711E249F870070E850 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E701E249F870070E850 /* UIManager.m */; };
 		575F5EB71E24F6A70070E850 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E8A1E24F6A70070E850 /* ArticleDetailViewController.m */; };
 		575F5EB81E24F6A70070E850 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E8D1E24F6A70070E850 /* ArticleTextView.m */; };
@@ -125,6 +35,96 @@
 		575F5EC41E24F6A70070E850 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EAF1E24F6A70070E850 /* SettingViewController.m */; };
 		575F5EC51E24F6A70070E850 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EB31E24F6A70070E850 /* WordListViewController.m */; };
 		575F5EC61E24F6A70070E850 /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EB61E24F6A70070E850 /* WordModel.m */; };
+		575F5F201E24F7720070E850 /* 83pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */; };
+		575F5F211E24F7720070E850 /* 90ms-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECA1E24F7720070E850 /* 90ms-RKSJ-H */; };
+		575F5F221E24F7720070E850 /* 90ms-RKSJ-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECB1E24F7720070E850 /* 90ms-RKSJ-UCS2 */; };
+		575F5F231E24F7720070E850 /* 90ms-RKSJ-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECC1E24F7720070E850 /* 90ms-RKSJ-V */; };
+		575F5F241E24F7720070E850 /* 90msp-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECD1E24F7720070E850 /* 90msp-RKSJ-H */; };
+		575F5F251E24F7720070E850 /* 90msp-RKSJ-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECE1E24F7720070E850 /* 90msp-RKSJ-V */; };
+		575F5F261E24F7720070E850 /* 90pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECF1E24F7720070E850 /* 90pv-RKSJ-H */; };
+		575F5F271E24F7720070E850 /* 90pv-RKSJ-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED01E24F7720070E850 /* 90pv-RKSJ-UCS2 */; };
+		575F5F281E24F7720070E850 /* 90pv-RKSJ-UCS2C in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED11E24F7720070E850 /* 90pv-RKSJ-UCS2C */; };
+		575F5F291E24F7720070E850 /* Add-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED21E24F7720070E850 /* Add-RKSJ-H */; };
+		575F5F2A1E24F7720070E850 /* Add-RKSJ-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED31E24F7720070E850 /* Add-RKSJ-V */; };
+		575F5F2B1E24F7720070E850 /* Adobe-CNS1-6 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED41E24F7720070E850 /* Adobe-CNS1-6 */; };
+		575F5F2C1E24F7720070E850 /* Adobe-CNS1-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED51E24F7720070E850 /* Adobe-CNS1-UCS2 */; };
+		575F5F2D1E24F7720070E850 /* Adobe-GB1-5 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED61E24F7720070E850 /* Adobe-GB1-5 */; };
+		575F5F2E1E24F7720070E850 /* Adobe-GB1-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED71E24F7720070E850 /* Adobe-GB1-UCS2 */; };
+		575F5F2F1E24F7720070E850 /* Adobe-Japan1-6 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED81E24F7720070E850 /* Adobe-Japan1-6 */; };
+		575F5F301E24F7720070E850 /* Adobe-Japan1-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ED91E24F7720070E850 /* Adobe-Japan1-UCS2 */; };
+		575F5F311E24F7720070E850 /* Adobe-Korea1-2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EDA1E24F7720070E850 /* Adobe-Korea1-2 */; };
+		575F5F321E24F7720070E850 /* Adobe-Korea1-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EDB1E24F7720070E850 /* Adobe-Korea1-UCS2 */; };
+		575F5F331E24F7720070E850 /* B5pc-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EDC1E24F7720070E850 /* B5pc-H */; };
+		575F5F341E24F7720070E850 /* B5pc-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EDD1E24F7720070E850 /* B5pc-UCS2 */; };
+		575F5F351E24F7720070E850 /* B5pc-UCS2C in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EDE1E24F7720070E850 /* B5pc-UCS2C */; };
+		575F5F361E24F7720070E850 /* B5pc-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EDF1E24F7720070E850 /* B5pc-V */; };
+		575F5F371E24F7720070E850 /* CNS-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE01E24F7720070E850 /* CNS-EUC-H */; };
+		575F5F381E24F7720070E850 /* CNS-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE11E24F7720070E850 /* CNS-EUC-V */; };
+		575F5F391E24F7720070E850 /* cp932.txt in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE21E24F7720070E850 /* cp932.txt */; };
+		575F5F3A1E24F7720070E850 /* cp936.txt in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE31E24F7720070E850 /* cp936.txt */; };
+		575F5F3B1E24F7720070E850 /* cp949.txt in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE41E24F7720070E850 /* cp949.txt */; };
+		575F5F3C1E24F7720070E850 /* cp950.txt in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE51E24F7720070E850 /* cp950.txt */; };
+		575F5F3D1E24F7720070E850 /* ETen-B5-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE61E24F7720070E850 /* ETen-B5-H */; };
+		575F5F3E1E24F7720070E850 /* ETen-B5-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE71E24F7720070E850 /* ETen-B5-UCS2 */; };
+		575F5F3F1E24F7720070E850 /* ETen-B5-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE81E24F7720070E850 /* ETen-B5-V */; };
+		575F5F401E24F7720070E850 /* ETenms-B5-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EE91E24F7720070E850 /* ETenms-B5-H */; };
+		575F5F411E24F7720070E850 /* ETenms-B5-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EEA1E24F7720070E850 /* ETenms-B5-V */; };
+		575F5F421E24F7720070E850 /* EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EEB1E24F7720070E850 /* EUC-H */; };
+		575F5F431E24F7720070E850 /* EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EEC1E24F7720070E850 /* EUC-V */; };
+		575F5F441E24F7720070E850 /* Ext-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EED1E24F7720070E850 /* Ext-RKSJ-H */; };
+		575F5F451E24F7720070E850 /* Ext-RKSJ-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EEE1E24F7720070E850 /* Ext-RKSJ-V */; };
+		575F5F461E24F7720070E850 /* GB-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EEF1E24F7720070E850 /* GB-EUC-H */; };
+		575F5F471E24F7720070E850 /* GB-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF01E24F7720070E850 /* GB-EUC-V */; };
+		575F5F481E24F7720070E850 /* GBK-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF11E24F7720070E850 /* GBK-EUC-H */; };
+		575F5F491E24F7720070E850 /* GBK-EUC-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF21E24F7720070E850 /* GBK-EUC-UCS2 */; };
+		575F5F4A1E24F7720070E850 /* GBK-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF31E24F7720070E850 /* GBK-EUC-V */; };
+		575F5F4B1E24F7720070E850 /* GBK2K-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF41E24F7720070E850 /* GBK2K-H */; };
+		575F5F4C1E24F7720070E850 /* GBK2K-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF51E24F7720070E850 /* GBK2K-V */; };
+		575F5F4D1E24F7720070E850 /* GBKp-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF61E24F7720070E850 /* GBKp-EUC-H */; };
+		575F5F4E1E24F7720070E850 /* GBKp-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF71E24F7720070E850 /* GBKp-EUC-V */; };
+		575F5F4F1E24F7720070E850 /* GBpc-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF81E24F7720070E850 /* GBpc-EUC-H */; };
+		575F5F501E24F7720070E850 /* GBpc-EUC-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EF91E24F7720070E850 /* GBpc-EUC-UCS2 */; };
+		575F5F511E24F7720070E850 /* GBpc-EUC-UCS2C in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EFA1E24F7720070E850 /* GBpc-EUC-UCS2C */; };
+		575F5F521E24F7720070E850 /* GBpc-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EFB1E24F7720070E850 /* GBpc-EUC-V */; };
+		575F5F531E24F7720070E850 /* GBT-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EFC1E24F7720070E850 /* GBT-EUC-H */; };
+		575F5F541E24F7720070E850 /* GBT-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EFD1E24F7720070E850 /* GBT-EUC-V */; };
+		575F5F551E24F7720070E850 /* H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EFE1E24F7720070E850 /* H */; };
+		575F5F561E24F7720070E850 /* HKscs-B5-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EFF1E24F7720070E850 /* HKscs-B5-H */; };
+		575F5F571E24F7720070E850 /* HKscs-B5-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F001E24F7720070E850 /* HKscs-B5-V */; };
+		575F5F581E24F7720070E850 /* KSC-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F011E24F7720070E850 /* KSC-EUC-H */; };
+		575F5F591E24F7720070E850 /* KSC-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F021E24F7720070E850 /* KSC-EUC-V */; };
+		575F5F5A1E24F7720070E850 /* KSCms-UHC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F031E24F7720070E850 /* KSCms-UHC-H */; };
+		575F5F5B1E24F7720070E850 /* KSCms-UHC-HW-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F041E24F7720070E850 /* KSCms-UHC-HW-H */; };
+		575F5F5C1E24F7720070E850 /* KSCms-UHC-HW-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F051E24F7720070E850 /* KSCms-UHC-HW-V */; };
+		575F5F5D1E24F7720070E850 /* KSCms-UHC-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F061E24F7720070E850 /* KSCms-UHC-UCS2 */; };
+		575F5F5E1E24F7720070E850 /* KSCms-UHC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F071E24F7720070E850 /* KSCms-UHC-V */; };
+		575F5F5F1E24F7720070E850 /* KSCpc-EUC-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F081E24F7720070E850 /* KSCpc-EUC-H */; };
+		575F5F601E24F7720070E850 /* KSCpc-EUC-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F091E24F7720070E850 /* KSCpc-EUC-UCS2 */; };
+		575F5F611E24F7720070E850 /* KSCpc-EUC-UCS2C in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F0A1E24F7720070E850 /* KSCpc-EUC-UCS2C */; };
+		575F5F621E24F7720070E850 /* KSCpc-EUC-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F0B1E24F7720070E850 /* KSCpc-EUC-V */; };
+		575F5F631E24F7720070E850 /* UniCNS-UCS2-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F0C1E24F7720070E850 /* UniCNS-UCS2-H */; };
+		575F5F641E24F7720070E850 /* UniCNS-UCS2-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F0D1E24F7720070E850 /* UniCNS-UCS2-V */; };
+		575F5F651E24F7720070E850 /* UniCNS-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F0E1E24F7720070E850 /* UniCNS-UTF16-H */; };
+		575F5F661E24F7720070E850 /* UniCNS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F0F1E24F7720070E850 /* UniCNS-UTF16-V */; };
+		575F5F671E24F7720070E850 /* UniGB-UCS2-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F101E24F7720070E850 /* UniGB-UCS2-H */; };
+		575F5F681E24F7720070E850 /* UniGB-UCS2-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F111E24F7720070E850 /* UniGB-UCS2-V */; };
+		575F5F691E24F7720070E850 /* UniGB-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F121E24F7720070E850 /* UniGB-UTF16-H */; };
+		575F5F6A1E24F7720070E850 /* UniGB-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F131E24F7720070E850 /* UniGB-UTF16-V */; };
+		575F5F6B1E24F7720070E850 /* UniJIS-UCS2-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F141E24F7720070E850 /* UniJIS-UCS2-H */; };
+		575F5F6C1E24F7720070E850 /* UniJIS-UCS2-HW-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F151E24F7720070E850 /* UniJIS-UCS2-HW-H */; };
+		575F5F6D1E24F7720070E850 /* UniJIS-UCS2-HW-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F161E24F7720070E850 /* UniJIS-UCS2-HW-V */; };
+		575F5F6E1E24F7720070E850 /* UniJIS-UCS2-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F171E24F7720070E850 /* UniJIS-UCS2-V */; };
+		575F5F6F1E24F7720070E850 /* UniJIS-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F181E24F7720070E850 /* UniJIS-UTF16-H */; };
+		575F5F701E24F7720070E850 /* UniJIS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F191E24F7720070E850 /* UniJIS-UTF16-V */; };
+		575F5F711E24F7720070E850 /* UniKS-UCS2-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F1A1E24F7720070E850 /* UniKS-UCS2-H */; };
+		575F5F721E24F7720070E850 /* UniKS-UCS2-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F1B1E24F7720070E850 /* UniKS-UCS2-V */; };
+		575F5F731E24F7720070E850 /* UniKS-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F1C1E24F7720070E850 /* UniKS-UTF16-H */; };
+		575F5F741E24F7720070E850 /* UniKS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F1D1E24F7720070E850 /* UniKS-UTF16-V */; };
+		575F5F751E24F7720070E850 /* V in Resources */ = {isa = PBXBuildFile; fileRef = 575F5F1E1E24F7720070E850 /* V */; };
+		575F5F761E24F7720070E850 /* TET_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575F5F1F1E24F7720070E850 /* TET_ios.framework */; };
+		575F5F7E1E24F78C0070E850 /* NSDictionary+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F791E24F78C0070E850 /* NSDictionary+JSONHelper.m */; };
+		575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F7B1E24F78C0070E850 /* UIColor+Extention.m */; };
+		575F5F801E24F78C0070E850 /* UIWebView+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F7D1E24F78C0070E850 /* UIWebView+JS.m */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -160,8 +160,6 @@
 		570878051E226618004D3AD5 /* paper_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_4.jpg; sourceTree = "<group>"; };
 		570DC5601E23AD3A00E24D1D /* DocumentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListViewController.h; sourceTree = "<group>"; };
 		570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListViewController.m; sourceTree = "<group>"; };
-		570DC5631E23B08100E24D1D /* UIColor+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
-		570DC5641E23B08100E24D1D /* UIColor+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
 		570DC5681E23B33A00E24D1D /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		570DC5691E23B33A00E24D1D /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		570DC56E1E23B3F800E24D1D /* DocumentListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListDataSource.h; sourceTree = "<group>"; };
@@ -172,99 +170,8 @@
 		57119F3F1E220F3A00B929EB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		57119F401E220F3A00B929EB /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		57119F421E220F9100B929EB /* APIManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManagerProtocol.h; sourceTree = "<group>"; };
-		57119F461E221DB300B929EB /* NSDictionary+JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONHelper.h"; sourceTree = "<group>"; };
-		57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONHelper.m"; sourceTree = "<group>"; };
 		57119F651E22413E00B929EB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		57180EC61E23276200FFD097 /* UIWebView+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JS.h"; sourceTree = "<group>"; };
-		57180EC71E23276200FFD097 /* UIWebView+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JS.m"; sourceTree = "<group>"; };
-		57180ED91E235CFD00FFD097 /* TET_ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TET_ios.framework; sourceTree = "<group>"; };
 		57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		57180EDE1E235E8E00FFD097 /* 83pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "83pv-RKSJ-H"; sourceTree = "<group>"; };
-		57180EDF1E235E8E00FFD097 /* 90ms-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90ms-RKSJ-H"; sourceTree = "<group>"; };
-		57180EE01E235E8E00FFD097 /* 90ms-RKSJ-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90ms-RKSJ-UCS2"; sourceTree = "<group>"; };
-		57180EE11E235E8E00FFD097 /* 90ms-RKSJ-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90ms-RKSJ-V"; sourceTree = "<group>"; };
-		57180EE21E235E8E00FFD097 /* 90msp-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90msp-RKSJ-H"; sourceTree = "<group>"; };
-		57180EE31E235E8E00FFD097 /* 90msp-RKSJ-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90msp-RKSJ-V"; sourceTree = "<group>"; };
-		57180EE41E235E8E00FFD097 /* 90pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90pv-RKSJ-H"; sourceTree = "<group>"; };
-		57180EE51E235E8E00FFD097 /* 90pv-RKSJ-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90pv-RKSJ-UCS2"; sourceTree = "<group>"; };
-		57180EE61E235E8E00FFD097 /* 90pv-RKSJ-UCS2C */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90pv-RKSJ-UCS2C"; sourceTree = "<group>"; };
-		57180EE71E235E8E00FFD097 /* Add-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Add-RKSJ-H"; sourceTree = "<group>"; };
-		57180EE81E235E8E00FFD097 /* Add-RKSJ-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Add-RKSJ-V"; sourceTree = "<group>"; };
-		57180EE91E235E8E00FFD097 /* Adobe-CNS1-6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-CNS1-6"; sourceTree = "<group>"; };
-		57180EEA1E235E8E00FFD097 /* Adobe-CNS1-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-CNS1-UCS2"; sourceTree = "<group>"; };
-		57180EEB1E235E8E00FFD097 /* Adobe-GB1-5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-GB1-5"; sourceTree = "<group>"; };
-		57180EEC1E235E8E00FFD097 /* Adobe-GB1-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-GB1-UCS2"; sourceTree = "<group>"; };
-		57180EED1E235E8E00FFD097 /* Adobe-Japan1-6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-Japan1-6"; sourceTree = "<group>"; };
-		57180EEE1E235E8E00FFD097 /* Adobe-Japan1-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-Japan1-UCS2"; sourceTree = "<group>"; };
-		57180EEF1E235E8E00FFD097 /* Adobe-Korea1-2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-Korea1-2"; sourceTree = "<group>"; };
-		57180EF01E235E8E00FFD097 /* Adobe-Korea1-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-Korea1-UCS2"; sourceTree = "<group>"; };
-		57180EF11E235E8E00FFD097 /* B5pc-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "B5pc-H"; sourceTree = "<group>"; };
-		57180EF21E235E8E00FFD097 /* B5pc-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "B5pc-UCS2"; sourceTree = "<group>"; };
-		57180EF31E235E8E00FFD097 /* B5pc-UCS2C */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "B5pc-UCS2C"; sourceTree = "<group>"; };
-		57180EF41E235E8E00FFD097 /* B5pc-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "B5pc-V"; sourceTree = "<group>"; };
-		57180EF51E235E8E00FFD097 /* CNS-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CNS-EUC-H"; sourceTree = "<group>"; };
-		57180EF61E235E8E00FFD097 /* CNS-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CNS-EUC-V"; sourceTree = "<group>"; };
-		57180EF71E235E8E00FFD097 /* cp932.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cp932.txt; sourceTree = "<group>"; };
-		57180EF81E235E8E00FFD097 /* cp936.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cp936.txt; sourceTree = "<group>"; };
-		57180EF91E235E8E00FFD097 /* cp949.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cp949.txt; sourceTree = "<group>"; };
-		57180EFA1E235E8E00FFD097 /* cp950.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cp950.txt; sourceTree = "<group>"; };
-		57180EFB1E235E8E00FFD097 /* ETen-B5-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETen-B5-H"; sourceTree = "<group>"; };
-		57180EFC1E235E8E00FFD097 /* ETen-B5-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETen-B5-UCS2"; sourceTree = "<group>"; };
-		57180EFD1E235E8E00FFD097 /* ETen-B5-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETen-B5-V"; sourceTree = "<group>"; };
-		57180EFE1E235E8E00FFD097 /* ETenms-B5-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETenms-B5-H"; sourceTree = "<group>"; };
-		57180EFF1E235E8E00FFD097 /* ETenms-B5-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETenms-B5-V"; sourceTree = "<group>"; };
-		57180F001E235E8E00FFD097 /* EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "EUC-H"; sourceTree = "<group>"; };
-		57180F011E235E8E00FFD097 /* EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "EUC-V"; sourceTree = "<group>"; };
-		57180F021E235E8E00FFD097 /* Ext-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Ext-RKSJ-H"; sourceTree = "<group>"; };
-		57180F031E235E8E00FFD097 /* Ext-RKSJ-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Ext-RKSJ-V"; sourceTree = "<group>"; };
-		57180F041E235E8E00FFD097 /* GB-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GB-EUC-H"; sourceTree = "<group>"; };
-		57180F051E235E8E00FFD097 /* GB-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GB-EUC-V"; sourceTree = "<group>"; };
-		57180F061E235E8E00FFD097 /* GBK-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK-EUC-H"; sourceTree = "<group>"; };
-		57180F071E235E8E00FFD097 /* GBK-EUC-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK-EUC-UCS2"; sourceTree = "<group>"; };
-		57180F081E235E8E00FFD097 /* GBK-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK-EUC-V"; sourceTree = "<group>"; };
-		57180F091E235E8E00FFD097 /* GBK2K-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK2K-H"; sourceTree = "<group>"; };
-		57180F0A1E235E8E00FFD097 /* GBK2K-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK2K-V"; sourceTree = "<group>"; };
-		57180F0B1E235E8E00FFD097 /* GBKp-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBKp-EUC-H"; sourceTree = "<group>"; };
-		57180F0C1E235E8E00FFD097 /* GBKp-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBKp-EUC-V"; sourceTree = "<group>"; };
-		57180F0D1E235E8E00FFD097 /* GBpc-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBpc-EUC-H"; sourceTree = "<group>"; };
-		57180F0E1E235E8E00FFD097 /* GBpc-EUC-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBpc-EUC-UCS2"; sourceTree = "<group>"; };
-		57180F0F1E235E8E00FFD097 /* GBpc-EUC-UCS2C */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBpc-EUC-UCS2C"; sourceTree = "<group>"; };
-		57180F101E235E8E00FFD097 /* GBpc-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBpc-EUC-V"; sourceTree = "<group>"; };
-		57180F111E235E8E00FFD097 /* GBT-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBT-EUC-H"; sourceTree = "<group>"; };
-		57180F121E235E8E00FFD097 /* GBT-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBT-EUC-V"; sourceTree = "<group>"; };
-		57180F131E235E8E00FFD097 /* H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = H; sourceTree = "<group>"; };
-		57180F141E235E8E00FFD097 /* HKscs-B5-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HKscs-B5-H"; sourceTree = "<group>"; };
-		57180F151E235E8E00FFD097 /* HKscs-B5-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HKscs-B5-V"; sourceTree = "<group>"; };
-		57180F161E235E8E00FFD097 /* KSC-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSC-EUC-H"; sourceTree = "<group>"; };
-		57180F171E235E8E00FFD097 /* KSC-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSC-EUC-V"; sourceTree = "<group>"; };
-		57180F181E235E8E00FFD097 /* KSCms-UHC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-H"; sourceTree = "<group>"; };
-		57180F191E235E8E00FFD097 /* KSCms-UHC-HW-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-HW-H"; sourceTree = "<group>"; };
-		57180F1A1E235E8E00FFD097 /* KSCms-UHC-HW-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-HW-V"; sourceTree = "<group>"; };
-		57180F1B1E235E8E00FFD097 /* KSCms-UHC-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-UCS2"; sourceTree = "<group>"; };
-		57180F1C1E235E8E00FFD097 /* KSCms-UHC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-V"; sourceTree = "<group>"; };
-		57180F1D1E235E8E00FFD097 /* KSCpc-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCpc-EUC-H"; sourceTree = "<group>"; };
-		57180F1E1E235E8E00FFD097 /* KSCpc-EUC-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCpc-EUC-UCS2"; sourceTree = "<group>"; };
-		57180F1F1E235E8E00FFD097 /* KSCpc-EUC-UCS2C */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCpc-EUC-UCS2C"; sourceTree = "<group>"; };
-		57180F201E235E8E00FFD097 /* KSCpc-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCpc-EUC-V"; sourceTree = "<group>"; };
-		57180F211E235E8E00FFD097 /* UniCNS-UCS2-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniCNS-UCS2-H"; sourceTree = "<group>"; };
-		57180F221E235E8E00FFD097 /* UniCNS-UCS2-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniCNS-UCS2-V"; sourceTree = "<group>"; };
-		57180F231E235E8E00FFD097 /* UniCNS-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniCNS-UTF16-H"; sourceTree = "<group>"; };
-		57180F241E235E8E00FFD097 /* UniCNS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniCNS-UTF16-V"; sourceTree = "<group>"; };
-		57180F251E235E8E00FFD097 /* UniGB-UCS2-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniGB-UCS2-H"; sourceTree = "<group>"; };
-		57180F261E235E8E00FFD097 /* UniGB-UCS2-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniGB-UCS2-V"; sourceTree = "<group>"; };
-		57180F271E235E8E00FFD097 /* UniGB-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniGB-UTF16-H"; sourceTree = "<group>"; };
-		57180F281E235E8E00FFD097 /* UniGB-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniGB-UTF16-V"; sourceTree = "<group>"; };
-		57180F291E235E8E00FFD097 /* UniJIS-UCS2-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UCS2-H"; sourceTree = "<group>"; };
-		57180F2A1E235E8E00FFD097 /* UniJIS-UCS2-HW-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UCS2-HW-H"; sourceTree = "<group>"; };
-		57180F2B1E235E8E00FFD097 /* UniJIS-UCS2-HW-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UCS2-HW-V"; sourceTree = "<group>"; };
-		57180F2C1E235E8E00FFD097 /* UniJIS-UCS2-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UCS2-V"; sourceTree = "<group>"; };
-		57180F2D1E235E8E00FFD097 /* UniJIS-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UTF16-H"; sourceTree = "<group>"; };
-		57180F2E1E235E8E00FFD097 /* UniJIS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UTF16-V"; sourceTree = "<group>"; };
-		57180F2F1E235E8E00FFD097 /* UniKS-UCS2-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UCS2-H"; sourceTree = "<group>"; };
-		57180F301E235E8E00FFD097 /* UniKS-UCS2-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UCS2-V"; sourceTree = "<group>"; };
-		57180F311E235E8E00FFD097 /* UniKS-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-H"; sourceTree = "<group>"; };
-		57180F321E235E8E00FFD097 /* UniKS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-V"; sourceTree = "<group>"; };
-		57180F331E235E8E00FFD097 /* V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = V; sourceTree = "<group>"; };
 		575F5E6F1E249F870070E850 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIManager.h; sourceTree = "<group>"; };
 		575F5E701E249F870070E850 /* UIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIManager.m; sourceTree = "<group>"; };
 		575F5E891E24F6A70070E850 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
@@ -300,6 +207,99 @@
 		575F5EB31E24F6A70070E850 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
 		575F5EB51E24F6A70070E850 /* WordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordModel.h; sourceTree = "<group>"; };
 		575F5EB61E24F6A70070E850 /* WordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordModel.m; sourceTree = "<group>"; };
+		575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "83pv-RKSJ-H"; sourceTree = "<group>"; };
+		575F5ECA1E24F7720070E850 /* 90ms-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90ms-RKSJ-H"; sourceTree = "<group>"; };
+		575F5ECB1E24F7720070E850 /* 90ms-RKSJ-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90ms-RKSJ-UCS2"; sourceTree = "<group>"; };
+		575F5ECC1E24F7720070E850 /* 90ms-RKSJ-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90ms-RKSJ-V"; sourceTree = "<group>"; };
+		575F5ECD1E24F7720070E850 /* 90msp-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90msp-RKSJ-H"; sourceTree = "<group>"; };
+		575F5ECE1E24F7720070E850 /* 90msp-RKSJ-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90msp-RKSJ-V"; sourceTree = "<group>"; };
+		575F5ECF1E24F7720070E850 /* 90pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90pv-RKSJ-H"; sourceTree = "<group>"; };
+		575F5ED01E24F7720070E850 /* 90pv-RKSJ-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90pv-RKSJ-UCS2"; sourceTree = "<group>"; };
+		575F5ED11E24F7720070E850 /* 90pv-RKSJ-UCS2C */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90pv-RKSJ-UCS2C"; sourceTree = "<group>"; };
+		575F5ED21E24F7720070E850 /* Add-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Add-RKSJ-H"; sourceTree = "<group>"; };
+		575F5ED31E24F7720070E850 /* Add-RKSJ-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Add-RKSJ-V"; sourceTree = "<group>"; };
+		575F5ED41E24F7720070E850 /* Adobe-CNS1-6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-CNS1-6"; sourceTree = "<group>"; };
+		575F5ED51E24F7720070E850 /* Adobe-CNS1-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-CNS1-UCS2"; sourceTree = "<group>"; };
+		575F5ED61E24F7720070E850 /* Adobe-GB1-5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-GB1-5"; sourceTree = "<group>"; };
+		575F5ED71E24F7720070E850 /* Adobe-GB1-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-GB1-UCS2"; sourceTree = "<group>"; };
+		575F5ED81E24F7720070E850 /* Adobe-Japan1-6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-Japan1-6"; sourceTree = "<group>"; };
+		575F5ED91E24F7720070E850 /* Adobe-Japan1-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-Japan1-UCS2"; sourceTree = "<group>"; };
+		575F5EDA1E24F7720070E850 /* Adobe-Korea1-2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-Korea1-2"; sourceTree = "<group>"; };
+		575F5EDB1E24F7720070E850 /* Adobe-Korea1-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Adobe-Korea1-UCS2"; sourceTree = "<group>"; };
+		575F5EDC1E24F7720070E850 /* B5pc-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "B5pc-H"; sourceTree = "<group>"; };
+		575F5EDD1E24F7720070E850 /* B5pc-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "B5pc-UCS2"; sourceTree = "<group>"; };
+		575F5EDE1E24F7720070E850 /* B5pc-UCS2C */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "B5pc-UCS2C"; sourceTree = "<group>"; };
+		575F5EDF1E24F7720070E850 /* B5pc-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "B5pc-V"; sourceTree = "<group>"; };
+		575F5EE01E24F7720070E850 /* CNS-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CNS-EUC-H"; sourceTree = "<group>"; };
+		575F5EE11E24F7720070E850 /* CNS-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CNS-EUC-V"; sourceTree = "<group>"; };
+		575F5EE21E24F7720070E850 /* cp932.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cp932.txt; sourceTree = "<group>"; };
+		575F5EE31E24F7720070E850 /* cp936.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cp936.txt; sourceTree = "<group>"; };
+		575F5EE41E24F7720070E850 /* cp949.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cp949.txt; sourceTree = "<group>"; };
+		575F5EE51E24F7720070E850 /* cp950.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cp950.txt; sourceTree = "<group>"; };
+		575F5EE61E24F7720070E850 /* ETen-B5-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETen-B5-H"; sourceTree = "<group>"; };
+		575F5EE71E24F7720070E850 /* ETen-B5-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETen-B5-UCS2"; sourceTree = "<group>"; };
+		575F5EE81E24F7720070E850 /* ETen-B5-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETen-B5-V"; sourceTree = "<group>"; };
+		575F5EE91E24F7720070E850 /* ETenms-B5-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETenms-B5-H"; sourceTree = "<group>"; };
+		575F5EEA1E24F7720070E850 /* ETenms-B5-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ETenms-B5-V"; sourceTree = "<group>"; };
+		575F5EEB1E24F7720070E850 /* EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "EUC-H"; sourceTree = "<group>"; };
+		575F5EEC1E24F7720070E850 /* EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "EUC-V"; sourceTree = "<group>"; };
+		575F5EED1E24F7720070E850 /* Ext-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Ext-RKSJ-H"; sourceTree = "<group>"; };
+		575F5EEE1E24F7720070E850 /* Ext-RKSJ-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Ext-RKSJ-V"; sourceTree = "<group>"; };
+		575F5EEF1E24F7720070E850 /* GB-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GB-EUC-H"; sourceTree = "<group>"; };
+		575F5EF01E24F7720070E850 /* GB-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GB-EUC-V"; sourceTree = "<group>"; };
+		575F5EF11E24F7720070E850 /* GBK-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK-EUC-H"; sourceTree = "<group>"; };
+		575F5EF21E24F7720070E850 /* GBK-EUC-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK-EUC-UCS2"; sourceTree = "<group>"; };
+		575F5EF31E24F7720070E850 /* GBK-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK-EUC-V"; sourceTree = "<group>"; };
+		575F5EF41E24F7720070E850 /* GBK2K-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK2K-H"; sourceTree = "<group>"; };
+		575F5EF51E24F7720070E850 /* GBK2K-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBK2K-V"; sourceTree = "<group>"; };
+		575F5EF61E24F7720070E850 /* GBKp-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBKp-EUC-H"; sourceTree = "<group>"; };
+		575F5EF71E24F7720070E850 /* GBKp-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBKp-EUC-V"; sourceTree = "<group>"; };
+		575F5EF81E24F7720070E850 /* GBpc-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBpc-EUC-H"; sourceTree = "<group>"; };
+		575F5EF91E24F7720070E850 /* GBpc-EUC-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBpc-EUC-UCS2"; sourceTree = "<group>"; };
+		575F5EFA1E24F7720070E850 /* GBpc-EUC-UCS2C */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBpc-EUC-UCS2C"; sourceTree = "<group>"; };
+		575F5EFB1E24F7720070E850 /* GBpc-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBpc-EUC-V"; sourceTree = "<group>"; };
+		575F5EFC1E24F7720070E850 /* GBT-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBT-EUC-H"; sourceTree = "<group>"; };
+		575F5EFD1E24F7720070E850 /* GBT-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GBT-EUC-V"; sourceTree = "<group>"; };
+		575F5EFE1E24F7720070E850 /* H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = H; sourceTree = "<group>"; };
+		575F5EFF1E24F7720070E850 /* HKscs-B5-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HKscs-B5-H"; sourceTree = "<group>"; };
+		575F5F001E24F7720070E850 /* HKscs-B5-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "HKscs-B5-V"; sourceTree = "<group>"; };
+		575F5F011E24F7720070E850 /* KSC-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSC-EUC-H"; sourceTree = "<group>"; };
+		575F5F021E24F7720070E850 /* KSC-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSC-EUC-V"; sourceTree = "<group>"; };
+		575F5F031E24F7720070E850 /* KSCms-UHC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-H"; sourceTree = "<group>"; };
+		575F5F041E24F7720070E850 /* KSCms-UHC-HW-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-HW-H"; sourceTree = "<group>"; };
+		575F5F051E24F7720070E850 /* KSCms-UHC-HW-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-HW-V"; sourceTree = "<group>"; };
+		575F5F061E24F7720070E850 /* KSCms-UHC-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-UCS2"; sourceTree = "<group>"; };
+		575F5F071E24F7720070E850 /* KSCms-UHC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCms-UHC-V"; sourceTree = "<group>"; };
+		575F5F081E24F7720070E850 /* KSCpc-EUC-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCpc-EUC-H"; sourceTree = "<group>"; };
+		575F5F091E24F7720070E850 /* KSCpc-EUC-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCpc-EUC-UCS2"; sourceTree = "<group>"; };
+		575F5F0A1E24F7720070E850 /* KSCpc-EUC-UCS2C */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCpc-EUC-UCS2C"; sourceTree = "<group>"; };
+		575F5F0B1E24F7720070E850 /* KSCpc-EUC-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KSCpc-EUC-V"; sourceTree = "<group>"; };
+		575F5F0C1E24F7720070E850 /* UniCNS-UCS2-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniCNS-UCS2-H"; sourceTree = "<group>"; };
+		575F5F0D1E24F7720070E850 /* UniCNS-UCS2-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniCNS-UCS2-V"; sourceTree = "<group>"; };
+		575F5F0E1E24F7720070E850 /* UniCNS-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniCNS-UTF16-H"; sourceTree = "<group>"; };
+		575F5F0F1E24F7720070E850 /* UniCNS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniCNS-UTF16-V"; sourceTree = "<group>"; };
+		575F5F101E24F7720070E850 /* UniGB-UCS2-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniGB-UCS2-H"; sourceTree = "<group>"; };
+		575F5F111E24F7720070E850 /* UniGB-UCS2-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniGB-UCS2-V"; sourceTree = "<group>"; };
+		575F5F121E24F7720070E850 /* UniGB-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniGB-UTF16-H"; sourceTree = "<group>"; };
+		575F5F131E24F7720070E850 /* UniGB-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniGB-UTF16-V"; sourceTree = "<group>"; };
+		575F5F141E24F7720070E850 /* UniJIS-UCS2-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UCS2-H"; sourceTree = "<group>"; };
+		575F5F151E24F7720070E850 /* UniJIS-UCS2-HW-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UCS2-HW-H"; sourceTree = "<group>"; };
+		575F5F161E24F7720070E850 /* UniJIS-UCS2-HW-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UCS2-HW-V"; sourceTree = "<group>"; };
+		575F5F171E24F7720070E850 /* UniJIS-UCS2-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UCS2-V"; sourceTree = "<group>"; };
+		575F5F181E24F7720070E850 /* UniJIS-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UTF16-H"; sourceTree = "<group>"; };
+		575F5F191E24F7720070E850 /* UniJIS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniJIS-UTF16-V"; sourceTree = "<group>"; };
+		575F5F1A1E24F7720070E850 /* UniKS-UCS2-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UCS2-H"; sourceTree = "<group>"; };
+		575F5F1B1E24F7720070E850 /* UniKS-UCS2-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UCS2-V"; sourceTree = "<group>"; };
+		575F5F1C1E24F7720070E850 /* UniKS-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-H"; sourceTree = "<group>"; };
+		575F5F1D1E24F7720070E850 /* UniKS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-V"; sourceTree = "<group>"; };
+		575F5F1E1E24F7720070E850 /* V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = V; sourceTree = "<group>"; };
+		575F5F1F1E24F7720070E850 /* TET_ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TET_ios.framework; sourceTree = "<group>"; };
+		575F5F781E24F78C0070E850 /* NSDictionary+JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONHelper.h"; sourceTree = "<group>"; };
+		575F5F791E24F78C0070E850 /* NSDictionary+JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONHelper.m"; sourceTree = "<group>"; };
+		575F5F7A1E24F78C0070E850 /* UIColor+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
+		575F5F7B1E24F78C0070E850 /* UIColor+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
+		575F5F7C1E24F78C0070E850 /* UIWebView+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JS.h"; sourceTree = "<group>"; };
+		575F5F7D1E24F78C0070E850 /* UIWebView+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JS.m"; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -326,7 +326,7 @@
 			files = (
 				57180EDC1E235D6C00FFD097 /* CoreGraphics.framework in Frameworks */,
 				57119F661E22413E00B929EB /* CoreText.framework in Frameworks */,
-				57180EDA1E235CFD00FFD097 /* TET_ios.framework in Frameworks */,
+				575F5F761E24F7720070E850 /* TET_ios.framework in Frameworks */,
 				5D3330FFF71202D99C8AA74E /* libPods-EnglishReader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,108 +421,6 @@
 				57119F421E220F9100B929EB /* APIManagerProtocol.h */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		57180ED21E23596B00FFD097 /* Extention */ = {
-			isa = PBXGroup;
-			children = (
-				57180EDD1E235E8E00FFD097 /* cmap */,
-				57180ED91E235CFD00FFD097 /* TET_ios.framework */,
-			);
-			path = Extention;
-			sourceTree = "<group>";
-		};
-		57180EDD1E235E8E00FFD097 /* cmap */ = {
-			isa = PBXGroup;
-			children = (
-				57180EDE1E235E8E00FFD097 /* 83pv-RKSJ-H */,
-				57180EDF1E235E8E00FFD097 /* 90ms-RKSJ-H */,
-				57180EE01E235E8E00FFD097 /* 90ms-RKSJ-UCS2 */,
-				57180EE11E235E8E00FFD097 /* 90ms-RKSJ-V */,
-				57180EE21E235E8E00FFD097 /* 90msp-RKSJ-H */,
-				57180EE31E235E8E00FFD097 /* 90msp-RKSJ-V */,
-				57180EE41E235E8E00FFD097 /* 90pv-RKSJ-H */,
-				57180EE51E235E8E00FFD097 /* 90pv-RKSJ-UCS2 */,
-				57180EE61E235E8E00FFD097 /* 90pv-RKSJ-UCS2C */,
-				57180EE71E235E8E00FFD097 /* Add-RKSJ-H */,
-				57180EE81E235E8E00FFD097 /* Add-RKSJ-V */,
-				57180EE91E235E8E00FFD097 /* Adobe-CNS1-6 */,
-				57180EEA1E235E8E00FFD097 /* Adobe-CNS1-UCS2 */,
-				57180EEB1E235E8E00FFD097 /* Adobe-GB1-5 */,
-				57180EEC1E235E8E00FFD097 /* Adobe-GB1-UCS2 */,
-				57180EED1E235E8E00FFD097 /* Adobe-Japan1-6 */,
-				57180EEE1E235E8E00FFD097 /* Adobe-Japan1-UCS2 */,
-				57180EEF1E235E8E00FFD097 /* Adobe-Korea1-2 */,
-				57180EF01E235E8E00FFD097 /* Adobe-Korea1-UCS2 */,
-				57180EF11E235E8E00FFD097 /* B5pc-H */,
-				57180EF21E235E8E00FFD097 /* B5pc-UCS2 */,
-				57180EF31E235E8E00FFD097 /* B5pc-UCS2C */,
-				57180EF41E235E8E00FFD097 /* B5pc-V */,
-				57180EF51E235E8E00FFD097 /* CNS-EUC-H */,
-				57180EF61E235E8E00FFD097 /* CNS-EUC-V */,
-				57180EF71E235E8E00FFD097 /* cp932.txt */,
-				57180EF81E235E8E00FFD097 /* cp936.txt */,
-				57180EF91E235E8E00FFD097 /* cp949.txt */,
-				57180EFA1E235E8E00FFD097 /* cp950.txt */,
-				57180EFB1E235E8E00FFD097 /* ETen-B5-H */,
-				57180EFC1E235E8E00FFD097 /* ETen-B5-UCS2 */,
-				57180EFD1E235E8E00FFD097 /* ETen-B5-V */,
-				57180EFE1E235E8E00FFD097 /* ETenms-B5-H */,
-				57180EFF1E235E8E00FFD097 /* ETenms-B5-V */,
-				57180F001E235E8E00FFD097 /* EUC-H */,
-				57180F011E235E8E00FFD097 /* EUC-V */,
-				57180F021E235E8E00FFD097 /* Ext-RKSJ-H */,
-				57180F031E235E8E00FFD097 /* Ext-RKSJ-V */,
-				57180F041E235E8E00FFD097 /* GB-EUC-H */,
-				57180F051E235E8E00FFD097 /* GB-EUC-V */,
-				57180F061E235E8E00FFD097 /* GBK-EUC-H */,
-				57180F071E235E8E00FFD097 /* GBK-EUC-UCS2 */,
-				57180F081E235E8E00FFD097 /* GBK-EUC-V */,
-				57180F091E235E8E00FFD097 /* GBK2K-H */,
-				57180F0A1E235E8E00FFD097 /* GBK2K-V */,
-				57180F0B1E235E8E00FFD097 /* GBKp-EUC-H */,
-				57180F0C1E235E8E00FFD097 /* GBKp-EUC-V */,
-				57180F0D1E235E8E00FFD097 /* GBpc-EUC-H */,
-				57180F0E1E235E8E00FFD097 /* GBpc-EUC-UCS2 */,
-				57180F0F1E235E8E00FFD097 /* GBpc-EUC-UCS2C */,
-				57180F101E235E8E00FFD097 /* GBpc-EUC-V */,
-				57180F111E235E8E00FFD097 /* GBT-EUC-H */,
-				57180F121E235E8E00FFD097 /* GBT-EUC-V */,
-				57180F131E235E8E00FFD097 /* H */,
-				57180F141E235E8E00FFD097 /* HKscs-B5-H */,
-				57180F151E235E8E00FFD097 /* HKscs-B5-V */,
-				57180F161E235E8E00FFD097 /* KSC-EUC-H */,
-				57180F171E235E8E00FFD097 /* KSC-EUC-V */,
-				57180F181E235E8E00FFD097 /* KSCms-UHC-H */,
-				57180F191E235E8E00FFD097 /* KSCms-UHC-HW-H */,
-				57180F1A1E235E8E00FFD097 /* KSCms-UHC-HW-V */,
-				57180F1B1E235E8E00FFD097 /* KSCms-UHC-UCS2 */,
-				57180F1C1E235E8E00FFD097 /* KSCms-UHC-V */,
-				57180F1D1E235E8E00FFD097 /* KSCpc-EUC-H */,
-				57180F1E1E235E8E00FFD097 /* KSCpc-EUC-UCS2 */,
-				57180F1F1E235E8E00FFD097 /* KSCpc-EUC-UCS2C */,
-				57180F201E235E8E00FFD097 /* KSCpc-EUC-V */,
-				57180F211E235E8E00FFD097 /* UniCNS-UCS2-H */,
-				57180F221E235E8E00FFD097 /* UniCNS-UCS2-V */,
-				57180F231E235E8E00FFD097 /* UniCNS-UTF16-H */,
-				57180F241E235E8E00FFD097 /* UniCNS-UTF16-V */,
-				57180F251E235E8E00FFD097 /* UniGB-UCS2-H */,
-				57180F261E235E8E00FFD097 /* UniGB-UCS2-V */,
-				57180F271E235E8E00FFD097 /* UniGB-UTF16-H */,
-				57180F281E235E8E00FFD097 /* UniGB-UTF16-V */,
-				57180F291E235E8E00FFD097 /* UniJIS-UCS2-H */,
-				57180F2A1E235E8E00FFD097 /* UniJIS-UCS2-HW-H */,
-				57180F2B1E235E8E00FFD097 /* UniJIS-UCS2-HW-V */,
-				57180F2C1E235E8E00FFD097 /* UniJIS-UCS2-V */,
-				57180F2D1E235E8E00FFD097 /* UniJIS-UTF16-H */,
-				57180F2E1E235E8E00FFD097 /* UniJIS-UTF16-V */,
-				57180F2F1E235E8E00FFD097 /* UniKS-UCS2-H */,
-				57180F301E235E8E00FFD097 /* UniKS-UCS2-V */,
-				57180F311E235E8E00FFD097 /* UniKS-UTF16-H */,
-				57180F321E235E8E00FFD097 /* UniKS-UTF16-V */,
-				57180F331E235E8E00FFD097 /* V */,
-			);
-			path = cmap;
 			sourceTree = "<group>";
 		};
 		575F5E6E1E249F350070E850 /* UIManager */ = {
@@ -694,6 +592,121 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		575F5EC71E24F7720070E850 /* ThirdLibs */ = {
+			isa = PBXGroup;
+			children = (
+				575F5EC81E24F7720070E850 /* cmap */,
+				575F5F1F1E24F7720070E850 /* TET_ios.framework */,
+			);
+			path = ThirdLibs;
+			sourceTree = "<group>";
+		};
+		575F5EC81E24F7720070E850 /* cmap */ = {
+			isa = PBXGroup;
+			children = (
+				575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */,
+				575F5ECA1E24F7720070E850 /* 90ms-RKSJ-H */,
+				575F5ECB1E24F7720070E850 /* 90ms-RKSJ-UCS2 */,
+				575F5ECC1E24F7720070E850 /* 90ms-RKSJ-V */,
+				575F5ECD1E24F7720070E850 /* 90msp-RKSJ-H */,
+				575F5ECE1E24F7720070E850 /* 90msp-RKSJ-V */,
+				575F5ECF1E24F7720070E850 /* 90pv-RKSJ-H */,
+				575F5ED01E24F7720070E850 /* 90pv-RKSJ-UCS2 */,
+				575F5ED11E24F7720070E850 /* 90pv-RKSJ-UCS2C */,
+				575F5ED21E24F7720070E850 /* Add-RKSJ-H */,
+				575F5ED31E24F7720070E850 /* Add-RKSJ-V */,
+				575F5ED41E24F7720070E850 /* Adobe-CNS1-6 */,
+				575F5ED51E24F7720070E850 /* Adobe-CNS1-UCS2 */,
+				575F5ED61E24F7720070E850 /* Adobe-GB1-5 */,
+				575F5ED71E24F7720070E850 /* Adobe-GB1-UCS2 */,
+				575F5ED81E24F7720070E850 /* Adobe-Japan1-6 */,
+				575F5ED91E24F7720070E850 /* Adobe-Japan1-UCS2 */,
+				575F5EDA1E24F7720070E850 /* Adobe-Korea1-2 */,
+				575F5EDB1E24F7720070E850 /* Adobe-Korea1-UCS2 */,
+				575F5EDC1E24F7720070E850 /* B5pc-H */,
+				575F5EDD1E24F7720070E850 /* B5pc-UCS2 */,
+				575F5EDE1E24F7720070E850 /* B5pc-UCS2C */,
+				575F5EDF1E24F7720070E850 /* B5pc-V */,
+				575F5EE01E24F7720070E850 /* CNS-EUC-H */,
+				575F5EE11E24F7720070E850 /* CNS-EUC-V */,
+				575F5EE21E24F7720070E850 /* cp932.txt */,
+				575F5EE31E24F7720070E850 /* cp936.txt */,
+				575F5EE41E24F7720070E850 /* cp949.txt */,
+				575F5EE51E24F7720070E850 /* cp950.txt */,
+				575F5EE61E24F7720070E850 /* ETen-B5-H */,
+				575F5EE71E24F7720070E850 /* ETen-B5-UCS2 */,
+				575F5EE81E24F7720070E850 /* ETen-B5-V */,
+				575F5EE91E24F7720070E850 /* ETenms-B5-H */,
+				575F5EEA1E24F7720070E850 /* ETenms-B5-V */,
+				575F5EEB1E24F7720070E850 /* EUC-H */,
+				575F5EEC1E24F7720070E850 /* EUC-V */,
+				575F5EED1E24F7720070E850 /* Ext-RKSJ-H */,
+				575F5EEE1E24F7720070E850 /* Ext-RKSJ-V */,
+				575F5EEF1E24F7720070E850 /* GB-EUC-H */,
+				575F5EF01E24F7720070E850 /* GB-EUC-V */,
+				575F5EF11E24F7720070E850 /* GBK-EUC-H */,
+				575F5EF21E24F7720070E850 /* GBK-EUC-UCS2 */,
+				575F5EF31E24F7720070E850 /* GBK-EUC-V */,
+				575F5EF41E24F7720070E850 /* GBK2K-H */,
+				575F5EF51E24F7720070E850 /* GBK2K-V */,
+				575F5EF61E24F7720070E850 /* GBKp-EUC-H */,
+				575F5EF71E24F7720070E850 /* GBKp-EUC-V */,
+				575F5EF81E24F7720070E850 /* GBpc-EUC-H */,
+				575F5EF91E24F7720070E850 /* GBpc-EUC-UCS2 */,
+				575F5EFA1E24F7720070E850 /* GBpc-EUC-UCS2C */,
+				575F5EFB1E24F7720070E850 /* GBpc-EUC-V */,
+				575F5EFC1E24F7720070E850 /* GBT-EUC-H */,
+				575F5EFD1E24F7720070E850 /* GBT-EUC-V */,
+				575F5EFE1E24F7720070E850 /* H */,
+				575F5EFF1E24F7720070E850 /* HKscs-B5-H */,
+				575F5F001E24F7720070E850 /* HKscs-B5-V */,
+				575F5F011E24F7720070E850 /* KSC-EUC-H */,
+				575F5F021E24F7720070E850 /* KSC-EUC-V */,
+				575F5F031E24F7720070E850 /* KSCms-UHC-H */,
+				575F5F041E24F7720070E850 /* KSCms-UHC-HW-H */,
+				575F5F051E24F7720070E850 /* KSCms-UHC-HW-V */,
+				575F5F061E24F7720070E850 /* KSCms-UHC-UCS2 */,
+				575F5F071E24F7720070E850 /* KSCms-UHC-V */,
+				575F5F081E24F7720070E850 /* KSCpc-EUC-H */,
+				575F5F091E24F7720070E850 /* KSCpc-EUC-UCS2 */,
+				575F5F0A1E24F7720070E850 /* KSCpc-EUC-UCS2C */,
+				575F5F0B1E24F7720070E850 /* KSCpc-EUC-V */,
+				575F5F0C1E24F7720070E850 /* UniCNS-UCS2-H */,
+				575F5F0D1E24F7720070E850 /* UniCNS-UCS2-V */,
+				575F5F0E1E24F7720070E850 /* UniCNS-UTF16-H */,
+				575F5F0F1E24F7720070E850 /* UniCNS-UTF16-V */,
+				575F5F101E24F7720070E850 /* UniGB-UCS2-H */,
+				575F5F111E24F7720070E850 /* UniGB-UCS2-V */,
+				575F5F121E24F7720070E850 /* UniGB-UTF16-H */,
+				575F5F131E24F7720070E850 /* UniGB-UTF16-V */,
+				575F5F141E24F7720070E850 /* UniJIS-UCS2-H */,
+				575F5F151E24F7720070E850 /* UniJIS-UCS2-HW-H */,
+				575F5F161E24F7720070E850 /* UniJIS-UCS2-HW-V */,
+				575F5F171E24F7720070E850 /* UniJIS-UCS2-V */,
+				575F5F181E24F7720070E850 /* UniJIS-UTF16-H */,
+				575F5F191E24F7720070E850 /* UniJIS-UTF16-V */,
+				575F5F1A1E24F7720070E850 /* UniKS-UCS2-H */,
+				575F5F1B1E24F7720070E850 /* UniKS-UCS2-V */,
+				575F5F1C1E24F7720070E850 /* UniKS-UTF16-H */,
+				575F5F1D1E24F7720070E850 /* UniKS-UTF16-V */,
+				575F5F1E1E24F7720070E850 /* V */,
+			);
+			path = cmap;
+			sourceTree = "<group>";
+		};
+		575F5F771E24F78C0070E850 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				575F5F781E24F78C0070E850 /* NSDictionary+JSONHelper.h */,
+				575F5F791E24F78C0070E850 /* NSDictionary+JSONHelper.m */,
+				575F5F7A1E24F78C0070E850 /* UIColor+Extention.h */,
+				575F5F7B1E24F78C0070E850 /* UIColor+Extention.m */,
+				575F5F7C1E24F78C0070E850 /* UIWebView+JS.h */,
+				575F5F7D1E24F78C0070E850 /* UIWebView+JS.m */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
 		5797A8971E20F27500F0BE38 = {
 			isa = PBXGroup;
 			children = (
@@ -719,10 +732,11 @@
 		5797A8A21E20F27600F0BE38 /* EnglishReader */ = {
 			isa = PBXGroup;
 			children = (
+				575F5F771E24F78C0070E850 /* Categorys */,
+				575F5EC71E24F7720070E850 /* ThirdLibs */,
 				575F5E861E24F6A70070E850 /* APPFunction */,
 				575F5E6E1E249F350070E850 /* UIManager */,
 				570DC55D1E23AD2700E24D1D /* DocumentList */,
-				57180ED21E23596B00FFD097 /* Extention */,
 				570878011E226618004D3AD5 /* Images */,
 				57119F3E1E220ECA00B929EB /* Networking */,
 				57119F3B1E220E1900B929EB /* Common */,
@@ -768,12 +782,6 @@
 			children = (
 				5797A8EC1E210B9000F0BE38 /* ArticleHelper.h */,
 				5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */,
-				57119F461E221DB300B929EB /* NSDictionary+JSONHelper.h */,
-				57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */,
-				57180EC61E23276200FFD097 /* UIWebView+JS.h */,
-				57180EC71E23276200FFD097 /* UIWebView+JS.m */,
-				570DC5631E23B08100E24D1D /* UIColor+Extention.h */,
-				570DC5641E23B08100E24D1D /* UIColor+Extention.m */,
 				570DC5681E23B33A00E24D1D /* FileManager.h */,
 				570DC5691E23B33A00E24D1D /* FileManager.m */,
 			);
@@ -900,98 +908,98 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57180F6C1E235E8E00FFD097 /* KSC-EUC-H in Resources */,
-				57180F7E1E235E8E00FFD097 /* UniGB-UTF16-V in Resources */,
-				57180F5C1E235E8E00FFD097 /* GBK-EUC-H in Resources */,
-				57180F7A1E235E8E00FFD097 /* UniCNS-UTF16-V in Resources */,
-				57180F341E235E8E00FFD097 /* 83pv-RKSJ-H in Resources */,
-				57180F3A1E235E8E00FFD097 /* 90pv-RKSJ-H in Resources */,
-				57180F5A1E235E8E00FFD097 /* GB-EUC-H in Resources */,
-				57180F821E235E8E00FFD097 /* UniJIS-UCS2-V in Resources */,
-				57180F461E235E8E00FFD097 /* Adobe-Korea1-UCS2 in Resources */,
-				57180F621E235E8E00FFD097 /* GBKp-EUC-V in Resources */,
-				57180F4C1E235E8E00FFD097 /* CNS-EUC-V in Resources */,
-				57180F4E1E235E8E00FFD097 /* cp936.txt in Resources */,
-				57180F811E235E8E00FFD097 /* UniJIS-UCS2-HW-V in Resources */,
-				57180F481E235E8E00FFD097 /* B5pc-UCS2 in Resources */,
-				57180F521E235E8E00FFD097 /* ETen-B5-UCS2 in Resources */,
-				57180F4F1E235E8E00FFD097 /* cp949.txt in Resources */,
-				57180F701E235E8E00FFD097 /* KSCms-UHC-HW-V in Resources */,
-				57180F631E235E8E00FFD097 /* GBpc-EUC-H in Resources */,
-				57180F861E235E8E00FFD097 /* UniKS-UCS2-V in Resources */,
-				57180F471E235E8E00FFD097 /* B5pc-H in Resources */,
-				57180F431E235E8E00FFD097 /* Adobe-Japan1-6 in Resources */,
-				57180F641E235E8E00FFD097 /* GBpc-EUC-UCS2 in Resources */,
-				57180F6B1E235E8E00FFD097 /* HKscs-B5-V in Resources */,
-				57180F661E235E8E00FFD097 /* GBpc-EUC-V in Resources */,
+				575F5F701E24F7720070E850 /* UniJIS-UTF16-V in Resources */,
+				575F5F6F1E24F7720070E850 /* UniJIS-UTF16-H in Resources */,
+				575F5F281E24F7720070E850 /* 90pv-RKSJ-UCS2C in Resources */,
+				575F5F501E24F7720070E850 /* GBpc-EUC-UCS2 in Resources */,
+				575F5F431E24F7720070E850 /* EUC-V in Resources */,
+				575F5F3C1E24F7720070E850 /* cp950.txt in Resources */,
+				575F5F2A1E24F7720070E850 /* Add-RKSJ-V in Resources */,
+				575F5F2F1E24F7720070E850 /* Adobe-Japan1-6 in Resources */,
+				575F5F5B1E24F7720070E850 /* KSCms-UHC-HW-H in Resources */,
+				575F5F6B1E24F7720070E850 /* UniJIS-UCS2-H in Resources */,
+				575F5F591E24F7720070E850 /* KSC-EUC-V in Resources */,
+				575F5F4D1E24F7720070E850 /* GBKp-EUC-H in Resources */,
+				575F5F721E24F7720070E850 /* UniKS-UCS2-V in Resources */,
+				575F5F351E24F7720070E850 /* B5pc-UCS2C in Resources */,
+				575F5F301E24F7720070E850 /* Adobe-Japan1-UCS2 in Resources */,
+				575F5F3F1E24F7720070E850 /* ETen-B5-V in Resources */,
+				575F5F291E24F7720070E850 /* Add-RKSJ-H in Resources */,
+				575F5F571E24F7720070E850 /* HKscs-B5-V in Resources */,
+				575F5F481E24F7720070E850 /* GBK-EUC-H in Resources */,
+				575F5F241E24F7720070E850 /* 90msp-RKSJ-H in Resources */,
+				575F5F5F1E24F7720070E850 /* KSCpc-EUC-H in Resources */,
+				575F5F3D1E24F7720070E850 /* ETen-B5-H in Resources */,
+				575F5F711E24F7720070E850 /* UniKS-UCS2-H in Resources */,
 				5797A8B31E20F27600F0BE38 /* LaunchScreen.storyboard in Resources */,
-				57180F6F1E235E8E00FFD097 /* KSCms-UHC-HW-H in Resources */,
-				57180F4D1E235E8E00FFD097 /* cp932.txt in Resources */,
-				57180F411E235E8E00FFD097 /* Adobe-GB1-5 in Resources */,
-				57180F7D1E235E8E00FFD097 /* UniGB-UTF16-H in Resources */,
-				57180F421E235E8E00FFD097 /* Adobe-GB1-UCS2 in Resources */,
-				57180F731E235E8E00FFD097 /* KSCpc-EUC-H in Resources */,
-				57180F451E235E8E00FFD097 /* Adobe-Korea1-2 in Resources */,
+				575F5F2C1E24F7720070E850 /* Adobe-CNS1-UCS2 in Resources */,
+				575F5F5D1E24F7720070E850 /* KSCms-UHC-UCS2 in Resources */,
+				575F5F251E24F7720070E850 /* 90msp-RKSJ-V in Resources */,
+				575F5F461E24F7720070E850 /* GB-EUC-H in Resources */,
+				575F5F361E24F7720070E850 /* B5pc-V in Resources */,
+				575F5F621E24F7720070E850 /* KSCpc-EUC-V in Resources */,
+				575F5F641E24F7720070E850 /* UniCNS-UCS2-V in Resources */,
+				575F5F2E1E24F7720070E850 /* Adobe-GB1-UCS2 in Resources */,
+				575F5F231E24F7720070E850 /* 90ms-RKSJ-V in Resources */,
+				575F5F5C1E24F7720070E850 /* KSCms-UHC-HW-V in Resources */,
 				570878061E226618004D3AD5 /* paper_1.jpg in Resources */,
 				570878071E226618004D3AD5 /* paper_2.jpg in Resources */,
-				57180F5F1E235E8E00FFD097 /* GBK2K-H in Resources */,
-				57180F7B1E235E8E00FFD097 /* UniGB-UCS2-H in Resources */,
-				57180F3D1E235E8E00FFD097 /* Add-RKSJ-H in Resources */,
-				57180F791E235E8E00FFD097 /* UniCNS-UTF16-H in Resources */,
-				57180F4A1E235E8E00FFD097 /* B5pc-V in Resources */,
-				57180F571E235E8E00FFD097 /* EUC-V in Resources */,
-				57180F351E235E8E00FFD097 /* 90ms-RKSJ-H in Resources */,
-				57180F651E235E8E00FFD097 /* GBpc-EUC-UCS2C in Resources */,
-				57180F381E235E8E00FFD097 /* 90msp-RKSJ-H in Resources */,
-				57180F3B1E235E8E00FFD097 /* 90pv-RKSJ-UCS2 in Resources */,
-				57180F871E235E8E00FFD097 /* UniKS-UTF16-H in Resources */,
-				57180F3F1E235E8E00FFD097 /* Adobe-CNS1-6 in Resources */,
-				57180F891E235E8E00FFD097 /* V in Resources */,
-				57180F881E235E8E00FFD097 /* UniKS-UTF16-V in Resources */,
+				575F5F3B1E24F7720070E850 /* cp949.txt in Resources */,
+				575F5F421E24F7720070E850 /* EUC-H in Resources */,
+				575F5F741E24F7720070E850 /* UniKS-UTF16-V in Resources */,
+				575F5F601E24F7720070E850 /* KSCpc-EUC-UCS2 in Resources */,
+				575F5F261E24F7720070E850 /* 90pv-RKSJ-H in Resources */,
+				575F5F681E24F7720070E850 /* UniGB-UCS2-V in Resources */,
+				575F5F531E24F7720070E850 /* GBT-EUC-H in Resources */,
+				575F5F581E24F7720070E850 /* KSC-EUC-H in Resources */,
+				575F5F271E24F7720070E850 /* 90pv-RKSJ-UCS2 in Resources */,
+				575F5F6D1E24F7720070E850 /* UniJIS-UCS2-HW-V in Resources */,
+				575F5F411E24F7720070E850 /* ETenms-B5-V in Resources */,
+				575F5F541E24F7720070E850 /* GBT-EUC-V in Resources */,
 				570878081E226618004D3AD5 /* paper_3.jpg in Resources */,
-				57180F561E235E8E00FFD097 /* EUC-H in Resources */,
-				57180F671E235E8E00FFD097 /* GBT-EUC-H in Resources */,
+				575F5F4F1E24F7720070E850 /* GBpc-EUC-H in Resources */,
+				575F5F4E1E24F7720070E850 /* GBKp-EUC-V in Resources */,
+				575F5F341E24F7720070E850 /* B5pc-UCS2 in Resources */,
+				575F5F5E1E24F7720070E850 /* KSCms-UHC-V in Resources */,
 				570878091E226618004D3AD5 /* paper_4.jpg in Resources */,
-				57180F851E235E8E00FFD097 /* UniKS-UCS2-H in Resources */,
-				57180F771E235E8E00FFD097 /* UniCNS-UCS2-H in Resources */,
-				57180F441E235E8E00FFD097 /* Adobe-Japan1-UCS2 in Resources */,
-				57180F5E1E235E8E00FFD097 /* GBK-EUC-V in Resources */,
-				57180F611E235E8E00FFD097 /* GBKp-EUC-H in Resources */,
-				57180F511E235E8E00FFD097 /* ETen-B5-H in Resources */,
-				57180F831E235E8E00FFD097 /* UniJIS-UTF16-H in Resources */,
-				57180F581E235E8E00FFD097 /* Ext-RKSJ-H in Resources */,
-				57180F361E235E8E00FFD097 /* 90ms-RKSJ-UCS2 in Resources */,
-				57180F801E235E8E00FFD097 /* UniJIS-UCS2-HW-H in Resources */,
-				57180F601E235E8E00FFD097 /* GBK2K-V in Resources */,
-				57180F591E235E8E00FFD097 /* Ext-RKSJ-V in Resources */,
-				57180F6A1E235E8E00FFD097 /* HKscs-B5-H in Resources */,
-				57180F7C1E235E8E00FFD097 /* UniGB-UCS2-V in Resources */,
-				57180F391E235E8E00FFD097 /* 90msp-RKSJ-V in Resources */,
-				57180F7F1E235E8E00FFD097 /* UniJIS-UCS2-H in Resources */,
+				575F5F381E24F7720070E850 /* CNS-EUC-V in Resources */,
+				575F5F4A1E24F7720070E850 /* GBK-EUC-V in Resources */,
+				575F5F391E24F7720070E850 /* cp932.txt in Resources */,
+				575F5F4C1E24F7720070E850 /* GBK2K-V in Resources */,
+				575F5F511E24F7720070E850 /* GBpc-EUC-UCS2C in Resources */,
+				575F5F561E24F7720070E850 /* HKscs-B5-H in Resources */,
+				575F5F2D1E24F7720070E850 /* Adobe-GB1-5 in Resources */,
+				575F5F221E24F7720070E850 /* 90ms-RKSJ-UCS2 in Resources */,
+				575F5F6C1E24F7720070E850 /* UniJIS-UCS2-HW-H in Resources */,
+				575F5F491E24F7720070E850 /* GBK-EUC-UCS2 in Resources */,
+				575F5F2B1E24F7720070E850 /* Adobe-CNS1-6 in Resources */,
+				575F5F3E1E24F7720070E850 /* ETen-B5-UCS2 in Resources */,
 				5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */,
-				57180F751E235E8E00FFD097 /* KSCpc-EUC-UCS2C in Resources */,
-				57180F721E235E8E00FFD097 /* KSCms-UHC-V in Resources */,
-				57180F6E1E235E8E00FFD097 /* KSCms-UHC-H in Resources */,
-				57180F3E1E235E8E00FFD097 /* Add-RKSJ-V in Resources */,
-				57180F741E235E8E00FFD097 /* KSCpc-EUC-UCS2 in Resources */,
-				57180F3C1E235E8E00FFD097 /* 90pv-RKSJ-UCS2C in Resources */,
-				57180F371E235E8E00FFD097 /* 90ms-RKSJ-V in Resources */,
-				57180F4B1E235E8E00FFD097 /* CNS-EUC-H in Resources */,
-				57180F531E235E8E00FFD097 /* ETen-B5-V in Resources */,
-				57180F401E235E8E00FFD097 /* Adobe-CNS1-UCS2 in Resources */,
-				57180F681E235E8E00FFD097 /* GBT-EUC-V in Resources */,
-				57180F501E235E8E00FFD097 /* cp950.txt in Resources */,
-				57180F541E235E8E00FFD097 /* ETenms-B5-H in Resources */,
-				57180F5D1E235E8E00FFD097 /* GBK-EUC-UCS2 in Resources */,
-				57180F6D1E235E8E00FFD097 /* KSC-EUC-V in Resources */,
-				57180F551E235E8E00FFD097 /* ETenms-B5-V in Resources */,
-				57180F711E235E8E00FFD097 /* KSCms-UHC-UCS2 in Resources */,
-				57180F691E235E8E00FFD097 /* H in Resources */,
-				57180F5B1E235E8E00FFD097 /* GB-EUC-V in Resources */,
-				57180F841E235E8E00FFD097 /* UniJIS-UTF16-V in Resources */,
-				57180F781E235E8E00FFD097 /* UniCNS-UCS2-V in Resources */,
-				57180F491E235E8E00FFD097 /* B5pc-UCS2C in Resources */,
-				57180F761E235E8E00FFD097 /* KSCpc-EUC-V in Resources */,
+				575F5F331E24F7720070E850 /* B5pc-H in Resources */,
+				575F5F551E24F7720070E850 /* H in Resources */,
+				575F5F631E24F7720070E850 /* UniCNS-UCS2-H in Resources */,
+				575F5F471E24F7720070E850 /* GB-EUC-V in Resources */,
+				575F5F5A1E24F7720070E850 /* KSCms-UHC-H in Resources */,
+				575F5F751E24F7720070E850 /* V in Resources */,
+				575F5F371E24F7720070E850 /* CNS-EUC-H in Resources */,
+				575F5F311E24F7720070E850 /* Adobe-Korea1-2 in Resources */,
+				575F5F611E24F7720070E850 /* KSCpc-EUC-UCS2C in Resources */,
+				575F5F6E1E24F7720070E850 /* UniJIS-UCS2-V in Resources */,
+				575F5F671E24F7720070E850 /* UniGB-UCS2-H in Resources */,
+				575F5F651E24F7720070E850 /* UniCNS-UTF16-H in Resources */,
+				575F5F451E24F7720070E850 /* Ext-RKSJ-V in Resources */,
+				575F5F321E24F7720070E850 /* Adobe-Korea1-UCS2 in Resources */,
+				575F5F211E24F7720070E850 /* 90ms-RKSJ-H in Resources */,
+				575F5F4B1E24F7720070E850 /* GBK2K-H in Resources */,
+				575F5F6A1E24F7720070E850 /* UniGB-UTF16-V in Resources */,
+				575F5F401E24F7720070E850 /* ETenms-B5-H in Resources */,
+				575F5F661E24F7720070E850 /* UniCNS-UTF16-V in Resources */,
+				575F5F691E24F7720070E850 /* UniGB-UTF16-H in Resources */,
+				575F5F521E24F7720070E850 /* GBpc-EUC-V in Resources */,
+				575F5F441E24F7720070E850 /* Ext-RKSJ-H in Resources */,
+				575F5F201E24F7720070E850 /* 83pv-RKSJ-H in Resources */,
+				575F5F3A1E24F7720070E850 /* cp936.txt in Resources */,
+				575F5F731E24F7720070E850 /* UniKS-UTF16-H in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,24 +1082,24 @@
 				575F5EC01E24F6A70070E850 /* MineViewController.m in Sources */,
 				575F5EBE1E24F6A70070E850 /* DocumentListDataSource.m in Sources */,
 				5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */,
+				575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */,
 				575F5EB91E24F6A70070E850 /* InterpreterView.m in Sources */,
+				575F5F801E24F78C0070E850 /* UIWebView+JS.m in Sources */,
 				570DC5701E23B3F800E24D1D /* DocumentListDataSource.m in Sources */,
 				575F5EC11E24F6A70070E850 /* MainTabBarController.m in Sources */,
 				575F5EB71E24F6A70070E850 /* ArticleDetailViewController.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
-				570DC5651E23B08100E24D1D /* UIColor+Extention.m in Sources */,
 				575F5EC41E24F6A70070E850 /* SettingViewController.m in Sources */,
 				575F5EBF1E24F6A70070E850 /* DocumentListCell.m in Sources */,
 				575F5EBA1E24F6A70070E850 /* InterpreterViewHeaderView.m in Sources */,
-				57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */,
 				575F5E711E249F870070E850 /* UIManager.m in Sources */,
 				575F5EC21E24F6A70070E850 /* MainViewController.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
 				570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */,
 				575F5EB81E24F6A70070E850 /* ArticleTextView.m in Sources */,
+				575F5F7E1E24F78C0070E850 /* NSDictionary+JSONHelper.m in Sources */,
 				575F5EC31E24F6A70070E850 /* RootNavigationController.m in Sources */,
-				57180EC81E23276200FFD097 /* UIWebView+JS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1238,6 +1246,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EnglishReader/Extention",
+					"$(PROJECT_DIR)/EnglishReader/ThirdLibs",
 				);
 				INFOPLIST_FILE = EnglishReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1257,6 +1266,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EnglishReader/Extention",
+					"$(PROJECT_DIR)/EnglishReader/ThirdLibs",
 				);
 				INFOPLIST_FILE = EnglishReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
