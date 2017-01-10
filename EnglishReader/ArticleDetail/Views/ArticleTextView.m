@@ -20,7 +20,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self insertSubview:self.backgroundImageView atIndex:0];
+//        [self insertSubview:self.backgroundImageView atIndex:0];
         self.selectable = NO;
         self.editable = NO;
     }
@@ -31,11 +31,11 @@
 - (void)setAttributedText:(NSAttributedString *)attributedText {
     [super setAttributedText:attributedText];
     
-    CGFloat backgroundImageViewX = 0.0;
-    CGFloat backgroundImageViewY = -CGRectGetHeight(self.frame);
-    CGFloat backgroundImageViewW = CGRectGetWidth(self.frame);
-    CGFloat backgroundImageViewH = self.contentSize.height + CGRectGetHeight(self.frame)*2;
-    self.backgroundImageView.frame = CGRectMake(backgroundImageViewX, backgroundImageViewY, backgroundImageViewW, backgroundImageViewH);
+//    CGFloat backgroundImageViewX = 0.0;
+//    CGFloat backgroundImageViewY = -CGRectGetHeight(self.frame);
+//    CGFloat backgroundImageViewW = CGRectGetWidth(self.frame);
+//    CGFloat backgroundImageViewH = self.contentSize.height + CGRectGetHeight(self.frame)*2;
+//    self.backgroundImageView.frame = CGRectMake(backgroundImageViewX, backgroundImageViewY, backgroundImageViewW, backgroundImageViewH);
 }
 
 #pragma mark ----- getter

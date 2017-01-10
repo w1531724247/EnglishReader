@@ -61,7 +61,7 @@
 
 //获取page页的文本
 - (NSAttributedString *)actionTextWithPage:(NSInteger)page {
-    if (page >= self.pageOfText.count) {
+    if (page > self.totalPage - 1) {
         return [[NSAttributedString alloc] init];
     }
     
@@ -441,6 +441,11 @@
 }
 
 #pragma mark ----- getter
+
+- (NSInteger)totalPage {
+    return self.pageOfText.count;
+}
+
 - (UIWebView *)webView {
     if (!_webView) {
         _webView = [[UIWebView alloc] init];

@@ -13,12 +13,14 @@
 #import "ArticleTextView.h"
 #import "InterpreterView.h"
 #import <CoreText/CoreText.h>
+#import "MJRefresh.h"
 
 @interface ArticleDetailViewController ()<ArticleHelperDelegate, InterpreterViewDelegate>
 
 @property (nonatomic, strong) ArticleHelper *articleHleper;
 @property (nonatomic, strong) ArticleTextView *textView;
 @property (nonatomic, strong) InterpreterView *interpreterView;
+@property (nonatomic, assign) NSInteger currentPage;
 
 @end
 
@@ -90,6 +92,30 @@
     }
 }
 
+#pragma mark --- refresh action
+
+- (void)showPreviousPageText:(id)sender {
+    self.currentPage--;
+    if (self.currentPage < 0) {
+        self.currentPage = 0;
+    }
+
+    self.textView.attributedText = [self.articleHleper actionTextWithPage:self.currentPage];
+    [self.textView.mj_header endRefreshing];
+}
+
+- (void)showNextPageText:(id)sender {
+    self.currentPage++;
+    if (self.currentPage >= self.articleHleper.totalPage) {
+        self.currentPage--;
+        [self.textView.mj_footer resetNoMoreData];
+        return;
+    }
+    
+    self.textView.attributedText = [self.articleHleper actionTextWithPage:self.currentPage];
+    [self.textView.mj_footer endRefreshing];
+}
+
 #pragma mark ----- getter
 
 - (ArticleHelper *)articleHleper {
@@ -104,6 +130,8 @@
 - (ArticleTextView *)textView {
     if (!_textView) {
         _textView = [[ArticleTextView alloc] init];
+        _textView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(showPreviousPageText:)];
+        _textView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(showNextPageText:)];
     }
     
     return _textView;
