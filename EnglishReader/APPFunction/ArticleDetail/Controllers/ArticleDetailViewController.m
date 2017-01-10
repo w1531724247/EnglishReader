@@ -14,6 +14,7 @@
 #import "InterpreterView.h"
 #import <CoreText/CoreText.h>
 #import "MJRefresh.h"
+#import "FMDBManager.h"
 
 @interface ArticleDetailViewController ()<ArticleHelperDelegate, InterpreterViewDelegate>
 
@@ -53,6 +54,7 @@
 }
 
 - (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text {
+        
     [self showInterpreterViewWithText:text];
 }
 

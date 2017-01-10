@@ -125,6 +125,7 @@
 		575F5F891E24F7CC0070E850 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F831E24F7CC0070E850 /* DataCenter.m */; };
 		575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F861E24F7CC0070E850 /* FMDBKeyValueTable.m */; };
 		575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F881E24F7CC0070E850 /* FMDBManager.m */; };
+		575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F8E1E2506410070E850 /* StrangeWordTable.m */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -300,6 +301,8 @@
 		575F5F861E24F7CC0070E850 /* FMDBKeyValueTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBKeyValueTable.m; sourceTree = "<group>"; };
 		575F5F871E24F7CC0070E850 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
 		575F5F881E24F7CC0070E850 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
+		575F5F8D1E2506410070E850 /* StrangeWordTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrangeWordTable.h; sourceTree = "<group>"; };
+		575F5F8E1E2506410070E850 /* StrangeWordTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrangeWordTable.m; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -679,6 +682,8 @@
 				575F5F861E24F7CC0070E850 /* FMDBKeyValueTable.m */,
 				575F5F871E24F7CC0070E850 /* FMDBManager.h */,
 				575F5F881E24F7CC0070E850 /* FMDBManager.m */,
+				575F5F8D1E2506410070E850 /* StrangeWordTable.h */,
+				575F5F8E1E2506410070E850 /* StrangeWordTable.m */,
 			);
 			path = FMDBUtility;
 			sourceTree = "<group>";
@@ -1062,6 +1067,7 @@
 				575F5F801E24F78C0070E850 /* UIWebView+JS.m in Sources */,
 				575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */,
 				575F5EC11E24F6A70070E850 /* MainTabBarController.m in Sources */,
+				575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */,
 				575F5EB71E24F6A70070E850 /* ArticleDetailViewController.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
