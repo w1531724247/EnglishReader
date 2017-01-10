@@ -42,6 +42,8 @@
 #pragma mark ---- UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     ArticleDetailViewController *detailVC = [[ArticleDetailViewController alloc] init];
     detailVC.filePath = [self.dataSource.filePathArray objectAtIndex:indexPath.row];
     

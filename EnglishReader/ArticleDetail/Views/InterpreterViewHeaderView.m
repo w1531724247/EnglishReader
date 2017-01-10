@@ -41,7 +41,7 @@
     [self.dragImageView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mas_centerX);
         make.centerY.equalTo(self.mas_centerY);
-        make.width.height.equalTo(@(44));
+        make.width.height.equalTo(@(22));
     }];
     
     [self.closeButton mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -71,7 +71,7 @@
 - (UIImageView *)dragImageView {
     if (!_dragImageView) {
         _dragImageView = [[UIImageView alloc] init];
-        _dragImageView.backgroundColor = [UIColor redColor];
+        _dragImageView.image = [UIImage imageNamed:@"drag_up_down_indicatorImage"];
     }
     
     return _dragImageView;

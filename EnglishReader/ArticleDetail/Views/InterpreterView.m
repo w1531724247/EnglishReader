@@ -13,6 +13,7 @@
 #import "InterpreterViewNetwork.h"
 #import <UIKit/UIReferenceLibraryViewController.h>
 #import "Masonry.h"
+#import "YYKit.h"
 
 @interface InterpreterView ()<InterpreterContentViewProtocol>
 
@@ -71,7 +72,7 @@
     [self.headerView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left);
         make.right.equalTo(self.mas_right);
-        make.height.equalTo(@(50));
+        make.height.equalTo(@(44));
         make.top.equalTo(self.mas_top);
     }];
     
@@ -103,7 +104,7 @@
 - (InterpreterViewHeaderView *)headerView {
     if (!_headerView) {
         _headerView = [[InterpreterViewHeaderView alloc] init];
-        _headerView.backgroundColor = [UIColor grayColor];
+        _headerView.backgroundColor = [UIColor colorWithRGB:0x888888];
         [_headerView addCloseButtonEventToTarget:self action:@selector(closeButtonDidTouch:) forControlEvents:UIControlEventTouchUpInside];
     }
     

@@ -13,6 +13,7 @@
 #import "YYKit.h"
 #import "UIWebView+JS.h"
 #import <TET_ios/TET_objc.h>
+#import "UIManager.h"
 
 @interface ArticleHelper ()<UIWebViewDelegate>
 
@@ -269,7 +270,7 @@
         NSValue *value = [rangeArray objectAtIndex:index];
         NSRange range = [value rangeValue];
         [actionText setTextHighlightRange:range
-                                    color:nil
+                                    color:[UIManager textColor]
                           backgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]
                                 tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
                                     [weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];

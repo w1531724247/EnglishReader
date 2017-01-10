@@ -115,6 +115,7 @@
 		57180F871E235E8E00FFD097 /* UniKS-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F311E235E8E00FFD097 /* UniKS-UTF16-H */; };
 		57180F881E235E8E00FFD097 /* UniKS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F321E235E8E00FFD097 /* UniKS-UTF16-V */; };
 		57180F891E235E8E00FFD097 /* V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F331E235E8E00FFD097 /* V */; };
+		575F5E711E249F870070E850 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E701E249F870070E850 /* UIManager.m */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -271,6 +272,8 @@
 		57180F321E235E8E00FFD097 /* UniKS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-V"; sourceTree = "<group>"; };
 		57180F331E235E8E00FFD097 /* V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = V; sourceTree = "<group>"; };
 		575F5E6D1E2495B20070E850 /* InterpreterContentViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterContentViewProtocol.h; sourceTree = "<group>"; };
+		575F5E6F1E249F870070E850 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIManager.h; sourceTree = "<group>"; };
+		575F5E701E249F870070E850 /* UIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIManager.m; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -542,6 +545,15 @@
 			path = cmap;
 			sourceTree = "<group>";
 		};
+		575F5E6E1E249F350070E850 /* UIManager */ = {
+			isa = PBXGroup;
+			children = (
+				575F5E6F1E249F870070E850 /* UIManager.h */,
+				575F5E701E249F870070E850 /* UIManager.m */,
+			);
+			path = UIManager;
+			sourceTree = "<group>";
+		};
 		5797A8971E20F27500F0BE38 = {
 			isa = PBXGroup;
 			children = (
@@ -567,6 +579,7 @@
 		5797A8A21E20F27600F0BE38 /* EnglishReader */ = {
 			isa = PBXGroup;
 			children = (
+				575F5E6E1E249F350070E850 /* UIManager */,
 				570DC5661E23B22400E24D1D /* Resource */,
 				570DC55D1E23AD2700E24D1D /* DocumentList */,
 				57180ED21E23596B00FFD097 /* Extention */,
@@ -946,6 +959,7 @@
 				570DC5651E23B08100E24D1D /* UIColor+Extention.m in Sources */,
 				57119F5E1E22310600B929EB /* ArticleTextView.m in Sources */,
 				57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */,
+				575F5E711E249F870070E850 /* UIManager.m in Sources */,
 				5797A8E01E21052000F0BE38 /* RootNavigationController.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
 				57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */,
