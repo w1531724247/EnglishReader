@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 #import "RootNavigationController.h"
-#import "ArticleDetailViewController.h"
-#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -54,9 +52,7 @@
 
 -(void)setupWindow{
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    MainViewController *mainVC = [[MainViewController alloc] init];
-    RootNavigationController *rootNavigationController = [[RootNavigationController alloc] initWithRootViewController:mainVC];
+    RootNavigationController *rootNavigationController = [RootNavigationController shareNavigationController];
     
     self.window.rootViewController = rootNavigationController;
     //在调用presentViewControllerWithDictionary前,需要先makeKeyAndVisible

@@ -27,11 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.textView];
     self.textView.frame = self.view.bounds;
 
-    [self.articleHleper handleFileWithPath:[[NSBundle mainBundle] pathForResource:@"demoText" ofType:@"html"]];
+    [self.articleHleper handleFileWithPath:self.filePath];
     [self hiddenInterpreterView];
 }
 

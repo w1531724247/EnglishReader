@@ -7,12 +7,26 @@
 //
 
 #import "RootNavigationController.h"
+#import "MainViewController.h"
 
 @interface RootNavigationController ()
 
 @end
 
 @implementation RootNavigationController
+
++ (instancetype)shareNavigationController {
+    static RootNavigationController *_shareNavigationController;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!_shareNavigationController) {
+            MainViewController *mainVC = [[MainViewController alloc] init];
+            _shareNavigationController = [[RootNavigationController alloc] initWithRootViewController:mainVC];
+        }
+    });
+    
+    return _shareNavigationController;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

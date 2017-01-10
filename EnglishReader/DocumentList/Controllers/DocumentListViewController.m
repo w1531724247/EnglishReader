@@ -7,12 +7,26 @@
 //
 
 #import "DocumentListViewController.h"
+#import "DocumentListDataSource.h"
+#import "ArticleDetailViewController.h"
+#import "RootNavigationController.h"
 
-@interface DocumentListViewController ()
+@interface DocumentListViewController () <UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) DocumentListDataSource *dataSource;
 
 @end
 
 @implementation DocumentListViewController
+
+- (void)loadView {
+    [super loadView];
+    
+    self.view = self.tableView;
+    self.tableView.dataSource = self.dataSource;
+    self.tableView.delegate = self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,14 +39,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark ---- UITableViewDelegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ArticleDetailViewController *detailVC = [[ArticleDetailViewController alloc] init];
+    detailVC.filePath = [self.dataSource.filePathArray objectAtIndex:indexPath.row];
+    
+    [[RootNavigationController shareNavigationController] pushViewController:detailVC animated:YES];
 }
-*/
+
+#pragma mark ---- getter
+
+- (DocumentListDataSource *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [[DocumentListDataSource alloc] init];
+    }
+    
+    return _dataSource;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] init];
+    }
+    
+    return _tableView;
+}
 
 @end

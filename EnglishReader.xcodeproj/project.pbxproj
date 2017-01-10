@@ -14,6 +14,9 @@
 		570DC5621E23AD3A00E24D1D /* DocumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */; };
 		570DC5651E23B08100E24D1D /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5641E23B08100E24D1D /* UIColor+Extention.m */; };
 		570DC5671E23B22400E24D1D /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 570DC5661E23B22400E24D1D /* Resource */; };
+		570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5691E23B33A00E24D1D /* FileManager.m */; };
+		570DC5701E23B3F800E24D1D /* DocumentListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC56F1E23B3F800E24D1D /* DocumentListDataSource.m */; };
+		570DC5731E23B68E00E24D1D /* DocumentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5721E23B68E00E24D1D /* DocumentListCell.m */; };
 		57119F411E220F3A00B929EB /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F401E220F3A00B929EB /* APIManager.m */; };
 		57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F471E221DB300B929EB /* NSDictionary+JSONHelper.m */; };
 		57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F511E22310600B929EB /* ArticleDetailViewController.m */; };
@@ -22,12 +25,8 @@
 		57119F601E22310600B929EB /* InterpreterViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F581E22310600B929EB /* InterpreterViewHeaderView.m */; };
 		57119F611E22310600B929EB /* InterpreterViewLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F5A1E22310600B929EB /* InterpreterViewLocal.m */; };
 		57119F621E22310600B929EB /* InterpreterViewNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F5C1E22310600B929EB /* InterpreterViewNetwork.m */; };
-		57119F641E22400300B929EB /* demoText.docx in Resources */ = {isa = PBXBuildFile; fileRef = 57119F631E22400300B929EB /* demoText.docx */; };
 		57119F661E22413E00B929EB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57119F651E22413E00B929EB /* CoreText.framework */; };
 		57180EC81E23276200FFD097 /* UIWebView+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 57180EC71E23276200FFD097 /* UIWebView+JS.m */; };
-		57180ECA1E23359100FFD097 /* demoText.html in Resources */ = {isa = PBXBuildFile; fileRef = 57180EC91E23359100FFD097 /* demoText.html */; };
-		57180ECC1E2335B600FFD097 /* demoText.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 57180ECB1E2335B600FFD097 /* demoText.rtf */; };
-		57180ECE1E2337D200FFD097 /* demoText.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 57180ECD1E2337D200FFD097 /* demoText.pdf */; };
 		57180EDA1E235CFD00FFD097 /* TET_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180ED91E235CFD00FFD097 /* TET_ios.framework */; };
 		57180EDC1E235D6C00FFD097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */; };
 		57180F341E235E8E00FFD097 /* 83pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180EDE1E235E8E00FFD097 /* 83pv-RKSJ-H */; };
@@ -116,16 +115,12 @@
 		57180F871E235E8E00FFD097 /* UniKS-UTF16-H in Resources */ = {isa = PBXBuildFile; fileRef = 57180F311E235E8E00FFD097 /* UniKS-UTF16-H */; };
 		57180F881E235E8E00FFD097 /* UniKS-UTF16-V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F321E235E8E00FFD097 /* UniKS-UTF16-V */; };
 		57180F891E235E8E00FFD097 /* V in Resources */ = {isa = PBXBuildFile; fileRef = 57180F331E235E8E00FFD097 /* V */; };
-		57180F8B1E2363C300FFD097 /* AppleScript.docset in Resources */ = {isa = PBXBuildFile; fileRef = 57180F8A1E2363C300FFD097 /* AppleScript.docset */; };
-		57180F8D1E236C8D00FFD097 /* bodyText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57180F8C1E236C8D00FFD097 /* bodyText.txt */; };
-		57180F921E23900F00FFD097 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 57180F901E23900F00FFD097 /* ExampleApp.html */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
 		5797A8B31E20F27600F0BE38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8B11E20F27600F0BE38 /* LaunchScreen.storyboard */; };
 		5797A8BE1E20F27600F0BE38 /* EnglishReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8BD1E20F27600F0BE38 /* EnglishReaderTests.m */; };
 		5797A8C91E20F27600F0BE38 /* EnglishReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */; };
-		5797A8D81E21038400F0BE38 /* demoText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8D71E21038400F0BE38 /* demoText.txt */; };
 		5797A8E01E21052000F0BE38 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8DF1E21052000F0BE38 /* RootNavigationController.m */; };
 		5797A8E31E21053900F0BE38 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8E21E21053900F0BE38 /* MainViewController.m */; };
 		5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */; };
@@ -160,6 +155,12 @@
 		570DC5631E23B08100E24D1D /* UIColor+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
 		570DC5641E23B08100E24D1D /* UIColor+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
 		570DC5661E23B22400E24D1D /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
+		570DC5681E23B33A00E24D1D /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		570DC5691E23B33A00E24D1D /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		570DC56E1E23B3F800E24D1D /* DocumentListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListDataSource.h; sourceTree = "<group>"; };
+		570DC56F1E23B3F800E24D1D /* DocumentListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListDataSource.m; sourceTree = "<group>"; };
+		570DC5711E23B68E00E24D1D /* DocumentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListCell.h; sourceTree = "<group>"; };
+		570DC5721E23B68E00E24D1D /* DocumentListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListCell.m; sourceTree = "<group>"; };
 		57119F3D1E220E5200B929EB /* DefineKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKeys.h; sourceTree = "<group>"; };
 		57119F3F1E220F3A00B929EB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		57119F401E220F3A00B929EB /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
@@ -178,13 +179,9 @@
 		57119F5A1E22310600B929EB /* InterpreterViewLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewLocal.m; sourceTree = "<group>"; };
 		57119F5B1E22310600B929EB /* InterpreterViewNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewNetwork.h; sourceTree = "<group>"; };
 		57119F5C1E22310600B929EB /* InterpreterViewNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewNetwork.m; sourceTree = "<group>"; };
-		57119F631E22400300B929EB /* demoText.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = demoText.docx; sourceTree = "<group>"; };
 		57119F651E22413E00B929EB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		57180EC61E23276200FFD097 /* UIWebView+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JS.h"; sourceTree = "<group>"; };
 		57180EC71E23276200FFD097 /* UIWebView+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JS.m"; sourceTree = "<group>"; };
-		57180EC91E23359100FFD097 /* demoText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demoText.html; sourceTree = "<group>"; };
-		57180ECB1E2335B600FFD097 /* demoText.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = demoText.rtf; sourceTree = "<group>"; };
-		57180ECD1E2337D200FFD097 /* demoText.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = demoText.pdf; sourceTree = "<group>"; };
 		57180ED91E235CFD00FFD097 /* TET_ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TET_ios.framework; sourceTree = "<group>"; };
 		57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		57180EDE1E235E8E00FFD097 /* 83pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "83pv-RKSJ-H"; sourceTree = "<group>"; };
@@ -273,9 +270,6 @@
 		57180F311E235E8E00FFD097 /* UniKS-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-H"; sourceTree = "<group>"; };
 		57180F321E235E8E00FFD097 /* UniKS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-V"; sourceTree = "<group>"; };
 		57180F331E235E8E00FFD097 /* V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = V; sourceTree = "<group>"; };
-		57180F8A1E2363C300FFD097 /* AppleScript.docset */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppleScript.docset; sourceTree = "<group>"; };
-		57180F8C1E236C8D00FFD097 /* bodyText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bodyText.txt; sourceTree = "<group>"; };
-		57180F901E23900F00FFD097 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -289,7 +283,6 @@
 		5797A8C41E20F27600F0BE38 /* EnglishReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnglishReaderUITests.m; sourceTree = "<group>"; };
 		5797A8CA1E20F27600F0BE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5797A8D71E21038400F0BE38 /* demoText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demoText.txt; sourceTree = "<group>"; };
 		5797A8DE1E21052000F0BE38 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
 		5797A8DF1E21052000F0BE38 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		5797A8E11E21053900F0BE38 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -367,6 +360,7 @@
 		570DC55D1E23AD2700E24D1D /* DocumentList */ = {
 			isa = PBXGroup;
 			children = (
+				570DC56D1E23B3E900E24D1D /* DataSource */,
 				570DC55E1E23AD2700E24D1D /* Controllers */,
 				570DC55F1E23AD2700E24D1D /* Views */,
 			);
@@ -385,15 +379,19 @@
 		570DC55F1E23AD2700E24D1D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				570DC5711E23B68E00E24D1D /* DocumentListCell.h */,
+				570DC5721E23B68E00E24D1D /* DocumentListCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		57119F3A1E220E0A00B929EB /* Resources */ = {
+		570DC56D1E23B3E900E24D1D /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				570DC56E1E23B3F800E24D1D /* DocumentListDataSource.h */,
+				570DC56F1E23B3F800E24D1D /* DocumentListDataSource.m */,
 			);
-			path = Resources;
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		57119F3B1E220E1900B929EB /* Common */ = {
@@ -574,11 +572,9 @@
 				570877FF1E225B0B004D3AD5 /* Setting */,
 				57119F3E1E220ECA00B929EB /* Networking */,
 				57119F3B1E220E1900B929EB /* Common */,
-				57119F3A1E220E0A00B929EB /* Resources */,
 				5797A8EB1E210B7A00F0BE38 /* Utility */,
 				5797A8E71E210AB900F0BE38 /* ArticleDetail */,
 				5797A8DD1E21052000F0BE38 /* RootMain */,
-				5797A8D61E21030000F0BE38 /* TextFile */,
 				5797A8A61E20F27600F0BE38 /* AppDelegate.h */,
 				5797A8A71E20F27600F0BE38 /* AppDelegate.m */,
 				5797A8AF1E20F27600F0BE38 /* Assets.xcassets */,
@@ -615,21 +611,6 @@
 			path = EnglishReaderUITests;
 			sourceTree = "<group>";
 		};
-		5797A8D61E21030000F0BE38 /* TextFile */ = {
-			isa = PBXGroup;
-			children = (
-				57180F901E23900F00FFD097 /* ExampleApp.html */,
-				57180F8C1E236C8D00FFD097 /* bodyText.txt */,
-				57180F8A1E2363C300FFD097 /* AppleScript.docset */,
-				57180ECD1E2337D200FFD097 /* demoText.pdf */,
-				57119F631E22400300B929EB /* demoText.docx */,
-				5797A8D71E21038400F0BE38 /* demoText.txt */,
-				57180EC91E23359100FFD097 /* demoText.html */,
-				57180ECB1E2335B600FFD097 /* demoText.rtf */,
-			);
-			path = TextFile;
-			sourceTree = "<group>";
-		};
 		5797A8DD1E21052000F0BE38 /* RootMain */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,6 +642,8 @@
 				57180EC71E23276200FFD097 /* UIWebView+JS.m */,
 				570DC5631E23B08100E24D1D /* UIColor+Extention.h */,
 				570DC5641E23B08100E24D1D /* UIColor+Extention.m */,
+				570DC5681E23B33A00E24D1D /* FileManager.h */,
+				570DC5691E23B33A00E24D1D /* FileManager.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -793,13 +776,10 @@
 				57180F3A1E235E8E00FFD097 /* 90pv-RKSJ-H in Resources */,
 				57180F5A1E235E8E00FFD097 /* GB-EUC-H in Resources */,
 				57180F821E235E8E00FFD097 /* UniJIS-UCS2-V in Resources */,
-				5797A8D81E21038400F0BE38 /* demoText.txt in Resources */,
 				57180F461E235E8E00FFD097 /* Adobe-Korea1-UCS2 in Resources */,
 				57180F621E235E8E00FFD097 /* GBKp-EUC-V in Resources */,
-				57180ECE1E2337D200FFD097 /* demoText.pdf in Resources */,
 				57180F4C1E235E8E00FFD097 /* CNS-EUC-V in Resources */,
 				57180F4E1E235E8E00FFD097 /* cp936.txt in Resources */,
-				57180F8B1E2363C300FFD097 /* AppleScript.docset in Resources */,
 				57180F811E235E8E00FFD097 /* UniJIS-UCS2-HW-V in Resources */,
 				57180F481E235E8E00FFD097 /* B5pc-UCS2 in Resources */,
 				57180F521E235E8E00FFD097 /* ETen-B5-UCS2 in Resources */,
@@ -818,7 +798,6 @@
 				57180F411E235E8E00FFD097 /* Adobe-GB1-5 in Resources */,
 				57180F7D1E235E8E00FFD097 /* UniGB-UTF16-H in Resources */,
 				57180F421E235E8E00FFD097 /* Adobe-GB1-UCS2 in Resources */,
-				57180F8D1E236C8D00FFD097 /* bodyText.txt in Resources */,
 				57180F731E235E8E00FFD097 /* KSCpc-EUC-H in Resources */,
 				57180F451E235E8E00FFD097 /* Adobe-Korea1-2 in Resources */,
 				570878061E226618004D3AD5 /* paper_1.jpg in Resources */,
@@ -848,7 +827,6 @@
 				57180F611E235E8E00FFD097 /* GBKp-EUC-H in Resources */,
 				57180F511E235E8E00FFD097 /* ETen-B5-H in Resources */,
 				57180F831E235E8E00FFD097 /* UniJIS-UTF16-H in Resources */,
-				57180ECC1E2335B600FFD097 /* demoText.rtf in Resources */,
 				57180F581E235E8E00FFD097 /* Ext-RKSJ-H in Resources */,
 				57180F361E235E8E00FFD097 /* 90ms-RKSJ-UCS2 in Resources */,
 				57180F801E235E8E00FFD097 /* UniJIS-UCS2-HW-H in Resources */,
@@ -861,7 +839,6 @@
 				5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */,
 				57180F751E235E8E00FFD097 /* KSCpc-EUC-UCS2C in Resources */,
 				57180F721E235E8E00FFD097 /* KSCms-UHC-V in Resources */,
-				57119F641E22400300B929EB /* demoText.docx in Resources */,
 				57180F6E1E235E8E00FFD097 /* KSCms-UHC-H in Resources */,
 				57180F3E1E235E8E00FFD097 /* Add-RKSJ-V in Resources */,
 				57180F741E235E8E00FFD097 /* KSCpc-EUC-UCS2 in Resources */,
@@ -869,7 +846,6 @@
 				570DC5671E23B22400E24D1D /* Resource in Resources */,
 				57180F371E235E8E00FFD097 /* 90ms-RKSJ-V in Resources */,
 				57180F4B1E235E8E00FFD097 /* CNS-EUC-H in Resources */,
-				57180ECA1E23359100FFD097 /* demoText.html in Resources */,
 				57180F531E235E8E00FFD097 /* ETen-B5-V in Resources */,
 				57180F401E235E8E00FFD097 /* Adobe-CNS1-UCS2 in Resources */,
 				57180F681E235E8E00FFD097 /* GBT-EUC-V in Resources */,
@@ -881,7 +857,6 @@
 				57180F711E235E8E00FFD097 /* KSCms-UHC-UCS2 in Resources */,
 				57180F691E235E8E00FFD097 /* H in Resources */,
 				57180F5B1E235E8E00FFD097 /* GB-EUC-V in Resources */,
-				57180F921E23900F00FFD097 /* ExampleApp.html in Resources */,
 				57180F841E235E8E00FFD097 /* UniJIS-UTF16-V in Resources */,
 				57180F781E235E8E00FFD097 /* UniCNS-UCS2-V in Resources */,
 				57180F491E235E8E00FFD097 /* B5pc-UCS2C in Resources */,
@@ -958,9 +933,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				570DC5731E23B68E00E24D1D /* DocumentListCell.m in Sources */,
 				57119F601E22310600B929EB /* InterpreterViewHeaderView.m in Sources */,
 				570DC5621E23AD3A00E24D1D /* DocumentListViewController.m in Sources */,
 				5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */,
+				570DC5701E23B3F800E24D1D /* DocumentListDataSource.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
 				57119F5F1E22310600B929EB /* InterpreterView.m in Sources */,
@@ -972,6 +949,7 @@
 				57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */,
 				5797A8E31E21053900F0BE38 /* MainViewController.m in Sources */,
 				57119F621E22310600B929EB /* InterpreterViewNetwork.m in Sources */,
+				570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */,
 				57180EC81E23276200FFD097 /* UIWebView+JS.m in Sources */,
 				57119F611E22310600B929EB /* InterpreterViewLocal.m in Sources */,
 			);

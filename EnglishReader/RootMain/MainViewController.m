@@ -84,7 +84,7 @@
 - (UIViewController *)magicView:(VTMagicView *)magicView viewControllerAtPage:(NSUInteger)pageIndex {
     if (pageIndex == 0) {
         DocumentListViewController *documentListVC = [[DocumentListViewController alloc] init];
-        documentListVC.view.backgroundColor = [UIColor randomColor];
+        
         return documentListVC;
     } else {
         UIViewController *VC = [[UIViewController alloc] init];

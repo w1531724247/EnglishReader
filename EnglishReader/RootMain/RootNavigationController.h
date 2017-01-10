@@ -10,4 +10,6 @@
 
 @interface RootNavigationController : UINavigationController
 
++ (instancetype)shareNavigationController;
+
 @end
