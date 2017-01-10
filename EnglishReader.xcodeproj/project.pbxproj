@@ -11,10 +11,7 @@
 		570878071E226618004D3AD5 /* paper_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878031E226618004D3AD5 /* paper_2.jpg */; };
 		570878081E226618004D3AD5 /* paper_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878041E226618004D3AD5 /* paper_3.jpg */; };
 		570878091E226618004D3AD5 /* paper_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878051E226618004D3AD5 /* paper_4.jpg */; };
-		570DC5621E23AD3A00E24D1D /* DocumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */; };
 		570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5691E23B33A00E24D1D /* FileManager.m */; };
-		570DC5701E23B3F800E24D1D /* DocumentListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC56F1E23B3F800E24D1D /* DocumentListDataSource.m */; };
-		570DC5731E23B68E00E24D1D /* DocumentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5721E23B68E00E24D1D /* DocumentListCell.m */; };
 		57119F411E220F3A00B929EB /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F401E220F3A00B929EB /* APIManager.m */; };
 		57119F661E22413E00B929EB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57119F651E22413E00B929EB /* CoreText.framework */; };
 		57180EDC1E235D6C00FFD097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */; };
@@ -125,6 +122,9 @@
 		575F5F7E1E24F78C0070E850 /* NSDictionary+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F791E24F78C0070E850 /* NSDictionary+JSONHelper.m */; };
 		575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F7B1E24F78C0070E850 /* UIColor+Extention.m */; };
 		575F5F801E24F78C0070E850 /* UIWebView+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F7D1E24F78C0070E850 /* UIWebView+JS.m */; };
+		575F5F891E24F7CC0070E850 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F831E24F7CC0070E850 /* DataCenter.m */; };
+		575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F861E24F7CC0070E850 /* FMDBKeyValueTable.m */; };
+		575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F881E24F7CC0070E850 /* FMDBManager.m */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -158,14 +158,8 @@
 		570878031E226618004D3AD5 /* paper_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_2.jpg; sourceTree = "<group>"; };
 		570878041E226618004D3AD5 /* paper_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_3.jpg; sourceTree = "<group>"; };
 		570878051E226618004D3AD5 /* paper_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_4.jpg; sourceTree = "<group>"; };
-		570DC5601E23AD3A00E24D1D /* DocumentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListViewController.h; sourceTree = "<group>"; };
-		570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListViewController.m; sourceTree = "<group>"; };
 		570DC5681E23B33A00E24D1D /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		570DC5691E23B33A00E24D1D /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
-		570DC56E1E23B3F800E24D1D /* DocumentListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListDataSource.h; sourceTree = "<group>"; };
-		570DC56F1E23B3F800E24D1D /* DocumentListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListDataSource.m; sourceTree = "<group>"; };
-		570DC5711E23B68E00E24D1D /* DocumentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListCell.h; sourceTree = "<group>"; };
-		570DC5721E23B68E00E24D1D /* DocumentListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListCell.m; sourceTree = "<group>"; };
 		57119F3D1E220E5200B929EB /* DefineKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKeys.h; sourceTree = "<group>"; };
 		57119F3F1E220F3A00B929EB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		57119F401E220F3A00B929EB /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
@@ -300,6 +294,12 @@
 		575F5F7B1E24F78C0070E850 /* UIColor+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
 		575F5F7C1E24F78C0070E850 /* UIWebView+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JS.h"; sourceTree = "<group>"; };
 		575F5F7D1E24F78C0070E850 /* UIWebView+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JS.m"; sourceTree = "<group>"; };
+		575F5F821E24F7CC0070E850 /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
+		575F5F831E24F7CC0070E850 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
+		575F5F851E24F7CC0070E850 /* FMDBKeyValueTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBKeyValueTable.h; sourceTree = "<group>"; };
+		575F5F861E24F7CC0070E850 /* FMDBKeyValueTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBKeyValueTable.m; sourceTree = "<group>"; };
+		575F5F871E24F7CC0070E850 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
+		575F5F881E24F7CC0070E850 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -366,43 +366,6 @@
 				570878051E226618004D3AD5 /* paper_4.jpg */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		570DC55D1E23AD2700E24D1D /* DocumentList */ = {
-			isa = PBXGroup;
-			children = (
-				570DC56D1E23B3E900E24D1D /* DataSource */,
-				570DC55E1E23AD2700E24D1D /* Controllers */,
-				570DC55F1E23AD2700E24D1D /* Views */,
-			);
-			path = DocumentList;
-			sourceTree = "<group>";
-		};
-		570DC55E1E23AD2700E24D1D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				570DC5601E23AD3A00E24D1D /* DocumentListViewController.h */,
-				570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		570DC55F1E23AD2700E24D1D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				570DC5711E23B68E00E24D1D /* DocumentListCell.h */,
-				570DC5721E23B68E00E24D1D /* DocumentListCell.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		570DC56D1E23B3E900E24D1D /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				570DC56E1E23B3F800E24D1D /* DocumentListDataSource.h */,
-				570DC56F1E23B3F800E24D1D /* DocumentListDataSource.m */,
-			);
-			path = DataSource;
 			sourceTree = "<group>";
 		};
 		57119F3B1E220E1900B929EB /* Common */ = {
@@ -707,6 +670,19 @@
 			path = Categorys;
 			sourceTree = "<group>";
 		};
+		575F5F811E24F7CC0070E850 /* FMDBUtility */ = {
+			isa = PBXGroup;
+			children = (
+				575F5F821E24F7CC0070E850 /* DataCenter.h */,
+				575F5F831E24F7CC0070E850 /* DataCenter.m */,
+				575F5F851E24F7CC0070E850 /* FMDBKeyValueTable.h */,
+				575F5F861E24F7CC0070E850 /* FMDBKeyValueTable.m */,
+				575F5F871E24F7CC0070E850 /* FMDBManager.h */,
+				575F5F881E24F7CC0070E850 /* FMDBManager.m */,
+			);
+			path = FMDBUtility;
+			sourceTree = "<group>";
+		};
 		5797A8971E20F27500F0BE38 = {
 			isa = PBXGroup;
 			children = (
@@ -736,7 +712,6 @@
 				575F5EC71E24F7720070E850 /* ThirdLibs */,
 				575F5E861E24F6A70070E850 /* APPFunction */,
 				575F5E6E1E249F350070E850 /* UIManager */,
-				570DC55D1E23AD2700E24D1D /* DocumentList */,
 				570878011E226618004D3AD5 /* Images */,
 				57119F3E1E220ECA00B929EB /* Networking */,
 				57119F3B1E220E1900B929EB /* Common */,
@@ -780,6 +755,7 @@
 		5797A8EB1E210B7A00F0BE38 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				575F5F811E24F7CC0070E850 /* FMDBUtility */,
 				5797A8EC1E210B9000F0BE38 /* ArticleHelper.h */,
 				5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */,
 				570DC5681E23B33A00E24D1D /* FileManager.h */,
@@ -1073,11 +1049,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				575F5EBB1E24F6A70070E850 /* InterpreterViewLocal.m in Sources */,
-				570DC5731E23B68E00E24D1D /* DocumentListCell.m in Sources */,
 				575F5EC51E24F6A70070E850 /* WordListViewController.m in Sources */,
 				575F5EC61E24F6A70070E850 /* WordModel.m in Sources */,
 				575F5EBC1E24F6A70070E850 /* InterpreterViewNetwork.m in Sources */,
-				570DC5621E23AD3A00E24D1D /* DocumentListViewController.m in Sources */,
+				575F5F891E24F7CC0070E850 /* DataCenter.m in Sources */,
 				575F5EBD1E24F6A70070E850 /* DocumentListViewController.m in Sources */,
 				575F5EC01E24F6A70070E850 /* MineViewController.m in Sources */,
 				575F5EBE1E24F6A70070E850 /* DocumentListDataSource.m in Sources */,
@@ -1085,11 +1060,12 @@
 				575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */,
 				575F5EB91E24F6A70070E850 /* InterpreterView.m in Sources */,
 				575F5F801E24F78C0070E850 /* UIWebView+JS.m in Sources */,
-				570DC5701E23B3F800E24D1D /* DocumentListDataSource.m in Sources */,
+				575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */,
 				575F5EC11E24F6A70070E850 /* MainTabBarController.m in Sources */,
 				575F5EB71E24F6A70070E850 /* ArticleDetailViewController.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
+				575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */,
 				575F5EC41E24F6A70070E850 /* SettingViewController.m in Sources */,
 				575F5EBF1E24F6A70070E850 /* DocumentListCell.m in Sources */,
 				575F5EBA1E24F6A70070E850 /* InterpreterViewHeaderView.m in Sources */,

@@ -7,12 +7,10 @@
 //
 
 #define DataBaseInfoDirectoryName @"DataBaseInfo"
-#define DataBaseName @"QMDataBase"
-
+#define DataBaseName @"ERDataBase"
 
 #import "FMDBManager.h"
-#import "QMCommonHeader.h"
-#import "QMFileManager.h"
+#import "FileManager.h"
 
 @interface FMDBManager ()
 @property (nonatomic, copy) NSString *currentDataBase;
@@ -26,11 +24,6 @@
     
     if (self) {
         [self useDataBaseWithName:DataBaseName];
-        [self creatTableWithName:ChatInfoTable withAttributeDictionary:@{
-                                                                             @"roomID" : @"integer",
-                                                                             @"chatInfoModel": @"nvarchar"
-                                                                             
-                                                                             }];
     }
     return self;
 }
@@ -72,9 +65,9 @@
     
     _currentDataBase = dataBaseName;
     __block BOOL successed = NO;
-    BOOL documentExist = [QMFileManager creatDocumentSubDirectoryWithString:DataBaseInfoDirectoryName];
+    BOOL documentExist = [FileManager creatDocumentSubDirectoryWithString:DataBaseInfoDirectoryName];
     if (documentExist) {
-        NSString *dataBaseDirectory = [QMFileManager getDocumentSubDirectoryWithString:DataBaseInfoDirectoryName];
+        NSString *dataBaseDirectory = [FileManager getDocumentSubDirectoryWithString:DataBaseInfoDirectoryName];
         
         NSString *dataBase = [NSString stringWithFormat:@"%@.sqlite", dataBaseName];
         // 0.获得沙盒中的数据库文件名
@@ -85,6 +78,7 @@
         _queue = [FMDatabaseQueue databaseQueueWithPath:filePath];
         successed = YES;
     }
+    
     return successed;
 }
 
