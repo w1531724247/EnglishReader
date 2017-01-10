@@ -32,9 +32,9 @@
     if (filePath.length < 1 || ![filePath isKindOfClass:[NSString class]]) {
         return ;
     }
-
     // 获得文件的后缀名（不带'.'）
     NSString *fileExtension = [filePath pathExtension];
+    filePath = [filePath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];//添加对中文文件路径的支持
     if ([fileExtension isEqualToString:@"txt"]) {
         [self handleTxtWithFilePath:filePath];
     }
