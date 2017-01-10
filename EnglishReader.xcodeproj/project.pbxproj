@@ -13,7 +13,6 @@
 		570878091E226618004D3AD5 /* paper_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878051E226618004D3AD5 /* paper_4.jpg */; };
 		570DC5621E23AD3A00E24D1D /* DocumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */; };
 		570DC5651E23B08100E24D1D /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5641E23B08100E24D1D /* UIColor+Extention.m */; };
-		570DC5671E23B22400E24D1D /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 570DC5661E23B22400E24D1D /* Resource */; };
 		570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5691E23B33A00E24D1D /* FileManager.m */; };
 		570DC5701E23B3F800E24D1D /* DocumentListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC56F1E23B3F800E24D1D /* DocumentListDataSource.m */; };
 		570DC5731E23B68E00E24D1D /* DocumentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570DC5721E23B68E00E24D1D /* DocumentListCell.m */; };
@@ -155,7 +154,6 @@
 		570DC5611E23AD3A00E24D1D /* DocumentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListViewController.m; sourceTree = "<group>"; };
 		570DC5631E23B08100E24D1D /* UIColor+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
 		570DC5641E23B08100E24D1D /* UIColor+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
-		570DC5661E23B22400E24D1D /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
 		570DC5681E23B33A00E24D1D /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		570DC5691E23B33A00E24D1D /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		570DC56E1E23B3F800E24D1D /* DocumentListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListDataSource.h; sourceTree = "<group>"; };
@@ -580,7 +578,6 @@
 			isa = PBXGroup;
 			children = (
 				575F5E6E1E249F350070E850 /* UIManager */,
-				570DC5661E23B22400E24D1D /* Resource */,
 				570DC55D1E23AD2700E24D1D /* DocumentList */,
 				57180ED21E23596B00FFD097 /* Extention */,
 				570878011E226618004D3AD5 /* Images */,
@@ -858,7 +855,6 @@
 				57180F3E1E235E8E00FFD097 /* Add-RKSJ-V in Resources */,
 				57180F741E235E8E00FFD097 /* KSCpc-EUC-UCS2 in Resources */,
 				57180F3C1E235E8E00FFD097 /* 90pv-RKSJ-UCS2C in Resources */,
-				570DC5671E23B22400E24D1D /* Resource in Resources */,
 				57180F371E235E8E00FFD097 /* 90ms-RKSJ-V in Resources */,
 				57180F4B1E235E8E00FFD097 /* CNS-EUC-H in Resources */,
 				57180F531E235E8E00FFD097 /* ETen-B5-V in Resources */,

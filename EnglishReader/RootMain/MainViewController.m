@@ -51,7 +51,7 @@
  *  @return header数组
  */
 - (NSArray<__kindof NSString *> *)menuTitlesForMagicView:(VTMagicView *)magicView {
-    NSArray *titles = [NSArray arrayWithObjects:@"文档列表", @"单词本", @"设置", @"我", nil];
+    NSArray *titles = [NSArray arrayWithObjects:@"文档列表", nil];//, @"单词本", @"设置", @"我"
     
     return titles;
 }

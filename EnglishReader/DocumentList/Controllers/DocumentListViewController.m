@@ -8,8 +8,6 @@
 
 #import "DocumentListViewController.h"
 #import "DocumentListDataSource.h"
-#import "ArticleDetailViewController.h"
-#import "RootNavigationController.h"
 
 @interface DocumentListViewController () <UITableViewDelegate>
 
@@ -25,29 +23,19 @@
     
     self.view = self.tableView;
     self.tableView.dataSource = self.dataSource;
-    self.tableView.delegate = self;
+    self.tableView.delegate = self.dataSource;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark ---- UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    ArticleDetailViewController *detailVC = [[ArticleDetailViewController alloc] init];
-    detailVC.filePath = [self.dataSource.filePathArray objectAtIndex:indexPath.row];
-    
-    [[RootNavigationController shareNavigationController] pushViewController:detailVC animated:YES];
 }
 
 #pragma mark ---- getter

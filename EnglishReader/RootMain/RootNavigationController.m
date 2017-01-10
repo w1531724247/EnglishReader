@@ -8,6 +8,7 @@
 
 #import "RootNavigationController.h"
 #import "MainViewController.h"
+#import "DocumentListViewController.h"
 
 @interface RootNavigationController ()
 
@@ -20,7 +21,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (!_shareNavigationController) {
-            MainViewController *mainVC = [[MainViewController alloc] init];
+            DocumentListViewController *mainVC = [[DocumentListViewController alloc] init];
             _shareNavigationController = [[RootNavigationController alloc] initWithRootViewController:mainVC];
         }
     });

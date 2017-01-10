@@ -27,7 +27,6 @@
 
 @end
 
-
 @interface InterpreterViewLocal ()
 
 @property (nonatomic, strong) UIWebView *webView;
@@ -38,6 +37,7 @@
 @implementation InterpreterViewLocal
 
 - (void)dealloc {
+    [self restoreLoadHTMLStringMethod];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -45,10 +45,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        Class class = [UIWebView class];
-        Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
-        Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
-        method_exchangeImplementations(originalMethod, newMethod);
+        [self hookLoadHTMLStringMethod];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadReferenceHTMLString:) name:kLoadReferenceHTMLString object:nil];
         
         [self addSubview:self.webView];
@@ -84,6 +81,21 @@
     if ([self.delegate respondsToSelector:@selector(interpreterSuccessed)]) {
         [self.delegate interpreterSuccessed];
     }
+}
+
+#pragma mark ---- private
+- (void)hookLoadHTMLStringMethod {
+    Class class = [UIWebView class];
+    Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
+    Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
+    method_exchangeImplementations(originalMethod, newMethod);
+}
+
+- (void)restoreLoadHTMLStringMethod {
+    Class class = [UIWebView class];
+    Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
+    Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
+    method_exchangeImplementations(newMethod, originalMethod);
 }
 
 #pragma mark ---- getter

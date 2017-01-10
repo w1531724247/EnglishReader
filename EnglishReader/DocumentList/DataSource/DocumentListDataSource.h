@@ -9,9 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface DocumentListDataSource : NSObject <UITableViewDataSource>
-
-//文件数组
-@property (nonatomic, strong, readonly) NSArray *filePathArray;
+@interface DocumentListDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @end
