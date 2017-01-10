@@ -97,10 +97,9 @@
 }
 
 #pragma mark --- refresh action
-
 - (void)showPreviousPageText:(id)sender {
     self.currentPage--;
-    if (self.currentPage < 0) {
+    if (self.currentPage <= 0) {
         self.currentPage = 0;
     }
 

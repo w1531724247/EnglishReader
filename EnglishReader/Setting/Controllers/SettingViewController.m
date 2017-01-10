@@ -7,7 +7,13 @@
 //
 
 #import "SettingViewController.h"
-
+/*
+    文字颜色
+    文字大小
+    文字字体
+    行间距
+    字间距
+ */
 @interface SettingViewController ()
 
 @end
@@ -19,6 +25,7 @@
     // Do any additional setup after loading the view.
     
     self.title = @"设置";
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

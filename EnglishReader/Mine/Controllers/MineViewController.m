@@ -1,24 +1,24 @@
 //
-//  WordListViewController.m
+//  MineViewController.m
 //  EnglishReader
 //
 //  Created by QMTV on 17/1/10.
 //  Copyright © 2017年 LFC. All rights reserved.
 //
 
-#import "WordListViewController.h"
+#import "MineViewController.h"
 
-@interface WordListViewController ()
+@interface MineViewController ()
 
 @end
 
-@implementation WordListViewController
+@implementation MineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"单词本";
+    self.title = @"我";
     self.view.backgroundColor = [UIColor whiteColor];
 }
 

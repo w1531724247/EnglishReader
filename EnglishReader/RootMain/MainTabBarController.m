@@ -11,6 +11,7 @@
 #import "UIManager.h"
 #import "SettingViewController.h"
 #import "WordListViewController.h"
+#import "MineViewController.h"
 
 @interface MainTabBarController ()
 
@@ -35,7 +36,7 @@
     SettingViewController *settingVC = [[SettingViewController alloc] init];
     UINavigationController *settingNav = [[UINavigationController alloc] initWithRootViewController:settingVC];
     
-    UIViewController *mineVC = [[UIViewController alloc] init];
+    MineViewController *mineVC = [[MineViewController alloc] init];
     UINavigationController *mineNav = [[UINavigationController alloc] initWithRootViewController:mineVC];
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIManager textColor]} forState:UIControlStateNormal];

@@ -118,6 +118,7 @@
 		575F5E741E24CC780070E850 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E731E24CC780070E850 /* MainTabBarController.m */; };
 		575F5E771E24CED00070E850 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E761E24CED00070E850 /* SettingViewController.m */; };
 		575F5E7C1E24CF210070E850 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E7B1E24CF210070E850 /* WordListViewController.m */; };
+		575F5E811E24D83F0070E850 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E801E24D83F0070E850 /* MineViewController.m */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -281,6 +282,8 @@
 		575F5E761E24CED00070E850 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		575F5E7A1E24CF210070E850 /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
 		575F5E7B1E24CF210070E850 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
+		575F5E7F1E24D83F0070E850 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		575F5E801E24D83F0070E850 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -580,6 +583,23 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		575F5E7D1E24D8330070E850 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				575F5E7E1E24D8330070E850 /* Controllers */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		575F5E7E1E24D8330070E850 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				575F5E7F1E24D83F0070E850 /* MineViewController.h */,
+				575F5E801E24D83F0070E850 /* MineViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5797A8971E20F27500F0BE38 = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +625,7 @@
 		5797A8A21E20F27600F0BE38 /* EnglishReader */ = {
 			isa = PBXGroup;
 			children = (
+				575F5E7D1E24D8330070E850 /* Mine */,
 				575F5E781E24CF150070E850 /* WordList */,
 				575F5E6E1E249F350070E850 /* UIManager */,
 				570DC55D1E23AD2700E24D1D /* DocumentList */,
@@ -990,6 +1011,7 @@
 				57119F481E221DB300B929EB /* NSDictionary+JSONHelper.m in Sources */,
 				575F5E711E249F870070E850 /* UIManager.m in Sources */,
 				5797A8E01E21052000F0BE38 /* RootNavigationController.m in Sources */,
+				575F5E811E24D83F0070E850 /* MineViewController.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
 				57119F5D1E22310600B929EB /* ArticleDetailViewController.m in Sources */,
 				575F5E7C1E24CF210070E850 /* WordListViewController.m in Sources */,

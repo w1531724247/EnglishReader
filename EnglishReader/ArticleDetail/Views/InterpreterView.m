@@ -148,7 +148,6 @@
 }
 
 #pragma mark ---- action
-
 - (void)closeButtonDidTouch:(UIButton *)button {
     if ([self.delegate respondsToSelector:@selector(interpreterView:closeButtonDidTouch:)]) {
         [self.headerView dragImageUpDown:YES];
