@@ -38,7 +38,6 @@
     [self hiddenInterpreterView];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -60,12 +59,13 @@
 
 #pragma mark ----- private
 -  (void)showInterpreterViewWithText:(NSString *)text {
+    [self.interpreterView startLoadingAnimation];
+    
     CGFloat interpreterViewX = 0.0;
     CGFloat interpreterViewY = CGRectGetHeight(self.view.frame) - kWebViewHeight;
     CGFloat interpreterViewW = CGRectGetWidth(self.view.frame);
     CGFloat interpreterViewH = kWebViewHeight;
     CGRect frame = CGRectMake(interpreterViewX, interpreterViewY, interpreterViewW, interpreterViewH);
-    
     [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.interpreterView.frame = frame;
     } completion:^(BOOL finished) {
@@ -113,6 +113,7 @@
     }
     
     self.textView.attributedText = [self.articleHleper actionTextWithPage:self.currentPage];
+    [self.textView scrollToTopAnimated:NO];
     [self.textView.mj_footer endRefreshing];
 }
 

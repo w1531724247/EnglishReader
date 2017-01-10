@@ -14,12 +14,11 @@
 #import <UIKit/UIReferenceLibraryViewController.h>
 #import "Masonry.h"
 
-@interface InterpreterView ()
+@interface InterpreterView ()<InterpreterContentViewProtocol>
 
 @property (nonatomic, strong) InterpreterViewHeaderView *headerView;
 @property (nonatomic, strong) InterpreterViewNetwork *interpreterViewNet;
 @property (nonatomic, strong) InterpreterViewLocal *interpreterViewLocal;
-@property (nonatomic, strong) UIView *interpreterView;
 
 @end
 
@@ -42,14 +41,28 @@
 
 - (void)interpretWithText:(NSString *)text {
     if ([UIReferenceLibraryViewController dictionaryHasDefinitionForTerm:text]) {
-        [self bringSubviewToFront:self.interpreterViewLocal];
+        self.interpreterViewLocal.hidden = NO;
+        self.interpreterViewNet.hidden = YES;
         [self.interpreterViewLocal interpretWithText:text];
-        self.interpreterView = self.interpreterViewLocal;
     } else {
-        [self bringSubviewToFront:self.interpreterViewNet];
+        self.interpreterViewLocal.hidden = YES;
+        self.interpreterViewNet.hidden = NO;
         [self.interpreterViewNet interpretWithText:text];
-        self.interpreterView = self.interpreterViewNet;
     }
+}
+
+- (void)startLoadingAnimation {
+    [self.headerView startLoadingAnimation];
+}
+
+#pragma mark ---- InterpreterContentViewProtocol
+
+- (void)interpreterSuccessed {
+    [self.headerView stopLoadingAnimation];
+}
+
+- (void)interpreterFailure {
+    [self.headerView stopLoadingAnimation];
 }
 
 #pragma mark ---- private
@@ -100,6 +113,7 @@
 - (InterpreterViewNetwork *)interpreterViewNet {
     if (!_interpreterViewNet) {
         _interpreterViewNet = [[InterpreterViewNetwork alloc] init];
+        _interpreterViewNet.delegate = self;
     }
     
     return _interpreterViewNet;
@@ -108,6 +122,7 @@
 - (InterpreterViewLocal *)interpreterViewLocal {
     if (!_interpreterViewLocal) {
         _interpreterViewLocal = [[InterpreterViewLocal alloc] init];
+        _interpreterViewLocal.delegate = self;
     }
     
     return _interpreterViewLocal;

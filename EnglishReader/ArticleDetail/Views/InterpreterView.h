@@ -12,6 +12,7 @@
 @interface InterpreterView : UIView
 
 - (void)interpretWithText:(NSString *)text;
+- (void)startLoadingAnimation;
 
 @property (nonatomic, weak) id<InterpreterViewDelegate> delegate;
 

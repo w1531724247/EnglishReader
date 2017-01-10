@@ -29,6 +29,7 @@
 
 
 @interface InterpreterViewLocal ()
+
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) UIReferenceLibraryViewController *reference;
 
@@ -64,16 +65,13 @@
 }
 
 - (void)interpretWithText:(NSString *)text {
-    if ([UIReferenceLibraryViewController dictionaryHasDefinitionForTerm:text]) {
-        if (self.reference) {
-            [self.reference.view removeFromSuperview];
-            self.reference = nil;
-        }
-
-        self.reference = [[UIReferenceLibraryViewController alloc] initWithTerm:text];
-        [self addSubview:self.reference.view];
-        [self bringSubviewToFront:self.webView];
+    if (self.reference) {
+        [self.reference.view removeFromSuperview];
+        self.reference = nil;
     }
+    
+    self.reference = [[UIReferenceLibraryViewController alloc] initWithTerm:text];
+    [self insertSubview:self.reference.view belowSubview:self.webView];
 }
 
 #pragma mark ---- Notification
@@ -82,6 +80,10 @@
 {
     NSString *html = [notification.userInfo objectForKey:@"html"];
     [self.webView loadReferenceHTMLString:html baseURL:nil];
+    
+    if ([self.delegate respondsToSelector:@selector(interpreterSuccessed)]) {
+        [self.delegate interpreterSuccessed];
+    }
 }
 
 #pragma mark ---- getter
@@ -93,6 +95,5 @@
     
     return _webView;
 }
-
 
 @end

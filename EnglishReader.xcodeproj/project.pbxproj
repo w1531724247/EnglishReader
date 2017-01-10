@@ -270,6 +270,7 @@
 		57180F311E235E8E00FFD097 /* UniKS-UTF16-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-H"; sourceTree = "<group>"; };
 		57180F321E235E8E00FFD097 /* UniKS-UTF16-V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UniKS-UTF16-V"; sourceTree = "<group>"; };
 		57180F331E235E8E00FFD097 /* V */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = V; sourceTree = "<group>"; };
+		575F5E6D1E2495B20070E850 /* InterpreterContentViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterContentViewProtocol.h; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -430,6 +431,7 @@
 				57119F561E22310600B929EB /* InterpreterView.m */,
 				57119F571E22310600B929EB /* InterpreterViewHeaderView.h */,
 				57119F581E22310600B929EB /* InterpreterViewHeaderView.m */,
+				575F5E6D1E2495B20070E850 /* InterpreterContentViewProtocol.h */,
 				57119F591E22310600B929EB /* InterpreterViewLocal.h */,
 				57119F5A1E22310600B929EB /* InterpreterViewLocal.m */,
 				57119F5B1E22310600B929EB /* InterpreterViewNetwork.h */,

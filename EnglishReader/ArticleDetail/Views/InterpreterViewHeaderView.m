@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) UIImageView *dragImageView;
 @property (nonatomic, strong) UIButton *closeButton;
-
+@property (nonatomic, strong) UIActivityIndicatorView *indicationView;
 @end
 
 @implementation InterpreterViewHeaderView
@@ -23,6 +23,7 @@
     if (self) {
         [self addSubview:self.dragImageView];
         [self addSubview:self.closeButton];
+        [self addSubview:self.indicationView];
         [self addConstraintsToSubviews];
     }
     
@@ -33,7 +34,6 @@
 - (void)addCloseButtonEventToTarget:(nullable id)target action:(nonnull SEL)selector forControlEvents:(UIControlEvents)controlEvents {
     [self.closeButton addTarget:target action:selector forControlEvents:controlEvents];
 }
-
 
 #pragma amrk --- private
 
@@ -49,6 +49,21 @@
         make.right.equalTo(self.mas_right);
         make.centerY.equalTo(self.mas_centerY);
     }];
+    
+    [self.indicationView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.closeButton.mas_centerX);
+        make.centerY.equalTo(self.closeButton.mas_centerY);
+    }];
+}
+
+- (void)startLoadingAnimation {
+    self.closeButton.hidden = YES;
+    [self.indicationView startAnimating];
+}
+
+- (void)stopLoadingAnimation {
+    self.closeButton.hidden = NO;
+    [self.indicationView stopAnimating];
 }
 
 #pragma mark --- getter
@@ -70,5 +85,13 @@
     
     return _closeButton;
 }
+
+- (UIActivityIndicatorView *)indicationView {
+    if (!_indicationView) {
+        _indicationView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    }
+    return _indicationView;
+}
+
 
 @end

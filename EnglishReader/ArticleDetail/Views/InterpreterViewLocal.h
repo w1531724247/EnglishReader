@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InterpreterContentViewProtocol.h"
 
 @interface InterpreterViewLocal : UIView
 
+@property (nonatomic, weak) id<InterpreterContentViewProtocol> delegate;
 - (void)interpretWithText:(NSString *)text;
 
 @end

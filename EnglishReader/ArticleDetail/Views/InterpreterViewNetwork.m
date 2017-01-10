@@ -47,8 +47,12 @@
 #pragma mark --- APIManagerProtocol
 - (void)getInterpretFromBaiduServerSuccessed:(BOOL)successed withResponse:(id)responseObject {
     if (!successed) {
+        if ([self.delegate respondsToSelector:@selector(interpreterSuccessed)]) {
+            [self.delegate interpreterFailure];
+        }
         return;
     }
+    
     NSDictionary *responseDict = (NSDictionary *)responseObject;
     NSArray *trans_result = [responseDict getArrayForKey:@"trans_result"];
     NSDictionary *resultDict = [trans_result firstObject];
@@ -56,8 +60,11 @@
     NSString *dst = [resultDict getStringForKey:@"dst"];
     
     NSString *result = [NSString stringWithFormat:@"%@:\n   %@", src, dst];
-    
     self.textView.text = result;
+    
+    if ([self.delegate respondsToSelector:@selector(interpreterSuccessed)]) {
+        [self.delegate interpreterSuccessed];
+    }
 }
 
 #pragma mark --- getter
