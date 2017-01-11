@@ -20,9 +20,11 @@
 - (BOOL)addWord:(NSString *)word withArticleName:(NSString *)articleName;
 //删除一个单词
 - (BOOL)deleteWord:(NSString *)word;
-//改一个单词的信息
-- (BOOL)updateWord:(NSString *)word;
-//查询一个单词
-- (BOOL)queryWordWithValue:(NSString *)value forKey:(NSString *)key;
+
+//改一个单词的中文翻译的信息
+- (BOOL)updateWord:(NSString *)word withChineseInterpretation:(NSString *)interpretation;
+
+//查询一个单词的中文意思
+- (BOOL)queryChineseInterpretationWithWord:(NSString *)word;
 
 @end

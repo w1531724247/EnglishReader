@@ -8,6 +8,7 @@
 
 #define kWord @"word"
 #define kCreatDate @"creatDate"
+#define kChineseWord @"chineseWord"
 #define kFirstUpperLetter @"firstUpperLetter"
 #define kLookUpCount @"lookUpCount"
 #define kArticles @"articles"
@@ -132,15 +133,37 @@
     return successed;
 }
 
-//改一个单词的信息
-- (BOOL)updateWord:(NSString *)word {
-    BOOL successed = NO;
+//改一个单词的中文翻译的信息
+- (BOOL)updateWord:(NSString *)word withChineseInterpretation:(NSString *)interpretation {
+    if (word.length < 1 || interpretation.length < 1) {
+        return NO;
+    }
     
+    if (![word isKindOfClass:[NSString class]] || ![interpretation isKindOfClass:[NSString class]]) {
+        return NO;
+    }
+    BOOL successed = NO;
+    NSArray *objectArray = [[FMDBManager shareManager] queryRecordInTable:kStrangeWordTable withConditionDictionary:@{kWord:word}];
+    
+    if([objectArray lastObject]){
+        NSDictionary *wordRecordDict = [objectArray lastObject];
+        [wordRecordDict setValue:interpretation forKey:kChineseWord];
+        successed = [[FMDBManager shareManager] updateRecordWithDictionary:wordRecordDict
+                                                                   inTable:kStrangeWordTable
+                                                   withConditionDictionary:@{kWord:word}];
+    }
     return successed;
 }
 
-//查询一个单词
-- (BOOL)queryWordWithValue:(NSString *)value forKey:(NSString *)key {
+//查询一个单词的中文意思
+- (BOOL)queryChineseInterpretationWithWord:(NSString *)word {
+    if (word.length < 1) {
+        return NO;
+    }
+    
+    if (![word isKindOfClass:[NSString class]]) {
+        return NO;
+    }
     BOOL successed = NO;
     
     return successed;
