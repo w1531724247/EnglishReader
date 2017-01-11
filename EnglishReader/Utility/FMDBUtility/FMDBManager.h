@@ -17,6 +17,7 @@
  *  当前正在使用的数据库名字
  */
 @property (nonatomic, copy, readonly) NSString *currentDataBaseName;
+
 /**
  *  单例对象
  *
@@ -98,7 +99,7 @@
  *
  *  @return 插入成功 返回YES;
  */
-- (BOOL)insertDictionary:(NSDictionary *)dictionary toTable:(NSString *)tableName;
+- (BOOL)insertRecordWithDictionary:(NSDictionary *)dictionary toTable:(NSString *)tableName;
 /**
  *  删除表中的一行数据
  *
@@ -116,7 +117,7 @@
  *
  *  @return 更新成功 返回YES;
  */
-- (BOOL)updateDictionary:(NSDictionary *)dictionary inTable:(NSString *)tableName withConditionDictionary:(NSDictionary *)conditionDict;
+- (BOOL)updateRecordWithDictionary:(NSDictionary *)dictionary inTable:(NSString *)tableName withConditionDictionary:(NSDictionary *)conditionDict;
 /**
  *  获取表中所有的记录
  *

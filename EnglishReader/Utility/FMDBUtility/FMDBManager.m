@@ -245,7 +245,7 @@
  *
  *  @return 插入成功 返回YES;
  */
-- (BOOL)insertDictionary:(NSDictionary *)dictionary toTable:(NSString *)tableName {
+- (BOOL)insertRecordWithDictionary:(NSDictionary *)dictionary toTable:(NSString *)tableName {
      NSAssert([tableName isKindOfClass:[NSString class]], @"tableName must be NSString or subClass");
      NSAssert([dictionary isKindOfClass:[NSDictionary class]], @"dictionary must be NSDictionary or subClass");
     __block BOOL successed = NO;
@@ -280,7 +280,7 @@
  *
  *  @return 更新成功 返回YES;
  */
-- (BOOL)updateDictionary:(NSDictionary *)dictionary inTable:(NSString *)tableName withConditionDictionary:(NSDictionary *)conditionDict{
+- (BOOL)updateRecordWithDictionary:(NSDictionary *)dictionary inTable:(NSString *)tableName withConditionDictionary:(NSDictionary *)conditionDict{
     NSAssert([dictionary isKindOfClass:[NSDictionary class]], @"dictionary must be NSDictionary or subClass");
     NSAssert([conditionDict isKindOfClass:[NSDictionary class]], @"conditionDict must be NSDictionary or subClass");
     NSAssert([tableName isKindOfClass:[NSString class]], @"tableName must be NSString or subClass");

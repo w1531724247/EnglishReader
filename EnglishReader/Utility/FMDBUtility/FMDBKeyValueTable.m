@@ -75,10 +75,10 @@
     }
     
     if([objectArray lastObject]){
-        successed = [[FMDBManager shareManager] updateDictionary:@{@"key":key,
+        successed = [[FMDBManager shareManager] updateRecordWithDictionary:@{@"key":key,
                                                                    @"value": value} inTable:KeyValueTable withConditionDictionary:@{@"key":key}];
     }else{
-        successed = [[FMDBManager shareManager] insertDictionary:@{@"key":key,
+        successed = [[FMDBManager shareManager] insertRecordWithDictionary:@{@"key":key,
                                                                    @"value": value} toTable:KeyValueTable];
     }
     

@@ -6,8 +6,8 @@
 //  Copyright © 2017年 LFC. All rights reserved.
 //
 
-#import "WordModel.h"
+#import "WordRecordModel.h"
 
-@implementation WordModel
+@implementation WordRecordModel
 
 @end

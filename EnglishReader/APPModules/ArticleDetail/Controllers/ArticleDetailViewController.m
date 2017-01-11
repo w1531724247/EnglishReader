@@ -14,7 +14,7 @@
 #import "InterpreterView.h"
 #import <CoreText/CoreText.h>
 #import "MJRefresh.h"
-#import "FMDBManager.h"
+#import "StrangeWordTable.h"
 
 @interface ArticleDetailViewController ()<ArticleHelperDelegate, InterpreterViewDelegate>
 
@@ -54,7 +54,8 @@
 }
 
 - (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text {
-        
+    NSString *articleName = [self.filePath lastPathComponent];
+    [[StrangeWordTable shareTable] addWord:text withArticleName:articleName];
     [self showInterpreterViewWithText:text];
 }
 

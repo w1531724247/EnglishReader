@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WordModel : NSObject
+@interface WordRecordModel : NSObject
 
 @property (nonatomic, copy) NSString *word;//单词
 @property (nonatomic, strong) NSDate *creatDate;//创建<添加>日期

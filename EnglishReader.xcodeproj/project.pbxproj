@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		570382311E25C72D00B57A00 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382041E25C72D00B57A00 /* ArticleDetailViewController.m */; };
+		570382321E25C72D00B57A00 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382071E25C72D00B57A00 /* ArticleTextView.m */; };
+		570382331E25C72D00B57A00 /* InterpreterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703820A1E25C72D00B57A00 /* InterpreterView.m */; };
+		570382341E25C72D00B57A00 /* InterpreterViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703820C1E25C72D00B57A00 /* InterpreterViewHeaderView.m */; };
+		570382351E25C72D00B57A00 /* InterpreterViewLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703820E1E25C72D00B57A00 /* InterpreterViewLocal.m */; };
+		570382361E25C72D00B57A00 /* InterpreterViewNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382101E25C72D00B57A00 /* InterpreterViewNetwork.m */; };
+		570382371E25C72D00B57A00 /* DocumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382141E25C72D00B57A00 /* DocumentListViewController.m */; };
+		570382381E25C72D00B57A00 /* DocumentListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382171E25C72D00B57A00 /* DocumentListDataSource.m */; };
+		570382391E25C72D00B57A00 /* DocumentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703821A1E25C72D00B57A00 /* DocumentListCell.m */; };
+		5703823A1E25C72D00B57A00 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703821E1E25C72D00B57A00 /* MineViewController.m */; };
+		5703823B1E25C72D00B57A00 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382211E25C72D00B57A00 /* MainTabBarController.m */; };
+		5703823C1E25C72D00B57A00 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382231E25C72D00B57A00 /* MainViewController.m */; };
+		5703823D1E25C72D00B57A00 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382251E25C72D00B57A00 /* RootNavigationController.m */; };
+		5703823E1E25C72D00B57A00 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382291E25C72D00B57A00 /* SettingViewController.m */; };
+		5703823F1E25C72D00B57A00 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703822D1E25C72D00B57A00 /* WordListViewController.m */; };
+		570382401E25C72D00B57A00 /* WordRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382301E25C72D00B57A00 /* WordRecordModel.m */; };
+		570382431E25CFFD00B57A00 /* NSArray+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382421E25CFFD00B57A00 /* NSArray+NSString.m */; };
+		570382461E25D05B00B57A00 /* NSDictionary+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382451E25D05B00B57A00 /* NSDictionary+NSString.m */; };
+		570382491E25D3D900B57A00 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382481E25D3D900B57A00 /* NSDate+Utility.m */; };
+		5703824C1E25DC1000B57A00 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703824B1E25DC1000B57A00 /* NSString+Category.m */; };
 		570878061E226618004D3AD5 /* paper_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878021E226618004D3AD5 /* paper_1.jpg */; };
 		570878071E226618004D3AD5 /* paper_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878031E226618004D3AD5 /* paper_2.jpg */; };
 		570878081E226618004D3AD5 /* paper_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878041E226618004D3AD5 /* paper_3.jpg */; };
@@ -16,22 +36,6 @@
 		57119F661E22413E00B929EB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57119F651E22413E00B929EB /* CoreText.framework */; };
 		57180EDC1E235D6C00FFD097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */; };
 		575F5E711E249F870070E850 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E701E249F870070E850 /* UIManager.m */; };
-		575F5EB71E24F6A70070E850 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E8A1E24F6A70070E850 /* ArticleDetailViewController.m */; };
-		575F5EB81E24F6A70070E850 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E8D1E24F6A70070E850 /* ArticleTextView.m */; };
-		575F5EB91E24F6A70070E850 /* InterpreterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E901E24F6A70070E850 /* InterpreterView.m */; };
-		575F5EBA1E24F6A70070E850 /* InterpreterViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E921E24F6A70070E850 /* InterpreterViewHeaderView.m */; };
-		575F5EBB1E24F6A70070E850 /* InterpreterViewLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E941E24F6A70070E850 /* InterpreterViewLocal.m */; };
-		575F5EBC1E24F6A70070E850 /* InterpreterViewNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E961E24F6A70070E850 /* InterpreterViewNetwork.m */; };
-		575F5EBD1E24F6A70070E850 /* DocumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E9A1E24F6A70070E850 /* DocumentListViewController.m */; };
-		575F5EBE1E24F6A70070E850 /* DocumentListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E9D1E24F6A70070E850 /* DocumentListDataSource.m */; };
-		575F5EBF1E24F6A70070E850 /* DocumentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EA01E24F6A70070E850 /* DocumentListCell.m */; };
-		575F5EC01E24F6A70070E850 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EA41E24F6A70070E850 /* MineViewController.m */; };
-		575F5EC11E24F6A70070E850 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EA71E24F6A70070E850 /* MainTabBarController.m */; };
-		575F5EC21E24F6A70070E850 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EA91E24F6A70070E850 /* MainViewController.m */; };
-		575F5EC31E24F6A70070E850 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EAB1E24F6A70070E850 /* RootNavigationController.m */; };
-		575F5EC41E24F6A70070E850 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EAF1E24F6A70070E850 /* SettingViewController.m */; };
-		575F5EC51E24F6A70070E850 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EB31E24F6A70070E850 /* WordListViewController.m */; };
-		575F5EC61E24F6A70070E850 /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5EB61E24F6A70070E850 /* WordModel.m */; };
 		575F5F201E24F7720070E850 /* 83pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */; };
 		575F5F211E24F7720070E850 /* 90ms-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECA1E24F7720070E850 /* 90ms-RKSJ-H */; };
 		575F5F221E24F7720070E850 /* 90ms-RKSJ-UCS2 in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECB1E24F7720070E850 /* 90ms-RKSJ-UCS2 */; };
@@ -155,6 +159,47 @@
 
 /* Begin PBXFileReference section */
 		0C00EBF68E03656A2F86647F /* Pods-EnglishReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.release.xcconfig"; sourceTree = "<group>"; };
+		570382031E25C72D00B57A00 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
+		570382041E25C72D00B57A00 /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
+		570382061E25C72D00B57A00 /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTextView.h; sourceTree = "<group>"; };
+		570382071E25C72D00B57A00 /* ArticleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTextView.m; sourceTree = "<group>"; };
+		570382081E25C72D00B57A00 /* InterpreterContentViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterContentViewProtocol.h; sourceTree = "<group>"; };
+		570382091E25C72D00B57A00 /* InterpreterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterView.h; sourceTree = "<group>"; };
+		5703820A1E25C72D00B57A00 /* InterpreterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterView.m; sourceTree = "<group>"; };
+		5703820B1E25C72D00B57A00 /* InterpreterViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewHeaderView.h; sourceTree = "<group>"; };
+		5703820C1E25C72D00B57A00 /* InterpreterViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewHeaderView.m; sourceTree = "<group>"; };
+		5703820D1E25C72D00B57A00 /* InterpreterViewLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewLocal.h; sourceTree = "<group>"; };
+		5703820E1E25C72D00B57A00 /* InterpreterViewLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewLocal.m; sourceTree = "<group>"; };
+		5703820F1E25C72D00B57A00 /* InterpreterViewNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewNetwork.h; sourceTree = "<group>"; };
+		570382101E25C72D00B57A00 /* InterpreterViewNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewNetwork.m; sourceTree = "<group>"; };
+		570382131E25C72D00B57A00 /* DocumentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListViewController.h; sourceTree = "<group>"; };
+		570382141E25C72D00B57A00 /* DocumentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListViewController.m; sourceTree = "<group>"; };
+		570382161E25C72D00B57A00 /* DocumentListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListDataSource.h; sourceTree = "<group>"; };
+		570382171E25C72D00B57A00 /* DocumentListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListDataSource.m; sourceTree = "<group>"; };
+		570382191E25C72D00B57A00 /* DocumentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListCell.h; sourceTree = "<group>"; };
+		5703821A1E25C72D00B57A00 /* DocumentListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListCell.m; sourceTree = "<group>"; };
+		5703821D1E25C72D00B57A00 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		5703821E1E25C72D00B57A00 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		570382201E25C72D00B57A00 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		570382211E25C72D00B57A00 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		570382221E25C72D00B57A00 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		570382231E25C72D00B57A00 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		570382241E25C72D00B57A00 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		570382251E25C72D00B57A00 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
+		570382281E25C72D00B57A00 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		570382291E25C72D00B57A00 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		5703822C1E25C72D00B57A00 /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
+		5703822D1E25C72D00B57A00 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
+		5703822F1E25C72D00B57A00 /* WordRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordRecordModel.h; sourceTree = "<group>"; };
+		570382301E25C72D00B57A00 /* WordRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordRecordModel.m; sourceTree = "<group>"; };
+		570382411E25CFFD00B57A00 /* NSArray+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NSString.h"; sourceTree = "<group>"; };
+		570382421E25CFFD00B57A00 /* NSArray+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NSString.m"; sourceTree = "<group>"; };
+		570382441E25D05B00B57A00 /* NSDictionary+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSString.h"; sourceTree = "<group>"; };
+		570382451E25D05B00B57A00 /* NSDictionary+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSString.m"; sourceTree = "<group>"; };
+		570382471E25D3D900B57A00 /* NSDate+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utility.h"; sourceTree = "<group>"; };
+		570382481E25D3D900B57A00 /* NSDate+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utility.m"; sourceTree = "<group>"; };
+		5703824A1E25DC1000B57A00 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		5703824B1E25DC1000B57A00 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		570878021E226618004D3AD5 /* paper_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_1.jpg; sourceTree = "<group>"; };
 		570878031E226618004D3AD5 /* paper_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_2.jpg; sourceTree = "<group>"; };
 		570878041E226618004D3AD5 /* paper_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_3.jpg; sourceTree = "<group>"; };
@@ -169,39 +214,6 @@
 		57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		575F5E6F1E249F870070E850 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIManager.h; sourceTree = "<group>"; };
 		575F5E701E249F870070E850 /* UIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIManager.m; sourceTree = "<group>"; };
-		575F5E891E24F6A70070E850 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
-		575F5E8A1E24F6A70070E850 /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
-		575F5E8C1E24F6A70070E850 /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTextView.h; sourceTree = "<group>"; };
-		575F5E8D1E24F6A70070E850 /* ArticleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTextView.m; sourceTree = "<group>"; };
-		575F5E8E1E24F6A70070E850 /* InterpreterContentViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterContentViewProtocol.h; sourceTree = "<group>"; };
-		575F5E8F1E24F6A70070E850 /* InterpreterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterView.h; sourceTree = "<group>"; };
-		575F5E901E24F6A70070E850 /* InterpreterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterView.m; sourceTree = "<group>"; };
-		575F5E911E24F6A70070E850 /* InterpreterViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewHeaderView.h; sourceTree = "<group>"; };
-		575F5E921E24F6A70070E850 /* InterpreterViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewHeaderView.m; sourceTree = "<group>"; };
-		575F5E931E24F6A70070E850 /* InterpreterViewLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewLocal.h; sourceTree = "<group>"; };
-		575F5E941E24F6A70070E850 /* InterpreterViewLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewLocal.m; sourceTree = "<group>"; };
-		575F5E951E24F6A70070E850 /* InterpreterViewNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterViewNetwork.h; sourceTree = "<group>"; };
-		575F5E961E24F6A70070E850 /* InterpreterViewNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterpreterViewNetwork.m; sourceTree = "<group>"; };
-		575F5E991E24F6A70070E850 /* DocumentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListViewController.h; sourceTree = "<group>"; };
-		575F5E9A1E24F6A70070E850 /* DocumentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListViewController.m; sourceTree = "<group>"; };
-		575F5E9C1E24F6A70070E850 /* DocumentListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListDataSource.h; sourceTree = "<group>"; };
-		575F5E9D1E24F6A70070E850 /* DocumentListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListDataSource.m; sourceTree = "<group>"; };
-		575F5E9F1E24F6A70070E850 /* DocumentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentListCell.h; sourceTree = "<group>"; };
-		575F5EA01E24F6A70070E850 /* DocumentListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentListCell.m; sourceTree = "<group>"; };
-		575F5EA31E24F6A70070E850 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
-		575F5EA41E24F6A70070E850 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		575F5EA61E24F6A70070E850 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
-		575F5EA71E24F6A70070E850 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
-		575F5EA81E24F6A70070E850 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		575F5EA91E24F6A70070E850 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		575F5EAA1E24F6A70070E850 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
-		575F5EAB1E24F6A70070E850 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
-		575F5EAE1E24F6A70070E850 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		575F5EAF1E24F6A70070E850 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		575F5EB21E24F6A70070E850 /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
-		575F5EB31E24F6A70070E850 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
-		575F5EB51E24F6A70070E850 /* WordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordModel.h; sourceTree = "<group>"; };
-		575F5EB61E24F6A70070E850 /* WordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordModel.m; sourceTree = "<group>"; };
 		575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "83pv-RKSJ-H"; sourceTree = "<group>"; };
 		575F5ECA1E24F7720070E850 /* 90ms-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90ms-RKSJ-H"; sourceTree = "<group>"; };
 		575F5ECB1E24F7720070E850 /* 90ms-RKSJ-UCS2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "90ms-RKSJ-UCS2"; sourceTree = "<group>"; };
@@ -360,6 +372,166 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		570382001E25C72D00B57A00 /* APPModules */ = {
+			isa = PBXGroup;
+			children = (
+				570382011E25C72D00B57A00 /* ArticleDetail */,
+				570382111E25C72D00B57A00 /* DocumentList */,
+				5703821B1E25C72D00B57A00 /* Mine */,
+				5703821F1E25C72D00B57A00 /* RootMain */,
+				570382261E25C72D00B57A00 /* Setting */,
+				5703822A1E25C72D00B57A00 /* WordList */,
+			);
+			path = APPModules;
+			sourceTree = "<group>";
+		};
+		570382011E25C72D00B57A00 /* ArticleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				570382021E25C72D00B57A00 /* Controllers */,
+				570382051E25C72D00B57A00 /* Views */,
+			);
+			path = ArticleDetail;
+			sourceTree = "<group>";
+		};
+		570382021E25C72D00B57A00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				570382031E25C72D00B57A00 /* ArticleDetailViewController.h */,
+				570382041E25C72D00B57A00 /* ArticleDetailViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		570382051E25C72D00B57A00 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				570382061E25C72D00B57A00 /* ArticleTextView.h */,
+				570382071E25C72D00B57A00 /* ArticleTextView.m */,
+				570382081E25C72D00B57A00 /* InterpreterContentViewProtocol.h */,
+				570382091E25C72D00B57A00 /* InterpreterView.h */,
+				5703820A1E25C72D00B57A00 /* InterpreterView.m */,
+				5703820B1E25C72D00B57A00 /* InterpreterViewHeaderView.h */,
+				5703820C1E25C72D00B57A00 /* InterpreterViewHeaderView.m */,
+				5703820D1E25C72D00B57A00 /* InterpreterViewLocal.h */,
+				5703820E1E25C72D00B57A00 /* InterpreterViewLocal.m */,
+				5703820F1E25C72D00B57A00 /* InterpreterViewNetwork.h */,
+				570382101E25C72D00B57A00 /* InterpreterViewNetwork.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		570382111E25C72D00B57A00 /* DocumentList */ = {
+			isa = PBXGroup;
+			children = (
+				570382121E25C72D00B57A00 /* Controllers */,
+				570382151E25C72D00B57A00 /* DataSource */,
+				570382181E25C72D00B57A00 /* Views */,
+			);
+			path = DocumentList;
+			sourceTree = "<group>";
+		};
+		570382121E25C72D00B57A00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				570382131E25C72D00B57A00 /* DocumentListViewController.h */,
+				570382141E25C72D00B57A00 /* DocumentListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		570382151E25C72D00B57A00 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				570382161E25C72D00B57A00 /* DocumentListDataSource.h */,
+				570382171E25C72D00B57A00 /* DocumentListDataSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		570382181E25C72D00B57A00 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				570382191E25C72D00B57A00 /* DocumentListCell.h */,
+				5703821A1E25C72D00B57A00 /* DocumentListCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5703821B1E25C72D00B57A00 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				5703821C1E25C72D00B57A00 /* Controllers */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		5703821C1E25C72D00B57A00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5703821D1E25C72D00B57A00 /* MineViewController.h */,
+				5703821E1E25C72D00B57A00 /* MineViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5703821F1E25C72D00B57A00 /* RootMain */ = {
+			isa = PBXGroup;
+			children = (
+				570382201E25C72D00B57A00 /* MainTabBarController.h */,
+				570382211E25C72D00B57A00 /* MainTabBarController.m */,
+				570382221E25C72D00B57A00 /* MainViewController.h */,
+				570382231E25C72D00B57A00 /* MainViewController.m */,
+				570382241E25C72D00B57A00 /* RootNavigationController.h */,
+				570382251E25C72D00B57A00 /* RootNavigationController.m */,
+			);
+			path = RootMain;
+			sourceTree = "<group>";
+		};
+		570382261E25C72D00B57A00 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				570382271E25C72D00B57A00 /* Controllers */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		570382271E25C72D00B57A00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				570382281E25C72D00B57A00 /* SettingViewController.h */,
+				570382291E25C72D00B57A00 /* SettingViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5703822A1E25C72D00B57A00 /* WordList */ = {
+			isa = PBXGroup;
+			children = (
+				5703822B1E25C72D00B57A00 /* Controllers */,
+				5703822E1E25C72D00B57A00 /* Models */,
+			);
+			path = WordList;
+			sourceTree = "<group>";
+		};
+		5703822B1E25C72D00B57A00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5703822C1E25C72D00B57A00 /* WordListViewController.h */,
+				5703822D1E25C72D00B57A00 /* WordListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5703822E1E25C72D00B57A00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5703822F1E25C72D00B57A00 /* WordRecordModel.h */,
+				570382301E25C72D00B57A00 /* WordRecordModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		570878011E226618004D3AD5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,166 +568,6 @@
 				575F5E701E249F870070E850 /* UIManager.m */,
 			);
 			path = UIManager;
-			sourceTree = "<group>";
-		};
-		575F5E861E24F6A70070E850 /* APPFunction */ = {
-			isa = PBXGroup;
-			children = (
-				575F5E871E24F6A70070E850 /* ArticleDetail */,
-				575F5E971E24F6A70070E850 /* DocumentList */,
-				575F5EA11E24F6A70070E850 /* Mine */,
-				575F5EA51E24F6A70070E850 /* RootMain */,
-				575F5EAC1E24F6A70070E850 /* Setting */,
-				575F5EB01E24F6A70070E850 /* WordList */,
-			);
-			path = APPFunction;
-			sourceTree = "<group>";
-		};
-		575F5E871E24F6A70070E850 /* ArticleDetail */ = {
-			isa = PBXGroup;
-			children = (
-				575F5E881E24F6A70070E850 /* Controllers */,
-				575F5E8B1E24F6A70070E850 /* Views */,
-			);
-			path = ArticleDetail;
-			sourceTree = "<group>";
-		};
-		575F5E881E24F6A70070E850 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				575F5E891E24F6A70070E850 /* ArticleDetailViewController.h */,
-				575F5E8A1E24F6A70070E850 /* ArticleDetailViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		575F5E8B1E24F6A70070E850 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				575F5E8C1E24F6A70070E850 /* ArticleTextView.h */,
-				575F5E8D1E24F6A70070E850 /* ArticleTextView.m */,
-				575F5E8E1E24F6A70070E850 /* InterpreterContentViewProtocol.h */,
-				575F5E8F1E24F6A70070E850 /* InterpreterView.h */,
-				575F5E901E24F6A70070E850 /* InterpreterView.m */,
-				575F5E911E24F6A70070E850 /* InterpreterViewHeaderView.h */,
-				575F5E921E24F6A70070E850 /* InterpreterViewHeaderView.m */,
-				575F5E931E24F6A70070E850 /* InterpreterViewLocal.h */,
-				575F5E941E24F6A70070E850 /* InterpreterViewLocal.m */,
-				575F5E951E24F6A70070E850 /* InterpreterViewNetwork.h */,
-				575F5E961E24F6A70070E850 /* InterpreterViewNetwork.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		575F5E971E24F6A70070E850 /* DocumentList */ = {
-			isa = PBXGroup;
-			children = (
-				575F5E981E24F6A70070E850 /* Controllers */,
-				575F5E9B1E24F6A70070E850 /* DataSource */,
-				575F5E9E1E24F6A70070E850 /* Views */,
-			);
-			path = DocumentList;
-			sourceTree = "<group>";
-		};
-		575F5E981E24F6A70070E850 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				575F5E991E24F6A70070E850 /* DocumentListViewController.h */,
-				575F5E9A1E24F6A70070E850 /* DocumentListViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		575F5E9B1E24F6A70070E850 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				575F5E9C1E24F6A70070E850 /* DocumentListDataSource.h */,
-				575F5E9D1E24F6A70070E850 /* DocumentListDataSource.m */,
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		575F5E9E1E24F6A70070E850 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				575F5E9F1E24F6A70070E850 /* DocumentListCell.h */,
-				575F5EA01E24F6A70070E850 /* DocumentListCell.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		575F5EA11E24F6A70070E850 /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				575F5EA21E24F6A70070E850 /* Controllers */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		575F5EA21E24F6A70070E850 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				575F5EA31E24F6A70070E850 /* MineViewController.h */,
-				575F5EA41E24F6A70070E850 /* MineViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		575F5EA51E24F6A70070E850 /* RootMain */ = {
-			isa = PBXGroup;
-			children = (
-				575F5EA61E24F6A70070E850 /* MainTabBarController.h */,
-				575F5EA71E24F6A70070E850 /* MainTabBarController.m */,
-				575F5EA81E24F6A70070E850 /* MainViewController.h */,
-				575F5EA91E24F6A70070E850 /* MainViewController.m */,
-				575F5EAA1E24F6A70070E850 /* RootNavigationController.h */,
-				575F5EAB1E24F6A70070E850 /* RootNavigationController.m */,
-			);
-			path = RootMain;
-			sourceTree = "<group>";
-		};
-		575F5EAC1E24F6A70070E850 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				575F5EAD1E24F6A70070E850 /* Controllers */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		575F5EAD1E24F6A70070E850 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				575F5EAE1E24F6A70070E850 /* SettingViewController.h */,
-				575F5EAF1E24F6A70070E850 /* SettingViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		575F5EB01E24F6A70070E850 /* WordList */ = {
-			isa = PBXGroup;
-			children = (
-				575F5EB11E24F6A70070E850 /* Controllers */,
-				575F5EB41E24F6A70070E850 /* Models */,
-			);
-			path = WordList;
-			sourceTree = "<group>";
-		};
-		575F5EB11E24F6A70070E850 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				575F5EB21E24F6A70070E850 /* WordListViewController.h */,
-				575F5EB31E24F6A70070E850 /* WordListViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		575F5EB41E24F6A70070E850 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				575F5EB51E24F6A70070E850 /* WordModel.h */,
-				575F5EB61E24F6A70070E850 /* WordModel.m */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		575F5EC71E24F7720070E850 /* ThirdLibs */ = {
@@ -713,9 +725,9 @@
 		5797A8A21E20F27600F0BE38 /* EnglishReader */ = {
 			isa = PBXGroup;
 			children = (
+				570382001E25C72D00B57A00 /* APPModules */,
 				575F5F771E24F78C0070E850 /* Categorys */,
 				575F5EC71E24F7720070E850 /* ThirdLibs */,
-				575F5E861E24F6A70070E850 /* APPFunction */,
 				575F5E6E1E249F350070E850 /* UIManager */,
 				570878011E226618004D3AD5 /* Images */,
 				57119F3E1E220ECA00B929EB /* Networking */,
@@ -765,6 +777,14 @@
 				5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */,
 				570DC5681E23B33A00E24D1D /* FileManager.h */,
 				570DC5691E23B33A00E24D1D /* FileManager.m */,
+				570382411E25CFFD00B57A00 /* NSArray+NSString.h */,
+				570382421E25CFFD00B57A00 /* NSArray+NSString.m */,
+				570382441E25D05B00B57A00 /* NSDictionary+NSString.h */,
+				570382451E25D05B00B57A00 /* NSDictionary+NSString.m */,
+				570382471E25D3D900B57A00 /* NSDate+Utility.h */,
+				570382481E25D3D900B57A00 /* NSDate+Utility.m */,
+				5703824A1E25DC1000B57A00 /* NSString+Category.h */,
+				5703824B1E25DC1000B57A00 /* NSString+Category.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1053,35 +1073,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575F5EBB1E24F6A70070E850 /* InterpreterViewLocal.m in Sources */,
-				575F5EC51E24F6A70070E850 /* WordListViewController.m in Sources */,
-				575F5EC61E24F6A70070E850 /* WordModel.m in Sources */,
-				575F5EBC1E24F6A70070E850 /* InterpreterViewNetwork.m in Sources */,
 				575F5F891E24F7CC0070E850 /* DataCenter.m in Sources */,
-				575F5EBD1E24F6A70070E850 /* DocumentListViewController.m in Sources */,
-				575F5EC01E24F6A70070E850 /* MineViewController.m in Sources */,
-				575F5EBE1E24F6A70070E850 /* DocumentListDataSource.m in Sources */,
+				570382361E25C72D00B57A00 /* InterpreterViewNetwork.m in Sources */,
 				5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */,
+				5703823C1E25C72D00B57A00 /* MainViewController.m in Sources */,
+				570382311E25C72D00B57A00 /* ArticleDetailViewController.m in Sources */,
+				5703823E1E25C72D00B57A00 /* SettingViewController.m in Sources */,
+				570382321E25C72D00B57A00 /* ArticleTextView.m in Sources */,
 				575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */,
-				575F5EB91E24F6A70070E850 /* InterpreterView.m in Sources */,
+				570382401E25C72D00B57A00 /* WordRecordModel.m in Sources */,
+				570382491E25D3D900B57A00 /* NSDate+Utility.m in Sources */,
 				575F5F801E24F78C0070E850 /* UIWebView+JS.m in Sources */,
 				575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */,
-				575F5EC11E24F6A70070E850 /* MainTabBarController.m in Sources */,
+				5703823F1E25C72D00B57A00 /* WordListViewController.m in Sources */,
 				575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */,
-				575F5EB71E24F6A70070E850 /* ArticleDetailViewController.m in Sources */,
+				5703823A1E25C72D00B57A00 /* MineViewController.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
+				570382431E25CFFD00B57A00 /* NSArray+NSString.m in Sources */,
 				575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */,
-				575F5EC41E24F6A70070E850 /* SettingViewController.m in Sources */,
-				575F5EBF1E24F6A70070E850 /* DocumentListCell.m in Sources */,
-				575F5EBA1E24F6A70070E850 /* InterpreterViewHeaderView.m in Sources */,
+				5703824C1E25DC1000B57A00 /* NSString+Category.m in Sources */,
+				570382391E25C72D00B57A00 /* DocumentListCell.m in Sources */,
+				5703823B1E25C72D00B57A00 /* MainTabBarController.m in Sources */,
+				570382461E25D05B00B57A00 /* NSDictionary+NSString.m in Sources */,
+				570382381E25C72D00B57A00 /* DocumentListDataSource.m in Sources */,
+				570382351E25C72D00B57A00 /* InterpreterViewLocal.m in Sources */,
+				570382371E25C72D00B57A00 /* DocumentListViewController.m in Sources */,
+				570382331E25C72D00B57A00 /* InterpreterView.m in Sources */,
 				575F5E711E249F870070E850 /* UIManager.m in Sources */,
-				575F5EC21E24F6A70070E850 /* MainViewController.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
 				570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */,
-				575F5EB81E24F6A70070E850 /* ArticleTextView.m in Sources */,
+				5703823D1E25C72D00B57A00 /* RootNavigationController.m in Sources */,
+				570382341E25C72D00B57A00 /* InterpreterViewHeaderView.m in Sources */,
 				575F5F7E1E24F78C0070E850 /* NSDictionary+JSONHelper.m in Sources */,
-				575F5EC31E24F6A70070E850 /* RootNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
