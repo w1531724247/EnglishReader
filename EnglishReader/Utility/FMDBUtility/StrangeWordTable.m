@@ -171,4 +171,29 @@
     return resultArray;
 }
 
+//通过文章名字查询单词列表
+- (NSArray *)queryStrangeWordByArticleName:(NSString *)articleName {
+    NSArray *resultArray = [NSArray array];
+    if (articleName.length < 1) {
+        return resultArray;
+    }
+    
+    if (![articleName isKindOfClass:[NSString class]]) {
+        return resultArray;
+    }
+    NSArray *wordList = [[FMDBManager shareManager] queryAllRecordInTable:kStrangeWordTable];
+    
+    NSMutableArray *tempArray = [NSMutableArray array];
+    for (NSDictionary *wordDict in wordList) {
+        NSString *articleString = [wordDict getStringForKey:kArticles];
+        NSArray *articles = [articleString arrayWithJsonString:articleString];
+        if ([articles containsObject:articleName]) {
+            [tempArray addObject:wordDict];
+        }
+    }
+    resultArray = [NSArray arrayWithArray:tempArray];
+    
+    return resultArray;
+}
+
 @end

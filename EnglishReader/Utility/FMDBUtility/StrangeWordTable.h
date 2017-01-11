@@ -27,4 +27,6 @@
 //通过首字母查询单词列表
 - (NSArray *)queryStrangeWordByFirstUpperLetter:(NSString *)firstUpperLetter;
 
+//通过文章名字查询单词列表
+- (NSArray *)queryStrangeWordByArticleName:(NSString *)ArticleName;
 @end
