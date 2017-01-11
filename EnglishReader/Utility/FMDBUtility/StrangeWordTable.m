@@ -25,12 +25,12 @@
 
 @implementation StrangeWordTable
 
--(instancetype)init{
+- (instancetype)init{
     self = [super init];
     if (self) {
         [[FMDBManager shareManager] creatTableWithName:kStrangeWordTable withAttributeDictionary:@{
                                                                                                @"word" : @"nvarchar",
-                                                                                               @"creatDate": @"date",
+                                                                                               @"creatDate": @"nvarchar",
                                                                                                @"chineseWord": @"nvarchar",
                                                                                                @"firstUpperLetter": @"nvarchar",
                                                                                                @"lookUpCount": @"integer",
@@ -45,7 +45,7 @@
  *
  *  @return 单例
  */
-+(instancetype)shareTable{
++ (instancetype)shareTable{
     static StrangeWordTable *_shareTable;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -78,8 +78,8 @@
         lookUpCount++;
         [wordRecordDict setValue:[NSNumber numberWithInteger:lookUpCount] forKey:kLookUpCount];
         
-        NSDate *date = [NSDate currentDate];
-        [wordRecordDict setValue:date forKey:kCreatDate];
+        NSString *currentDate = [[NSDate currentDate] exactToDay];
+        [wordRecordDict setValue:currentDate forKey:kCreatDate];
         
         NSString *articlesAtring = [wordRecordDict getStringForKey:kArticles];
         NSArray *articles = [articlesAtring arrayWithJsonString:articlesAtring];
@@ -95,7 +95,7 @@
                                                    withConditionDictionary:@{kWord:word}];
     } else {
         NSString *wordText = word;
-        NSDate *creatDate = [NSDate currentDate];
+        NSString *creatDate = [[NSDate currentDate] exactToDay];
         NSString *chineseWord = [NSString string];
         NSString *firstUpperLetter = [[word substringWithRange:NSMakeRange(0, 1)] uppercaseString];
         NSInteger lookUpCount= 1;
@@ -152,21 +152,23 @@
                                                                    inTable:kStrangeWordTable
                                                    withConditionDictionary:@{kWord:word}];
     }
+    
     return successed;
 }
 
-//查询一个单词的中文意思
-- (BOOL)queryChineseInterpretationWithWord:(NSString *)word {
-    if (word.length < 1) {
-        return NO;
+//通过首字母查询单词列表
+- (NSArray *)queryStrangeWordByFirstUpperLetter:(NSString *)firstUpperLetter {
+    NSArray *resultArray = [NSArray array];
+    if (firstUpperLetter.length < 1) {
+        return resultArray;
     }
     
-    if (![word isKindOfClass:[NSString class]]) {
-        return NO;
+    if (![firstUpperLetter isKindOfClass:[NSString class]]) {
+        return resultArray;
     }
-    BOOL successed = NO;
+    resultArray = [[FMDBManager shareManager] queryRecordInTable:kStrangeWordTable withConditionDictionary:@{kFirstUpperLetter:firstUpperLetter}];
     
-    return successed;
+    return resultArray;
 }
 
 @end

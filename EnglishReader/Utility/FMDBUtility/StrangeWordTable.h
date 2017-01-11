@@ -14,7 +14,7 @@
  *
  *  @return 单例
  */
-+(instancetype)shareTable;
++ (instancetype)shareTable;
 
 //添加一个单词
 - (BOOL)addWord:(NSString *)word withArticleName:(NSString *)articleName;
@@ -24,7 +24,7 @@
 //改一个单词的中文翻译的信息
 - (BOOL)updateWord:(NSString *)word withChineseInterpretation:(NSString *)interpretation;
 
-//查询一个单词的中文意思
-- (BOOL)queryChineseInterpretationWithWord:(NSString *)word;
+//通过首字母查询单词列表
+- (NSArray *)queryStrangeWordByFirstUpperLetter:(NSString *)firstUpperLetter;
 
 @end

@@ -20,4 +20,52 @@
     return dateNow;
 }
 
+//精确到天
+- (NSString *)exactToDay {
+    NSString *dateString = [self dateToString:self withDateFormat:@"yyyy-MM-dd"];
+    
+    return dateString;
+}
+
+//精确到小时
+- (NSString *)exactToHour {
+    NSString *dateString = [self dateToString:self withDateFormat:@"yyyy-MM-dd HH"];
+    
+    return dateString;
+}
+
+//精确到分
+- (NSString *)exactToMinute {
+    NSString *dateString = [self dateToString:self withDateFormat:@"yyyy-MM-dd HH:mm"];
+    
+    return dateString;
+}
+
+//精确到秒
+- (NSString *)exactToSecond {
+    NSString *dateString = [self dateToString:self withDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    return dateString;
+}
+
+//日期格式转字符串
+- (NSString *)dateToString:(NSDate *)date withDateFormat:(NSString *)format
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:format];
+    NSString *strDate = [dateFormatter stringFromDate:date];
+    
+    return strDate;
+}
+
+//字符串转日期格式
+- (NSDate *)stringToDate:(NSString *)dateString withDateFormat:(NSString *)format
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:format];
+    
+    NSDate *date = [dateFormatter dateFromString:dateString];
+    return date;
+}
+
 @end
