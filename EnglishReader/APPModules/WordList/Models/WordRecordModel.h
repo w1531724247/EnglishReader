@@ -11,7 +11,7 @@
 @interface WordRecordModel : NSObject
 
 @property (nonatomic, copy) NSString *word;//单词
-@property (nonatomic, strong) NSDate *creatDate;//创建<添加>日期
+@property (nonatomic, copy) NSString *creatDate;//创建<添加>日期
 @property (nonatomic, copy) NSString *chineseWord;//中文意思
 @property (nonatomic, copy) NSString *firstUpperLetter;//首字母大写
 @property (nonatomic, assign) NSInteger lookUpCount;//查看翻译的次数
