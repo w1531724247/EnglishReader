@@ -12,12 +12,14 @@
 #import "YYKit.h"
 #import <UIKit/UIReferenceLibraryViewController.h>
 #import "UIWebView+Category.h"
+#import "NSString+Category.h"
+#import "StrangeWordTable.h"
 
 @interface InterpreterViewLocal ()
 
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) UIReferenceLibraryViewController *reference;
-
+@property (nonatomic, copy) NSString *currentString;
 @end
 
 @implementation InterpreterViewLocal
@@ -52,7 +54,7 @@
         [self.reference.view removeFromSuperview];
         self.reference = nil;
     }
-    
+    self.currentString = text;
     self.reference = [[UIReferenceLibraryViewController alloc] initWithTerm:text];
     [self insertSubview:self.reference.view belowSubview:self.webView];
 }
@@ -67,6 +69,13 @@
     if ([self.delegate respondsToSelector:@selector(interpreterSuccessed)]) {
         [self.delegate interpreterSuccessed];
     }
+    
+    NSString *chineseString = [html extractFirstChinsesStringFromRefrenceHTML];
+    if (chineseString.length > 0) {//存储中文含义
+        [[StrangeWordTable shareTable] updateWord:self.currentString withChineseInterpretation:chineseString];
+    }
+    
+    self.currentString = nil;
 }
 
 #pragma mark ---- getter

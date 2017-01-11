@@ -31,4 +31,13 @@
  */
 - (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 
+/*
+ 判断是否是中文
+ */
+- (BOOL)isChinese;
+
+/*
+    提取字符串中的第一串连续的中文字符串
+ */
+- (NSString *)extractFirstChinsesStringFromRefrenceHTML;
 @end
