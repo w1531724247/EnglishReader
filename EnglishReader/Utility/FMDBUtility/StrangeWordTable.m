@@ -101,13 +101,13 @@
         NSArray *articles = [NSArray arrayWithObjects:articleName, nil];
         NSString *articlesString = [articles arrayToJsonString];
         
-        NSDictionary *dict = @{@"word": wordText,
+        NSDictionary *wordRecordDict = @{@"word": wordText,
                                @"creatDate": creatDate,
                                @"chineseWord": chineseWord,
                                @"firstUpperLetter": firstUpperLetter,
                                @"lookUpCount": [NSNumber numberWithInteger:lookUpCount],
                                @"articles":articlesString};
-        successed = [[FMDBManager shareManager] insertRecordWithDictionary:dict toTable:kStrangeWordTable];
+        successed = [[FMDBManager shareManager] insertRecordWithDictionary:wordRecordDict toTable:kStrangeWordTable];
     }
     
     return successed;
@@ -115,7 +115,19 @@
 
 //删除一个单词
 - (BOOL)deleteWord:(NSString *)word {
+    if (word.length < 1) {
+        return NO;
+    }
+    
+    if (![word isKindOfClass:[NSString class]]) {
+        return NO;
+    }
     BOOL successed = NO;
+    
+    NSArray *objectArray = [[FMDBManager shareManager] queryRecordInTable:kStrangeWordTable withConditionDictionary:@{kWord:word}];
+    if(objectArray.count > 0){
+        successed = [[FMDBManager shareManager] deleteRecordWithConditionDict:@{kWord:word} inTable:kStrangeWordTable];
+    }
     
     return successed;
 }
