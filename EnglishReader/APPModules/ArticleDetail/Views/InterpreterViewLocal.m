@@ -6,26 +6,12 @@
 //  Copyright © 2017年 LFC. All rights reserved.
 //
 
-#define kLoadReferenceHTMLString @"loadReferenceHTMLString"
 
+#import "CommonDefines.h"
 #import "InterpreterViewLocal.h"
 #import "YYKit.h"
-#import <objc/runtime.h>
 #import <UIKit/UIReferenceLibraryViewController.h>
-
-@interface UIWebView (reference)
-- (void)loadReferenceHTMLString:(NSString *)string baseURL:(NSURL *)baseURL;
-@end
-
-@implementation UIWebView (reference)
-
-- (void)loadReferenceHTMLString:(NSString *)string baseURL:(NSURL *)baseURL
-{
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:string, @"html", nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kLoadReferenceHTMLString object:nil userInfo:userInfo];
-}
-
-@end
+#import "UIWebView+Category.h"
 
 @interface InterpreterViewLocal ()
 
@@ -37,7 +23,7 @@
 @implementation InterpreterViewLocal
 
 - (void)dealloc {
-    [self restoreLoadHTMLStringMethod];
+    [_webView restoreLoadHTMLStringMethod];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -45,7 +31,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        [self hookLoadHTMLStringMethod];
+        [self.webView hookLoadHTMLStringMethod];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadReferenceHTMLString:) name:kLoadReferenceHTMLString object:nil];
         
         [self addSubview:self.webView];
@@ -81,21 +67,6 @@
     if ([self.delegate respondsToSelector:@selector(interpreterSuccessed)]) {
         [self.delegate interpreterSuccessed];
     }
-}
-
-#pragma mark ---- private
-- (void)hookLoadHTMLStringMethod {
-    Class class = [UIWebView class];
-    Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
-    Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
-    method_exchangeImplementations(originalMethod, newMethod);
-}
-
-- (void)restoreLoadHTMLStringMethod {
-    Class class = [UIWebView class];
-    Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
-    Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
-    method_exchangeImplementations(newMethod, originalMethod);
 }
 
 #pragma mark ---- getter

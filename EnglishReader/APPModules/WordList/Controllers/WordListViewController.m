@@ -7,12 +7,23 @@
 //
 
 #import "WordListViewController.h"
+#import "WordListDataSource.h"
 
 @interface WordListViewController ()
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) WordListDataSource *dataSource;
 
 @end
 
 @implementation WordListViewController
+
+- (void)loadView {
+    [super loadView];
+    
+    self.view = self.tableView;
+    self.tableView.dataSource = self.dataSource;
+    self.tableView.delegate = self.dataSource;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,19 +33,29 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.dataSource wordListOrderByFirstUpperLetterWithTableView:self.tableView];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark ---- getter
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (WordListDataSource *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [[WordListDataSource alloc] init];
+    }
+    
+    return _dataSource;
 }
-*/
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] init];
+    }
+    
+    return _tableView;
+}
+
 
 @end

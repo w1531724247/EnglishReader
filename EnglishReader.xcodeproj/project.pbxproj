@@ -23,10 +23,16 @@
 		5703823E1E25C72D00B57A00 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382291E25C72D00B57A00 /* SettingViewController.m */; };
 		5703823F1E25C72D00B57A00 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703822D1E25C72D00B57A00 /* WordListViewController.m */; };
 		570382401E25C72D00B57A00 /* WordRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382301E25C72D00B57A00 /* WordRecordModel.m */; };
-		570382431E25CFFD00B57A00 /* NSArray+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382421E25CFFD00B57A00 /* NSArray+NSString.m */; };
-		570382461E25D05B00B57A00 /* NSDictionary+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382451E25D05B00B57A00 /* NSDictionary+NSString.m */; };
-		570382491E25D3D900B57A00 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382481E25D3D900B57A00 /* NSDate+Utility.m */; };
-		5703824C1E25DC1000B57A00 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703824B1E25DC1000B57A00 /* NSString+Category.m */; };
+		570382501E25EB8E00B57A00 /* WordListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703824F1E25EB8E00B57A00 /* WordListDataSource.m */; };
+		570382541E25EC3400B57A00 /* WordListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382531E25EC3400B57A00 /* WordListCell.m */; };
+		5703826E1E2613B800B57A00 /* ArticleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703826D1E2613B800B57A00 /* ArticleHelper.m */; };
+		5703827E1E26148A00B57A00 /* NSArray+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382731E26148A00B57A00 /* NSArray+NSString.m */; };
+		5703827F1E26148A00B57A00 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382751E26148A00B57A00 /* NSDate+Utility.m */; };
+		570382801E26148A00B57A00 /* NSDictionary+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382771E26148A00B57A00 /* NSDictionary+NSString.m */; };
+		570382811E26148A00B57A00 /* NSObject+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382791E26148A00B57A00 /* NSObject+Category.m */; };
+		570382821E26148A00B57A00 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703827B1E26148A00B57A00 /* NSString+Category.m */; };
+		570382831E26148A00B57A00 /* UIWebView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703827D1E26148A00B57A00 /* UIWebView+Category.m */; };
+		570382871E26153800B57A00 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382861E26153800B57A00 /* WordDetailViewController.m */; };
 		570878061E226618004D3AD5 /* paper_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878021E226618004D3AD5 /* paper_1.jpg */; };
 		570878071E226618004D3AD5 /* paper_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878031E226618004D3AD5 /* paper_2.jpg */; };
 		570878081E226618004D3AD5 /* paper_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878041E226618004D3AD5 /* paper_3.jpg */; };
@@ -125,7 +131,6 @@
 		575F5F761E24F7720070E850 /* TET_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575F5F1F1E24F7720070E850 /* TET_ios.framework */; };
 		575F5F7E1E24F78C0070E850 /* NSDictionary+JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F791E24F78C0070E850 /* NSDictionary+JSONHelper.m */; };
 		575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F7B1E24F78C0070E850 /* UIColor+Extention.m */; };
-		575F5F801E24F78C0070E850 /* UIWebView+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F7D1E24F78C0070E850 /* UIWebView+JS.m */; };
 		575F5F891E24F7CC0070E850 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F831E24F7CC0070E850 /* DataCenter.m */; };
 		575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F861E24F7CC0070E850 /* FMDBKeyValueTable.m */; };
 		575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F881E24F7CC0070E850 /* FMDBManager.m */; };
@@ -136,7 +141,6 @@
 		5797A8B31E20F27600F0BE38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8B11E20F27600F0BE38 /* LaunchScreen.storyboard */; };
 		5797A8BE1E20F27600F0BE38 /* EnglishReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8BD1E20F27600F0BE38 /* EnglishReaderTests.m */; };
 		5797A8C91E20F27600F0BE38 /* EnglishReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */; };
-		5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */; };
 		5D3330FFF71202D99C8AA74E /* libPods-EnglishReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */; };
 /* End PBXBuildFile section */
 
@@ -192,21 +196,33 @@
 		5703822D1E25C72D00B57A00 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
 		5703822F1E25C72D00B57A00 /* WordRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordRecordModel.h; sourceTree = "<group>"; };
 		570382301E25C72D00B57A00 /* WordRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordRecordModel.m; sourceTree = "<group>"; };
-		570382411E25CFFD00B57A00 /* NSArray+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NSString.h"; sourceTree = "<group>"; };
-		570382421E25CFFD00B57A00 /* NSArray+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NSString.m"; sourceTree = "<group>"; };
-		570382441E25D05B00B57A00 /* NSDictionary+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSString.h"; sourceTree = "<group>"; };
-		570382451E25D05B00B57A00 /* NSDictionary+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSString.m"; sourceTree = "<group>"; };
-		570382471E25D3D900B57A00 /* NSDate+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utility.h"; sourceTree = "<group>"; };
-		570382481E25D3D900B57A00 /* NSDate+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utility.m"; sourceTree = "<group>"; };
-		5703824A1E25DC1000B57A00 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
-		5703824B1E25DC1000B57A00 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		5703824E1E25EB8E00B57A00 /* WordListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListDataSource.h; sourceTree = "<group>"; };
+		5703824F1E25EB8E00B57A00 /* WordListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListDataSource.m; sourceTree = "<group>"; };
+		570382521E25EC3400B57A00 /* WordListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListCell.h; sourceTree = "<group>"; };
+		570382531E25EC3400B57A00 /* WordListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListCell.m; sourceTree = "<group>"; };
+		5703826C1E2613B800B57A00 /* ArticleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleHelper.h; sourceTree = "<group>"; };
+		5703826D1E2613B800B57A00 /* ArticleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleHelper.m; sourceTree = "<group>"; };
+		570382721E26148A00B57A00 /* NSArray+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NSString.h"; sourceTree = "<group>"; };
+		570382731E26148A00B57A00 /* NSArray+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NSString.m"; sourceTree = "<group>"; };
+		570382741E26148A00B57A00 /* NSDate+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utility.h"; sourceTree = "<group>"; };
+		570382751E26148A00B57A00 /* NSDate+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utility.m"; sourceTree = "<group>"; };
+		570382761E26148A00B57A00 /* NSDictionary+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSString.h"; sourceTree = "<group>"; };
+		570382771E26148A00B57A00 /* NSDictionary+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSString.m"; sourceTree = "<group>"; };
+		570382781E26148A00B57A00 /* NSObject+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Category.h"; sourceTree = "<group>"; };
+		570382791E26148A00B57A00 /* NSObject+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Category.m"; sourceTree = "<group>"; };
+		5703827A1E26148A00B57A00 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		5703827B1E26148A00B57A00 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		5703827C1E26148A00B57A00 /* UIWebView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Category.h"; sourceTree = "<group>"; };
+		5703827D1E26148A00B57A00 /* UIWebView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Category.m"; sourceTree = "<group>"; };
+		570382841E2614B800B57A00 /* CommonDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefines.h; sourceTree = "<group>"; };
+		570382851E26153800B57A00 /* WordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordDetailViewController.h; sourceTree = "<group>"; };
+		570382861E26153800B57A00 /* WordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		570878021E226618004D3AD5 /* paper_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_1.jpg; sourceTree = "<group>"; };
 		570878031E226618004D3AD5 /* paper_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_2.jpg; sourceTree = "<group>"; };
 		570878041E226618004D3AD5 /* paper_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_3.jpg; sourceTree = "<group>"; };
 		570878051E226618004D3AD5 /* paper_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_4.jpg; sourceTree = "<group>"; };
 		570DC5681E23B33A00E24D1D /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		570DC5691E23B33A00E24D1D /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
-		57119F3D1E220E5200B929EB /* DefineKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKeys.h; sourceTree = "<group>"; };
 		57119F3F1E220F3A00B929EB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		57119F401E220F3A00B929EB /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		57119F421E220F9100B929EB /* APIManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManagerProtocol.h; sourceTree = "<group>"; };
@@ -305,8 +321,6 @@
 		575F5F791E24F78C0070E850 /* NSDictionary+JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONHelper.m"; sourceTree = "<group>"; };
 		575F5F7A1E24F78C0070E850 /* UIColor+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
 		575F5F7B1E24F78C0070E850 /* UIColor+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
-		575F5F7C1E24F78C0070E850 /* UIWebView+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JS.h"; sourceTree = "<group>"; };
-		575F5F7D1E24F78C0070E850 /* UIWebView+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JS.m"; sourceTree = "<group>"; };
 		575F5F821E24F7CC0070E850 /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
 		575F5F831E24F7CC0070E850 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
 		575F5F851E24F7CC0070E850 /* FMDBKeyValueTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBKeyValueTable.h; sourceTree = "<group>"; };
@@ -328,8 +342,6 @@
 		5797A8C41E20F27600F0BE38 /* EnglishReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnglishReaderUITests.m; sourceTree = "<group>"; };
 		5797A8CA1E20F27600F0BE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5797A8EC1E210B9000F0BE38 /* ArticleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleHelper.h; sourceTree = "<group>"; };
-		5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleHelper.m; sourceTree = "<group>"; };
 		BD374FCE2CF2E483B21E9921 /* Pods-EnglishReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.debug.xcconfig"; sourceTree = "<group>"; };
 		F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -375,6 +387,7 @@
 		570382001E25C72D00B57A00 /* APPModules */ = {
 			isa = PBXGroup;
 			children = (
+				570382661E2612EE00B57A00 /* WordDetail */,
 				570382011E25C72D00B57A00 /* ArticleDetail */,
 				570382111E25C72D00B57A00 /* DocumentList */,
 				5703821B1E25C72D00B57A00 /* Mine */,
@@ -388,6 +401,7 @@
 		570382011E25C72D00B57A00 /* ArticleDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5703826B1E2613B800B57A00 /* Utility */,
 				570382021E25C72D00B57A00 /* Controllers */,
 				570382051E25C72D00B57A00 /* Views */,
 			);
@@ -508,6 +522,8 @@
 		5703822A1E25C72D00B57A00 /* WordList */ = {
 			isa = PBXGroup;
 			children = (
+				570382511E25EC2100B57A00 /* Views */,
+				5703824D1E25EB7200B57A00 /* DataSource */,
 				5703822B1E25C72D00B57A00 /* Controllers */,
 				5703822E1E25C72D00B57A00 /* Models */,
 			);
@@ -532,6 +548,50 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5703824D1E25EB7200B57A00 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				5703824E1E25EB8E00B57A00 /* WordListDataSource.h */,
+				5703824F1E25EB8E00B57A00 /* WordListDataSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		570382511E25EC2100B57A00 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				570382521E25EC3400B57A00 /* WordListCell.h */,
+				570382531E25EC3400B57A00 /* WordListCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		570382661E2612EE00B57A00 /* WordDetail */ = {
+			isa = PBXGroup;
+			children = (
+				570382671E2612EE00B57A00 /* Controllers */,
+			);
+			path = WordDetail;
+			sourceTree = "<group>";
+		};
+		570382671E2612EE00B57A00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				570382851E26153800B57A00 /* WordDetailViewController.h */,
+				570382861E26153800B57A00 /* WordDetailViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5703826B1E2613B800B57A00 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5703826C1E2613B800B57A00 /* ArticleHelper.h */,
+				5703826D1E2613B800B57A00 /* ArticleHelper.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		570878011E226618004D3AD5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,7 +606,7 @@
 		57119F3B1E220E1900B929EB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				57119F3D1E220E5200B929EB /* DefineKeys.h */,
+				570382841E2614B800B57A00 /* CommonDefines.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -677,10 +737,20 @@
 			children = (
 				575F5F781E24F78C0070E850 /* NSDictionary+JSONHelper.h */,
 				575F5F791E24F78C0070E850 /* NSDictionary+JSONHelper.m */,
+				570382721E26148A00B57A00 /* NSArray+NSString.h */,
+				570382731E26148A00B57A00 /* NSArray+NSString.m */,
+				570382741E26148A00B57A00 /* NSDate+Utility.h */,
+				570382751E26148A00B57A00 /* NSDate+Utility.m */,
+				570382761E26148A00B57A00 /* NSDictionary+NSString.h */,
+				570382771E26148A00B57A00 /* NSDictionary+NSString.m */,
+				570382781E26148A00B57A00 /* NSObject+Category.h */,
+				570382791E26148A00B57A00 /* NSObject+Category.m */,
+				5703827A1E26148A00B57A00 /* NSString+Category.h */,
+				5703827B1E26148A00B57A00 /* NSString+Category.m */,
+				5703827C1E26148A00B57A00 /* UIWebView+Category.h */,
+				5703827D1E26148A00B57A00 /* UIWebView+Category.m */,
 				575F5F7A1E24F78C0070E850 /* UIColor+Extention.h */,
 				575F5F7B1E24F78C0070E850 /* UIColor+Extention.m */,
-				575F5F7C1E24F78C0070E850 /* UIWebView+JS.h */,
-				575F5F7D1E24F78C0070E850 /* UIWebView+JS.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -773,18 +843,8 @@
 			isa = PBXGroup;
 			children = (
 				575F5F811E24F7CC0070E850 /* FMDBUtility */,
-				5797A8EC1E210B9000F0BE38 /* ArticleHelper.h */,
-				5797A8ED1E210B9000F0BE38 /* ArticleHelper.m */,
 				570DC5681E23B33A00E24D1D /* FileManager.h */,
 				570DC5691E23B33A00E24D1D /* FileManager.m */,
-				570382411E25CFFD00B57A00 /* NSArray+NSString.h */,
-				570382421E25CFFD00B57A00 /* NSArray+NSString.m */,
-				570382441E25D05B00B57A00 /* NSDictionary+NSString.h */,
-				570382451E25D05B00B57A00 /* NSDictionary+NSString.m */,
-				570382471E25D3D900B57A00 /* NSDate+Utility.h */,
-				570382481E25D3D900B57A00 /* NSDate+Utility.m */,
-				5703824A1E25DC1000B57A00 /* NSString+Category.h */,
-				5703824B1E25DC1000B57A00 /* NSString+Category.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1075,35 +1135,39 @@
 			files = (
 				575F5F891E24F7CC0070E850 /* DataCenter.m in Sources */,
 				570382361E25C72D00B57A00 /* InterpreterViewNetwork.m in Sources */,
-				5797A8EE1E210B9000F0BE38 /* ArticleHelper.m in Sources */,
 				5703823C1E25C72D00B57A00 /* MainViewController.m in Sources */,
+				570382541E25EC3400B57A00 /* WordListCell.m in Sources */,
 				570382311E25C72D00B57A00 /* ArticleDetailViewController.m in Sources */,
 				5703823E1E25C72D00B57A00 /* SettingViewController.m in Sources */,
 				570382321E25C72D00B57A00 /* ArticleTextView.m in Sources */,
+				570382811E26148A00B57A00 /* NSObject+Category.m in Sources */,
 				575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */,
 				570382401E25C72D00B57A00 /* WordRecordModel.m in Sources */,
-				570382491E25D3D900B57A00 /* NSDate+Utility.m in Sources */,
-				575F5F801E24F78C0070E850 /* UIWebView+JS.m in Sources */,
+				570382821E26148A00B57A00 /* NSString+Category.m in Sources */,
 				575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */,
 				5703823F1E25C72D00B57A00 /* WordListViewController.m in Sources */,
+				5703827E1E26148A00B57A00 /* NSArray+NSString.m in Sources */,
 				575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */,
 				5703823A1E25C72D00B57A00 /* MineViewController.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
+				570382801E26148A00B57A00 /* NSDictionary+NSString.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
-				570382431E25CFFD00B57A00 /* NSArray+NSString.m in Sources */,
 				575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */,
-				5703824C1E25DC1000B57A00 /* NSString+Category.m in Sources */,
+				570382501E25EB8E00B57A00 /* WordListDataSource.m in Sources */,
 				570382391E25C72D00B57A00 /* DocumentListCell.m in Sources */,
 				5703823B1E25C72D00B57A00 /* MainTabBarController.m in Sources */,
-				570382461E25D05B00B57A00 /* NSDictionary+NSString.m in Sources */,
 				570382381E25C72D00B57A00 /* DocumentListDataSource.m in Sources */,
 				570382351E25C72D00B57A00 /* InterpreterViewLocal.m in Sources */,
+				570382831E26148A00B57A00 /* UIWebView+Category.m in Sources */,
 				570382371E25C72D00B57A00 /* DocumentListViewController.m in Sources */,
 				570382331E25C72D00B57A00 /* InterpreterView.m in Sources */,
 				575F5E711E249F870070E850 /* UIManager.m in Sources */,
+				5703826E1E2613B800B57A00 /* ArticleHelper.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
+				570382871E26153800B57A00 /* WordDetailViewController.m in Sources */,
 				570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */,
 				5703823D1E25C72D00B57A00 /* RootNavigationController.m in Sources */,
+				5703827F1E26148A00B57A00 /* NSDate+Utility.m in Sources */,
 				570382341E25C72D00B57A00 /* InterpreterViewHeaderView.m in Sources */,
 				575F5F7E1E24F78C0070E850 /* NSDictionary+JSONHelper.m in Sources */,
 			);

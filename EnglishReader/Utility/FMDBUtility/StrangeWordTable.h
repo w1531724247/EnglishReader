@@ -18,6 +18,7 @@
 
 //添加一个单词
 - (BOOL)addWord:(NSString *)word withArticleName:(NSString *)articleName;
+
 //删除一个单词
 - (BOOL)deleteWord:(NSString *)word;
 

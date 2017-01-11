@@ -9,7 +9,7 @@
 #import "DocumentListViewController.h"
 #import "DocumentListDataSource.h"
 
-@interface DocumentListViewController () <UITableViewDelegate>
+@interface DocumentListViewController ()
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) DocumentListDataSource *dataSource;

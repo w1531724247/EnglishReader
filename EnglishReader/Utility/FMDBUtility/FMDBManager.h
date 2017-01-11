@@ -127,6 +127,18 @@
  *  @return 查到的结果
  */
 - (NSArray *)queryAllRecordInTable:(NSString *)tableName;
+
+/**
+ *  获取表中所有的记录
+ *
+ *  @param tableName       记录所在的表名字
+ *  @param page            页码
+ *  @param size            每页的个数
+ *
+ *  @return 查到的结果
+ */
+- (NSArray *)queryRecordInTable:(NSString *)tableName withPage:(NSInteger)page andSize:(NSInteger)size;
+
 /**
  *  查找表中符合条件的记录
  *

@@ -1,14 +1,14 @@
 //
-//  UIWebView+JS.h
+//  UIWebView+Category.h
 //  EnglishReader
 //
-//  Created by QMTV on 17/1/9.
+//  Created by QMTV on 17/1/11.
 //  Copyright © 2017年 LFC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIWebView (JS)
+@interface UIWebView (Category)
 
 //获取当前webView加载的URL
 - (NSString *)URL;
@@ -20,4 +20,11 @@
 - (NSString *)bodyText;
 //分割每一个单词
 - (void)seperatWords;
+
+- (void)loadReferenceHTMLString:(NSString *)string baseURL:(NSURL *)baseURL;
+
+- (void)hookLoadHTMLStringMethod;
+
+- (void)restoreLoadHTMLStringMethod;
+
 @end

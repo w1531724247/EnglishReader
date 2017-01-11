@@ -10,8 +10,8 @@
 
 #import "ArticleHelper.h"
 #import <ctype.h>
+#import "UIWebView+Category.h"
 #import "YYKit.h"
-#import "UIWebView+JS.h"
 #import <TET_ios/TET_objc.h>
 #import "UIManager.h"
 

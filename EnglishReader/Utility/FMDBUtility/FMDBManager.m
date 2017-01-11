@@ -326,6 +326,47 @@
 }
 
 /**
+ *  获取表中所有的记录
+ *
+ *  @param tableName       记录所在的表名字
+ *  @param page            页码
+ *  @param size            每页的个数
+ *
+ *  @return 查到的结果
+ */
+- (NSArray *)queryRecordInTable:(NSString *)tableName withPage:(NSInteger)page andSize:(NSInteger)size {
+    NSAssert([tableName isKindOfClass:[NSString class]], @"tableName must be NSString or subClass");
+    if (page < 0) {
+        page = 0;
+    }
+    
+    if (size == 0) {
+        size = 50;
+    }
+    
+    NSMutableArray *resultArray = [NSMutableArray array];
+    NSDictionary *attributes = [self getTableAttributesWithTableName:tableName];
+    
+    [self.queue inDatabase:^(FMDatabase *db) {
+        NSString *sql1 = [NSString stringWithFormat:@"select * from %@ order by identifier limit %zi offset %zi;", tableName, size, page*size];
+        // 1.查询数据
+        FMResultSet *rs = [db executeQuery:sql1];
+        // 2.遍历结果集
+        while (rs.next) {
+            NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+            for (NSString *key in attributes) {
+                NSString *value = [rs objectForColumnName:key];
+                [dict setValue:value forKey:key];
+            }
+            
+            [resultArray addObject:dict];
+        }
+    }];
+    
+    return resultArray;
+}
+
+/**
  *  查找表中符合条件的记录
  *
  *  @param tableName     记录所在的表名字
