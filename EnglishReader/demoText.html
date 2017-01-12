@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+        <script language="javascript">
+            
+        function wrapWords(element) {
+            var html = element.innerHTML;
+            var words = html.split(/ /);
+            var newHtml = '';
+            
+            for (var i = 0; i < words.length; i++) {
+                newHtml += '<span>' + words[i] + '</span> ';
+            }
+            
+            element.innerHTML = newHtml;
+        }
+        
+        $("#parent").delegate("span", "click", function() {
+                              alert($(this).text());
+                              });
+            </script>
+        </head>
+
+<body>
+    <h1>这是按钮调用</h1>
+    <input type="button" value="分词" onclick="wrapWords()" />
+    
+    <div id="parent">
+        <span>Hello </span>
+        <span>world. </span>
+        <span>Here </span>
+        <span>are </span>
+        <span>some </span>
+        <span>words!</span>
+    </div>
+</body>
+</html>

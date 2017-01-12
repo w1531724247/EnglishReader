@@ -141,6 +141,8 @@
 		5797A8B31E20F27600F0BE38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8B11E20F27600F0BE38 /* LaunchScreen.storyboard */; };
 		5797A8BE1E20F27600F0BE38 /* EnglishReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8BD1E20F27600F0BE38 /* EnglishReaderTests.m */; };
 		5797A8C91E20F27600F0BE38 /* EnglishReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */; };
+		5799D7521E27640400C92BB4 /* demoText.html in Resources */ = {isa = PBXBuildFile; fileRef = 5799D7511E27640400C92BB4 /* demoText.html */; };
+		5799D7571E27684500C92BB4 /* WebDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5799D7561E27684500C92BB4 /* WebDetailViewController.m */; };
 		5D3330FFF71202D99C8AA74E /* libPods-EnglishReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */; };
 /* End PBXBuildFile section */
 
@@ -342,6 +344,9 @@
 		5797A8C41E20F27600F0BE38 /* EnglishReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnglishReaderUITests.m; sourceTree = "<group>"; };
 		5797A8CA1E20F27600F0BE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5799D7511E27640400C92BB4 /* demoText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demoText.html; sourceTree = "<group>"; };
+		5799D7551E27684500C92BB4 /* WebDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDetailViewController.h; sourceTree = "<group>"; };
+		5799D7561E27684500C92BB4 /* WebDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDetailViewController.m; sourceTree = "<group>"; };
 		BD374FCE2CF2E483B21E9921 /* Pods-EnglishReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.debug.xcconfig"; sourceTree = "<group>"; };
 		F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -387,6 +392,7 @@
 		570382001E25C72D00B57A00 /* APPModules */ = {
 			isa = PBXGroup;
 			children = (
+				5799D7531E27682A00C92BB4 /* WebDetail */,
 				570382661E2612EE00B57A00 /* WordDetail */,
 				570382011E25C72D00B57A00 /* ArticleDetail */,
 				570382111E25C72D00B57A00 /* DocumentList */,
@@ -809,6 +815,7 @@
 				5797A8B11E20F27600F0BE38 /* LaunchScreen.storyboard */,
 				5797A8B41E20F27600F0BE38 /* Info.plist */,
 				5797A8A31E20F27600F0BE38 /* Supporting Files */,
+				5799D7511E27640400C92BB4 /* demoText.html */,
 			);
 			path = EnglishReader;
 			sourceTree = "<group>";
@@ -847,6 +854,23 @@
 				570DC5691E23B33A00E24D1D /* FileManager.m */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		5799D7531E27682A00C92BB4 /* WebDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5799D7541E27682A00C92BB4 /* Controllers */,
+			);
+			path = WebDetail;
+			sourceTree = "<group>";
+		};
+		5799D7541E27682A00C92BB4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5799D7551E27684500C92BB4 /* WebDetailViewController.h */,
+				5799D7561E27684500C92BB4 /* WebDetailViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CB982E37F391EA695AF47250 /* Frameworks */ = {
@@ -1040,6 +1064,7 @@
 				575F5F551E24F7720070E850 /* H in Resources */,
 				575F5F631E24F7720070E850 /* UniCNS-UCS2-H in Resources */,
 				575F5F471E24F7720070E850 /* GB-EUC-V in Resources */,
+				5799D7521E27640400C92BB4 /* demoText.html in Resources */,
 				575F5F5A1E24F7720070E850 /* KSCms-UHC-H in Resources */,
 				575F5F751E24F7720070E850 /* V in Resources */,
 				575F5F371E24F7720070E850 /* CNS-EUC-H in Resources */,
@@ -1165,6 +1190,7 @@
 				5703826E1E2613B800B57A00 /* ArticleHelper.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
 				570382871E26153800B57A00 /* WordDetailViewController.m in Sources */,
+				5799D7571E27684500C92BB4 /* WebDetailViewController.m in Sources */,
 				570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */,
 				5703823D1E25C72D00B57A00 /* RootNavigationController.m in Sources */,
 				5703827F1E26148A00B57A00 /* NSDate+Utility.m in Sources */,
