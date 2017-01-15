@@ -2,36 +2,48 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
         <script language="javascript">
-            
-        function wrapWords(element) {
-            var html = element.innerHTML;
-            var words = html.split(/ /);
-            var newHtml = '';
-            
-            for (var i = 0; i < words.length; i++) {
-                newHtml += '<span>' + words[i] + '</span> ';
+
+        function wrapWords() {
+            var body_elements = document.getElementById("body").childNodes;
+
+            for (var i = 0; i < body_elements.length; i++) {
+                var node = body_elements[i];
+                node.addEventListener('click', function() {alert(this.innerHTML)});
             }
-            
-            element.innerHTML = newHtml;
+
+            // var length = html.length;
+            // var actionHtml = "";
+            // for (var i=0; i<length; i++) {
+            //     var char = html.charAt(i);
+            //     var word = "";
+            //     var str = /^[A-Za-z]*$/;
+            //     if (str.test(char)) {//是字母
+            //         for (var j=i; j<length; j++){
+            //             char = html.charAt(j);
+            //             if (str.test(char)) {
+            //                 word = word + char;
+            //             } else {
+            //                 // words.push(word);
+            //                 i=j-1;
+            //                 break;
+            //             }
+            //         }
+            //         actionHtml = actionHtml + '<span onclick="alert(this.innerHTML)">' + word + '</span>';
+            //     } else {
+            //         actionHtml = actionHtml + '<span>' + char + '</span>';
+            //     }
+            // }
         }
-        
-        $("#parent").delegate("span", "click", function() {
-                              alert($(this).text());
-                              });
             </script>
         </head>
 
-<body>
+<body id="body">
     <h1>这是按钮调用</h1>
     <input type="button" value="分词" onclick="wrapWords()" />
-    
-    <div id="parent">
-        <span>Hello </span>
-        <span>world. </span>
-        <span>Here </span>
-        <span>are </span>
-        <span>some </span>
-        <span>words!</span>
+
+    <div>
+
+        Hello  world. Here are some words!
     </div>
 </body>
 </html>
