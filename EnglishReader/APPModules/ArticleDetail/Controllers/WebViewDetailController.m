@@ -33,7 +33,6 @@
 }
 
 - (void)setupWebView {
-    self.filePath = [self.filePath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];//添加对中文文件路径以及文件名中包含空格的支持
     NSURL *url = [NSURL URLWithString:self.filePath];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:urlRequest];

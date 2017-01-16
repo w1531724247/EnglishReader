@@ -75,7 +75,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     WebViewDetailController *detailVC = [[WebViewDetailController alloc] init];
-    detailVC.filePath = [self.filePathArray objectAtIndex:indexPath.row];
+    NSString *filePath = [self.filePathArray objectAtIndex:indexPath.row];
+    filePath = [filePath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];//添加对中文文件路径以及文件名中包含空格的支持
+    detailVC.filePath = filePath;
     detailVC.hidesBottomBarWhenPushed = YES;
     [tableView.viewController.navigationController pushViewController:detailVC animated:YES];
 }
