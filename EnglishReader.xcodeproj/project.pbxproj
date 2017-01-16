@@ -445,9 +445,9 @@
 		570382051E25C72D00B57A00 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				570382081E25C72D00B57A00 /* InterpreterContentViewProtocol.h */,
 				570382061E25C72D00B57A00 /* ArticleTextView.h */,
 				570382071E25C72D00B57A00 /* ArticleTextView.m */,
-				570382081E25C72D00B57A00 /* InterpreterContentViewProtocol.h */,
 				570382091E25C72D00B57A00 /* InterpreterView.h */,
 				5703820A1E25C72D00B57A00 /* InterpreterView.m */,
 				5703820B1E25C72D00B57A00 /* InterpreterViewHeaderView.h */,
