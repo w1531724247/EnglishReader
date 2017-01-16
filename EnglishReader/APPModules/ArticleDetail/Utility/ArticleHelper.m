@@ -34,6 +34,7 @@
     }
     // 获得文件的后缀名（不带'.'）
     NSString *fileExtension = [filePath pathExtension];
+    filePath = [filePath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];//添加对中文文件路径以及文件名中包含空格的支持
     if ([fileExtension isEqualToString:@"txt"]) {
         [self handleTxtWithFilePath:filePath];
     }
