@@ -67,8 +67,6 @@
     self.webView.frame = self.view.bounds;
 }
 
-#pragma mark ---- notification
-
 #pragma mark ---- Notification
 - (void)loadReferenceHTMLString:(NSNotification *)notification
 {

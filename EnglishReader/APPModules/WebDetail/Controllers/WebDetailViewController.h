@@ -10,4 +10,6 @@
 
 @interface WebDetailViewController : UIViewController
 
+@property (nonatomic, copy) NSString *urlString;
+
 @end

@@ -75,7 +75,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     WebDetailViewController *detailVC = [[WebDetailViewController alloc] init];
-//    detailVC.filePath = [self.filePathArray objectAtIndex:indexPath.row];
+    detailVC.urlString = [self.filePathArray objectAtIndex:indexPath.row];
     detailVC.hidesBottomBarWhenPushed = YES;
     [tableView.viewController.navigationController pushViewController:detailVC animated:YES];
 }

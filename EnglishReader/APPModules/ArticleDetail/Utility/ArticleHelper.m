@@ -424,8 +424,13 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSString *bodyText = [webView bodyText];
     [self handleText:bodyText];
+    
+    //-------------------------------------------------------------------
 //    [[UIApplication sharedApplication].keyWindow addSubview:self.webView];
 //    self.webView.frame = [UIApplication sharedApplication].keyWindow.bounds;
+    
+//    NSError *error;
+//    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
