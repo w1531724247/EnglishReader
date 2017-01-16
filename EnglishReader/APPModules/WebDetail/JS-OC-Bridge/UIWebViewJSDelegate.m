@@ -19,18 +19,21 @@
 
 @implementation UIWebViewJSDelegate
 
+- (void)dealloc {
+    
+}
+
 #pragma mark --------UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
     return YES;
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView{
-    
+- (void)webViewDidStartLoad:(UIWebView *)webView {
     
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (!self.handled) {
         NSError *error;
         [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"actionSpan" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
@@ -47,12 +50,11 @@
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    //    [QMHUD showText:@"网络异常,请检查网络连接"];
+    
 }
 
 #pragma mark ------- JSObjectProtocol
 - (void)textDidTouch:(NSString *)text {
-    
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([weakSelf.delegate respondsToSelector:@selector(webViewTextDidTouch:)]) {

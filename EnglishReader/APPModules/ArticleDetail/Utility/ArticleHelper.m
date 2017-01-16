@@ -71,7 +71,6 @@
     return [self addActionToAttributedText:attributedText];
 }
 
-
 #pragma amrk ------ private
 //处理txt文本
 - (void)handleTxtWithFilePath:(NSString *)filePath {

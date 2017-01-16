@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) UIWebViewJSDelegate *webViewJSDelegate;
 @property (nonatomic, strong) UIWebView *webView;
-
+@property (nonatomic, assign) BOOL setuped;
 @end
 
 @implementation WebViewDetailController
@@ -24,17 +24,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     [self setupWebView];
 }
 
-- (void)setupWebView {
-    [self.view insertSubview:self.webView atIndex:0];
-    self.webView.frame = self.view.bounds;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
+}
+
+- (void)setupWebView {
+    self.filePath = [self.filePath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];//添加对中文文件路径以及文件名中包含空格的支持
     NSURL *url = [NSURL URLWithString:self.filePath];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:urlRequest];
+    
+    [self.view insertSubview:self.webView atIndex:0];
+    self.webView.frame = self.view.bounds;
 }
 
 #pragma mark ----- InterpreterViewDelegate
@@ -43,13 +48,11 @@
 }
 
 #pragma mark ---- UIWebViewJSProtocol
-
 - (void)webViewTextDidTouch:(NSString *)text {
     NSString *articleName = [self.filePath lastPathComponent];
     [[StrangeWordTable shareTable] addWord:text withArticleName:articleName];
     [self showInterpreterViewWithText:text];
 }
-
 
 #pragma mark ----- getter
 - (UIWebView *)webView {
