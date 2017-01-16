@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		570382311E25C72D00B57A00 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382041E25C72D00B57A00 /* ArticleDetailViewController.m */; };
+		570382311E25C72D00B57A00 /* TextViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382041E25C72D00B57A00 /* TextViewDetailController.m */; };
 		570382321E25C72D00B57A00 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382071E25C72D00B57A00 /* ArticleTextView.m */; };
 		570382331E25C72D00B57A00 /* InterpreterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703820A1E25C72D00B57A00 /* InterpreterView.m */; };
 		570382341E25C72D00B57A00 /* InterpreterViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703820C1E25C72D00B57A00 /* InterpreterViewHeaderView.m */; };
@@ -141,13 +141,14 @@
 		5797A8BE1E20F27600F0BE38 /* EnglishReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8BD1E20F27600F0BE38 /* EnglishReaderTests.m */; };
 		5797A8C91E20F27600F0BE38 /* EnglishReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */; };
 		5799D7521E27640400C92BB4 /* demoText.html in Resources */ = {isa = PBXBuildFile; fileRef = 5799D7511E27640400C92BB4 /* demoText.html */; };
-		5799D7571E27684500C92BB4 /* WebDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5799D7561E27684500C92BB4 /* WebDetailViewController.m */; };
-		57E2D5F91E2C63A70044C243 /* wordDetail.html in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D5F81E2C63A70044C243 /* wordDetail.html */; };
 		57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */; };
-		57E2D5FD1E2CA08D0044C243 /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D5FC1E2CA08D0044C243 /* text.html */; };
 		57E2D6011E2CBF6D0044C243 /* actionSpanFunction.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */; };
 		57E2D6031E2CC0E80044C243 /* actionSpan.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6021E2CC0E80044C243 /* actionSpan.js */; };
 		57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */; };
+		57F4D9C51E2CE300005B429D /* DocumentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F4D9C41E2CE300005B429D /* DocumentDetailViewController.m */; };
+		57F4D9C81E2CE5DD005B429D /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F4D9C71E2CE5DD005B429D /* WebViewDetailController.m */; };
+		57F4D9CB1E2CE663005B429D /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = 57F4D9C91E2CE663005B429D /* text.html */; };
+		57F4D9CC1E2CE663005B429D /* wordDetail.html in Resources */ = {isa = PBXBuildFile; fileRef = 57F4D9CA1E2CE663005B429D /* wordDetail.html */; };
 		5D3330FFF71202D99C8AA74E /* libPods-EnglishReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */; };
 /* End PBXBuildFile section */
 
@@ -170,8 +171,8 @@
 
 /* Begin PBXFileReference section */
 		0C00EBF68E03656A2F86647F /* Pods-EnglishReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.release.xcconfig"; sourceTree = "<group>"; };
-		570382031E25C72D00B57A00 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
-		570382041E25C72D00B57A00 /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
+		570382031E25C72D00B57A00 /* TextViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewDetailController.h; sourceTree = "<group>"; };
+		570382041E25C72D00B57A00 /* TextViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewDetailController.m; sourceTree = "<group>"; };
 		570382061E25C72D00B57A00 /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTextView.h; sourceTree = "<group>"; };
 		570382071E25C72D00B57A00 /* ArticleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTextView.m; sourceTree = "<group>"; };
 		570382081E25C72D00B57A00 /* InterpreterContentViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterContentViewProtocol.h; sourceTree = "<group>"; };
@@ -349,16 +350,18 @@
 		5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnglishReaderUITests.m; sourceTree = "<group>"; };
 		5797A8CA1E20F27600F0BE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5799D7511E27640400C92BB4 /* demoText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demoText.html; sourceTree = "<group>"; };
-		5799D7551E27684500C92BB4 /* WebDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDetailViewController.h; sourceTree = "<group>"; };
-		5799D7561E27684500C92BB4 /* WebDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDetailViewController.m; sourceTree = "<group>"; };
-		57E2D5F81E2C63A70044C243 /* wordDetail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wordDetail.html; sourceTree = "<group>"; };
 		57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
-		57E2D5FC1E2CA08D0044C243 /* text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = text.html; sourceTree = "<group>"; };
 		57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionSpanFunction.js; sourceTree = "<group>"; };
 		57E2D6021E2CC0E80044C243 /* actionSpan.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionSpan.js; sourceTree = "<group>"; };
 		57E2D6081E2CD74A0044C243 /* UIWebViewJSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewJSDelegate.h; sourceTree = "<group>"; };
 		57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewJSDelegate.m; sourceTree = "<group>"; };
 		57E2D60B1E2CD78C0044C243 /* JSObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectProtocol.h; sourceTree = "<group>"; };
+		57F4D9C31E2CE300005B429D /* DocumentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentDetailViewController.h; sourceTree = "<group>"; };
+		57F4D9C41E2CE300005B429D /* DocumentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentDetailViewController.m; sourceTree = "<group>"; };
+		57F4D9C61E2CE5DD005B429D /* WebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDetailController.h; sourceTree = "<group>"; };
+		57F4D9C71E2CE5DD005B429D /* WebViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDetailController.m; sourceTree = "<group>"; };
+		57F4D9C91E2CE663005B429D /* text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = text.html; sourceTree = "<group>"; };
+		57F4D9CA1E2CE663005B429D /* wordDetail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wordDetail.html; sourceTree = "<group>"; };
 		BD374FCE2CF2E483B21E9921 /* Pods-EnglishReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.debug.xcconfig"; sourceTree = "<group>"; };
 		F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -429,8 +432,12 @@
 		570382021E25C72D00B57A00 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				570382031E25C72D00B57A00 /* ArticleDetailViewController.h */,
-				570382041E25C72D00B57A00 /* ArticleDetailViewController.m */,
+				570382031E25C72D00B57A00 /* TextViewDetailController.h */,
+				570382041E25C72D00B57A00 /* TextViewDetailController.m */,
+				57F4D9C61E2CE5DD005B429D /* WebViewDetailController.h */,
+				57F4D9C71E2CE5DD005B429D /* WebViewDetailController.m */,
+				57F4D9C31E2CE300005B429D /* DocumentDetailViewController.h */,
+				57F4D9C41E2CE300005B429D /* DocumentDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -597,8 +604,6 @@
 			children = (
 				570382851E26153800B57A00 /* WordDetailViewController.h */,
 				57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */,
-				57E2D5F81E2C63A70044C243 /* wordDetail.html */,
-				57E2D5FC1E2CA08D0044C243 /* text.html */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -884,8 +889,6 @@
 		5799D7541E27682A00C92BB4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5799D7551E27684500C92BB4 /* WebDetailViewController.h */,
-				5799D7561E27684500C92BB4 /* WebDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -893,6 +896,8 @@
 		57E2D6041E2CD6E30044C243 /* JS-OC-Bridge */ = {
 			isa = PBXGroup;
 			children = (
+				57F4D9C91E2CE663005B429D /* text.html */,
+				57F4D9CA1E2CE663005B429D /* wordDetail.html */,
 				57E2D60B1E2CD78C0044C243 /* JSObjectProtocol.h */,
 				57E2D6081E2CD74A0044C243 /* UIWebViewJSDelegate.h */,
 				57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */,
@@ -1037,6 +1042,7 @@
 				575F5F301E24F7720070E850 /* Adobe-Japan1-UCS2 in Resources */,
 				575F5F3F1E24F7720070E850 /* ETen-B5-V in Resources */,
 				575F5F291E24F7720070E850 /* Add-RKSJ-H in Resources */,
+				57F4D9CB1E2CE663005B429D /* text.html in Resources */,
 				575F5F571E24F7720070E850 /* HKscs-B5-V in Resources */,
 				575F5F481E24F7720070E850 /* GBK-EUC-H in Resources */,
 				575F5F241E24F7720070E850 /* 90msp-RKSJ-H in Resources */,
@@ -1062,7 +1068,6 @@
 				575F5F601E24F7720070E850 /* KSCpc-EUC-UCS2 in Resources */,
 				57E2D6011E2CBF6D0044C243 /* actionSpanFunction.js in Resources */,
 				575F5F261E24F7720070E850 /* 90pv-RKSJ-H in Resources */,
-				57E2D5FD1E2CA08D0044C243 /* text.html in Resources */,
 				575F5F681E24F7720070E850 /* UniGB-UCS2-V in Resources */,
 				575F5F531E24F7720070E850 /* GBT-EUC-H in Resources */,
 				57E2D6031E2CC0E80044C243 /* actionSpan.js in Resources */,
@@ -1086,7 +1091,6 @@
 				575F5F2D1E24F7720070E850 /* Adobe-GB1-5 in Resources */,
 				575F5F221E24F7720070E850 /* 90ms-RKSJ-UCS2 in Resources */,
 				575F5F6C1E24F7720070E850 /* UniJIS-UCS2-HW-H in Resources */,
-				57E2D5F91E2C63A70044C243 /* wordDetail.html in Resources */,
 				575F5F491E24F7720070E850 /* GBK-EUC-UCS2 in Resources */,
 				575F5F2B1E24F7720070E850 /* Adobe-CNS1-6 in Resources */,
 				575F5F3E1E24F7720070E850 /* ETen-B5-UCS2 in Resources */,
@@ -1117,6 +1121,7 @@
 				575F5F201E24F7720070E850 /* 83pv-RKSJ-H in Resources */,
 				575F5F3A1E24F7720070E850 /* cp936.txt in Resources */,
 				575F5F731E24F7720070E850 /* UniKS-UTF16-H in Resources */,
+				57F4D9CC1E2CE663005B429D /* wordDetail.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1193,7 +1198,7 @@
 				570382361E25C72D00B57A00 /* InterpreterViewNetwork.m in Sources */,
 				5703823C1E25C72D00B57A00 /* MainViewController.m in Sources */,
 				570382541E25EC3400B57A00 /* WordListCell.m in Sources */,
-				570382311E25C72D00B57A00 /* ArticleDetailViewController.m in Sources */,
+				570382311E25C72D00B57A00 /* TextViewDetailController.m in Sources */,
 				5703823E1E25C72D00B57A00 /* SettingViewController.m in Sources */,
 				570382321E25C72D00B57A00 /* ArticleTextView.m in Sources */,
 				57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */,
@@ -1201,6 +1206,7 @@
 				575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */,
 				570382401E25C72D00B57A00 /* WordRecordModel.m in Sources */,
 				570382821E26148A00B57A00 /* NSString+Category.m in Sources */,
+				57F4D9C81E2CE5DD005B429D /* WebViewDetailController.m in Sources */,
 				575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */,
 				5703823F1E25C72D00B57A00 /* WordListViewController.m in Sources */,
 				5703827E1E26148A00B57A00 /* NSArray+NSString.m in Sources */,
@@ -1215,6 +1221,7 @@
 				570382391E25C72D00B57A00 /* DocumentListCell.m in Sources */,
 				5703823B1E25C72D00B57A00 /* MainTabBarController.m in Sources */,
 				570382381E25C72D00B57A00 /* DocumentListDataSource.m in Sources */,
+				57F4D9C51E2CE300005B429D /* DocumentDetailViewController.m in Sources */,
 				570382351E25C72D00B57A00 /* InterpreterViewLocal.m in Sources */,
 				570382831E26148A00B57A00 /* UIWebView+Category.m in Sources */,
 				570382371E25C72D00B57A00 /* DocumentListViewController.m in Sources */,
@@ -1222,7 +1229,6 @@
 				575F5E711E249F870070E850 /* UIManager.m in Sources */,
 				5703826E1E2613B800B57A00 /* ArticleHelper.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
-				5799D7571E27684500C92BB4 /* WebDetailViewController.m in Sources */,
 				570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */,
 				5703823D1E25C72D00B57A00 /* RootNavigationController.m in Sources */,
 				5703827F1E26148A00B57A00 /* NSDate+Utility.m in Sources */,

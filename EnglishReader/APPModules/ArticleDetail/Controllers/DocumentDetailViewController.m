@@ -1,43 +1,31 @@
 //
-//  WebDetailViewController.m
+//  DocumentDetailViewController.m
 //  EnglishReader
 //
-//  Created by QMTV on 17/1/12.
+//  Created by QMTV on 17/1/16.
 //  Copyright © 2017年 LFC. All rights reserved.
 //
 #define kWebViewHeight 250.0
 
-#import "WebDetailViewController.h"
-#import "UIWebView+Category.h"
-#import "UIWebViewJSDelegate.h"
-#import "InterpreterView.h"
-#import "StrangeWordTable.h"
+#import "DocumentDetailViewController.h"
 
-@interface WebDetailViewController ()<UIWebViewDelegate, UIWebViewJSProtocol, InterpreterViewDelegate>
-@property (nonatomic, strong) UIWebViewJSDelegate *webViewJSDelegate;
-@property (nonatomic, strong) UIWebView *webView;
-@property (nonatomic, strong) InterpreterView *interpreterView;
+@interface DocumentDetailViewController ()
 
 @end
 
-@implementation WebDetailViewController
+@implementation DocumentDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = [[self.urlString stringByDeletingPathExtension] lastPathComponent];
     
-    [self setupWebView];
+    self.title = [[self.filePath stringByDeletingPathExtension] lastPathComponent];
     [self hiddenInterpreterView];
 }
 
-- (void)setupWebView {
-    [self.view addSubview:self.webView];
-    self.webView.frame = self.view.bounds;
-    
-    NSURL *url = [NSURL URLWithString:self.urlString];
-    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
-    [self.webView loadRequest:urlRequest];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark ----- InterpreterViewDelegate
@@ -80,34 +68,7 @@
     }
 }
 
-#pragma mark ---- UIWebViewJSProtocol
-
-- (void)webViewTextDidTouch:(NSString *)text {
-    NSString *articleName = [self.urlString lastPathComponent];
-    [[StrangeWordTable shareTable] addWord:text withArticleName:articleName];
-    [self showInterpreterViewWithText:text];
-}
-
-
-#pragma mark ----- getter
-- (UIWebView *)webView {
-    if (!_webView) {
-        _webView = [[UIWebView alloc] init];
-        _webView.delegate = self.webViewJSDelegate;
-    }
-    
-    return _webView;
-}
-
-- (UIWebViewJSDelegate *)webViewJSDelegate {
-    if (!_webViewJSDelegate) {
-        _webViewJSDelegate = [[UIWebViewJSDelegate alloc] init];
-        _webViewJSDelegate.delegate = self;
-    }
-    
-    return _webViewJSDelegate;
-}
-
+#pragma mark -- getter
 - (InterpreterView *)interpreterView {
     if (!_interpreterView) {
         _interpreterView = [[InterpreterView alloc] init];
@@ -116,5 +77,15 @@
     
     return _interpreterView;
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

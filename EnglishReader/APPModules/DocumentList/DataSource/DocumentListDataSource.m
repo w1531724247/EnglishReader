@@ -9,10 +9,10 @@
 #import "DocumentListDataSource.h"
 #import "FileManager.h"
 #import "DocumentListCell.h"
-#import "ArticleDetailViewController.h"
+#import "TextViewDetailController.h"
 #import "RootNavigationController.h"
 #import "YYKit.h"
-#import "WebDetailViewController.h"
+#import "WebViewDetailController.h"
 
 @interface DocumentListDataSource () 
 
@@ -74,8 +74,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    WebDetailViewController *detailVC = [[WebDetailViewController alloc] init];
-    detailVC.urlString = [self.filePathArray objectAtIndex:indexPath.row];
+    WebViewDetailController *detailVC = [[WebViewDetailController alloc] init];
+    detailVC.filePath = [self.filePathArray objectAtIndex:indexPath.row];
     detailVC.hidesBottomBarWhenPushed = YES;
     [tableView.viewController.navigationController pushViewController:detailVC animated:YES];
 }

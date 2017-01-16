@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DocumentDetailViewController.h"
 
-@interface ArticleDetailViewController : UIViewController
-
-@property (nonatomic, copy) NSString *filePath;
+@interface TextViewDetailController : DocumentDetailViewController
 
 @end

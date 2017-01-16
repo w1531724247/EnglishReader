@@ -6,40 +6,35 @@
 //  Copyright © 2017年 LFC. All rights reserved.
 //
 
-#define kWebViewHeight 250.0
-
-#import "ArticleDetailViewController.h"
+#import "TextViewDetailController.h"
 #import "ArticleHelper.h"
 #import "ArticleTextView.h"
-#import "InterpreterView.h"
+
 #import <CoreText/CoreText.h>
 #import "MJRefresh.h"
 #import "StrangeWordTable.h"
 
-@interface ArticleDetailViewController ()<ArticleHelperDelegate, InterpreterViewDelegate>
+@interface TextViewDetailController ()<ArticleHelperDelegate>
 
 @property (nonatomic, strong) ArticleHelper *articleHleper;
 @property (nonatomic, strong) ArticleTextView *textView;
-@property (nonatomic, strong) InterpreterView *interpreterView;
 @property (nonatomic, assign) NSInteger currentPage;
 
 @end
 
-@implementation ArticleDetailViewController
+@implementation TextViewDetailController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = [[self.filePath stringByDeletingPathExtension] lastPathComponent];
     [self setupSubViews];
     [self.articleHleper handleFileWithPath:self.filePath];
-    [self hiddenInterpreterView];
 }
 
 - (void)setupSubViews {
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.textView];
+    [self.view insertSubview:self.textView atIndex:0];
     self.textView.frame = self.view.bounds;
 }
 
@@ -57,46 +52,6 @@
     NSString *articleName = [self.filePath lastPathComponent];
     [[StrangeWordTable shareTable] addWord:text withArticleName:articleName];
     [self showInterpreterViewWithText:text];
-}
-
-#pragma mark ----- InterpreterViewDelegate
-- (void)interpreterView:(InterpreterView *)interpreterView closeButtonDidTouch:(id)sender {
-    [self hiddenInterpreterView];
-}
-
-#pragma mark ----- private
--  (void)showInterpreterViewWithText:(NSString *)text {
-    [self.interpreterView startLoadingAnimation];
-    
-    CGFloat interpreterViewX = 0.0;
-    CGFloat interpreterViewY = CGRectGetHeight(self.view.frame) - kWebViewHeight;
-    CGFloat interpreterViewW = CGRectGetWidth(self.view.frame);
-    CGFloat interpreterViewH = kWebViewHeight;
-    CGRect frame = CGRectMake(interpreterViewX, interpreterViewY, interpreterViewW, interpreterViewH);
-    [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        self.interpreterView.frame = frame;
-    } completion:^(BOOL finished) {
-        [self.interpreterView interpretWithText:text];
-    }];
-}
-
-- (void)hiddenInterpreterView {
-    CGFloat interpreterViewX = 0.0;
-    CGFloat interpreterViewY = CGRectGetHeight(self.view.frame);
-    CGFloat interpreterViewW = CGRectGetWidth(self.view.frame);
-    CGFloat interpreterViewH = kWebViewHeight;
-    CGRect frame = CGRectMake(interpreterViewX, interpreterViewY, interpreterViewW, interpreterViewH);
-    
-    if (!_interpreterView) {
-        [self.view addSubview:self.interpreterView];
-        self.interpreterView.frame = frame;
-    } else {
-        [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.interpreterView.frame = frame;
-        } completion:^(BOOL finished) {
-            
-        }];
-    }
 }
 
 #pragma mark --- refresh action
@@ -142,15 +97,6 @@
     }
     
     return _textView;
-}
-
-- (InterpreterView *)interpreterView {
-    if (!_interpreterView) {
-        _interpreterView = [[InterpreterView alloc] init];
-        _interpreterView.delegate = self;
-    }
-    
-    return _interpreterView;
 }
 
 @end

@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DocumentDetailViewController.h"
 
-@interface WebDetailViewController : UIViewController
-
-@property (nonatomic, copy) NSString *urlString;
+@interface WebViewDetailController : DocumentDetailViewController
 
 @end
