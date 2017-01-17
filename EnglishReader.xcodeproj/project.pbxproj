@@ -134,6 +134,9 @@
 		575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F861E24F7CC0070E850 /* FMDBKeyValueTable.m */; };
 		575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F881E24F7CC0070E850 /* FMDBManager.m */; };
 		575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F8E1E2506410070E850 /* StrangeWordTable.m */; };
+		57970B101E2DB2DD002F08F5 /* handleTxt.html in Resources */ = {isa = PBXBuildFile; fileRef = 57970B0F1E2DB2DD002F08F5 /* handleTxt.html */; };
+		57970B121E2DB3BA002F08F5 /* handleRTF.html in Resources */ = {isa = PBXBuildFile; fileRef = 57970B111E2DB3BA002F08F5 /* handleRTF.html */; };
+		57970B141E2DC135002F08F5 /* handlePDF.html in Resources */ = {isa = PBXBuildFile; fileRef = 57970B131E2DC135002F08F5 /* handlePDF.html */; };
 		5797A8A51E20F27600F0BE38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A41E20F27600F0BE38 /* main.m */; };
 		5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8A71E20F27600F0BE38 /* AppDelegate.m */; };
 		5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5797A8AF1E20F27600F0BE38 /* Assets.xcassets */; };
@@ -143,12 +146,12 @@
 		5799D7521E27640400C92BB4 /* demoText.html in Resources */ = {isa = PBXBuildFile; fileRef = 5799D7511E27640400C92BB4 /* demoText.html */; };
 		57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */; };
 		57E2D6011E2CBF6D0044C243 /* actionSpanFunction.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */; };
-		57E2D6031E2CC0E80044C243 /* actionSpan.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6021E2CC0E80044C243 /* actionSpan.js */; };
+		57E2D6031E2CC0E80044C243 /* handleSpan.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6021E2CC0E80044C243 /* handleSpan.js */; };
 		57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */; };
 		57F4D9C51E2CE300005B429D /* DocumentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F4D9C41E2CE300005B429D /* DocumentDetailViewController.m */; };
 		57F4D9C81E2CE5DD005B429D /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F4D9C71E2CE5DD005B429D /* WebViewDetailController.m */; };
 		57F4D9CB1E2CE663005B429D /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = 57F4D9C91E2CE663005B429D /* text.html */; };
-		57F4D9CC1E2CE663005B429D /* wordDetail.html in Resources */ = {isa = PBXBuildFile; fileRef = 57F4D9CA1E2CE663005B429D /* wordDetail.html */; };
+		57F4D9CC1E2CE663005B429D /* handleMSWord.html in Resources */ = {isa = PBXBuildFile; fileRef = 57F4D9CA1E2CE663005B429D /* handleMSWord.html */; };
 		5D3330FFF71202D99C8AA74E /* libPods-EnglishReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */; };
 /* End PBXBuildFile section */
 
@@ -336,6 +339,9 @@
 		575F5F881E24F7CC0070E850 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
 		575F5F8D1E2506410070E850 /* StrangeWordTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrangeWordTable.h; sourceTree = "<group>"; };
 		575F5F8E1E2506410070E850 /* StrangeWordTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrangeWordTable.m; sourceTree = "<group>"; };
+		57970B0F1E2DB2DD002F08F5 /* handleTxt.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handleTxt.html; sourceTree = "<group>"; };
+		57970B111E2DB3BA002F08F5 /* handleRTF.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handleRTF.html; sourceTree = "<group>"; };
+		57970B131E2DC135002F08F5 /* handlePDF.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handlePDF.html; sourceTree = "<group>"; };
 		5797A8A01E20F27600F0BE38 /* EnglishReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5797A8A41E20F27600F0BE38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5797A8A61E20F27600F0BE38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -352,7 +358,7 @@
 		5799D7511E27640400C92BB4 /* demoText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demoText.html; sourceTree = "<group>"; };
 		57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionSpanFunction.js; sourceTree = "<group>"; };
-		57E2D6021E2CC0E80044C243 /* actionSpan.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionSpan.js; sourceTree = "<group>"; };
+		57E2D6021E2CC0E80044C243 /* handleSpan.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handleSpan.js; sourceTree = "<group>"; };
 		57E2D6081E2CD74A0044C243 /* UIWebViewJSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewJSDelegate.h; sourceTree = "<group>"; };
 		57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewJSDelegate.m; sourceTree = "<group>"; };
 		57E2D60B1E2CD78C0044C243 /* JSObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectProtocol.h; sourceTree = "<group>"; };
@@ -361,7 +367,7 @@
 		57F4D9C61E2CE5DD005B429D /* WebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDetailController.h; sourceTree = "<group>"; };
 		57F4D9C71E2CE5DD005B429D /* WebViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDetailController.m; sourceTree = "<group>"; };
 		57F4D9C91E2CE663005B429D /* text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = text.html; sourceTree = "<group>"; };
-		57F4D9CA1E2CE663005B429D /* wordDetail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wordDetail.html; sourceTree = "<group>"; };
+		57F4D9CA1E2CE663005B429D /* handleMSWord.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handleMSWord.html; sourceTree = "<group>"; };
 		BD374FCE2CF2E483B21E9921 /* Pods-EnglishReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.debug.xcconfig"; sourceTree = "<group>"; };
 		F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -613,7 +619,7 @@
 			children = (
 				5703826C1E2613B800B57A00 /* ArticleHelper.h */,
 				5703826D1E2613B800B57A00 /* ArticleHelper.m */,
-				57E2D6021E2CC0E80044C243 /* actionSpan.js */,
+				57E2D6021E2CC0E80044C243 /* handleSpan.js */,
 				57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */,
 			);
 			path = Utility;
@@ -897,10 +903,13 @@
 			isa = PBXGroup;
 			children = (
 				57F4D9C91E2CE663005B429D /* text.html */,
-				57F4D9CA1E2CE663005B429D /* wordDetail.html */,
+				57F4D9CA1E2CE663005B429D /* handleMSWord.html */,
 				57E2D60B1E2CD78C0044C243 /* JSObjectProtocol.h */,
 				57E2D6081E2CD74A0044C243 /* UIWebViewJSDelegate.h */,
 				57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */,
+				57970B131E2DC135002F08F5 /* handlePDF.html */,
+				57970B0F1E2DB2DD002F08F5 /* handleTxt.html */,
+				57970B111E2DB3BA002F08F5 /* handleRTF.html */,
 			);
 			path = "JS-OC-Bridge";
 			sourceTree = "<group>";
@@ -1058,6 +1067,7 @@
 				575F5F621E24F7720070E850 /* KSCpc-EUC-V in Resources */,
 				575F5F641E24F7720070E850 /* UniCNS-UCS2-V in Resources */,
 				575F5F2E1E24F7720070E850 /* Adobe-GB1-UCS2 in Resources */,
+				57970B101E2DB2DD002F08F5 /* handleTxt.html in Resources */,
 				575F5F231E24F7720070E850 /* 90ms-RKSJ-V in Resources */,
 				575F5F5C1E24F7720070E850 /* KSCms-UHC-HW-V in Resources */,
 				570878061E226618004D3AD5 /* paper_1.jpg in Resources */,
@@ -1070,7 +1080,7 @@
 				575F5F261E24F7720070E850 /* 90pv-RKSJ-H in Resources */,
 				575F5F681E24F7720070E850 /* UniGB-UCS2-V in Resources */,
 				575F5F531E24F7720070E850 /* GBT-EUC-H in Resources */,
-				57E2D6031E2CC0E80044C243 /* actionSpan.js in Resources */,
+				57E2D6031E2CC0E80044C243 /* handleSpan.js in Resources */,
 				575F5F581E24F7720070E850 /* KSC-EUC-H in Resources */,
 				575F5F271E24F7720070E850 /* 90pv-RKSJ-UCS2 in Resources */,
 				575F5F6D1E24F7720070E850 /* UniJIS-UCS2-HW-V in Resources */,
@@ -1089,6 +1099,7 @@
 				575F5F511E24F7720070E850 /* GBpc-EUC-UCS2C in Resources */,
 				575F5F561E24F7720070E850 /* HKscs-B5-H in Resources */,
 				575F5F2D1E24F7720070E850 /* Adobe-GB1-5 in Resources */,
+				57970B121E2DB3BA002F08F5 /* handleRTF.html in Resources */,
 				575F5F221E24F7720070E850 /* 90ms-RKSJ-UCS2 in Resources */,
 				575F5F6C1E24F7720070E850 /* UniJIS-UCS2-HW-H in Resources */,
 				575F5F491E24F7720070E850 /* GBK-EUC-UCS2 in Resources */,
@@ -1114,6 +1125,7 @@
 				575F5F4B1E24F7720070E850 /* GBK2K-H in Resources */,
 				575F5F6A1E24F7720070E850 /* UniGB-UTF16-V in Resources */,
 				575F5F401E24F7720070E850 /* ETenms-B5-H in Resources */,
+				57970B141E2DC135002F08F5 /* handlePDF.html in Resources */,
 				575F5F661E24F7720070E850 /* UniCNS-UTF16-V in Resources */,
 				575F5F691E24F7720070E850 /* UniGB-UTF16-H in Resources */,
 				575F5F521E24F7720070E850 /* GBpc-EUC-V in Resources */,
@@ -1121,7 +1133,7 @@
 				575F5F201E24F7720070E850 /* 83pv-RKSJ-H in Resources */,
 				575F5F3A1E24F7720070E850 /* cp936.txt in Resources */,
 				575F5F731E24F7720070E850 /* UniKS-UTF16-H in Resources */,
-				57F4D9CC1E2CE663005B429D /* wordDetail.html in Resources */,
+				57F4D9CC1E2CE663005B429D /* handleMSWord.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -429,7 +429,7 @@
 //    self.webView.frame = [UIApplication sharedApplication].keyWindow.bounds;
     
 //    NSError *error;
-//    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
+//    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handleSpan" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {

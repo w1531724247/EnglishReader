@@ -9,9 +9,10 @@
 #import "DocumentListDataSource.h"
 #import "FileManager.h"
 #import "DocumentListCell.h"
-#import "TextViewDetailController.h"
 #import "RootNavigationController.h"
 #import "YYKit.h"
+#import "DocumentDetailViewController.h"
+#import "TextViewDetailController.h"
 #import "WebViewDetailController.h"
 
 @interface DocumentListDataSource () 
@@ -74,11 +75,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    WebViewDetailController *detailVC = [[WebViewDetailController alloc] init];
     NSString *filePath = [self.filePathArray objectAtIndex:indexPath.row];
+    
+    DocumentDetailViewController *detailVC;
+    NSString *extension = [filePath pathExtension];
+    extension = [extension lowercaseString];
+    if ([extension isEqualToString:@"doc"] || [extension isEqualToString:@"docx"] || [extension isEqualToString:@"rtf"] || [extension isEqualToString:@"html"]) {
+        detailVC = [[WebViewDetailController alloc] init];
+    }
+    if ([extension isEqualToString:@"txt"] || [extension isEqualToString:@"pdf"]) {
+        detailVC = [[TextViewDetailController alloc] init];
+    }
+    
     detailVC.filePath = filePath;
     detailVC.hidesBottomBarWhenPushed = YES;
-    [tableView.viewController.navigationController pushViewController:detailVC animated:YES];
+    if (detailVC) {
+        [tableView.viewController.navigationController pushViewController:detailVC animated:YES];
+    }
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {

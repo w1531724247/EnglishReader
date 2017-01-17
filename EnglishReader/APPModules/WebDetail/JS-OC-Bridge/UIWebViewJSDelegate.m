@@ -36,7 +36,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (!self.handled) {
         NSError *error;
-        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"actionSpan" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
+        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handleSpan" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
         self.handled = YES;
     }
     

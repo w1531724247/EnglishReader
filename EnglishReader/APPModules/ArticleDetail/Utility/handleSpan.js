@@ -1,11 +1,10 @@
 var span_nodes = document.getElementsByTagName('span');
 for (var i = 0; i < span_nodes.length; i++) {
     var span = span_nodes[i];
-    var class_name = span.getAttribute("class");
-    if (class_name != "actioned") {
+    var actionFlag = span.getAttribute("actionFlag");
+    if (actionFlag != "YES") {
         var parent = span.parentNode;
-        if (span.childNodes[0].tagName == undefined) {
-            var text = span.innerText;
+        var text = span.innerText;
             var length = text.length;
             
             var clone_span = span.cloneNode(false);
@@ -23,7 +22,7 @@ for (var i = 0; i < span_nodes.length; i++) {
                                 if (word.length > 0) {
                                     var action_span = document.createElement('span');
                                     action_span.innerText = word;
-                                    action_span.setAttribute("class", "actioned");
+                                    action_span.setAttribute("actionFlag", "YES");
                                     action_span.onclick = function () {
                                         jsActionDelegate.textDidTouch(this.innerText);
                                     }
@@ -34,7 +33,7 @@ for (var i = 0; i < span_nodes.length; i++) {
                         } else {
                             var action_span = document.createElement('span');
                             action_span.innerText = word;
-                            action_span.setAttribute("class", "actioned");
+                            action_span.setAttribute("actionFlag", "YES");
                             action_span.onclick = function () {
                                 jsActionDelegate.textDidTouch(this.innerText);
                             }
@@ -42,24 +41,21 @@ for (var i = 0; i < span_nodes.length; i++) {
                             
                             var new_span = document.createElement('span');
                             new_span.innerText = char;
-                            new_span.setAttribute("class", "actioned");
+                            new_span.setAttribute("actionFlag", "YES");
                             clone_span.appendChild(new_span);
                             j=k;
-                            // action_span.appendChild(node);
-                            // textNode.parentNode.appendChild(action_span);
                             break;
                         }
                     }
                 } else {
                     var new_span = document.createElement('span');
                     new_span.innerText = char;
-                    new_span.setAttribute("class", "actioned");
+                    new_span.setAttribute("actionFlag", "YES");
                     clone_span.appendChild(new_span);
                 }
             }
-            clone_span.setAttribute("class", "actioned");
+            clone_span.setAttribute("actionFlag", "YES");
             parent.replaceChild(clone_span, span);
-        }
 
     }
 }
