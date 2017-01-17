@@ -39,7 +39,7 @@
         [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handleSpan" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
         self.handled = YES;
     }
-    
+
     //首先创建JSContext 对象（此处通过当前webView的键获取到jscontext）
     self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     self.jsContext[@"jsActionDelegate"] = self;
@@ -47,6 +47,7 @@
         context.exception = exceptionValue;
         NSLog(@"error：%@", exceptionValue);
     };
+    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
