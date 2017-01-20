@@ -14,6 +14,7 @@
 #import "StrangeWordTable.h"
 #import "NSDictionary+JSONHelper.h"
 #import "WordRecordModel.h"
+#import "WordListSectionHeaderView.h"
 
 @interface WordListDataSource ()
 
@@ -95,6 +96,19 @@
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    NSString *identifier = @"WordListSectionHeaderView";
+    WordListSectionHeaderView *sectionHeaderView = [[WordListSectionHeaderView alloc] initWithReuseIdentifier:identifier];
+    NSString *sectionTitle = [self.sectionTitleArray objectAtIndex:section];
+    sectionHeaderView.sectionTitle = sectionTitle;
+    
+    return sectionHeaderView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 20.0;
 }
 
 #pragma mark ---- UITableViewDelegate
