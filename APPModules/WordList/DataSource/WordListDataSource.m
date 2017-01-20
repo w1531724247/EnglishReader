@@ -58,8 +58,10 @@
     NSMutableArray *wordListTempArray = [NSMutableArray array];
     for (NSString *letter in letterArray) {
         NSArray *wordList = [[StrangeWordTable shareTable] queryStrangeWordByFirstUpperLetter:letter];
-        [sectionTitleTempArray addObject:letter];
-        [wordListTempArray addObject:wordList];
+        if (wordList.count > 0) {
+            [sectionTitleTempArray addObject:letter];
+            [wordListTempArray addObject:wordList];
+        }
     }
     
     self.sectionTitleArray = sectionTitleTempArray;
@@ -103,12 +105,14 @@
     WordListSectionHeaderView *sectionHeaderView = [[WordListSectionHeaderView alloc] initWithReuseIdentifier:identifier];
     NSString *sectionTitle = [self.sectionTitleArray objectAtIndex:section];
     sectionHeaderView.sectionTitle = sectionTitle;
+    sectionHeaderView.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(tableView.frame), 30.0);
     
     return sectionHeaderView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 20.0;
+    
+    return 30.0;
 }
 
 #pragma mark ---- UITableViewDelegate

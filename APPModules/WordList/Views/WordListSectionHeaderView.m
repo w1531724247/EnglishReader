@@ -18,8 +18,8 @@
 
 @implementation WordListSectionHeaderView
 
--(instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+-(instancetype)initWithReuseIdentifier:(nullable NSString *)reuseIdentifier {
+    self = [super initWithReuseIdentifier:reuseIdentifier];
     if (self) {
         [self addSubview:self.titleLabel];
         [self addConstraintsToSubviews];
@@ -37,7 +37,7 @@
 - (void)setSectionTitle:(NSString *)sectionTitle {
     _sectionTitle = sectionTitle;
     
-    self.titleLabel.text = [NSString stringWithFormat:@"   %@", sectionTitle];
+    self.titleLabel.text = [NSString stringWithFormat:@"    %@", sectionTitle];
 }
 
 #pragma mark -----  getter
