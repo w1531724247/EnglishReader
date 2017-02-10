@@ -38,9 +38,6 @@
         NSError *error;
         [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handleDocSet" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
         self.handled = YES;
-        
-        NSString *htmlString = [webView HTMLString];
-        NSLog(@"htmlString = %@", [htmlString substringWithRange:NSMakeRange(0, 100)]);
     }
 
     //首先创建JSContext 对象（此处通过当前webView的键获取到jscontext）
@@ -50,10 +47,9 @@
         context.exception = exceptionValue;
         NSLog(@"error：%@", exceptionValue);
     };
-    
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     
 }
 

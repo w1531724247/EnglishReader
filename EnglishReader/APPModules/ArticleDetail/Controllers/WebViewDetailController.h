@@ -11,4 +11,6 @@
 
 @interface WebViewDetailController : DocumentDetailViewController
 
+@property (nonatomic, strong, readonly) UIWebView *webView;
+
 @end

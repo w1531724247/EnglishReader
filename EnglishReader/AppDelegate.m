@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootNavigationController.h"
+#import "DHTarixProtocol.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [NSURLProtocol registerClass:[DHTarixProtocol class]];
+    
     // 初始化UI
     [self performSelectorOnMainThread:@selector(setupWindow) withObject:nil waitUntilDone:YES];
     

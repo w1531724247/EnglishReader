@@ -80,18 +80,21 @@
     DocumentDetailViewController *detailVC;
     NSString *extension = [filePath pathExtension];
     extension = [extension lowercaseString];
-    if ([extension isEqualToString:@"doc"] || [extension isEqualToString:@"docx"] || [extension isEqualToString:@"rtf"] || [extension isEqualToString:@"html"]) {
+    if ([extension isEqualToString:@"doc"] || [extension isEqualToString:@"docx"] || [extension isEqualToString:@"rtf"] || [extension isEqualToString:@"html"] || [extension isEqualToString:@"docset"]) {
         detailVC = [[WebViewDetailController alloc] init];
     }
     if ([extension isEqualToString:@"txt"] || [extension isEqualToString:@"pdf"]) {
         detailVC = [[TextViewDetailController alloc] init];
     }
     
+    filePath = [NSString stringWithFormat:@"dash-tarix://%@/Contents/Resources/Documents/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/Class/alias", filePath];
     detailVC.filePath = filePath;
+
     detailVC.hidesBottomBarWhenPushed = YES;
     if (detailVC) {
         [tableView.viewController.navigationController pushViewController:detailVC animated:YES];
     }
+
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {

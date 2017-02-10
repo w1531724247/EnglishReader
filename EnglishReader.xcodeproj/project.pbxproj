@@ -137,6 +137,14 @@
 		578675A11E4D753B00E28239 /* documentHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = 578675A01E4D753B00E28239 /* documentHTML.html */; };
 		578675A51E4D760E00E28239 /* handleDocSet.js in Resources */ = {isa = PBXBuildFile; fileRef = 578675A31E4D760E00E28239 /* handleDocSet.js */; };
 		578675A71E4D761E00E28239 /* handleMSWord.js in Resources */ = {isa = PBXBuildFile; fileRef = 578675A61E4D761E00E28239 /* handleMSWord.js */; };
+		578675B31E4DBE0100E28239 /* DHTarixProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 578675B21E4DBE0100E28239 /* DHTarixProtocol.m */; };
+		578675B71E4DBE5800E28239 /* NSString+DHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 578675B61E4DBE5800E28239 /* NSString+DHUtils.m */; };
+		578675C41E4DBEE500E28239 /* DHUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 578675BF1E4DBEE500E28239 /* DHUnarchiver.m */; };
+		578675C51E4DBEE500E28239 /* libarchive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 578675C31E4DBEE500E28239 /* libarchive.a */; };
+		578675C71E4DBF4800E28239 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 578675C61E4DBF4800E28239 /* libsqlite3.tbd */; };
+		578675CC1E4DBFBB00E28239 /* DHCSS.m in Sources */ = {isa = PBXBuildFile; fileRef = 578675CA1E4DBFBB00E28239 /* DHCSS.m */; };
+		578675CD1E4DBFBB00E28239 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 578675CB1E4DBFBB00E28239 /* style.css */; };
+		578675D01E4DC32E00E28239 /* DHTarixIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 578675CF1E4DC32E00E28239 /* DHTarixIndex.m */; };
 		57970B101E2DB2DD002F08F5 /* handleTxt.html in Resources */ = {isa = PBXBuildFile; fileRef = 57970B0F1E2DB2DD002F08F5 /* handleTxt.html */; };
 		57970B121E2DB3BA002F08F5 /* handleRTF.html in Resources */ = {isa = PBXBuildFile; fileRef = 57970B111E2DB3BA002F08F5 /* handleRTF.html */; };
 		57970B141E2DC135002F08F5 /* handlePDF.html in Resources */ = {isa = PBXBuildFile; fileRef = 57970B131E2DC135002F08F5 /* handlePDF.html */; };
@@ -344,6 +352,21 @@
 		578675A01E4D753B00E28239 /* documentHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = documentHTML.html; sourceTree = "<group>"; };
 		578675A31E4D760E00E28239 /* handleDocSet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handleDocSet.js; sourceTree = "<group>"; };
 		578675A61E4D761E00E28239 /* handleMSWord.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handleMSWord.js; sourceTree = "<group>"; };
+		578675B11E4DBE0100E28239 /* DHTarixProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTarixProtocol.h; sourceTree = "<group>"; };
+		578675B21E4DBE0100E28239 /* DHTarixProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTarixProtocol.m; sourceTree = "<group>"; };
+		578675B51E4DBE5800E28239 /* NSString+DHUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DHUtils.h"; sourceTree = "<group>"; };
+		578675B61E4DBE5800E28239 /* NSString+DHUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DHUtils.m"; sourceTree = "<group>"; };
+		578675BE1E4DBEE500E28239 /* DHUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHUnarchiver.h; sourceTree = "<group>"; };
+		578675BF1E4DBEE500E28239 /* DHUnarchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHUnarchiver.m; sourceTree = "<group>"; };
+		578675C11E4DBEE500E28239 /* archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = archive.h; sourceTree = "<group>"; };
+		578675C21E4DBEE500E28239 /* archive_entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = archive_entry.h; sourceTree = "<group>"; };
+		578675C31E4DBEE500E28239 /* libarchive.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libarchive.a; sourceTree = "<group>"; };
+		578675C61E4DBF4800E28239 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		578675C91E4DBFBB00E28239 /* DHCSS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCSS.h; sourceTree = "<group>"; };
+		578675CA1E4DBFBB00E28239 /* DHCSS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCSS.m; sourceTree = "<group>"; };
+		578675CB1E4DBFBB00E28239 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		578675CE1E4DC32E00E28239 /* DHTarixIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTarixIndex.h; sourceTree = "<group>"; };
+		578675CF1E4DC32E00E28239 /* DHTarixIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTarixIndex.m; sourceTree = "<group>"; };
 		57970B0F1E2DB2DD002F08F5 /* handleTxt.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handleTxt.html; sourceTree = "<group>"; };
 		57970B111E2DB3BA002F08F5 /* handleRTF.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handleRTF.html; sourceTree = "<group>"; };
 		57970B131E2DC135002F08F5 /* handlePDF.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handlePDF.html; sourceTree = "<group>"; };
@@ -381,7 +404,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578675C71E4DBF4800E28239 /* libsqlite3.tbd in Frameworks */,
 				57180EDC1E235D6C00FFD097 /* CoreGraphics.framework in Frameworks */,
+				578675C51E4DBEE500E28239 /* libarchive.a in Frameworks */,
 				57119F661E22413E00B929EB /* CoreText.framework in Frameworks */,
 				575F5F761E24F7720070E850 /* TET_ios.framework in Frameworks */,
 				5D3330FFF71202D99C8AA74E /* libPods-EnglishReader.a in Frameworks */,
@@ -671,6 +696,7 @@
 		575F5EC71E24F7720070E850 /* ThirdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				578675AF1E4DBDB200E28239 /* Dash */,
 				575F5EC81E24F7720070E850 /* cmap */,
 				575F5F1F1E24F7720070E850 /* TET_ios.framework */,
 			);
@@ -808,6 +834,67 @@
 			path = FMDBUtility;
 			sourceTree = "<group>";
 		};
+		578675AF1E4DBDB200E28239 /* Dash */ = {
+			isa = PBXGroup;
+			children = (
+				578675C81E4DBFBB00E28239 /* CSS */,
+				578675BD1E4DBEE500E28239 /* Unarchiver */,
+				578675B41E4DBE3100E28239 /* Category */,
+				578675B01E4DBE0100E28239 /* Protocol */,
+			);
+			path = Dash;
+			sourceTree = "<group>";
+		};
+		578675B01E4DBE0100E28239 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				578675B11E4DBE0100E28239 /* DHTarixProtocol.h */,
+				578675B21E4DBE0100E28239 /* DHTarixProtocol.m */,
+				578675CE1E4DC32E00E28239 /* DHTarixIndex.h */,
+				578675CF1E4DC32E00E28239 /* DHTarixIndex.m */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		578675B41E4DBE3100E28239 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				578675B51E4DBE5800E28239 /* NSString+DHUtils.h */,
+				578675B61E4DBE5800E28239 /* NSString+DHUtils.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		578675BD1E4DBEE500E28239 /* Unarchiver */ = {
+			isa = PBXGroup;
+			children = (
+				578675BE1E4DBEE500E28239 /* DHUnarchiver.h */,
+				578675BF1E4DBEE500E28239 /* DHUnarchiver.m */,
+				578675C01E4DBEE500E28239 /* libarchive */,
+			);
+			path = Unarchiver;
+			sourceTree = "<group>";
+		};
+		578675C01E4DBEE500E28239 /* libarchive */ = {
+			isa = PBXGroup;
+			children = (
+				578675C11E4DBEE500E28239 /* archive.h */,
+				578675C21E4DBEE500E28239 /* archive_entry.h */,
+				578675C31E4DBEE500E28239 /* libarchive.a */,
+			);
+			path = libarchive;
+			sourceTree = "<group>";
+		};
+		578675C81E4DBFBB00E28239 /* CSS */ = {
+			isa = PBXGroup;
+			children = (
+				578675C91E4DBFBB00E28239 /* DHCSS.h */,
+				578675CA1E4DBFBB00E28239 /* DHCSS.m */,
+				578675CB1E4DBFBB00E28239 /* style.css */,
+			);
+			path = CSS;
+			sourceTree = "<group>";
+		};
 		5797A8971E20F27500F0BE38 = {
 			isa = PBXGroup;
 			children = (
@@ -923,6 +1010,7 @@
 		CB982E37F391EA695AF47250 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				578675C61E4DBF4800E28239 /* libsqlite3.tbd */,
 				57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */,
 				57119F651E22413E00B929EB /* CoreText.framework */,
 				F39FB3324EE27FE9200B804C /* libPods-EnglishReader.a */,
@@ -1065,6 +1153,7 @@
 				575F5F5F1E24F7720070E850 /* KSCpc-EUC-H in Resources */,
 				575F5F3D1E24F7720070E850 /* ETen-B5-H in Resources */,
 				575F5F711E24F7720070E850 /* UniKS-UCS2-H in Resources */,
+				578675CD1E4DBFBB00E28239 /* style.css in Resources */,
 				5797A8B31E20F27600F0BE38 /* LaunchScreen.storyboard in Resources */,
 				575F5F2C1E24F7720070E850 /* Adobe-CNS1-UCS2 in Resources */,
 				575F5F5D1E24F7720070E850 /* KSCms-UHC-UCS2 in Resources */,
@@ -1223,15 +1312,18 @@
 				570382321E25C72D00B57A00 /* ArticleTextView.m in Sources */,
 				57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */,
 				570382811E26148A00B57A00 /* NSObject+Category.m in Sources */,
+				578675D01E4DC32E00E28239 /* DHTarixIndex.m in Sources */,
 				575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */,
 				570382401E25C72D00B57A00 /* WordRecordModel.m in Sources */,
 				570382821E26148A00B57A00 /* NSString+Category.m in Sources */,
+				578675C41E4DBEE500E28239 /* DHUnarchiver.m in Sources */,
 				57F4D9C81E2CE5DD005B429D /* WebViewDetailController.m in Sources */,
 				575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */,
 				5703823F1E25C72D00B57A00 /* WordListViewController.m in Sources */,
 				5703827E1E26148A00B57A00 /* NSArray+NSString.m in Sources */,
 				575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */,
 				57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */,
+				578675CC1E4DBFBB00E28239 /* DHCSS.m in Sources */,
 				5703823A1E25C72D00B57A00 /* MineViewController.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				570382801E26148A00B57A00 /* NSDictionary+NSString.m in Sources */,
@@ -1243,7 +1335,9 @@
 				570382381E25C72D00B57A00 /* DocumentListDataSource.m in Sources */,
 				57F4D9C51E2CE300005B429D /* DocumentDetailViewController.m in Sources */,
 				570382351E25C72D00B57A00 /* InterpreterViewLocal.m in Sources */,
+				578675B31E4DBE0100E28239 /* DHTarixProtocol.m in Sources */,
 				570382831E26148A00B57A00 /* UIWebView+Category.m in Sources */,
+				578675B71E4DBE5800E28239 /* NSString+DHUtils.m in Sources */,
 				570382371E25C72D00B57A00 /* DocumentListViewController.m in Sources */,
 				570382331E25C72D00B57A00 /* InterpreterView.m in Sources */,
 				575F5E711E249F870070E850 /* UIManager.m in Sources */,
@@ -1405,6 +1499,11 @@
 				INFOPLIST_FILE = EnglishReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EnglishReader/ThirdLibs/Dash/Protocol/libarchive",
+					"$(PROJECT_DIR)/EnglishReader/ThirdLibs/Dash/Unarchiver/libarchive",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = QuanMinTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1425,6 +1524,11 @@
 				INFOPLIST_FILE = EnglishReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EnglishReader/ThirdLibs/Dash/Protocol/libarchive",
+					"$(PROJECT_DIR)/EnglishReader/ThirdLibs/Dash/Unarchiver/libarchive",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = QuanMinTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

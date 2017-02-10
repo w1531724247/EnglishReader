@@ -40,4 +40,5 @@
     提取字符串中的第一串连续的中文字符串
  */
 - (NSString *)extractFirstChinsesStringFromRefrenceHTML;
+
 @end
