@@ -27,7 +27,10 @@
     NSString *hash = nil;
     NSString *docsetPath = [[path substringToStringReturningNil:@".docset"] stringByAppendingString:@".docset"];
     NSString *filePath = [[docsetPath lastPathComponent] stringByAppendingPathComponent:[path substringFromStringReturningNil:@".docset"]];
-    filePath = [filePath substringToStringReturningNil:@"#"];
+    if ([filePath containsString:@"#"]) {
+        filePath = [filePath substringToStringReturningNil:@"#"];
+    }
+    
     if(filePath.length && docsetPath.length)
     {
         NSString *indexPath = [docsetPath stringByAppendingPathComponent:@"Contents/Resources/tarixIndex.db"];

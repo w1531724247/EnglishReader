@@ -1,3 +1,9 @@
+//只提取文章内容
+function extractArticleNode() {
+
+}
+extractArticleNode();
+
 function handleElementsWithTagName(tagName) {
     var span_nodes = document.getElementsByTagName(tagName);
     for (var i = 0; i < span_nodes.length; i++) {

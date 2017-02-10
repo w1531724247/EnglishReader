@@ -34,11 +34,15 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+//    NSString *htmlString = [webView HTMLString];
+    
     if (!self.handled) {
         NSError *error;
         [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handleDocSet" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
         self.handled = YES;
     }
+    
+    
 
     //首先创建JSContext 对象（此处通过当前webView的键获取到jscontext）
     self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
