@@ -8,6 +8,7 @@ for (var i=0; i<meta_nodes.length; i++) {
     }
 }
 
+//处理<span>标签
 var span_nodes = document.getElementsByTagName('span');
 for (var i = 0; i < span_nodes.length; i++) {
     var span = span_nodes[i];
@@ -93,6 +94,8 @@ div.style.minHeight = 844;
 //    var img = img_nodes[i];
 //    img.style.cssText = "width:" + contentWidth + ";" + "height:" + contentWidth;
 //}
+
+
 
 
 

@@ -134,6 +134,9 @@
 		575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F861E24F7CC0070E850 /* FMDBKeyValueTable.m */; };
 		575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F881E24F7CC0070E850 /* FMDBManager.m */; };
 		575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F8E1E2506410070E850 /* StrangeWordTable.m */; };
+		578675A11E4D753B00E28239 /* documentHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = 578675A01E4D753B00E28239 /* documentHTML.html */; };
+		578675A51E4D760E00E28239 /* handleDocSet.js in Resources */ = {isa = PBXBuildFile; fileRef = 578675A31E4D760E00E28239 /* handleDocSet.js */; };
+		578675A71E4D761E00E28239 /* handleMSWord.js in Resources */ = {isa = PBXBuildFile; fileRef = 578675A61E4D761E00E28239 /* handleMSWord.js */; };
 		57970B101E2DB2DD002F08F5 /* handleTxt.html in Resources */ = {isa = PBXBuildFile; fileRef = 57970B0F1E2DB2DD002F08F5 /* handleTxt.html */; };
 		57970B121E2DB3BA002F08F5 /* handleRTF.html in Resources */ = {isa = PBXBuildFile; fileRef = 57970B111E2DB3BA002F08F5 /* handleRTF.html */; };
 		57970B141E2DC135002F08F5 /* handlePDF.html in Resources */ = {isa = PBXBuildFile; fileRef = 57970B131E2DC135002F08F5 /* handlePDF.html */; };
@@ -146,7 +149,6 @@
 		5799D7521E27640400C92BB4 /* demoText.html in Resources */ = {isa = PBXBuildFile; fileRef = 5799D7511E27640400C92BB4 /* demoText.html */; };
 		57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */; };
 		57E2D6011E2CBF6D0044C243 /* actionSpanFunction.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */; };
-		57E2D6031E2CC0E80044C243 /* handleSpan.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6021E2CC0E80044C243 /* handleSpan.js */; };
 		57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */; };
 		57F4D9C51E2CE300005B429D /* DocumentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F4D9C41E2CE300005B429D /* DocumentDetailViewController.m */; };
 		57F4D9C81E2CE5DD005B429D /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F4D9C71E2CE5DD005B429D /* WebViewDetailController.m */; };
@@ -339,6 +341,9 @@
 		575F5F881E24F7CC0070E850 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
 		575F5F8D1E2506410070E850 /* StrangeWordTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrangeWordTable.h; sourceTree = "<group>"; };
 		575F5F8E1E2506410070E850 /* StrangeWordTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrangeWordTable.m; sourceTree = "<group>"; };
+		578675A01E4D753B00E28239 /* documentHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = documentHTML.html; sourceTree = "<group>"; };
+		578675A31E4D760E00E28239 /* handleDocSet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handleDocSet.js; sourceTree = "<group>"; };
+		578675A61E4D761E00E28239 /* handleMSWord.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handleMSWord.js; sourceTree = "<group>"; };
 		57970B0F1E2DB2DD002F08F5 /* handleTxt.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handleTxt.html; sourceTree = "<group>"; };
 		57970B111E2DB3BA002F08F5 /* handleRTF.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handleRTF.html; sourceTree = "<group>"; };
 		57970B131E2DC135002F08F5 /* handlePDF.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = handlePDF.html; sourceTree = "<group>"; };
@@ -358,7 +363,6 @@
 		5799D7511E27640400C92BB4 /* demoText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demoText.html; sourceTree = "<group>"; };
 		57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionSpanFunction.js; sourceTree = "<group>"; };
-		57E2D6021E2CC0E80044C243 /* handleSpan.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handleSpan.js; sourceTree = "<group>"; };
 		57E2D6081E2CD74A0044C243 /* UIWebViewJSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewJSDelegate.h; sourceTree = "<group>"; };
 		57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewJSDelegate.m; sourceTree = "<group>"; };
 		57E2D60B1E2CD78C0044C243 /* JSObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectProtocol.h; sourceTree = "<group>"; };
@@ -619,7 +623,8 @@
 			children = (
 				5703826C1E2613B800B57A00 /* ArticleHelper.h */,
 				5703826D1E2613B800B57A00 /* ArticleHelper.m */,
-				57E2D6021E2CC0E80044C243 /* handleSpan.js */,
+				578675A61E4D761E00E28239 /* handleMSWord.js */,
+				578675A31E4D760E00E28239 /* handleDocSet.js */,
 				57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */,
 			);
 			path = Utility;
@@ -909,6 +914,7 @@
 				57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */,
 				57970B131E2DC135002F08F5 /* handlePDF.html */,
 				57970B0F1E2DB2DD002F08F5 /* handleTxt.html */,
+				578675A01E4D753B00E28239 /* documentHTML.html */,
 				57970B111E2DB3BA002F08F5 /* handleRTF.html */,
 			);
 			path = "JS-OC-Bridge";
@@ -1047,6 +1053,7 @@
 				575F5F591E24F7720070E850 /* KSC-EUC-V in Resources */,
 				575F5F4D1E24F7720070E850 /* GBKp-EUC-H in Resources */,
 				575F5F721E24F7720070E850 /* UniKS-UCS2-V in Resources */,
+				578675A51E4D760E00E28239 /* handleDocSet.js in Resources */,
 				575F5F351E24F7720070E850 /* B5pc-UCS2C in Resources */,
 				575F5F301E24F7720070E850 /* Adobe-Japan1-UCS2 in Resources */,
 				575F5F3F1E24F7720070E850 /* ETen-B5-V in Resources */,
@@ -1080,12 +1087,12 @@
 				575F5F261E24F7720070E850 /* 90pv-RKSJ-H in Resources */,
 				575F5F681E24F7720070E850 /* UniGB-UCS2-V in Resources */,
 				575F5F531E24F7720070E850 /* GBT-EUC-H in Resources */,
-				57E2D6031E2CC0E80044C243 /* handleSpan.js in Resources */,
 				575F5F581E24F7720070E850 /* KSC-EUC-H in Resources */,
 				575F5F271E24F7720070E850 /* 90pv-RKSJ-UCS2 in Resources */,
 				575F5F6D1E24F7720070E850 /* UniJIS-UCS2-HW-V in Resources */,
 				575F5F411E24F7720070E850 /* ETenms-B5-V in Resources */,
 				575F5F541E24F7720070E850 /* GBT-EUC-V in Resources */,
+				578675A71E4D761E00E28239 /* handleMSWord.js in Resources */,
 				570878081E226618004D3AD5 /* paper_3.jpg in Resources */,
 				575F5F4F1E24F7720070E850 /* GBpc-EUC-H in Resources */,
 				575F5F4E1E24F7720070E850 /* GBKp-EUC-V in Resources */,
@@ -1094,6 +1101,7 @@
 				570878091E226618004D3AD5 /* paper_4.jpg in Resources */,
 				575F5F381E24F7720070E850 /* CNS-EUC-V in Resources */,
 				575F5F4A1E24F7720070E850 /* GBK-EUC-V in Resources */,
+				578675A11E4D753B00E28239 /* documentHTML.html in Resources */,
 				575F5F391E24F7720070E850 /* cp932.txt in Resources */,
 				575F5F4C1E24F7720070E850 /* GBK2K-V in Resources */,
 				575F5F511E24F7720070E850 /* GBpc-EUC-UCS2C in Resources */,
