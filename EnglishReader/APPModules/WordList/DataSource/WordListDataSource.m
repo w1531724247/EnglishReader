@@ -14,6 +14,7 @@
 #import "StrangeWordTable.h"
 #import "NSDictionary+JSONHelper.h"
 #import "WordRecordModel.h"
+#import "WordListSectionHeaderView.h"
 
 @interface WordListDataSource ()
 
@@ -57,8 +58,10 @@
     NSMutableArray *wordListTempArray = [NSMutableArray array];
     for (NSString *letter in letterArray) {
         NSArray *wordList = [[StrangeWordTable shareTable] queryStrangeWordByFirstUpperLetter:letter];
-        [sectionTitleTempArray addObject:letter];
-        [wordListTempArray addObject:wordList];
+        if (wordList.count > 0) {
+            [sectionTitleTempArray addObject:letter];
+            [wordListTempArray addObject:wordList];
+        }
     }
     
     self.sectionTitleArray = sectionTitleTempArray;
@@ -95,6 +98,21 @@
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    NSString *identifier = @"WordListSectionHeaderView";
+    WordListSectionHeaderView *sectionHeaderView = [[WordListSectionHeaderView alloc] initWithReuseIdentifier:identifier];
+    NSString *sectionTitle = [self.sectionTitleArray objectAtIndex:section];
+    sectionHeaderView.sectionTitle = sectionTitle;
+    sectionHeaderView.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(tableView.frame), 30.0);
+    
+    return sectionHeaderView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return 30.0;
 }
 
 #pragma mark ---- UITableViewDelegate

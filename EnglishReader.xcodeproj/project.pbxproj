@@ -21,10 +21,6 @@
 		5703823C1E25C72D00B57A00 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382231E25C72D00B57A00 /* MainViewController.m */; };
 		5703823D1E25C72D00B57A00 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382251E25C72D00B57A00 /* RootNavigationController.m */; };
 		5703823E1E25C72D00B57A00 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382291E25C72D00B57A00 /* SettingViewController.m */; };
-		5703823F1E25C72D00B57A00 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703822D1E25C72D00B57A00 /* WordListViewController.m */; };
-		570382401E25C72D00B57A00 /* WordRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382301E25C72D00B57A00 /* WordRecordModel.m */; };
-		570382501E25EB8E00B57A00 /* WordListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703824F1E25EB8E00B57A00 /* WordListDataSource.m */; };
-		570382541E25EC3400B57A00 /* WordListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382531E25EC3400B57A00 /* WordListCell.m */; };
 		5703826E1E2613B800B57A00 /* ArticleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703826D1E2613B800B57A00 /* ArticleHelper.m */; };
 		5703827E1E26148A00B57A00 /* NSArray+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382731E26148A00B57A00 /* NSArray+NSString.m */; };
 		5703827F1E26148A00B57A00 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382751E26148A00B57A00 /* NSDate+Utility.m */; };
@@ -155,6 +151,11 @@
 		5797A8BE1E20F27600F0BE38 /* EnglishReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8BD1E20F27600F0BE38 /* EnglishReaderTests.m */; };
 		5797A8C91E20F27600F0BE38 /* EnglishReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */; };
 		5799D7521E27640400C92BB4 /* demoText.html in Resources */ = {isa = PBXBuildFile; fileRef = 5799D7511E27640400C92BB4 /* demoText.html */; };
+		57B4B49F1E4EB25100D08B96 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4931E4EB25100D08B96 /* WordListViewController.m */; };
+		57B4B4A01E4EB25100D08B96 /* WordListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4961E4EB25100D08B96 /* WordListDataSource.m */; };
+		57B4B4A11E4EB25100D08B96 /* WordRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4991E4EB25100D08B96 /* WordRecordModel.m */; };
+		57B4B4A21E4EB25100D08B96 /* WordListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B49C1E4EB25100D08B96 /* WordListCell.m */; };
+		57B4B4A31E4EB25100D08B96 /* WordListSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B49E1E4EB25100D08B96 /* WordListSectionHeaderView.m */; };
 		57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */; };
 		57E2D6011E2CBF6D0044C243 /* actionSpanFunction.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */; };
 		57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */; };
@@ -213,14 +214,6 @@
 		570382251E25C72D00B57A00 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		570382281E25C72D00B57A00 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		570382291E25C72D00B57A00 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		5703822C1E25C72D00B57A00 /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
-		5703822D1E25C72D00B57A00 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
-		5703822F1E25C72D00B57A00 /* WordRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordRecordModel.h; sourceTree = "<group>"; };
-		570382301E25C72D00B57A00 /* WordRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordRecordModel.m; sourceTree = "<group>"; };
-		5703824E1E25EB8E00B57A00 /* WordListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListDataSource.h; sourceTree = "<group>"; };
-		5703824F1E25EB8E00B57A00 /* WordListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListDataSource.m; sourceTree = "<group>"; };
-		570382521E25EC3400B57A00 /* WordListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListCell.h; sourceTree = "<group>"; };
-		570382531E25EC3400B57A00 /* WordListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListCell.m; sourceTree = "<group>"; };
 		5703826C1E2613B800B57A00 /* ArticleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleHelper.h; sourceTree = "<group>"; };
 		5703826D1E2613B800B57A00 /* ArticleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleHelper.m; sourceTree = "<group>"; };
 		570382721E26148A00B57A00 /* NSArray+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NSString.h"; sourceTree = "<group>"; };
@@ -384,6 +377,16 @@
 		5797A8C81E20F27600F0BE38 /* EnglishReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnglishReaderUITests.m; sourceTree = "<group>"; };
 		5797A8CA1E20F27600F0BE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5799D7511E27640400C92BB4 /* demoText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demoText.html; sourceTree = "<group>"; };
+		57B4B4921E4EB25100D08B96 /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
+		57B4B4931E4EB25100D08B96 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
+		57B4B4951E4EB25100D08B96 /* WordListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListDataSource.h; sourceTree = "<group>"; };
+		57B4B4961E4EB25100D08B96 /* WordListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListDataSource.m; sourceTree = "<group>"; };
+		57B4B4981E4EB25100D08B96 /* WordRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordRecordModel.h; sourceTree = "<group>"; };
+		57B4B4991E4EB25100D08B96 /* WordRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordRecordModel.m; sourceTree = "<group>"; };
+		57B4B49B1E4EB25100D08B96 /* WordListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListCell.h; sourceTree = "<group>"; };
+		57B4B49C1E4EB25100D08B96 /* WordListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListCell.m; sourceTree = "<group>"; };
+		57B4B49D1E4EB25100D08B96 /* WordListSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListSectionHeaderView.h; sourceTree = "<group>"; };
+		57B4B49E1E4EB25100D08B96 /* WordListSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListSectionHeaderView.m; sourceTree = "<group>"; };
 		57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionSpanFunction.js; sourceTree = "<group>"; };
 		57E2D6081E2CD74A0044C243 /* UIWebViewJSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewJSDelegate.h; sourceTree = "<group>"; };
@@ -449,7 +452,7 @@
 				5703821B1E25C72D00B57A00 /* Mine */,
 				5703821F1E25C72D00B57A00 /* RootMain */,
 				570382261E25C72D00B57A00 /* Setting */,
-				5703822A1E25C72D00B57A00 /* WordList */,
+				57B4B4901E4EB25100D08B96 /* WordList */,
 			);
 			path = APPModules;
 			sourceTree = "<group>";
@@ -577,53 +580,6 @@
 				570382291E25C72D00B57A00 /* SettingViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		5703822A1E25C72D00B57A00 /* WordList */ = {
-			isa = PBXGroup;
-			children = (
-				570382511E25EC2100B57A00 /* Views */,
-				5703824D1E25EB7200B57A00 /* DataSource */,
-				5703822B1E25C72D00B57A00 /* Controllers */,
-				5703822E1E25C72D00B57A00 /* Models */,
-			);
-			path = WordList;
-			sourceTree = "<group>";
-		};
-		5703822B1E25C72D00B57A00 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				5703822C1E25C72D00B57A00 /* WordListViewController.h */,
-				5703822D1E25C72D00B57A00 /* WordListViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		5703822E1E25C72D00B57A00 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5703822F1E25C72D00B57A00 /* WordRecordModel.h */,
-				570382301E25C72D00B57A00 /* WordRecordModel.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		5703824D1E25EB7200B57A00 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				5703824E1E25EB8E00B57A00 /* WordListDataSource.h */,
-				5703824F1E25EB8E00B57A00 /* WordListDataSource.m */,
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		570382511E25EC2100B57A00 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				570382521E25EC3400B57A00 /* WordListCell.h */,
-				570382531E25EC3400B57A00 /* WordListCell.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		570382661E2612EE00B57A00 /* WordDetail */ = {
@@ -991,6 +947,55 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		57B4B4901E4EB25100D08B96 /* WordList */ = {
+			isa = PBXGroup;
+			children = (
+				57B4B4911E4EB25100D08B96 /* Controllers */,
+				57B4B4941E4EB25100D08B96 /* DataSource */,
+				57B4B4971E4EB25100D08B96 /* Models */,
+				57B4B49A1E4EB25100D08B96 /* Views */,
+			);
+			path = WordList;
+			sourceTree = "<group>";
+		};
+		57B4B4911E4EB25100D08B96 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57B4B4921E4EB25100D08B96 /* WordListViewController.h */,
+				57B4B4931E4EB25100D08B96 /* WordListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		57B4B4941E4EB25100D08B96 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				57B4B4951E4EB25100D08B96 /* WordListDataSource.h */,
+				57B4B4961E4EB25100D08B96 /* WordListDataSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		57B4B4971E4EB25100D08B96 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57B4B4981E4EB25100D08B96 /* WordRecordModel.h */,
+				57B4B4991E4EB25100D08B96 /* WordRecordModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		57B4B49A1E4EB25100D08B96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57B4B49B1E4EB25100D08B96 /* WordListCell.h */,
+				57B4B49C1E4EB25100D08B96 /* WordListCell.m */,
+				57B4B49D1E4EB25100D08B96 /* WordListSectionHeaderView.h */,
+				57B4B49E1E4EB25100D08B96 /* WordListSectionHeaderView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		57E2D6041E2CD6E30044C243 /* JS-OC-Bridge */ = {
 			isa = PBXGroup;
 			children = (
@@ -1306,20 +1311,18 @@
 				575F5F891E24F7CC0070E850 /* DataCenter.m in Sources */,
 				570382361E25C72D00B57A00 /* InterpreterViewNetwork.m in Sources */,
 				5703823C1E25C72D00B57A00 /* MainViewController.m in Sources */,
-				570382541E25EC3400B57A00 /* WordListCell.m in Sources */,
 				570382311E25C72D00B57A00 /* TextViewDetailController.m in Sources */,
+				57B4B4A21E4EB25100D08B96 /* WordListCell.m in Sources */,
 				5703823E1E25C72D00B57A00 /* SettingViewController.m in Sources */,
 				570382321E25C72D00B57A00 /* ArticleTextView.m in Sources */,
 				57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */,
 				570382811E26148A00B57A00 /* NSObject+Category.m in Sources */,
 				578675D01E4DC32E00E28239 /* DHTarixIndex.m in Sources */,
 				575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */,
-				570382401E25C72D00B57A00 /* WordRecordModel.m in Sources */,
 				570382821E26148A00B57A00 /* NSString+Category.m in Sources */,
 				578675C41E4DBEE500E28239 /* DHUnarchiver.m in Sources */,
 				57F4D9C81E2CE5DD005B429D /* WebViewDetailController.m in Sources */,
 				575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */,
-				5703823F1E25C72D00B57A00 /* WordListViewController.m in Sources */,
 				5703827E1E26148A00B57A00 /* NSArray+NSString.m in Sources */,
 				575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */,
 				57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */,
@@ -1328,12 +1331,13 @@
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
 				570382801E26148A00B57A00 /* NSDictionary+NSString.m in Sources */,
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
+				57B4B4A31E4EB25100D08B96 /* WordListSectionHeaderView.m in Sources */,
 				575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */,
-				570382501E25EB8E00B57A00 /* WordListDataSource.m in Sources */,
 				570382391E25C72D00B57A00 /* DocumentListCell.m in Sources */,
 				5703823B1E25C72D00B57A00 /* MainTabBarController.m in Sources */,
 				570382381E25C72D00B57A00 /* DocumentListDataSource.m in Sources */,
 				57F4D9C51E2CE300005B429D /* DocumentDetailViewController.m in Sources */,
+				57B4B4A01E4EB25100D08B96 /* WordListDataSource.m in Sources */,
 				570382351E25C72D00B57A00 /* InterpreterViewLocal.m in Sources */,
 				578675B31E4DBE0100E28239 /* DHTarixProtocol.m in Sources */,
 				570382831E26148A00B57A00 /* UIWebView+Category.m in Sources */,
@@ -1342,9 +1346,11 @@
 				570382331E25C72D00B57A00 /* InterpreterView.m in Sources */,
 				575F5E711E249F870070E850 /* UIManager.m in Sources */,
 				5703826E1E2613B800B57A00 /* ArticleHelper.m in Sources */,
+				57B4B4A11E4EB25100D08B96 /* WordRecordModel.m in Sources */,
 				5797A8A51E20F27600F0BE38 /* main.m in Sources */,
 				570DC56A1E23B33A00E24D1D /* FileManager.m in Sources */,
 				5703823D1E25C72D00B57A00 /* RootNavigationController.m in Sources */,
+				57B4B49F1E4EB25100D08B96 /* WordListViewController.m in Sources */,
 				5703827F1E26148A00B57A00 /* NSDate+Utility.m in Sources */,
 				570382341E25C72D00B57A00 /* InterpreterViewHeaderView.m in Sources */,
 				575F5F7E1E24F78C0070E850 /* NSDictionary+JSONHelper.m in Sources */,
