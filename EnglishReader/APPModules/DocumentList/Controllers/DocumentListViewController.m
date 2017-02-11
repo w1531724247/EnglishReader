@@ -7,12 +7,11 @@
 //
 
 #import "DocumentListViewController.h"
-#import "DocumentListDataSource.h"
+
 
 @interface DocumentListViewController ()
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) DocumentListDataSource *dataSource;
+@property (nonatomic, strong, readwrite) UITableView *tableView;
 
 @end
 
@@ -22,15 +21,13 @@
     [super loadView];
     
     self.view = self.tableView;
-    self.tableView.dataSource = self.dataSource;
-    self.tableView.delegate = self.dataSource;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"文档列表";
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,15 +36,6 @@
 }
 
 #pragma mark ---- getter
-
-- (DocumentListDataSource *)dataSource {
-    if (!_dataSource) {
-        _dataSource = [[DocumentListDataSource alloc] init];
-    }
-    
-    return _dataSource;
-}
-
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] init];

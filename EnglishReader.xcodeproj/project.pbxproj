@@ -156,6 +156,12 @@
 		57B4B4A11E4EB25100D08B96 /* WordRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4991E4EB25100D08B96 /* WordRecordModel.m */; };
 		57B4B4A21E4EB25100D08B96 /* WordListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B49C1E4EB25100D08B96 /* WordListCell.m */; };
 		57B4B4A31E4EB25100D08B96 /* WordListSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B49E1E4EB25100D08B96 /* WordListSectionHeaderView.m */; };
+		57B4B4A71E4EC83300D08B96 /* DocsetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4A61E4EC83300D08B96 /* DocsetHelper.m */; };
+		57B4B4AA1E4ECB7300D08B96 /* LocalDocumentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4A91E4ECB7300D08B96 /* LocalDocumentListViewController.m */; };
+		57B4B4AD1E4ECCED00D08B96 /* DocsetDetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4AC1E4ECCED00D08B96 /* DocsetDetailListViewController.m */; };
+		57B4B4B01E4ECE1A00D08B96 /* DocsetDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4AF1E4ECE1A00D08B96 /* DocsetDetailDataSource.m */; };
+		57B4B4B41E4ED07100D08B96 /* DSType.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4B31E4ED07100D08B96 /* DSType.m */; };
+		57B4B4B71E4ED07E00D08B96 /* DSEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4B61E4ED07E00D08B96 /* DSEntry.m */; };
 		57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */; };
 		57E2D6011E2CBF6D0044C243 /* actionSpanFunction.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */; };
 		57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */; };
@@ -387,6 +393,18 @@
 		57B4B49C1E4EB25100D08B96 /* WordListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListCell.m; sourceTree = "<group>"; };
 		57B4B49D1E4EB25100D08B96 /* WordListSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListSectionHeaderView.h; sourceTree = "<group>"; };
 		57B4B49E1E4EB25100D08B96 /* WordListSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListSectionHeaderView.m; sourceTree = "<group>"; };
+		57B4B4A51E4EC83300D08B96 /* DocsetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocsetHelper.h; sourceTree = "<group>"; };
+		57B4B4A61E4EC83300D08B96 /* DocsetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocsetHelper.m; sourceTree = "<group>"; };
+		57B4B4A81E4ECB7300D08B96 /* LocalDocumentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalDocumentListViewController.h; sourceTree = "<group>"; };
+		57B4B4A91E4ECB7300D08B96 /* LocalDocumentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalDocumentListViewController.m; sourceTree = "<group>"; };
+		57B4B4AB1E4ECCED00D08B96 /* DocsetDetailListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocsetDetailListViewController.h; sourceTree = "<group>"; };
+		57B4B4AC1E4ECCED00D08B96 /* DocsetDetailListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocsetDetailListViewController.m; sourceTree = "<group>"; };
+		57B4B4AE1E4ECE1A00D08B96 /* DocsetDetailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocsetDetailDataSource.h; sourceTree = "<group>"; };
+		57B4B4AF1E4ECE1A00D08B96 /* DocsetDetailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocsetDetailDataSource.m; sourceTree = "<group>"; };
+		57B4B4B21E4ED07100D08B96 /* DSType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSType.h; sourceTree = "<group>"; };
+		57B4B4B31E4ED07100D08B96 /* DSType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSType.m; sourceTree = "<group>"; };
+		57B4B4B51E4ED07E00D08B96 /* DSEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEntry.h; sourceTree = "<group>"; };
+		57B4B4B61E4ED07E00D08B96 /* DSEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEntry.m; sourceTree = "<group>"; };
 		57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionSpanFunction.js; sourceTree = "<group>"; };
 		57E2D6081E2CD74A0044C243 /* UIWebViewJSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewJSDelegate.h; sourceTree = "<group>"; };
@@ -513,6 +531,10 @@
 			children = (
 				570382131E25C72D00B57A00 /* DocumentListViewController.h */,
 				570382141E25C72D00B57A00 /* DocumentListViewController.m */,
+				57B4B4A81E4ECB7300D08B96 /* LocalDocumentListViewController.h */,
+				57B4B4A91E4ECB7300D08B96 /* LocalDocumentListViewController.m */,
+				57B4B4AB1E4ECCED00D08B96 /* DocsetDetailListViewController.h */,
+				57B4B4AC1E4ECCED00D08B96 /* DocsetDetailListViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -522,6 +544,8 @@
 			children = (
 				570382161E25C72D00B57A00 /* DocumentListDataSource.h */,
 				570382171E25C72D00B57A00 /* DocumentListDataSource.m */,
+				57B4B4AE1E4ECE1A00D08B96 /* DocsetDetailDataSource.h */,
+				57B4B4AF1E4ECE1A00D08B96 /* DocsetDetailDataSource.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -924,6 +948,7 @@
 		5797A8EB1E210B7A00F0BE38 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				57B4B4A41E4EC28900D08B96 /* DocsetUtility */,
 				575F5F811E24F7CC0070E850 /* FMDBUtility */,
 				570DC5681E23B33A00E24D1D /* FileManager.h */,
 				570DC5691E23B33A00E24D1D /* FileManager.m */,
@@ -994,6 +1019,27 @@
 				57B4B49E1E4EB25100D08B96 /* WordListSectionHeaderView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		57B4B4A41E4EC28900D08B96 /* DocsetUtility */ = {
+			isa = PBXGroup;
+			children = (
+				57B4B4A51E4EC83300D08B96 /* DocsetHelper.h */,
+				57B4B4A61E4EC83300D08B96 /* DocsetHelper.m */,
+				57B4B4B11E4ED05B00D08B96 /* Models */,
+			);
+			path = DocsetUtility;
+			sourceTree = "<group>";
+		};
+		57B4B4B11E4ED05B00D08B96 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57B4B4B21E4ED07100D08B96 /* DSType.h */,
+				57B4B4B31E4ED07100D08B96 /* DSType.m */,
+				57B4B4B51E4ED07E00D08B96 /* DSEntry.h */,
+				57B4B4B61E4ED07E00D08B96 /* DSEntry.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		57E2D6041E2CD6E30044C243 /* JS-OC-Bridge */ = {
@@ -1308,6 +1354,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B4B4A71E4EC83300D08B96 /* DocsetHelper.m in Sources */,
+				57B4B4B71E4ED07E00D08B96 /* DSEntry.m in Sources */,
 				575F5F891E24F7CC0070E850 /* DataCenter.m in Sources */,
 				570382361E25C72D00B57A00 /* InterpreterViewNetwork.m in Sources */,
 				5703823C1E25C72D00B57A00 /* MainViewController.m in Sources */,
@@ -1326,6 +1374,7 @@
 				5703827E1E26148A00B57A00 /* NSArray+NSString.m in Sources */,
 				575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */,
 				57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */,
+				57B4B4AD1E4ECCED00D08B96 /* DocsetDetailListViewController.m in Sources */,
 				578675CC1E4DBFBB00E28239 /* DHCSS.m in Sources */,
 				5703823A1E25C72D00B57A00 /* MineViewController.m in Sources */,
 				5797A8A81E20F27600F0BE38 /* AppDelegate.m in Sources */,
@@ -1342,6 +1391,9 @@
 				578675B31E4DBE0100E28239 /* DHTarixProtocol.m in Sources */,
 				570382831E26148A00B57A00 /* UIWebView+Category.m in Sources */,
 				578675B71E4DBE5800E28239 /* NSString+DHUtils.m in Sources */,
+				57B4B4AA1E4ECB7300D08B96 /* LocalDocumentListViewController.m in Sources */,
+				57B4B4B41E4ED07100D08B96 /* DSType.m in Sources */,
+				57B4B4B01E4ECE1A00D08B96 /* DocsetDetailDataSource.m in Sources */,
 				570382371E25C72D00B57A00 /* DocumentListViewController.m in Sources */,
 				570382331E25C72D00B57A00 /* InterpreterView.m in Sources */,
 				575F5E711E249F870070E850 /* UIManager.m in Sources */,

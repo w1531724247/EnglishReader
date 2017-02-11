@@ -14,6 +14,7 @@
 #import "DocumentDetailViewController.h"
 #import "TextViewDetailController.h"
 #import "WebViewDetailController.h"
+#import "DocsetDetailListViewController.h"
 
 @interface DocumentListDataSource () 
 
@@ -76,25 +77,32 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *filePath = [self.filePathArray objectAtIndex:indexPath.row];
-    
-    DocumentDetailViewController *detailVC;
     NSString *extension = [filePath pathExtension];
     extension = [extension lowercaseString];
-    if ([extension isEqualToString:@"doc"] || [extension isEqualToString:@"docx"] || [extension isEqualToString:@"rtf"] || [extension isEqualToString:@"html"] || [extension isEqualToString:@"docset"]) {
+    
+    if ([extension isEqualToString:@"docset"]) {
+        DocsetDetailListViewController *detailListVC = [[DocsetDetailListViewController alloc] initWithType:DocsetDetailListTypes];
+        detailListVC.filePath = filePath;
+        detailListVC.hidesBottomBarWhenPushed = YES;
+        if (detailListVC) {
+            [tableView.viewController.navigationController pushViewController:detailListVC animated:YES];
+        }
+        return;
+    }
+    
+    DocumentDetailViewController *detailVC;
+    if ([extension isEqualToString:@"doc"] || [extension isEqualToString:@"docx"] || [extension isEqualToString:@"rtf"] || [extension isEqualToString:@"html"]) {
         detailVC = [[WebViewDetailController alloc] init];
     }
     if ([extension isEqualToString:@"txt"] || [extension isEqualToString:@"pdf"]) {
         detailVC = [[TextViewDetailController alloc] init];
     }
     
-    filePath = [NSString stringWithFormat:@"dash-tarix://%@/Contents/Resources/Documents/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/Class/alias", filePath];
     detailVC.filePath = filePath;
-
     detailVC.hidesBottomBarWhenPushed = YES;
     if (detailVC) {
         [tableView.viewController.navigationController pushViewController:detailVC animated:YES];
     }
-
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -7,7 +7,7 @@
 //
 
 #import "MainTabBarController.h"
-#import "DocumentListViewController.h"
+#import "LocalDocumentListViewController.h"
 #import "UIManager.h"
 #import "SettingViewController.h"
 #import "WordListViewController.h"
@@ -27,7 +27,7 @@
 }
 
 -(void)setupChildViewController {
-    DocumentListViewController *documentListVC = [[DocumentListViewController alloc] init];
+    LocalDocumentListViewController *documentListVC = [[LocalDocumentListViewController alloc] init];
     UINavigationController *documentListNav = [[UINavigationController alloc] initWithRootViewController:documentListVC];
     
     WordListViewController *wordListVC = [[WordListViewController alloc] init];
