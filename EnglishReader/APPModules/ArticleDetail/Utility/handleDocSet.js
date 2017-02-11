@@ -1,9 +1,4 @@
-//只提取文章内容
-function extractArticleNode() {
-
-}
-extractArticleNode();
-
+//处理文本标签
 function handleElementsWithTagName(tagName) {
     var span_nodes = document.getElementsByTagName(tagName);
     for (var i = 0; i < span_nodes.length; i++) {
@@ -89,3 +84,18 @@ handleElementsWithTagName('h4');
 handleElementsWithTagName('h5');
 //处理<h6>标签
 handleElementsWithTagName('h6');
+
+
+//只提取文章内容j
+function extractArticleNode() {
+    var childNodes = document.body.childNodes;
+    var length = childNodes.length;
+    for (var i = 0; i < length; i++) {
+        var child = childNodes[i];
+        if (child.tagName != "ARTICLE") {
+            document.body.removeChild(child);
+        }
+    }
+}
+extractArticleNode();
+

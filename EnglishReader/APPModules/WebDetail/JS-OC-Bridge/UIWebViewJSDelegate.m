@@ -30,19 +30,17 @@
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    
+    self.webView = webView;
+    self.webView.hidden = YES;
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-//    NSString *htmlString = [webView HTMLString];
-    
+- (void)webViewDidFinishLoad:(UIWebView *)webView {    
     if (!self.handled) {
         NSError *error;
         [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handleDocSet" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
         self.handled = YES;
+        self.webView.hidden = NO;
     }
-    
-    
 
     //首先创建JSContext 对象（此处通过当前webView的键获取到jscontext）
     self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
@@ -66,7 +64,4 @@
         }
     });
 }
-
-
-
 @end
