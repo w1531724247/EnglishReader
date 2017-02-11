@@ -12,7 +12,6 @@
 @interface UIWebViewJSDelegate ()
 
 @property (nonatomic, strong) JSContext *jsContext;
-@property (nonatomic, weak) UIWebView *webView;
 @property (nonatomic, assign) BOOL handled;
 
 @end
@@ -30,8 +29,7 @@
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    self.webView = webView;
-    self.webView.hidden = YES;
+
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {    
@@ -39,7 +37,10 @@
         NSError *error;
         [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handleDocSet" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
         self.handled = YES;
-        self.webView.hidden = NO;
+        
+        if ([self.delegate respondsToSelector:@selector(jsHandleCompleted)]) {
+            [self.delegate jsHandleCompleted];
+        }
     }
 
     //首先创建JSContext 对象（此处通过当前webView的键获取到jscontext）

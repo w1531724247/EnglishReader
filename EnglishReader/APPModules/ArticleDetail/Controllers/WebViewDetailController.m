@@ -17,6 +17,7 @@
 @property (nonatomic, strong) UIWebViewJSDelegate *webViewJSDelegate;
 @property (nonatomic, strong, readwrite) UIWebView *webView;
 @property (nonatomic, assign) BOOL setuped;
+@property (nonatomic, strong) UIActivityIndicatorView *indicatorView;
 
 @end
 
@@ -41,6 +42,11 @@
     
     [self.view insertSubview:self.webView atIndex:0];
     self.webView.frame = self.view.bounds;
+    self.webView.hidden = YES;
+    
+    [self.view addSubview:self.indicatorView];
+    self.indicatorView.center = self.view.center;
+    [self.indicatorView startAnimating];
 }
 
 #pragma mark ----- InterpreterViewDelegate
@@ -53,6 +59,11 @@
     NSString *articleName = [self.filePath lastPathComponent];
     [[StrangeWordTable shareTable] addWord:text withArticleName:articleName];
     [self showInterpreterViewWithText:text];
+}
+
+- (void)jsHandleCompleted {
+    self.webView.hidden = NO;
+    [self.indicatorView stopAnimating];
 }
 
 #pragma mark ----- getter
@@ -72,6 +83,15 @@
     }
     
     return _webViewJSDelegate;
+}
+
+- (UIActivityIndicatorView *)indicatorView {
+    if (!_indicatorView) {
+        _indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        _indicatorView.color = [UIColor darkGrayColor];
+    }
+    
+    return _indicatorView;
 }
 
 @end

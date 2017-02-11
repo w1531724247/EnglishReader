@@ -20,5 +20,6 @@
 @protocol UIWebViewJSProtocol <NSObject>
 
 - (void)webViewTextDidTouch:(NSString *)text;
+- (void)jsHandleCompleted;
 
 @end
