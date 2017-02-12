@@ -35,8 +35,17 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {    
     if (!self.handled) {
         NSError *error;
-        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handleDocSet" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
+        NSString *url = [webView URL];
+        NSString *jsFile = @"actionDocset";
+//        NSRange flagRange;
+//        flagRange = [url rangeOfString:@".docset"];
+//        if (flagRange.location != NSNotFound) {
+//            jsFile = @"actionDocset";
+//        }
+//        
+        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:jsFile ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
         self.handled = YES;
+        NSString *htmlString = [webView HTMLString];
         
         if ([self.delegate respondsToSelector:@selector(jsHandleCompleted)]) {
             [self.delegate jsHandleCompleted];

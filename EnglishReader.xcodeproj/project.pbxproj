@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5701E63C1E50103E0018DC9D /* actionDocset.js in Resources */ = {isa = PBXBuildFile; fileRef = 5701E63B1E50103E0018DC9D /* actionDocset.js */; };
 		570382311E25C72D00B57A00 /* TextViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382041E25C72D00B57A00 /* TextViewDetailController.m */; };
 		570382321E25C72D00B57A00 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382071E25C72D00B57A00 /* ArticleTextView.m */; };
 		570382331E25C72D00B57A00 /* InterpreterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703820A1E25C72D00B57A00 /* InterpreterView.m */; };
@@ -191,6 +192,7 @@
 
 /* Begin PBXFileReference section */
 		0C00EBF68E03656A2F86647F /* Pods-EnglishReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.release.xcconfig"; sourceTree = "<group>"; };
+		5701E63B1E50103E0018DC9D /* actionDocset.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionDocset.js; sourceTree = "<group>"; };
 		570382031E25C72D00B57A00 /* TextViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewDetailController.h; sourceTree = "<group>"; };
 		570382041E25C72D00B57A00 /* TextViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewDetailController.m; sourceTree = "<group>"; };
 		570382061E25C72D00B57A00 /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTextView.h; sourceTree = "<group>"; };
@@ -628,6 +630,7 @@
 			children = (
 				5703826C1E2613B800B57A00 /* ArticleHelper.h */,
 				5703826D1E2613B800B57A00 /* ArticleHelper.m */,
+				5701E63B1E50103E0018DC9D /* actionDocset.js */,
 				578675A61E4D761E00E28239 /* handleMSWord.js */,
 				578675A31E4D760E00E28239 /* handleDocSet.js */,
 				57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */,
@@ -1237,6 +1240,7 @@
 				575F5F4F1E24F7720070E850 /* GBpc-EUC-H in Resources */,
 				575F5F4E1E24F7720070E850 /* GBKp-EUC-V in Resources */,
 				575F5F341E24F7720070E850 /* B5pc-UCS2 in Resources */,
+				5701E63C1E50103E0018DC9D /* actionDocset.js in Resources */,
 				575F5F5E1E24F7720070E850 /* KSCms-UHC-V in Resources */,
 				570878091E226618004D3AD5 /* paper_4.jpg in Resources */,
 				575F5F381E24F7720070E850 /* CNS-EUC-V in Resources */,
