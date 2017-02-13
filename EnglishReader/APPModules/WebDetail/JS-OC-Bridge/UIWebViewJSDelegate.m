@@ -32,7 +32,7 @@
 
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {    
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (!self.handled) {
         NSError *error;
         NSString *url = [webView URL];
@@ -42,10 +42,9 @@
 //        if (flagRange.location != NSNotFound) {
 //            jsFile = @"actionDocset";
 //        }
-//        
+        
         [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:jsFile ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
         self.handled = YES;
-        NSString *htmlString = [webView HTMLString];
         
         if ([self.delegate respondsToSelector:@selector(jsHandleCompleted)]) {
             [self.delegate jsHandleCompleted];
@@ -59,6 +58,13 @@
         context.exception = exceptionValue;
         NSLog(@"error：%@", exceptionValue);
     };
+    
+    [self performSelector:@selector(extractHTMLString:) withObject:webView afterDelay:2.0];
+}
+    
+- (void)extractHTMLString:(UIWebView *)webView {
+    NSString *htmlString = [webView HTMLString];
+    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {

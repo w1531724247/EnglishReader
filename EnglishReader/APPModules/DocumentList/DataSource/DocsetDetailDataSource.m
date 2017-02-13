@@ -13,11 +13,11 @@
 #import "DSEntry.h"
 #import "DocsetDetailListViewController.h"
 #import "WebViewDetailController.h"
+#import "ERDocument.h"
 
 @interface DocsetDetailDataSource ()
 
-
-
+@property (nonatomic, strong) ERDocument *document;
 
 @end
 

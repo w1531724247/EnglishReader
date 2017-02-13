@@ -29,6 +29,7 @@
 		570382811E26148A00B57A00 /* NSObject+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382791E26148A00B57A00 /* NSObject+Category.m */; };
 		570382821E26148A00B57A00 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703827B1E26148A00B57A00 /* NSString+Category.m */; };
 		570382831E26148A00B57A00 /* UIWebView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703827D1E26148A00B57A00 /* UIWebView+Category.m */; };
+		57039A461E515DE600680805 /* ERDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 57039A451E515DE600680805 /* ERDocument.m */; };
 		570878061E226618004D3AD5 /* paper_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878021E226618004D3AD5 /* paper_1.jpg */; };
 		570878071E226618004D3AD5 /* paper_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878031E226618004D3AD5 /* paper_2.jpg */; };
 		570878081E226618004D3AD5 /* paper_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 570878041E226618004D3AD5 /* paper_3.jpg */; };
@@ -238,6 +239,8 @@
 		5703827D1E26148A00B57A00 /* UIWebView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Category.m"; sourceTree = "<group>"; };
 		570382841E2614B800B57A00 /* CommonDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefines.h; sourceTree = "<group>"; };
 		570382851E26153800B57A00 /* WordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordDetailViewController.h; sourceTree = "<group>"; };
+		57039A441E515DE600680805 /* ERDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERDocument.h; sourceTree = "<group>"; };
+		57039A451E515DE600680805 /* ERDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERDocument.m; sourceTree = "<group>"; };
 		570878021E226618004D3AD5 /* paper_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_1.jpg; sourceTree = "<group>"; };
 		570878031E226618004D3AD5 /* paper_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_2.jpg; sourceTree = "<group>"; };
 		570878041E226618004D3AD5 /* paper_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper_3.jpg; sourceTree = "<group>"; };
@@ -521,6 +524,7 @@
 		570382111E25C72D00B57A00 /* DocumentList */ = {
 			isa = PBXGroup;
 			children = (
+				57039A401E51595C00680805 /* Models */,
 				570382121E25C72D00B57A00 /* Controllers */,
 				570382151E25C72D00B57A00 /* DataSource */,
 				570382181E25C72D00B57A00 /* Views */,
@@ -636,6 +640,15 @@
 				57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		57039A401E51595C00680805 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57039A441E515DE600680805 /* ERDocument.h */,
+				57039A451E515DE600680805 /* ERDocument.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		570878011E226618004D3AD5 /* Images */ = {
@@ -1394,6 +1407,7 @@
 				570382351E25C72D00B57A00 /* InterpreterViewLocal.m in Sources */,
 				578675B31E4DBE0100E28239 /* DHTarixProtocol.m in Sources */,
 				570382831E26148A00B57A00 /* UIWebView+Category.m in Sources */,
+				57039A461E515DE600680805 /* ERDocument.m in Sources */,
 				578675B71E4DBE5800E28239 /* NSString+DHUtils.m in Sources */,
 				57B4B4AA1E4ECB7300D08B96 /* LocalDocumentListViewController.m in Sources */,
 				57B4B4B41E4ED07100D08B96 /* DSType.m in Sources */,

@@ -2,7 +2,7 @@ function wrapTextToNode(aNode) {
     var currentNode = aNode;
     var foundNotActionedNode = false;
     var pp_node;
-    while (currentNode.childNodes.length > 1) {//等于1表示没有子节点
+    while (currentNode.hasChildNodes()) {//等于1表示没有子节点
         var iteratorOver = false;
         for (var index = 0; index < currentNode.childNodes.length; index++) {
             var subNode = currentNode.childNodes[index];
@@ -50,6 +50,7 @@ function wrapTextToNode(aNode) {
             if (node.tagName == undefined) {//通常为文本对象
                 continue;
             }
+            
             addWrapedAttributeToNode(node);
             var startText = "<" + node.tagName.toLowerCase();
             var startIndex = parentText.indexOf(startText);
@@ -89,7 +90,10 @@ function wrapTextToNode(aNode) {
 
 function addWrapedAttributeToNode(aNode) {
     aNode.setAttribute("wraped", true);
-    addActionToEveryWordWithNode(aNode);
+    if (isExceptNode(aNode) == false) {
+        alert(aNode.tagName);
+        addActionToEveryWordWithNode(aNode);
+    }
 }
 
 //克隆一个节点及其属性
@@ -111,8 +115,11 @@ function addActionToEveryWordWithNode(aNode) {
     if (aNode == undefined) {
         return;
     }
-    if (aNode.childNodes.length > 1) {
+    if (aNode.hasChildNodes()) {
         //不能有子节点
+        return;
+    }
+    if (isExceptNode(aNode)) {
         return;
     }
     var aText = aNode.innerText;
@@ -166,6 +173,18 @@ function addActionToEveryWordWithNode(aNode) {
     }
 }
 
+function isExceptNode(aNode) {
+    var except = false;
+    var exceptTags = new Array("table","caption","th", "tr", "td", "thead", "tbody", "tfoot", "col", "colgroup", "a", "image");
+    for (var index = 0; index < exceptTags.length; index++) {
+        var tagName = exceptTags[index];
+        if (aNode.tagName.toLowerCase() == tagName) {
+            except = true;
+        }
+    }
+    
+    return except;
+}
 
 var articleNodes = document.getElementsByTagName("article");
 var article = articleNodes[0];
