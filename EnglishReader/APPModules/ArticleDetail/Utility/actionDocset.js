@@ -89,6 +89,7 @@ function wrapTextToNode(aNode) {
 
 function addWrapedAttributeToNode(aNode) {
     aNode.setAttribute("wraped", true);
+    addActionToEveryWordWithNode(aNode);
 }
 
 //克隆一个节点及其属性
@@ -106,14 +107,15 @@ function cloneNodeWithOutSubNode(aNode){
     return clone_node;
 }
 
-var articleNodes = document.getElementsByTagName("article");
-var article = articleNodes[0];
-var found
-do {
-    found = wrapTextToNode(article);
-} while (found);
-
-function actionSpansWithText(aText) {
+function addActionToEveryWordWithNode(aNode) {
+    if (aNode == undefined) {
+        return;
+    }
+    if (aNode.childNodes.length > 1) {
+        //不能有子节点
+        return;
+    }
+    var aText = aNode.innerText;
     var textLength = aText.length;
     var spanArray= new Array();
     
@@ -130,7 +132,7 @@ function actionSpansWithText(aText) {
                     if (j == textLength - 1) {//最后一位是字母
                         var action_span = document.createElement('span');
                         action_span.innerText = word;
-                        action_span.setAttribute("actionFlag", "YES");
+                        action_span.setAttribute("actionFlag", true);
                         action_span.onclick = function () {
                             jsActionDelegate.textDidTouch(this.innerText);
                         }
@@ -140,7 +142,7 @@ function actionSpansWithText(aText) {
                 } else {
                     var action_span = document.createElement('span');
                     action_span.innerText = word;
-                    action_span.setAttribute("actionFlag", "YES");
+                    action_span.setAttribute("actionFlag", true);
                     action_span.onclick = function () {
                         jsActionDelegate.textDidTouch(this.innerText);
                     }
@@ -152,26 +154,24 @@ function actionSpansWithText(aText) {
         } else {
             var new_span = document.createElement('span');
             new_span.innerText = char;
-            new_span.setAttribute("actionFlag", "YES");
+            new_span.setAttribute("actionFlag", true);
             spanArray[spanArray.length] = new_span;
         }
     }
     
-    return spanArray;
+    aNode.innerHTML = "";
+    for (var j = 0; j < spanArray.length;j++) {
+        var span = spanArray[j];
+        aNode.appendChild(span);
+    }
 }
 
-//var nodes = document.getElementsByName("target");
-//var lastNode = nodes[0];
-//var length = lastNode.childNodes.length;
-//
-//for (var index = 0; index < length; index++) {
-//    var node = lastNode.childNodes[index];
-//    var text = node.innerText;
-//    var spanArray = actionSpansWithText(text);
-//    node.innerHTML = "";
-//    for (var j = 0; j < spanArray.length;j++) {
-//        var span = spanArray[j];
-//        node.appendChild(span);
-//    }
-//}
+
+var articleNodes = document.getElementsByTagName("article");
+var article = articleNodes[0];
+var found
+do {
+    found = wrapTextToNode(article);
+} while (found);
+
 
