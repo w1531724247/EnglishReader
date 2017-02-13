@@ -67,7 +67,15 @@
         case DocsetDetailDataSourceEntries: {
             WebViewDetailController *detailVC = [[WebViewDetailController alloc] init];
             DSEntry *entry = [self.modelArray objectAtIndex:indexPath.row];
-            NSString *webUrlString = [NSString stringWithFormat:@"dash-tarix://%@/Contents/Resources/Documents/%@", self.filePath, entry.path];
+            NSString *webUrlString = [NSString string];
+            
+            NSRange schemaRange = [entry.path rangeOfString:@"://"];
+            if (schemaRange.location != NSNotFound) {//Xcode文档的处理方法不同
+                entry.path = [entry.path substringFromIndex:schemaRange.location+schemaRange.length];
+            }
+            
+            webUrlString = [NSString stringWithFormat:@"dash-tarix://%@/Contents/Resources/Documents/%@", self.filePath, entry.path];
+            
             detailVC.filePath = webUrlString;
             detailVC.hidesBottomBarWhenPushed = YES;
             if (detailVC) {
