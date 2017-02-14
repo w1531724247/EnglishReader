@@ -22,6 +22,12 @@
 @end
 
 @implementation WebViewDetailController
+    
+- (void)dealloc {
+    _webView = nil;
+    _webViewJSDelegate = nil;
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

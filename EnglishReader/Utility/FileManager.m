@@ -56,7 +56,7 @@
 
 + (NSString *)tempDirectory
 {
-    return [NSString stringWithFormat:@""];
+    return NSTemporaryDirectory();
 }
 
 + (BOOL)creatDocumentSubDirectoryWithString:(NSString *)directory{

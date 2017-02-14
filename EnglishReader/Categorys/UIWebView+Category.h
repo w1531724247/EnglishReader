@@ -18,6 +18,12 @@
 - (NSString *)HTMLString;
 //获取当前webView上显示的文本bodyText
 - (NSString *)bodyText;
+//获取当前webView上显示的文本bodyHTML
+- (NSString *)bodyHTML;
+//替换webView的bodyHTML内容
+- (void)replaceBodyHTML:(NSString *)newBodyHTML;
+//为webView的单词添加点击事件
+- (void)actionWebView;
 //分割每一个单词
 - (void)seperatWords;
 

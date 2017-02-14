@@ -12,5 +12,5 @@
 @protocol JSObjectProtocol <JSExport>
 
 - (void)textDidTouch:(NSString *)text;
-
+- (void)jsHandleCompletedWithFinalHTMLString:(NSString *)finalHTMLString;
 @end

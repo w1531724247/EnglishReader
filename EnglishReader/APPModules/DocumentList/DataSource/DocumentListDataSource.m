@@ -63,7 +63,10 @@
         NSMutableArray *filePathArray = [NSMutableArray array];
         for (NSString *file in files) {
             NSString *filePath = [resourcePath stringByAppendingPathComponent:file];
-            [filePathArray addObject:filePath];
+            NSString *ext = [filePath pathExtension];
+            if (ext.length > 1) {//只显示文件不显示文件夹
+                [filePathArray addObject:filePath];
+            }
         }
         
         _filePathArray = [NSArray arrayWithArray:filePathArray];

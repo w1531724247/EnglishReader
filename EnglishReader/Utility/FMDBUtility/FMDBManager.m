@@ -6,7 +6,7 @@
 //  Copyright © 2016年 QMTV. All rights reserved.
 //
 
-#define DataBaseInfoDirectoryName @"DataBaseInfo"
+#define DataBaseInfoDirectoryName @".DataBaseInfo"
 #define DataBaseName @"ERDataBase"
 
 #import "FMDBManager.h"

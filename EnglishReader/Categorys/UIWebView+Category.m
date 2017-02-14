@@ -39,6 +39,25 @@
     
     return bodyText;
 }
+    
+//获取当前webView上显示的文本bodyHTML
+- (NSString *)bodyHTML {
+    NSString *bodyHTML = [self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];//获取网页HTML文字
+    
+    return bodyHTML;
+}
+    
+//替换webView的bodyHTML内容
+- (void)replaceBodyHTML:(NSString *)newBodyHTML {
+    NSString *result = [self stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.body.innerHTML = '%@'", newBodyHTML]];
+    
+}
+    
+//为webView的单词添加点击事件
+- (void)actionWebView {
+    NSError *error;
+    [self stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"actionDocset" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
+}
 
 //分割每一个单词
 - (void)seperatWords {
