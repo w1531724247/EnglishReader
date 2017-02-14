@@ -5,7 +5,11 @@ function handleSpans() {
         var span = span_nodes[i];
         var actionFlag = span.getAttribute("actionFlag");
         if (actionFlag != "true") {
-            addActionToEveryWordWithNode(span);
+            if (isExceptNode(span.parentNode)) {
+                span.setAttribute("actionFlag", true);
+            } else {
+                addActionToEveryWordWithNode(span);
+            }
         }
     }
 }
@@ -61,6 +65,20 @@ function addClickEventToNode(aNode) {
     aNode.onclick = function () {
         jsActionDelegate.textDidTouch(this.innerText);
     }
+}
+
+
+function isExceptNode(aNode) {
+    var except = false;
+    var exceptTags = new Array("table","caption","th", "tr", "td", "thead", "tbody", "tfoot", "col", "colgroup", "a", "img");
+    for (var index = 0; index < exceptTags.length; index++) {
+        var tagName = exceptTags[index];
+        if (aNode.tagName.toLowerCase() == tagName) {
+            except = true;
+        }
+    }
+    
+    return except;
 }
 
 handleSpans();

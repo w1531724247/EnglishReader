@@ -38,20 +38,21 @@
         NSLog(@"error：%@", exceptionValue);
     };
     
-    switch (self.handleCount) {
-        case 1:{
-            [self actionWebView:webView];
-        }
-        break;
-        case 2:{
-            [webView actionWebView];
-            if ([self.delegate respondsToSelector:@selector(jsHandleCompleted)]) {
-                [self.delegate jsHandleCompleted];
-            }
-        }
-        break;
-        default:
-        break;
+//    switch (self.handleCount) {
+//        case 1:{
+//            [self actionWebView:webView];
+//        }
+//        break;
+//        case 2:{
+//            [webView actionWebView];
+//
+//        }
+//        break;
+//        default:
+//        break;
+//    }
+    if ([self.delegate respondsToSelector:@selector(jsHandleCompleted)]) {
+        [self.delegate jsHandleCompleted];
     }
     
     self.handleCount++;
