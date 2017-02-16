@@ -46,32 +46,13 @@
     
     return bodyHTML;
 }
-    
-//替换webView的bodyHTML内容
-- (void)replaceBodyHTML:(NSString *)newBodyHTML {
-    NSString *result = [self stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.body.innerHTML = '%@'", newBodyHTML]];
-    
-}
-    
+
 //为webView的单词添加点击事件
 - (void)actionWebView {
     NSError *error;
-    [self stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"actionDocset" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
+    [self stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"spansHTML" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
+    [self stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"actionSpanFunction" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
 }
-
-//分割每一个单词
-- (void)seperatWords {
-    [self stringByEvaluatingJavaScriptFromString:@"function wrapWords(element) {\
-     var html = element.innerHTML;\
-     var words = html.split(/ /);\
-     var newHtml = '';\
-     for (var i = 0; i < words.length; i++) {\
-     newHtml += '<span>' + words[i] + '</span> ';\
-     }\
-     element.innerHTML = newHtml;\
-     }"];
-}
-
 
 - (void)loadReferenceHTMLString:(NSString *)string baseURL:(NSURL *)baseURL
 {

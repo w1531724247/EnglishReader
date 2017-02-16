@@ -2,17 +2,27 @@ function addActionToEveryWord() {
     var span_nodes = document.getElementsByTagName('span');
     for (var i = 0; i < span_nodes.length; i++) {
         var spanNode = span_nodes[i];
-        var class_name = spanNode.getAttribute("class");
-        if (class_name != "actioned") {
+        var action_flag = spanNode.getAttribute("actioned");
+        if (action_flag != "true") {
             actionSpan(spanNode);
         }
     }
 }
 
 function actionSpan(spanNode) {
+    if (spanNode == undefined) {
+        return;
+    }
+    if (spanNode.tagName == undefined) {
+        return;
+    }
     var span = spanNode;
     var parent = span.parentNode;
-    if (span.childNodes[0].tagName == undefined) {
+    var firstSpan = span.childNodes[0];
+    if (firstSpan == undefined) {
+        return;
+    }
+    if (firstSpan.tagName == undefined) {
         var text = span.innerText;
         var length = text.length;
         
@@ -31,9 +41,9 @@ function actionSpan(spanNode) {
                             if (word.length > 0) {
                                 var action_span = document.createElement('span');
                                 action_span.innerText = word;
-                                action_span.setAttribute("class", "actioned");
+                                action_span.setAttribute("actioned", true);
                                 action_span.onclick = function () {
-                                    alert(this.innerText);
+                                    jsActionDelegate.textDidTouch(this.innerText);
                                 }
                                 clone_span.appendChild(action_span);
                                 j=k;
@@ -42,9 +52,9 @@ function actionSpan(spanNode) {
                     } else {
                         var action_span = document.createElement('span');
                         action_span.innerText = word;
-                        action_span.setAttribute("class", "actioned");
+                        action_span.setAttribute("actioned", true);
                         action_span.onclick = function () {
-                            alert(this.innerText);
+                            jsActionDelegate.textDidTouch(this.innerText);
                         }
                         clone_span.appendChild(action_span);
                         
@@ -53,19 +63,17 @@ function actionSpan(spanNode) {
                         new_span.setAttribute("class", "actioned");
                         clone_span.appendChild(new_span);
                         j=k;
-                        // action_span.appendChild(node);
-                        // textNode.parentNode.appendChild(action_span);
                         break;
                     }
                 }
             } else {
                 var new_span = document.createElement('span');
                 new_span.innerText = char;
-                new_span.setAttribute("class", "actioned");
+                new_span.setAttribute("actioned", true);
                 clone_span.appendChild(new_span);
             }
         }
-        clone_span.setAttribute("class", "actioned");
+        clone_span.setAttribute("actioned", true);
         parent.replaceChild(clone_span, span);
     }
 }

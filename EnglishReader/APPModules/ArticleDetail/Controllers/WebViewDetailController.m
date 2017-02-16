@@ -11,6 +11,7 @@
 #import "UIWebViewJSDelegate.h"
 #import "InterpreterView.h"
 #import "StrangeWordTable.h"
+#import "UIWebView+Category.h"
 
 @interface WebViewDetailController ()<UIWebViewJSProtocol>
 
@@ -53,6 +54,13 @@
     [self.view addSubview:self.indicatorView];
     self.indicatorView.center = self.view.center;
     [self.indicatorView startAnimating];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(HTMLAddActionToEveryWord)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+- (void)HTMLAddActionToEveryWord {
+    [self.webView actionWebView];
 }
 
 #pragma mark ----- InterpreterViewDelegate

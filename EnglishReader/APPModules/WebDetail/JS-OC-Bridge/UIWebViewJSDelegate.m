@@ -13,7 +13,6 @@
 @interface UIWebViewJSDelegate ()
 
 @property (nonatomic, strong) JSContext *jsContext;
-@property (nonatomic, assign) int handleCount;
     
 @end
 
@@ -38,24 +37,9 @@
         NSLog(@"error：%@", exceptionValue);
     };
     
-//    switch (self.handleCount) {
-//        case 1:{
-//            [self actionWebView:webView];
-//        }
-//        break;
-//        case 2:{
-//            [webView actionWebView];
-//
-//        }
-//        break;
-//        default:
-//        break;
-//    }
     if ([self.delegate respondsToSelector:@selector(jsHandleCompleted)]) {
         [self.delegate jsHandleCompleted];
     }
-    
-    self.handleCount++;
 }
     
 - (void)actionWebView:(UIWebView *)webView {

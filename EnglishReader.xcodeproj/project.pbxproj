@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5701E63C1E50103E0018DC9D /* actionDocset.js in Resources */ = {isa = PBXBuildFile; fileRef = 5701E63B1E50103E0018DC9D /* actionDocset.js */; };
 		570382311E25C72D00B57A00 /* TextViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382041E25C72D00B57A00 /* TextViewDetailController.m */; };
 		570382321E25C72D00B57A00 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 570382071E25C72D00B57A00 /* ArticleTextView.m */; };
 		570382331E25C72D00B57A00 /* InterpreterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703820A1E25C72D00B57A00 /* InterpreterView.m */; };
@@ -38,8 +37,6 @@
 		57119F411E220F3A00B929EB /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F401E220F3A00B929EB /* APIManager.m */; };
 		57119F661E22413E00B929EB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57119F651E22413E00B929EB /* CoreText.framework */; };
 		57180EDC1E235D6C00FFD097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */; };
-		571CADEC1E52FDB60073ED9E /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 571CADEB1E52FDB60073ED9E /* test.js */; };
-		571CADEE1E52FDC90073ED9E /* actionDocset_old.js in Resources */ = {isa = PBXBuildFile; fileRef = 571CADED1E52FDC90073ED9E /* actionDocset_old.js */; };
 		575F5E711E249F870070E850 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E701E249F870070E850 /* UIManager.m */; };
 		575F5F201E24F7720070E850 /* 83pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */; };
 		575F5F211E24F7720070E850 /* 90ms-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECA1E24F7720070E850 /* 90ms-RKSJ-H */; };
@@ -135,7 +132,6 @@
 		575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F881E24F7CC0070E850 /* FMDBManager.m */; };
 		575F5F8F1E2506410070E850 /* StrangeWordTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5F8E1E2506410070E850 /* StrangeWordTable.m */; };
 		578675A11E4D753B00E28239 /* documentHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = 578675A01E4D753B00E28239 /* documentHTML.html */; };
-		578675A51E4D760E00E28239 /* handleDocSet.js in Resources */ = {isa = PBXBuildFile; fileRef = 578675A31E4D760E00E28239 /* handleDocSet.js */; };
 		578675A71E4D761E00E28239 /* handleMSWord.js in Resources */ = {isa = PBXBuildFile; fileRef = 578675A61E4D761E00E28239 /* handleMSWord.js */; };
 		578675B31E4DBE0100E28239 /* DHTarixProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 578675B21E4DBE0100E28239 /* DHTarixProtocol.m */; };
 		578675B71E4DBE5800E28239 /* NSString+DHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 578675B61E4DBE5800E28239 /* NSString+DHUtils.m */; };
@@ -166,6 +162,7 @@
 		57B4B4B01E4ECE1A00D08B96 /* DocsetDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4AF1E4ECE1A00D08B96 /* DocsetDetailDataSource.m */; };
 		57B4B4B41E4ED07100D08B96 /* DSType.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4B31E4ED07100D08B96 /* DSType.m */; };
 		57B4B4B71E4ED07E00D08B96 /* DSEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B4B4B61E4ED07E00D08B96 /* DSEntry.m */; };
+		57B61DF31E53E68E00FA51C7 /* spansHTML.js in Resources */ = {isa = PBXBuildFile; fileRef = 57B61DF21E53E68E00FA51C7 /* spansHTML.js */; };
 		57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */; };
 		57E2D6011E2CBF6D0044C243 /* actionSpanFunction.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */; };
 		57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */; };
@@ -195,7 +192,6 @@
 
 /* Begin PBXFileReference section */
 		0C00EBF68E03656A2F86647F /* Pods-EnglishReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglishReader/Pods-EnglishReader.release.xcconfig"; sourceTree = "<group>"; };
-		5701E63B1E50103E0018DC9D /* actionDocset.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionDocset.js; sourceTree = "<group>"; };
 		570382031E25C72D00B57A00 /* TextViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewDetailController.h; sourceTree = "<group>"; };
 		570382041E25C72D00B57A00 /* TextViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewDetailController.m; sourceTree = "<group>"; };
 		570382061E25C72D00B57A00 /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTextView.h; sourceTree = "<group>"; };
@@ -254,8 +250,6 @@
 		57119F421E220F9100B929EB /* APIManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManagerProtocol.h; sourceTree = "<group>"; };
 		57119F651E22413E00B929EB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		571CADEB1E52FDB60073ED9E /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
-		571CADED1E52FDC90073ED9E /* actionDocset_old.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionDocset_old.js; sourceTree = "<group>"; };
 		575F5E6F1E249F870070E850 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIManager.h; sourceTree = "<group>"; };
 		575F5E701E249F870070E850 /* UIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIManager.m; sourceTree = "<group>"; };
 		575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "83pv-RKSJ-H"; sourceTree = "<group>"; };
@@ -358,7 +352,6 @@
 		575F5F8D1E2506410070E850 /* StrangeWordTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrangeWordTable.h; sourceTree = "<group>"; };
 		575F5F8E1E2506410070E850 /* StrangeWordTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrangeWordTable.m; sourceTree = "<group>"; };
 		578675A01E4D753B00E28239 /* documentHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = documentHTML.html; sourceTree = "<group>"; };
-		578675A31E4D760E00E28239 /* handleDocSet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handleDocSet.js; sourceTree = "<group>"; };
 		578675A61E4D761E00E28239 /* handleMSWord.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handleMSWord.js; sourceTree = "<group>"; };
 		578675B11E4DBE0100E28239 /* DHTarixProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTarixProtocol.h; sourceTree = "<group>"; };
 		578675B21E4DBE0100E28239 /* DHTarixProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTarixProtocol.m; sourceTree = "<group>"; };
@@ -414,6 +407,7 @@
 		57B4B4B31E4ED07100D08B96 /* DSType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSType.m; sourceTree = "<group>"; };
 		57B4B4B51E4ED07E00D08B96 /* DSEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEntry.h; sourceTree = "<group>"; };
 		57B4B4B61E4ED07E00D08B96 /* DSEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEntry.m; sourceTree = "<group>"; };
+		57B61DF21E53E68E00FA51C7 /* spansHTML.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = spansHTML.js; sourceTree = "<group>"; };
 		57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = actionSpanFunction.js; sourceTree = "<group>"; };
 		57E2D6081E2CD74A0044C243 /* UIWebViewJSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewJSDelegate.h; sourceTree = "<group>"; };
@@ -638,12 +632,9 @@
 			children = (
 				5703826C1E2613B800B57A00 /* ArticleHelper.h */,
 				5703826D1E2613B800B57A00 /* ArticleHelper.m */,
-				5701E63B1E50103E0018DC9D /* actionDocset.js */,
+				57B61DF21E53E68E00FA51C7 /* spansHTML.js */,
 				578675A61E4D761E00E28239 /* handleMSWord.js */,
-				578675A31E4D760E00E28239 /* handleDocSet.js */,
 				57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */,
-				571CADEB1E52FDB60073ED9E /* test.js */,
-				571CADED1E52FDC90073ED9E /* actionDocset_old.js */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1201,7 +1192,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				571CADEE1E52FDC90073ED9E /* actionDocset_old.js in Resources */,
 				575F5F701E24F7720070E850 /* UniJIS-UTF16-V in Resources */,
 				575F5F6F1E24F7720070E850 /* UniJIS-UTF16-H in Resources */,
 				575F5F281E24F7720070E850 /* 90pv-RKSJ-UCS2C in Resources */,
@@ -1215,7 +1205,6 @@
 				575F5F591E24F7720070E850 /* KSC-EUC-V in Resources */,
 				575F5F4D1E24F7720070E850 /* GBKp-EUC-H in Resources */,
 				575F5F721E24F7720070E850 /* UniKS-UCS2-V in Resources */,
-				578675A51E4D760E00E28239 /* handleDocSet.js in Resources */,
 				575F5F351E24F7720070E850 /* B5pc-UCS2C in Resources */,
 				575F5F301E24F7720070E850 /* Adobe-Japan1-UCS2 in Resources */,
 				575F5F3F1E24F7720070E850 /* ETen-B5-V in Resources */,
@@ -1235,6 +1224,7 @@
 				575F5F461E24F7720070E850 /* GB-EUC-H in Resources */,
 				575F5F361E24F7720070E850 /* B5pc-V in Resources */,
 				575F5F621E24F7720070E850 /* KSCpc-EUC-V in Resources */,
+				57B61DF31E53E68E00FA51C7 /* spansHTML.js in Resources */,
 				575F5F641E24F7720070E850 /* UniCNS-UCS2-V in Resources */,
 				575F5F2E1E24F7720070E850 /* Adobe-GB1-UCS2 in Resources */,
 				57970B101E2DB2DD002F08F5 /* handleTxt.html in Resources */,
@@ -1260,7 +1250,6 @@
 				575F5F4F1E24F7720070E850 /* GBpc-EUC-H in Resources */,
 				575F5F4E1E24F7720070E850 /* GBKp-EUC-V in Resources */,
 				575F5F341E24F7720070E850 /* B5pc-UCS2 in Resources */,
-				5701E63C1E50103E0018DC9D /* actionDocset.js in Resources */,
 				575F5F5E1E24F7720070E850 /* KSCms-UHC-V in Resources */,
 				570878091E226618004D3AD5 /* paper_4.jpg in Resources */,
 				575F5F381E24F7720070E850 /* CNS-EUC-V in Resources */,
@@ -1277,7 +1266,6 @@
 				575F5F491E24F7720070E850 /* GBK-EUC-UCS2 in Resources */,
 				575F5F2B1E24F7720070E850 /* Adobe-CNS1-6 in Resources */,
 				575F5F3E1E24F7720070E850 /* ETen-B5-UCS2 in Resources */,
-				571CADEC1E52FDB60073ED9E /* test.js in Resources */,
 				5797A8B01E20F27600F0BE38 /* Assets.xcassets in Resources */,
 				575F5F331E24F7720070E850 /* B5pc-H in Resources */,
 				575F5F551E24F7720070E850 /* H in Resources */,
