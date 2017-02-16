@@ -61,6 +61,9 @@
 
 - (void)HTMLAddActionToEveryWord {
     [self.webView actionWebView];
+//    [self.webView loadHTMLString:@"<html><head></head><body></body></html>" baseURL:nil];
+    
+    
 }
 
 #pragma mark ----- InterpreterViewDelegate

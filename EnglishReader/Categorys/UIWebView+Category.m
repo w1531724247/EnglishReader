@@ -61,17 +61,21 @@
 }
 
 - (void)hookLoadHTMLStringMethod {
-    Class class = [UIWebView class];
-    Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
-    Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
-    method_exchangeImplementations(originalMethod, newMethod);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        Class class = [UIWebView class];
+        Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
+        Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
+        method_exchangeImplementations(originalMethod, newMethod);
+    });
 }
 
 - (void)restoreLoadHTMLStringMethod {
-    Class class = [UIWebView class];
-    Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
-    Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
-    method_exchangeImplementations(newMethod, originalMethod);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        Class class = [UIWebView class];
+        Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
+        Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
+        method_exchangeImplementations(newMethod, originalMethod);
+    });
 }
 
 @end
