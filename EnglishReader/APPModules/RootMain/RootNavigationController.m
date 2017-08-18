@@ -8,6 +8,7 @@
 
 #import "RootNavigationController.h"
 #import "MainTabBarController.h"
+#import "WKMasterViewController.h"
 
 @interface RootNavigationController ()
 
@@ -21,8 +22,9 @@
     dispatch_once(&onceToken, ^{
         if (!_shareNavigationController) {
             MainTabBarController *mainVC = [[MainTabBarController alloc] init];
-            _shareNavigationController = [[RootNavigationController alloc] initWithRootViewController:mainVC];
-            _shareNavigationController.navigationBarHidden = YES;
+            WKMasterViewController *masterViewController = [[WKMasterViewController alloc] initWithNibName:@"WKMasterViewController" bundle:nil];
+            _shareNavigationController = [[RootNavigationController alloc] initWithRootViewController:masterViewController];
+//            _shareNavigationController.navigationBarHidden = YES;
         }
     });
     

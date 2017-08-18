@@ -37,6 +37,14 @@
 		57119F411E220F3A00B929EB /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57119F401E220F3A00B929EB /* APIManager.m */; };
 		57119F661E22413E00B929EB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57119F651E22413E00B929EB /* CoreText.framework */; };
 		57180EDC1E235D6C00FFD097 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */; };
+		573D256C1F46E02300174386 /* WKDataStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D25691F46E02300174386 /* WKDataStream.m */; };
+		573D256D1F46E02300174386 /* WKDocReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D256B1F46E02300174386 /* WKDocReader.m */; };
+		573D25781F46E0E300174386 /* WKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D25701F46E0E300174386 /* WKDetailViewController.m */; };
+		573D25791F46E0E300174386 /* WKDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573D25711F46E0E300174386 /* WKDetailViewController.xib */; };
+		573D257A1F46E0E300174386 /* WKDocumentInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D25731F46E0E300174386 /* WKDocumentInfoViewController.m */; };
+		573D257B1F46E0E300174386 /* WKDocumentInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573D25741F46E0E300174386 /* WKDocumentInfoViewController.xib */; };
+		573D257C1F46E0E300174386 /* WKMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D25761F46E0E300174386 /* WKMasterViewController.m */; };
+		573D257D1F46E0E300174386 /* WKMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573D25771F46E0E300174386 /* WKMasterViewController.xib */; };
 		575F5E711E249F870070E850 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E701E249F870070E850 /* UIManager.m */; };
 		575F5F201E24F7720070E850 /* 83pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */; };
 		575F5F211E24F7720070E850 /* 90ms-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECA1E24F7720070E850 /* 90ms-RKSJ-H */; };
@@ -166,6 +174,9 @@
 		57E2D5FB1E2C7ED90044C243 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D5FA1E2C7ED90044C243 /* WordDetailViewController.m */; };
 		57E2D6011E2CBF6D0044C243 /* actionSpanFunction.js in Resources */ = {isa = PBXBuildFile; fileRef = 57E2D6001E2CBF6D0044C243 /* actionSpanFunction.js */; };
 		57E2D60A1E2CD74A0044C243 /* UIWebViewJSDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */; };
+		57F057551F24787E00B0539F /* Bold-Italic-Underline.doc in Resources */ = {isa = PBXBuildFile; fileRef = 57F0574E1F24787E00B0539F /* Bold-Italic-Underline.doc */; };
+		57F057561F24787E00B0539F /* Fonts-colors-sizes.doc in Resources */ = {isa = PBXBuildFile; fileRef = 57F0574F1F24787E00B0539F /* Fonts-colors-sizes.doc */; };
+		57F057571F24787E00B0539F /* ParagraphStyle.doc in Resources */ = {isa = PBXBuildFile; fileRef = 57F057501F24787E00B0539F /* ParagraphStyle.doc */; };
 		57F4D9C51E2CE300005B429D /* DocumentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F4D9C41E2CE300005B429D /* DocumentDetailViewController.m */; };
 		57F4D9C81E2CE5DD005B429D /* WebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F4D9C71E2CE5DD005B429D /* WebViewDetailController.m */; };
 		57F4D9CB1E2CE663005B429D /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = 57F4D9C91E2CE663005B429D /* text.html */; };
@@ -250,6 +261,19 @@
 		57119F421E220F9100B929EB /* APIManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManagerProtocol.h; sourceTree = "<group>"; };
 		57119F651E22413E00B929EB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		57180EDB1E235D6C00FFD097 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		573D25681F46E02300174386 /* WKDataStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKDataStream.h; sourceTree = "<group>"; };
+		573D25691F46E02300174386 /* WKDataStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKDataStream.m; sourceTree = "<group>"; };
+		573D256A1F46E02300174386 /* WKDocReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKDocReader.h; sourceTree = "<group>"; };
+		573D256B1F46E02300174386 /* WKDocReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKDocReader.m; sourceTree = "<group>"; };
+		573D256F1F46E0E300174386 /* WKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKDetailViewController.h; sourceTree = "<group>"; };
+		573D25701F46E0E300174386 /* WKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKDetailViewController.m; sourceTree = "<group>"; };
+		573D25711F46E0E300174386 /* WKDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKDetailViewController.xib; sourceTree = "<group>"; };
+		573D25721F46E0E300174386 /* WKDocumentInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKDocumentInfoViewController.h; sourceTree = "<group>"; };
+		573D25731F46E0E300174386 /* WKDocumentInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKDocumentInfoViewController.m; sourceTree = "<group>"; };
+		573D25741F46E0E300174386 /* WKDocumentInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKDocumentInfoViewController.xib; sourceTree = "<group>"; };
+		573D25751F46E0E300174386 /* WKMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKMasterViewController.h; sourceTree = "<group>"; };
+		573D25761F46E0E300174386 /* WKMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKMasterViewController.m; sourceTree = "<group>"; };
+		573D25771F46E0E300174386 /* WKMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKMasterViewController.xib; sourceTree = "<group>"; };
 		575F5E6F1E249F870070E850 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIManager.h; sourceTree = "<group>"; };
 		575F5E701E249F870070E850 /* UIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIManager.m; sourceTree = "<group>"; };
 		575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "83pv-RKSJ-H"; sourceTree = "<group>"; };
@@ -413,6 +437,9 @@
 		57E2D6081E2CD74A0044C243 /* UIWebViewJSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewJSDelegate.h; sourceTree = "<group>"; };
 		57E2D6091E2CD74A0044C243 /* UIWebViewJSDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewJSDelegate.m; sourceTree = "<group>"; };
 		57E2D60B1E2CD78C0044C243 /* JSObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectProtocol.h; sourceTree = "<group>"; };
+		57F0574E1F24787E00B0539F /* Bold-Italic-Underline.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bold-Italic-Underline.doc"; sourceTree = "<group>"; };
+		57F0574F1F24787E00B0539F /* Fonts-colors-sizes.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts-colors-sizes.doc"; sourceTree = "<group>"; };
+		57F057501F24787E00B0539F /* ParagraphStyle.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = ParagraphStyle.doc; sourceTree = "<group>"; };
 		57F4D9C31E2CE300005B429D /* DocumentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentDetailViewController.h; sourceTree = "<group>"; };
 		57F4D9C41E2CE300005B429D /* DocumentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentDetailViewController.m; sourceTree = "<group>"; };
 		57F4D9C61E2CE5DD005B429D /* WebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDetailController.h; sourceTree = "<group>"; };
@@ -677,6 +704,33 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		573D25671F46E02300174386 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				573D25681F46E02300174386 /* WKDataStream.h */,
+				573D25691F46E02300174386 /* WKDataStream.m */,
+				573D256A1F46E02300174386 /* WKDocReader.h */,
+				573D256B1F46E02300174386 /* WKDocReader.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		573D256E1F46E0E300174386 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				573D256F1F46E0E300174386 /* WKDetailViewController.h */,
+				573D25701F46E0E300174386 /* WKDetailViewController.m */,
+				573D25711F46E0E300174386 /* WKDetailViewController.xib */,
+				573D25721F46E0E300174386 /* WKDocumentInfoViewController.h */,
+				573D25731F46E0E300174386 /* WKDocumentInfoViewController.m */,
+				573D25741F46E0E300174386 /* WKDocumentInfoViewController.xib */,
+				573D25751F46E0E300174386 /* WKMasterViewController.h */,
+				573D25761F46E0E300174386 /* WKMasterViewController.m */,
+				573D25771F46E0E300174386 /* WKMasterViewController.xib */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
 		575F5E6E1E249F350070E850 /* UIManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +743,7 @@
 		575F5EC71E24F7720070E850 /* ThirdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				57F0574C1F24787E00B0539F /* DocReader */,
 				578675AF1E4DBDB200E28239 /* Dash */,
 				575F5EC81E24F7720070E850 /* cmap */,
 				575F5F1F1E24F7720070E850 /* TET_ios.framework */,
@@ -1071,6 +1126,26 @@
 			path = "JS-OC-Bridge";
 			sourceTree = "<group>";
 		};
+		57F0574C1F24787E00B0539F /* DocReader */ = {
+			isa = PBXGroup;
+			children = (
+				573D256E1F46E0E300174386 /* demo */,
+				573D25671F46E02300174386 /* src */,
+				57F0574D1F24787E00B0539F /* examples */,
+			);
+			path = DocReader;
+			sourceTree = "<group>";
+		};
+		57F0574D1F24787E00B0539F /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				57F0574E1F24787E00B0539F /* Bold-Italic-Underline.doc */,
+				57F0574F1F24787E00B0539F /* Fonts-colors-sizes.doc */,
+				57F057501F24787E00B0539F /* ParagraphStyle.doc */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
 		CB982E37F391EA695AF47250 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1196,6 +1271,7 @@
 				575F5F6F1E24F7720070E850 /* UniJIS-UTF16-H in Resources */,
 				575F5F281E24F7720070E850 /* 90pv-RKSJ-UCS2C in Resources */,
 				575F5F501E24F7720070E850 /* GBpc-EUC-UCS2 in Resources */,
+				57F057551F24787E00B0539F /* Bold-Italic-Underline.doc in Resources */,
 				575F5F431E24F7720070E850 /* EUC-V in Resources */,
 				575F5F3C1E24F7720070E850 /* cp950.txt in Resources */,
 				575F5F2A1E24F7720070E850 /* Add-RKSJ-V in Resources */,
@@ -1212,6 +1288,7 @@
 				57F4D9CB1E2CE663005B429D /* text.html in Resources */,
 				575F5F571E24F7720070E850 /* HKscs-B5-V in Resources */,
 				575F5F481E24F7720070E850 /* GBK-EUC-H in Resources */,
+				57F057571F24787E00B0539F /* ParagraphStyle.doc in Resources */,
 				575F5F241E24F7720070E850 /* 90msp-RKSJ-H in Resources */,
 				575F5F5F1E24F7720070E850 /* KSCpc-EUC-H in Resources */,
 				575F5F3D1E24F7720070E850 /* ETen-B5-H in Resources */,
@@ -1223,6 +1300,8 @@
 				575F5F251E24F7720070E850 /* 90msp-RKSJ-V in Resources */,
 				575F5F461E24F7720070E850 /* GB-EUC-H in Resources */,
 				575F5F361E24F7720070E850 /* B5pc-V in Resources */,
+				57F057561F24787E00B0539F /* Fonts-colors-sizes.doc in Resources */,
+				573D257B1F46E0E300174386 /* WKDocumentInfoViewController.xib in Resources */,
 				575F5F621E24F7720070E850 /* KSCpc-EUC-V in Resources */,
 				57B61DF31E53E68E00FA51C7 /* spansHTML.js in Resources */,
 				575F5F641E24F7720070E850 /* UniCNS-UCS2-V in Resources */,
@@ -1277,6 +1356,7 @@
 				575F5F371E24F7720070E850 /* CNS-EUC-H in Resources */,
 				575F5F311E24F7720070E850 /* Adobe-Korea1-2 in Resources */,
 				575F5F611E24F7720070E850 /* KSCpc-EUC-UCS2C in Resources */,
+				573D25791F46E0E300174386 /* WKDetailViewController.xib in Resources */,
 				575F5F6E1E24F7720070E850 /* UniJIS-UCS2-V in Resources */,
 				575F5F671E24F7720070E850 /* UniGB-UCS2-H in Resources */,
 				575F5F651E24F7720070E850 /* UniCNS-UTF16-H in Resources */,
@@ -1285,6 +1365,7 @@
 				575F5F211E24F7720070E850 /* 90ms-RKSJ-H in Resources */,
 				575F5F4B1E24F7720070E850 /* GBK2K-H in Resources */,
 				575F5F6A1E24F7720070E850 /* UniGB-UTF16-V in Resources */,
+				573D257D1F46E0E300174386 /* WKMasterViewController.xib in Resources */,
 				575F5F401E24F7720070E850 /* ETenms-B5-H in Resources */,
 				57970B141E2DC135002F08F5 /* handlePDF.html in Resources */,
 				575F5F661E24F7720070E850 /* UniCNS-UTF16-V in Resources */,
@@ -1370,6 +1451,7 @@
 				57B4B4A71E4EC83300D08B96 /* DocsetHelper.m in Sources */,
 				57B4B4B71E4ED07E00D08B96 /* DSEntry.m in Sources */,
 				575F5F891E24F7CC0070E850 /* DataCenter.m in Sources */,
+				573D256C1F46E02300174386 /* WKDataStream.m in Sources */,
 				570382361E25C72D00B57A00 /* InterpreterViewNetwork.m in Sources */,
 				5703823C1E25C72D00B57A00 /* MainViewController.m in Sources */,
 				570382311E25C72D00B57A00 /* TextViewDetailController.m in Sources */,
@@ -1381,6 +1463,8 @@
 				578675D01E4DC32E00E28239 /* DHTarixIndex.m in Sources */,
 				575F5F7F1E24F78C0070E850 /* UIColor+Extention.m in Sources */,
 				570382821E26148A00B57A00 /* NSString+Category.m in Sources */,
+				573D25781F46E0E300174386 /* WKDetailViewController.m in Sources */,
+				573D257A1F46E0E300174386 /* WKDocumentInfoViewController.m in Sources */,
 				578675C41E4DBEE500E28239 /* DHUnarchiver.m in Sources */,
 				57F4D9C81E2CE5DD005B429D /* WebViewDetailController.m in Sources */,
 				575F5F8B1E24F7CC0070E850 /* FMDBKeyValueTable.m in Sources */,
@@ -1398,6 +1482,7 @@
 				570382391E25C72D00B57A00 /* DocumentListCell.m in Sources */,
 				5703823B1E25C72D00B57A00 /* MainTabBarController.m in Sources */,
 				570382381E25C72D00B57A00 /* DocumentListDataSource.m in Sources */,
+				573D256D1F46E02300174386 /* WKDocReader.m in Sources */,
 				57F4D9C51E2CE300005B429D /* DocumentDetailViewController.m in Sources */,
 				57B4B4A01E4EB25100D08B96 /* WordListDataSource.m in Sources */,
 				570382351E25C72D00B57A00 /* InterpreterViewLocal.m in Sources */,
@@ -1409,6 +1494,7 @@
 				57B4B4B41E4ED07100D08B96 /* DSType.m in Sources */,
 				57B4B4B01E4ECE1A00D08B96 /* DocsetDetailDataSource.m in Sources */,
 				570382371E25C72D00B57A00 /* DocumentListViewController.m in Sources */,
+				573D257C1F46E0E300174386 /* WKMasterViewController.m in Sources */,
 				570382331E25C72D00B57A00 /* InterpreterView.m in Sources */,
 				575F5E711E249F870070E850 /* UIManager.m in Sources */,
 				5703826E1E2613B800B57A00 /* ArticleHelper.m in Sources */,
