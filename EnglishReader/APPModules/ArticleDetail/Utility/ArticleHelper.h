@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WKDocReader.h"
 
 @protocol ArticleHelperDelegate;
 
 @interface ArticleHelper : NSObject
 
+@property (nonatomic, strong) WKDocReader *docReader;
 @property (nonatomic, weak) id<ArticleHelperDelegate> delegate;
 @property (nonatomic, assign, readonly) NSInteger totalPage;//总页数
 @property (nonatomic, assign, readonly) NSInteger currentPage;//总页数

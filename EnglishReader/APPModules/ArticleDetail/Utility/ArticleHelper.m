@@ -15,6 +15,7 @@
 #import <TET_ios/TET_objc.h>
 #import "UIManager.h"
 
+
 @interface ArticleHelper ()<UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
@@ -89,9 +90,36 @@
 
 //处理Mircosoft word.docx文档
 - (void)handleMSWordWithFilePath:(NSString *)filePath {
-    NSURL *url = [NSURL URLWithString:filePath];
-    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
-    [self.webView loadRequest:urlRequest];
+    WKDocReader *reader = [[WKDocReader alloc] initWithContentsOfFile:filePath];
+    if ([self.delegate respondsToSelector:@selector(articleHelper:handleSuccessedWithActionText:)]) {
+        NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithAttributedString:[reader attributedString]];
+        NSString *abString = attString.string;
+        NSInteger length = attString.length;
+        
+        NSMutableArray *rangeArray = [NSMutableArray array];
+        int preIndex = 0;
+        for (int index = 0; index < length; index++) {
+            NSString *substring = [abString substringWithRange:NSMakeRange(index, 1)];
+            if ([substring stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length < 1) {
+                [rangeArray addObject:[NSValue valueWithRange:NSMakeRange(preIndex, index-preIndex)]];
+                preIndex = index;
+            }
+        }
+        __weak typeof(self) weakSelf = self;
+        NSMutableAttributedString *actionText = [[NSMutableAttributedString alloc] init];
+        for (NSValue *value in rangeArray) {
+            NSRange range = [value rangeValue];
+            NSMutableAttributedString *subAttString = [[NSMutableAttributedString alloc] initWithAttributedString:[attString attributedSubstringFromRange:range]];
+            [subAttString setTextHighlightRange:subAttString.rangeOfAll color:nil backgroundColor:[UIColor blueColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+                [weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];
+            }];
+            
+            [actionText appendAttributedString:subAttString];
+            [actionText appendString:@" "];
+        }
+
+        [self.delegate articleHelper:self handleSuccessedWithActionText:actionText];
+    }
 }
 
 //处理rtf文本

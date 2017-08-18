@@ -1,5 +1,6 @@
 #import "WKDetailViewController.h"
 #import "WKDocumentInfoViewController.h"
+#import "YYKit.h"
 
 @interface WKDetailViewController ()
 - (void)configureView;
@@ -26,7 +27,33 @@
 - (void)configureView
 {
 	if (self.detailItem) {
-		[coreTextView setAttributedText:self.detailItem];
+        NSMutableAttributedString *attString = (NSMutableAttributedString *)self.detailItem;
+        NSString *abString = attString.string;
+        NSInteger length = attString.length;
+        
+        NSMutableArray *rangeArray = [NSMutableArray array];
+        int preIndex = 0;
+        for (int index = 0; index < length; index++) {
+            NSString *substring = [abString substringWithRange:NSMakeRange(index, 1)];
+            if ([substring stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length < 1) {
+                [rangeArray addObject:[NSValue valueWithRange:NSMakeRange(preIndex, index-preIndex)]];
+                preIndex = index;
+            }
+        }
+        
+        NSMutableAttributedString *actionText = [[NSMutableAttributedString alloc] init];
+        for (NSValue *value in rangeArray) {
+            NSRange range = [value rangeValue];
+            NSMutableAttributedString *subAttString = [[NSMutableAttributedString alloc] initWithAttributedString:[attString attributedSubstringFromRange:range]];
+            [subAttString setTextHighlightRange:subAttString.rangeOfAll color:nil backgroundColor:[UIColor blueColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+                NSLog(@"tapText = %@", [text attributedSubstringFromRange:range].string);
+            }];
+            
+            [actionText appendAttributedString:subAttString];
+            [actionText appendString:@" "];
+        }
+
+		[coreTextView setAttributedText:actionText];
         
 //        UILabel *textLabel = [[UILabel alloc] init];
 //        [textLabel setAttributedText:self.detailItem];
@@ -43,6 +70,7 @@
 {
     [super viewDidLoad];
 	coreTextView = [[YYTextView alloc] initWithFrame:self.view.bounds];
+    coreTextView.editable = NO;
 	[self.view addSubview:coreTextView];
     CGRect frame = coreTextView.frame;
     frame.origin.y += 64.0;

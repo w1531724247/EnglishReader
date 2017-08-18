@@ -94,10 +94,15 @@
     }
     
     DocumentDetailViewController *detailVC;
-    if ([extension isEqualToString:@"doc"] || [extension isEqualToString:@"docx"] || [extension isEqualToString:@"rtf"] || [extension isEqualToString:@"html"]) {
+    if ([extension isEqualToString:@"rtf"] || [extension isEqualToString:@"html"]) {
         detailVC = [[WebViewDetailController alloc] init];
     }
+    
     if ([extension isEqualToString:@"txt"] || [extension isEqualToString:@"pdf"]) {
+        detailVC = [[TextViewDetailController alloc] init];
+    }
+    
+    if ([extension isEqualToString:@"doc"] || [extension isEqualToString:@"docx"]) {
         detailVC = [[TextViewDetailController alloc] init];
     }
     

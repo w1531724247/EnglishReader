@@ -50,7 +50,17 @@
 
 - (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text {
     NSString *articleName = [self.filePath lastPathComponent];
+    
+    text = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    char lastChar = [text characterAtIndex:text.length-1];
+    if((lastChar >= 'a' && lastChar <= 'z')||(lastChar >= 'A' && lastChar <= 'Z')){//是英文字母。
+    
+    } else {
+        text = [text substringToIndex:text.length-1];
+    }
+    
     [[StrangeWordTable shareTable] addWord:text withArticleName:articleName];
+    
     [self showInterpreterViewWithText:text];
 }
 

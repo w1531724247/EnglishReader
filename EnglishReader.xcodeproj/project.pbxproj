@@ -1227,7 +1227,7 @@
 				TargetAttributes = {
 					5797A89F1E20F27600F0BE38 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = L68238BU67;
+						DevelopmentTeam = EFYJC86RP9;
 						ProvisioningStyle = Automatic;
 					};
 					5797A8B81E20F27600F0BE38 = {
@@ -1647,7 +1647,7 @@
 			baseConfigurationReference = BD374FCE2CF2E483B21E9921 /* Pods-EnglishReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L68238BU67;
+				DEVELOPMENT_TEAM = EFYJC86RP9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1662,7 +1662,7 @@
 					"$(PROJECT_DIR)/EnglishReader/ThirdLibs/Dash/Protocol/libarchive",
 					"$(PROJECT_DIR)/EnglishReader/ThirdLibs/Dash/Unarchiver/libarchive",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = QuanMinTV;
+				PRODUCT_BUNDLE_IDENTIFIER = "qmtv.com.QMTV-More";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1672,7 +1672,7 @@
 			baseConfigurationReference = 0C00EBF68E03656A2F86647F /* Pods-EnglishReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L68238BU67;
+				DEVELOPMENT_TEAM = EFYJC86RP9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1687,7 +1687,7 @@
 					"$(PROJECT_DIR)/EnglishReader/ThirdLibs/Dash/Protocol/libarchive",
 					"$(PROJECT_DIR)/EnglishReader/ThirdLibs/Dash/Unarchiver/libarchive",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = QuanMinTV;
+				PRODUCT_BUNDLE_IDENTIFIER = "qmtv.com.QMTV-More";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

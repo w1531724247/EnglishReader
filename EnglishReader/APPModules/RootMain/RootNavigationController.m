@@ -23,8 +23,8 @@
         if (!_shareNavigationController) {
             MainTabBarController *mainVC = [[MainTabBarController alloc] init];
             WKMasterViewController *masterViewController = [[WKMasterViewController alloc] initWithNibName:@"WKMasterViewController" bundle:nil];
-            _shareNavigationController = [[RootNavigationController alloc] initWithRootViewController:masterViewController];
-//            _shareNavigationController.navigationBarHidden = YES;
+            _shareNavigationController = [[RootNavigationController alloc] initWithRootViewController:mainVC];
+            _shareNavigationController.navigationBarHidden = YES;
         }
     });
     
