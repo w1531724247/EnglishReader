@@ -29,13 +29,20 @@
     // Do any additional setup after loading the view.
     
     [self setupSubViews];
-    [self.articleHleper handleFileWithPath:self.filePath];
+//    [self.articleHleper handleFileWithPath:self.filePath];
 }
 
 - (void)setupSubViews {
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view insertSubview:self.textView atIndex:0];
     self.textView.frame = self.view.bounds;
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"rtf"];
+    NSAttributedString *attrStr = [[NSAttributedString alloc]
+                                   initWithFileURL:url
+                                   options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType}
+                                   documentAttributes:nil error:nil];
+    self.textView.attributedText = attrStr;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +52,8 @@
 
 #pragma mark ----- ArticleHelperDelegate
 - (void)articleHelper:(ArticleHelper *)helper handleSuccessedWithActionText:(NSAttributedString *)actionText {
-    self.textView.attributedText = actionText;
+//  用HTML创建attributed String
+    
 }
 
 - (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text {

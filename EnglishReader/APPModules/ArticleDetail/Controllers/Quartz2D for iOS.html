@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Quartz2D for iOS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Sample Code">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40007531">
+    <meta id="document-version" name="document-version" content="5.0.3">
+    <meta id="build" name="build" content="b95469ad741d3d7e5116a6527ee90129">
+    <meta id="chapterId" name="chapterId" content="DTS40007531-Intro">
+    <meta id="date" name="date" content="2017-07-10">
+    <meta id="description" name="description" content="Demonstrates many of the Quartz2D APIs made available by the CoreGraphics framework.">
+    <meta id="book-title" name="book-title" content="Quartz2D for iOS">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="Mac Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/mac">
+    <meta id="reflib" name="reflib" content="Guides and Sample Code">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Sample Code}, {Topic/Graphics &amp; Animation/2D Drawing}">
+    
+    
+    <meta id="copyright" name="copyright" content="Copyright 2017 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Quartz2D for iOS">
+    <meta id="resources-uri" name="resources-uri" content="../../../Resources/1264">
+    <link id="book-index-page" rel="Start" title="Quartz2D for iOS" type="text/html" href="https://developer.apple.com/library/content/samplecode/QuartzDemo/index.html">
+    <link id="next-page" rel="Next" type="text/html" href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemoUITests_QuartzDemoUITests_swift.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="">
+    <link rel="stylesheet" type="text/css" href="Quartz2D%20for%20iOS_files/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="Quartz2D%20for%20iOS_files/feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta id="platforms" name="platforms" content="iOS">
+</head>    
+<body class="isShowingTOC" id=""><a name="//apple_ref/doc/uid/DTS40007531-Intro" title="Quartz2D for iOS"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="appleglobal,appleusdeveloper,dappdeveloperlib"
+    </script>
+
+    <script type="text/javascript" src="Quartz2D%20for%20iOS_files/s_code_h.js"></script>
+    <script type="text/javascript">
+    s.pageName=AC.Tracking.pageName();
+    s.channel="www.us.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id="ssi_Header" class="hideInXcode unified">
+            <a id="ssi_LibraryTitle" href="https://developer.apple.com/library/content/navigation/" onclick='s_objectID="https://developer.apple.com/library/content/navigation/_1";return this.s_oc?this.s_oc(e):true'>Guides and Sample Code</a>
+            <a id="ssi_AppleDeveloperConnection" href="https://developer.apple.com/" onclick='s_objectID="https://developer.apple.com/_1";return this.s_oc?this.s_oc(e):true'>Developer</a>
+            <div id="ssi_SearchButton" role="button" title="Search">Search</div>
+        </div>
+        <form id="ssi_SearchMenu" method="get" action="../../../search/" accept-charset="utf-8">
+            <label for="adcsearch">Search Guides and Sample Code</label>
+            
+            
+    
+            <input id="ssi_SearchField" name="q" accesskey="s" results="5" type="search">
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>Quartz2D for iOS</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex="4" rel="alternate" title="Download PDF" class=""><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex="3" title="Download Companion File" class=""><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top" selected="selected">Jump To…</option></select></li>
+            <li id="downloadSample_button" style="">
+                <a id="Sample_link" href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Quartz2DforiOS.zip"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7" class="isShowingTOC">
+        <ul id="toc" role="tree"><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-Intro-DontLinkElementID_2"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Introduction/Intro.html#//apple_ref/doc/uid/DTS40007531-Intro-DontLinkElementID_2">About Quartz2D for iOS</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemoUITests_QuartzDemoUITests_swift-DontLinkElementID_5"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemoUITests_QuartzDemoUITests_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemoUITests_QuartzDemoUITests_swift-DontLinkElementID_5">QuartzDemoUITests/​QuartzDemoUITests.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemoTests_QuartzDemoTests_swift-DontLinkElementID_4"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemoTests_QuartzDemoTests_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemoTests_QuartzDemoTests_swift-DontLinkElementID_4">QuartzDemoTests/​QuartzDemoTests.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzImageView_swift-DontLinkElementID_20"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzImageView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzImageView_swift-DontLinkElementID_20">QuartzDemo/​QuartzImageView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzGradientViewController_swift-DontLinkElementID_18"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzGradientViewController_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzGradientViewController_swift-DontLinkElementID_18">QuartzDemo/​QuartzGradientViewController.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzMaskingView_swift-DontLinkElementID_22"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzMaskingView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzMaskingView_swift-DontLinkElementID_22">QuartzDemo/​QuartzMaskingView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzClippingView_swift-DontLinkElementID_14"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzClippingView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzClippingView_swift-DontLinkElementID_14">QuartzDemo/​QuartzClippingView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzCapJointWidthView_swift-DontLinkElementID_13"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzCapJointWidthView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzCapJointWidthView_swift-DontLinkElementID_13">QuartzDemo/​QuartzCapJointWidthView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzLineView_swift-DontLinkElementID_21"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzLineView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzLineView_swift-DontLinkElementID_21">QuartzDemo/​QuartzLineView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzEllipseArcView_swift-DontLinkElementID_17"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzEllipseArcView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzEllipseArcView_swift-DontLinkElementID_17">QuartzDemo/​QuartzEllipseArcView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_AppDelegate_swift-DontLinkElementID_6"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_AppDelegate_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_AppDelegate_swift-DontLinkElementID_6">QuartzDemo/​AppDelegate.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzBezierView_swift-DontLinkElementID_9"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzBezierView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzBezierView_swift-DontLinkElementID_9">QuartzDemo/​QuartzBezierView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzDashViewController_swift-DontLinkElementID_15"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzDashViewController_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzDashViewController_swift-DontLinkElementID_15">QuartzDemo/​QuartzDashViewController.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzBlendingViewController_swift-DontLinkElementID_10"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzBlendingViewController_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzBlendingViewController_swift-DontLinkElementID_10">QuartzDemo/​QuartzBlendingViewController.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzPatternView_swift-DontLinkElementID_24"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzPatternView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzPatternView_swift-DontLinkElementID_24">QuartzDemo/​QuartzPatternView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzPDFView_swift-DontLinkElementID_23"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzPDFView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzPDFView_swift-DontLinkElementID_23">QuartzDemo/​QuartzPDFView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_DetailViewController_swift-DontLinkElementID_7"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_DetailViewController_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_DetailViewController_swift-DontLinkElementID_7">QuartzDemo/​DetailViewController.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzGradientView_swift-DontLinkElementID_19"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzGradientView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzGradientView_swift-DontLinkElementID_19">QuartzDemo/​QuartzGradientView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzBlendingView_swift-DontLinkElementID_11"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzBlendingView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzBlendingView_swift-DontLinkElementID_11">QuartzDemo/​QuartzBlendingView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzTextView_swift-DontLinkElementID_28"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzTextView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzTextView_swift-DontLinkElementID_28">QuartzDemo/​QuartzTextView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzPolygonView_swift-DontLinkElementID_26"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzPolygonView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzPolygonView_swift-DontLinkElementID_26">QuartzDemo/​QuartzPolygonView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzView_swift-DontLinkElementID_29"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzView_swift-DontLinkElementID_29">QuartzDemo/​QuartzView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzPolyViewController_swift-DontLinkElementID_25"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzPolyViewController_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzPolyViewController_swift-DontLinkElementID_25">QuartzDemo/​QuartzPolyViewController.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_MasterViewController_swift-DontLinkElementID_8"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_MasterViewController_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_MasterViewController_swift-DontLinkElementID_8">QuartzDemo/​MasterViewController.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzRectView_swift-DontLinkElementID_27"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzRectView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzRectView_swift-DontLinkElementID_27">QuartzDemo/​QuartzRectView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzDashView_swift-DontLinkElementID_16"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzDashView_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzDashView_swift-DontLinkElementID_16">QuartzDemo/​QuartzDashView.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzCapJointWidthViewController_swift-DontLinkElementID_12"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemo_QuartzCapJointWidthViewController_swift.html#//apple_ref/doc/uid/DTS40007531-QuartzDemo_QuartzCapJointWidthViewController_swift-DontLinkElementID_12">QuartzDemo/​QuartzCapJointWidthViewController.swift</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-ReadMe_md-DontLinkElementID_30"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/ReadMe_md.html#//apple_ref/doc/uid/DTS40007531-ReadMe_md-DontLinkElementID_30">ReadMe.md</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-LICENSE_txt-DontLinkElementID_3"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/LICENSE_txt.html#//apple_ref/doc/uid/DTS40007531-LICENSE_txt-DontLinkElementID_3">LICENSE.txt</a></span></li><li class=" " data-aref="//apple_ref/doc/uid/DTS40007531-RevisionHistory-DontLinkElementID_1"><span class="nodisclosure"></span><span class="sectionName"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/History/History.html#//apple_ref/doc/uid/DTS40007531-RevisionHistory-DontLinkElementID_1">Revision History</a></span></li></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="isShowingTOC">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class="nextLink" rel="next" href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemoUITests_QuartzDemoUITests_swift.html" onclick='s_objectID="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemoUITests_Quar_1";return this.s_oc?this.s_oc(e):true'>Next</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="https://developer.apple.com/library/content/samplecode/QuartzDemo/index.html" style="display:none;" onclick='s_objectID="https://developer.apple.com/library/content/samplecode/QuartzDemo/index.html_1";return this.s_oc?this.s_oc(e):true'></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40007531" title="Quartz2D for iOS"></a><a name="//apple_ref/doc/uid/DTS40007531-Intro-DontLinkElementID_2" title="Quartz2D for iOS"></a>
+    <h1 id="pageTitle">Quartz2D for iOS</h1><div class="spec_sheet_info_box"><table class="specbox" cellspacing="0"><tbody><tr><td scope="row"><strong><span style="white-space: nowrap;">Last Revision:</span></strong></td><td><div class="zSharedSpecBoxHeadList">Version 5.0, 2017-07-10<br>Translated into Swift. <br><span class="content_text"><a href="https://developer.apple.com/library/content/samplecode/QuartzDemo/History/History.html#//apple_ref/doc/uid/DTS40007531-RevisionHistory-DontLinkElementID_1" data-renderer-version="1" target="_self" onclick='s_objectID="https://developer.apple.com/library/content/samplecode/QuartzDemo/History/History.html#//apple_re_1";return this.s_oc?this.s_oc(e):true'>(Full Revision History)</a></span><br></div></td></tr><tr><td scope="row"><strong><span style="white-space: nowrap;">Build Requirements:</span></strong></td><td><div class="zSharedSpecBoxHeadList">Xcode 7 or later</div></td></tr><tr><td scope="row"><strong><span style="white-space: nowrap;">Runtime Requirements:</span></strong></td><td><div class="zSharedSpecBoxHeadList">iOS 9 or later</div></td></tr></tbody></table></div>
+    
+        <p>QuartzDemo is an iOS application that demonstrates many of 
+the Quartz2D APIs made available by the CoreGraphics framework. Quartz2D
+ forms the foundation of all drawing on iPhone OS and provides 
+facilities for drawing lines, polygons, curves, images, gradients, PDF 
+and many other graphical facilities.</p>
+    
+    
+        
+        
+        
+    
+
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class="nextLink" rel="next" href="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemoUITests_QuartzDemoUITests_swift.html" onclick='s_objectID="https://developer.apple.com/library/content/samplecode/QuartzDemo/Listings/QuartzDemoUITests_Quar_2";return this.s_oc?this.s_oc(e):true'>Next</a>
+        </div><br>
+        <div class="copyright"><br><hr><div align="center"><p class="content_text" dir="ltr" lang="en"> Copyright © 2017 Apple Inc. All Rights Reserved.  <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank" onclick='s_objectID="http://www.apple.com/legal/internet-services/terms/site.html_1";return this.s_oc?this.s_oc(e):true'>Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank" onclick='s_objectID="http://www.apple.com/privacy/_1";return this.s_oc?this.s_oc(e):true'>Privacy Policy</a>  |  Updated: 2017-07-10</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback…</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We’re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" name="helped" value="1" type="radio"> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" name="helped" value="2" type="radio"> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" name="helped" value="3" type="radio"> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input name="typo" type="checkbox"> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input name="infoIncorrect" type="checkbox"> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input name="needs_examples" type="checkbox"> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input name="needs_art" type="checkbox"> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input name="missingInfo" type="checkbox"> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required=""></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" value="Send" type="button">
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank" onclick='s_objectID="https://developer.apple.com/bugreporter/_1";return this.s_oc?this.s_oc(e):true'>Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank" onclick='s_objectID="http://www.apple.com/legal/policies/ideas.html_1";return this.s_oc?this.s_oc(e):true'>Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="Quartz2D%20for%20iOS_files/prototype.js"></script>
+    <script src="Quartz2D%20for%20iOS_files/library.js"></script>
+    <script src="Quartz2D%20for%20iOS_files/feedback.js"></script>
+
+
+</body></html>

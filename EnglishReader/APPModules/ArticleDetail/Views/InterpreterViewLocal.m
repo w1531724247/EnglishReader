@@ -14,6 +14,7 @@
 #import "UIWebView+Category.h"
 #import "NSString+Category.h"
 #import "StrangeWordTable.h"
+#import "NSObject+RunTime.h"
 
 @interface InterpreterViewLocal ()
 
@@ -57,6 +58,13 @@
     self.currentString = text;
     self.reference = [[UIReferenceLibraryViewController alloc] initWithTerm:text];
     [self insertSubview:self.reference.view belowSubview:self.webView];
+    
+    // 创建从Bundle中来自HTML文件的URL
+    NSString *html = [[NSBundle mainBundle] pathForResource:@"Quartz2D for iOS" ofType:@"html"];
+    NSString *htmlString= [[NSString alloc] initWithContentsOfFile:html encoding:NSUTF8StringEncoding error:nil];
+    
+
+    [self.webView loadHTMLString:htmlString baseURL:nil];
 }
 
 #pragma mark ---- Notification

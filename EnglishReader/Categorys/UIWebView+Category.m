@@ -57,16 +57,16 @@
 - (void)loadReferenceHTMLString:(NSString *)string baseURL:(NSURL *)baseURL
 {
     NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:string, @"html", nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"loadReferenceHTMLString" object:nil userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kLoadReferenceHTMLString object:nil userInfo:userInfo];
 }
 
 - (void)hookLoadHTMLStringMethod {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        Class class = [UIWebView class];
-        Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
-        Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
-        method_exchangeImplementations(originalMethod, newMethod);
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        Class class = [UIWebView class];
+//        Method originalMethod = class_getInstanceMethod(class, @selector(loadHTMLString:baseURL:));
+//        Method newMethod = class_getInstanceMethod(class, @selector(loadReferenceHTMLString:baseURL:));
+//        method_exchangeImplementations(originalMethod, newMethod);
+//    });
 }
 
 - (void)restoreLoadHTMLStringMethod {

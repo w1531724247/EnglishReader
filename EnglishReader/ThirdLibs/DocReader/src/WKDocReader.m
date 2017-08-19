@@ -521,9 +521,11 @@ NSString *const WKAutosizeDocumentAttribute = @"WKAutosizeDocumentAttribute";
 	[_wordStream skipToByte:_docInfo.textStartLocation];
 	uint32_t realTextLength = (_docInfo.ccpText * (_docInfo.fcCompressed ? 1 : 2));
 	uint8_t *textBytes = [_wordStream readBytes:realTextLength];
-    NSString *textContent = [[NSString alloc] initWithBytes:textBytes length:realTextLength encoding:(_docInfo.fcCompressed ? NSUTF8StringEncoding : NSUTF16LittleEndianStringEncoding)];
-	_attributedString = [[NSMutableAttributedString alloc] initWithString:textContent];
-	[_attributedString fillStringWithDefaultAttributes];
+    NSString *textContent = [[NSString alloc] initWithBytes:textBytes length:realTextLength encoding:(_docInfo.fcCompressed ? NSASCIIStringEncoding : NSUTF16LittleEndianStringEncoding)];
+    if (textContent) {
+        _attributedString = [[NSMutableAttributedString alloc] initWithString:textContent];
+        [_attributedString fillStringWithDefaultAttributes];
+    }
 }
 
 -(void)applySepx:(NSData *)sepx fromIndex:(uint32_t)start toIndex:(uint32_t)index

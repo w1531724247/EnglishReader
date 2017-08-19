@@ -45,6 +45,9 @@
 		573D257B1F46E0E300174386 /* WKDocumentInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573D25741F46E0E300174386 /* WKDocumentInfoViewController.xib */; };
 		573D257C1F46E0E300174386 /* WKMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D25761F46E0E300174386 /* WKMasterViewController.m */; };
 		573D257D1F46E0E300174386 /* WKMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573D25771F46E0E300174386 /* WKMasterViewController.xib */; };
+		573D257F1F470C7B00174386 /* Quartz2D for iOS.html in Resources */ = {isa = PBXBuildFile; fileRef = 573D257E1F470C7A00174386 /* Quartz2D for iOS.html */; };
+		573D25821F47125100174386 /* NSObject+RunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 573D25811F47125100174386 /* NSObject+RunTime.m */; };
+		573D25841F4720E900174386 /* test.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 573D25831F4720E900174386 /* test.rtf */; };
 		575F5E711E249F870070E850 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 575F5E701E249F870070E850 /* UIManager.m */; };
 		575F5F201E24F7720070E850 /* 83pv-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */; };
 		575F5F211E24F7720070E850 /* 90ms-RKSJ-H in Resources */ = {isa = PBXBuildFile; fileRef = 575F5ECA1E24F7720070E850 /* 90ms-RKSJ-H */; };
@@ -274,6 +277,10 @@
 		573D25751F46E0E300174386 /* WKMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKMasterViewController.h; sourceTree = "<group>"; };
 		573D25761F46E0E300174386 /* WKMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKMasterViewController.m; sourceTree = "<group>"; };
 		573D25771F46E0E300174386 /* WKMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKMasterViewController.xib; sourceTree = "<group>"; };
+		573D257E1F470C7A00174386 /* Quartz2D for iOS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Quartz2D for iOS.html"; sourceTree = "<group>"; };
+		573D25801F47125100174386 /* NSObject+RunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RunTime.h"; sourceTree = "<group>"; };
+		573D25811F47125100174386 /* NSObject+RunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RunTime.m"; sourceTree = "<group>"; };
+		573D25831F4720E900174386 /* test.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = test.rtf; sourceTree = "<group>"; };
 		575F5E6F1E249F870070E850 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIManager.h; sourceTree = "<group>"; };
 		575F5E701E249F870070E850 /* UIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIManager.m; sourceTree = "<group>"; };
 		575F5EC91E24F7720070E850 /* 83pv-RKSJ-H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "83pv-RKSJ-H"; sourceTree = "<group>"; };
@@ -518,6 +525,8 @@
 		570382021E25C72D00B57A00 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				573D25831F4720E900174386 /* test.rtf */,
+				573D257E1F470C7A00174386 /* Quartz2D for iOS.html */,
 				570382031E25C72D00B57A00 /* TextViewDetailController.h */,
 				570382041E25C72D00B57A00 /* TextViewDetailController.m */,
 				57F4D9C61E2CE5DD005B429D /* WebViewDetailController.h */,
@@ -847,6 +856,8 @@
 		575F5F771E24F78C0070E850 /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				573D25801F47125100174386 /* NSObject+RunTime.h */,
+				573D25811F47125100174386 /* NSObject+RunTime.m */,
 				575F5F781E24F78C0070E850 /* NSDictionary+JSONHelper.h */,
 				575F5F791E24F78C0070E850 /* NSDictionary+JSONHelper.m */,
 				570382721E26148A00B57A00 /* NSArray+NSString.h */,
@@ -1290,6 +1301,7 @@
 				575F5F481E24F7720070E850 /* GBK-EUC-H in Resources */,
 				57F057571F24787E00B0539F /* ParagraphStyle.doc in Resources */,
 				575F5F241E24F7720070E850 /* 90msp-RKSJ-H in Resources */,
+				573D257F1F470C7B00174386 /* Quartz2D for iOS.html in Resources */,
 				575F5F5F1E24F7720070E850 /* KSCpc-EUC-H in Resources */,
 				575F5F3D1E24F7720070E850 /* ETen-B5-H in Resources */,
 				575F5F711E24F7720070E850 /* UniKS-UCS2-H in Resources */,
@@ -1339,6 +1351,7 @@
 				575F5F511E24F7720070E850 /* GBpc-EUC-UCS2C in Resources */,
 				575F5F561E24F7720070E850 /* HKscs-B5-H in Resources */,
 				575F5F2D1E24F7720070E850 /* Adobe-GB1-5 in Resources */,
+				573D25841F4720E900174386 /* test.rtf in Resources */,
 				57970B121E2DB3BA002F08F5 /* handleRTF.html in Resources */,
 				575F5F221E24F7720070E850 /* 90ms-RKSJ-UCS2 in Resources */,
 				575F5F6C1E24F7720070E850 /* UniJIS-UCS2-HW-H in Resources */,
@@ -1479,6 +1492,7 @@
 				57119F411E220F3A00B929EB /* APIManager.m in Sources */,
 				57B4B4A31E4EB25100D08B96 /* WordListSectionHeaderView.m in Sources */,
 				575F5F8C1E24F7CC0070E850 /* FMDBManager.m in Sources */,
+				573D25821F47125100174386 /* NSObject+RunTime.m in Sources */,
 				570382391E25C72D00B57A00 /* DocumentListCell.m in Sources */,
 				5703823B1E25C72D00B57A00 /* MainTabBarController.m in Sources */,
 				570382381E25C72D00B57A00 /* DocumentListDataSource.m in Sources */,
