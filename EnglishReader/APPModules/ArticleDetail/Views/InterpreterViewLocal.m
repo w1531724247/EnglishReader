@@ -54,6 +54,8 @@
 }
 
 - (void)interpretWithText:(NSString *)text {
+    self.notFirstSet = NO;
+    
     if (self.reference) {
         [self.reference.view removeFromSuperview];
         self.reference = nil;
@@ -78,6 +80,7 @@
     NSAttributedString *attributedText = [userInfo valueForKey:@"attributedText"];
     [self.textView setAttributedText:attributedText];
     self.notFirstSet = YES;
+    [self.textView scrollToTop];
 }
 
 #pragma mark ---- getter
