@@ -29,20 +29,13 @@
     // Do any additional setup after loading the view.
     
     [self setupSubViews];
-//    [self.articleHleper handleFileWithPath:self.filePath];
+    [self.articleHleper handleFileWithPath:self.filePath];
 }
 
 - (void)setupSubViews {
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view insertSubview:self.textView atIndex:0];
     self.textView.frame = self.view.bounds;
-    
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"rtf"];
-    NSAttributedString *attrStr = [[NSAttributedString alloc]
-                                   initWithFileURL:url
-                                   options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType}
-                                   documentAttributes:nil error:nil];
-    self.textView.attributedText = attrStr;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,21 +45,14 @@
 
 #pragma mark ----- ArticleHelperDelegate
 - (void)articleHelper:(ArticleHelper *)helper handleSuccessedWithActionText:(NSAttributedString *)actionText {
-//  用HTML创建attributed String
-    
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.textView.attributedText = actionText;
+    });
 }
 
 - (void)articleHelper:(ArticleHelper *)helper textDidTouch:(NSString *)text {
     NSString *articleName = [self.filePath lastPathComponent];
-    
-    text = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    char lastChar = [text characterAtIndex:text.length-1];
-    if((lastChar >= 'a' && lastChar <= 'z')||(lastChar >= 'A' && lastChar <= 'Z')){//是英文字母。
-    
-    } else {
-        text = [text substringToIndex:text.length-1];
-    }
-    
     [[StrangeWordTable shareTable] addWord:text withArticleName:articleName];
     
     [self showInterpreterViewWithText:text];
@@ -110,8 +96,8 @@
 - (ArticleTextView *)textView {
     if (!_textView) {
         _textView = [[ArticleTextView alloc] init];
-        _textView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(showPreviousPageText:)];
-        _textView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(showNextPageText:)];
+//        _textView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(showPreviousPageText:)];
+//        _textView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(showNextPageText:)];
     }
     
     return _textView;

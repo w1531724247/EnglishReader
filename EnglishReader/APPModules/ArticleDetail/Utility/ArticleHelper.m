@@ -14,7 +14,7 @@
 #import "YYKit.h"
 #import <TET_ios/TET_objc.h>
 #import "UIManager.h"
-
+#import "NSObject+Multithreading.h"
 
 @interface ArticleHelper ()<UIWebViewDelegate>
 
@@ -40,43 +40,25 @@
         [self handleTxtWithFilePath:filePath];
     }
     
-    if ([fileExtension isEqualToString:@"docx"]) {
-        [self handleMSWordWithFilePath:filePath];
-    }
-    
-    if ([fileExtension isEqualToString:@"doc"]) {
-        [self handleMSWordWithFilePath:filePath];
-    }
-    
     if ([fileExtension isEqualToString:@"rtf"]) {
         [self handleRTFTextWithFilePath:filePath];
+    }
+    if ([fileExtension isEqualToString:@"rtfd"]) {
+        [self handleRTFDTextWithFilePath:filePath];
     }
     
     if ([fileExtension isEqualToString:@"html"]) {
         [self handleHTMLStringWithFilePath:filePath];
     }
-    
-    if ([fileExtension isEqualToString:@"pdf"]) {
-        [self handlePDFWithFilePath:filePath];
-    }
-}
-
-//获取page页的文本
-- (NSAttributedString *)actionTextWithPage:(NSInteger)page {
-    if (page > self.totalPage - 1) {
-        return [[NSAttributedString alloc] init];
-    }
-    
-    NSAttributedString *attributedText = [self.pageOfText objectAtIndex:page];
-    
-    return [self addActionToAttributedText:attributedText];
 }
 
 #pragma amrk ------ private
 //处理txt文本
 - (void)handleTxtWithFilePath:(NSString *)filePath {
     NSError *error;
-    NSString *text = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+    NSData *stringData = [NSData dataWithContentsOfFile:filePath];
+    NSAttributedString *attributeString = [[NSAttributedString alloc] initWithData:stringData options:@{NSDocumentTypeDocumentAttribute:NSPlainTextDocumentType} documentAttributes:nil error:&error];
+    
     if (error) {
         if ([self.delegate respondsToSelector:@selector(articleHelper:handleFailureWithError:)]) {
             [self.delegate articleHelper:self handleFailureWithError:error];
@@ -85,153 +67,69 @@
         return;
     }
 
-    [self handleText:text];
+    [self handleAttributedText:attributeString];
 }
 
-//处理Mircosoft word.docx文档
-- (void)handleMSWordWithFilePath:(NSString *)filePath {
-    WKDocReader *reader = [[WKDocReader alloc] initWithContentsOfFile:filePath];
-    if ([self.delegate respondsToSelector:@selector(articleHelper:handleSuccessedWithActionText:)]) {
-        NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithAttributedString:[reader attributedString]];
-        NSString *abString = attString.string;
-        NSInteger length = attString.length;
-        
-        NSMutableArray *rangeArray = [NSMutableArray array];
-        int preIndex = 0;
-        for (int index = 0; index < length; index++) {
-            NSString *substring = [abString substringWithRange:NSMakeRange(index, 1)];
-            if ([substring stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length < 1) {
-                [rangeArray addObject:[NSValue valueWithRange:NSMakeRange(preIndex, index-preIndex)]];
-                preIndex = index;
-            }
-        }
-        __weak typeof(self) weakSelf = self;
-        NSMutableAttributedString *actionText = [[NSMutableAttributedString alloc] init];
-        for (NSValue *value in rangeArray) {
-            NSRange range = [value rangeValue];
-            NSMutableAttributedString *subAttString = [[NSMutableAttributedString alloc] initWithAttributedString:[attString attributedSubstringFromRange:range]];
-            [subAttString setTextHighlightRange:subAttString.rangeOfAll color:nil backgroundColor:[UIColor blueColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
-                [weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];
-            }];
-            
-            [actionText appendAttributedString:subAttString];
-            [actionText appendString:@" "];
-        }
-
-        [self.delegate articleHelper:self handleSuccessedWithActionText:actionText];
-    }
-}
 
 //处理rtf文本
 - (void)handleRTFTextWithFilePath:(NSString *)filePath {
-    //rtf--to--NSAttributedString
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    //UILabel显示HTML文本
-    NSDictionary *docAttributes = [NSDictionary dictionary];
     NSError *error;
-    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:data
-                                                                       options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType}
-                                                            documentAttributes:&docAttributes
-                                                                         error:&error];
-    [self handleAttributedText:attrStr];
+    NSData *stringData = [NSData dataWithContentsOfFile:filePath];
+    NSAttributedString *attributeString = [[NSAttributedString alloc] initWithData:stringData options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType} documentAttributes:nil error:&error];
+    
+    if (error) {
+        if ([self.delegate respondsToSelector:@selector(articleHelper:handleFailureWithError:)]) {
+            [self.delegate articleHelper:self handleFailureWithError:error];
+        }
+        
+        return;
+    }
+    
+    [self handleAttributedText:attributeString];
+}
 
-    /*NSAttributedString--rtf--to
-     NSAttributedString *str = [[NSAttributedString alloc] initWithString:@"YOLO" attributes:nil];
-     NSData *data = [str dataFromRange:(NSRange){0, [str length]} documentAttributes:@{NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType} error:NULL];
-     [data writeToFile:@"/me.rtf" atomically:YES];
-     */
+//处理rtfd文本
+- (void)handleRTFDTextWithFilePath:(NSString *)filePath {
+    NSError *error;
+    NSData *stringData = [NSData dataWithContentsOfFile:filePath];
+    NSAttributedString *attributeString = [[NSAttributedString alloc] initWithData:stringData options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType} documentAttributes:nil error:&error];
+    
+    if (error) {
+        if ([self.delegate respondsToSelector:@selector(articleHelper:handleFailureWithError:)]) {
+            [self.delegate articleHelper:self handleFailureWithError:error];
+        }
+        
+        return;
+    }
+    
+    [self handleAttributedText:attributeString];
 }
 
 //处理html文本
 - (void)handleHTMLStringWithFilePath:(NSString *)filePath {
-    NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    [self.webView loadHTMLString:htmlString baseURL:nil];
+    NSError *error;
+    NSData *stringData = [NSData dataWithContentsOfFile:[filePath stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSAttributedString *attributeString = [[NSAttributedString alloc] initWithData:stringData options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:&error];
     
-    //UILabel显示HTML文本
-    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+    if (error) {
+        if ([self.delegate respondsToSelector:@selector(articleHelper:handleFailureWithError:)]) {
+            [self.delegate articleHelper:self handleFailureWithError:error];
+        }
+        
+        return;
+    }
+    
+    [self handleAttributedText:attributeString];
 }
 
 //处理pdf文本
 - (void)handlePDFWithFilePath:(NSString *)filePath {
-    NSString *pdfContent = [self extractTextFromPDFWithFilePath:filePath];
-    [self handleText:pdfContent];
-}
-
-- (NSArray *)analyseArticleText:(NSString *)articleText {
-    if (![articleText isKindOfClass:[NSString class]]) {
-        return [NSArray array];
-    }
-    
-    NSMutableArray *rangeArray = [NSMutableArray array];
-    NSInteger length = articleText.length;
-    for (int i = 0; i < length; i++) {//遍历每一个字符串, 判断它的类型
-        char character = [articleText characterAtIndex:i];
-        
-        if (isspace(character)) {//判断字符c是否为空白符, 空白符指空格、水平制表、垂直制表、换页、回车和换行符。
-            for (int j = i; j < length; j++) {
-                character = [articleText characterAtIndex:j];
-                if (!isspace(character)) {
-                    break;//某一段空白符遍历完了
-                }
-            }
-            
-            continue;
-        }
-        
-        if (isdigit(character)) {//判断字符c是否为数字
-            for (int j = i; j < length; j++) {
-                character = [articleText characterAtIndex:j];
-                if (!isdigit(character)) {
-                    break;//某一段数字遍历完了
-                }
-            }
-            
-            continue;
-        }
-        
-        if (isalpha(character)) {//判断字符c是否为英文字母
-            for (int j = i; j < length; j++) {
-                character = [articleText characterAtIndex:j];
-                if (!isalpha(character)) {
-                    NSString *smpStr = [NSString stringWithUTF8String:"’"];
-                    NSString *currentString = [articleText substringWithRange:NSMakeRange(j, 1)];
-                    if (![currentString isEqualToString:smpStr]) {
-                        NSRange range = NSMakeRange(i, j-i);
-                        [rangeArray addObject:[NSValue valueWithRange:range]];
-                        i = j;
-                        break;//某一段字母遍历完了
-                    }
-                }
-            }
-            
-            continue;
-        }
-        
-        if (ispunct(character)) {//判断字符c是否为标点符号
-            for (int j = i; j < length; j++) {
-                character = [articleText characterAtIndex:j];
-                if (!ispunct(character)) {
-                    break;//某一段标点符号遍历完了
-                }
-            }
-        
-            continue;
-        }
-    }
-    
-    return [NSArray arrayWithArray:rangeArray];
-}
-
-- (void)handleText:(NSString *)text {
-    if (text.length < 1 || ![text isKindOfClass:[NSString class]]) {
-        return ;
-    }
-    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text];
-    [self handleAttributedText:attributedText];
+//    NSString *pdfContent = [self extractTextFromPDFWithFilePath:filePath];
+//    [self handleAttributedText:pdfContent];
 }
 
 - (void)actionTextWithAttributedText:(NSAttributedString *)text {
-    if (text.length < 1 || ![text isKindOfClass:[NSString class]]) {
+    if (text.length < 1 || ![text isKindOfClass:[NSAttributedString class]]) {
         return;
     }
     
@@ -239,80 +137,71 @@
 }
 
 - (void)handleAttributedText:(NSAttributedString *)attributedText {
-    NSArray *rangeArray = [self analyseArticleText:attributedText.string];
-    NSInteger realPage = [self pagingArray:rangeArray];//单词分页, 每kMaxWords个单词为一页
-    
-    for (int page = 0; page < realPage; page++) {
-        NSInteger location = page*kMaxWords;
-        NSArray *subRange;
-        NSRange pageRange = NSMakeRange(location, kMaxWords);
-        
-        if ((pageRange.location + pageRange.length) > rangeArray.count) {//最后一页, 不足千个单词
-            pageRange = NSMakeRange(location, rangeArray.count - location);
-        }
-        
-        subRange = [rangeArray subarrayWithRange:pageRange];
-        NSRange startRange = [[subRange firstObject] rangeValue];
-        NSRange endRange = [[subRange lastObject] rangeValue];
-        
-        NSRange pageStringRange;
-        if (page == 0) {//第一页
-            pageStringRange = NSMakeRange(0, endRange.location + endRange.length);
-        } else if (page == (realPage - 1)) {//最后一页
-            pageStringRange = NSMakeRange(startRange.location, attributedText.string.length - startRange.location);
-        } else {//中间页
-            pageStringRange = NSMakeRange(startRange.location, endRange.location + endRange.length - startRange.location);
-        }
-        
-        NSAttributedString *actionText = [[NSMutableAttributedString alloc] initWithAttributedString:[attributedText attributedSubstringFromRange:pageStringRange]];
-        
-        [self.pageOfText addObject:actionText];
-    }
-
-    if ([self.delegate respondsToSelector:@selector(articleHelper:handleSuccessedWithActionText:)]) {
-        [self.delegate articleHelper:self handleSuccessedWithActionText:[self actionTextWithPage:0]];
-    }
-}
-
-- (NSInteger)pagingArray:(NSArray *)rangeArray {
-    CGFloat totalPage = rangeArray.count*1.0/kMaxWords;
-    NSInteger realPage = totalPage;
-    if (totalPage > 1 && totalPage > realPage) {//大于一页, 不足整页
-        realPage = realPage+1;
-    } else if (totalPage < 1 && totalPage > 0) {//不到一页
-        realPage = 1;
-    } else {//大于一页, 并且是整页
-        realPage = realPage;
-    }
-    
-    return realPage;
-}
-
-- (NSAttributedString *)addActionToAttributedText:(NSAttributedString *)attributedText {
-    NSMutableAttributedString *actionText = [[NSMutableAttributedString alloc] initWithAttributedString:attributedText];
-    NSArray *rangeArray = [self analyseArticleText:attributedText.string];
-    
     __weak typeof(self) weakSelf = self;
-    for (int index = 0; index < rangeArray.count; index++) {
-        NSValue *value = [rangeArray objectAtIndex:index];
-        NSRange range = [value rangeValue];
-        [actionText setTextHighlightRange:range
-                                    color:[UIManager textColor]
-                          backgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]
-                                tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
-                                    [weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];
-                                }];
-    }
-    
-    [actionText addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:20.0],
-                                }
-                        range:NSMakeRange(0, actionText.string.length)];
-    //    [attributedText setKern:[NSNumber numberWithFloat:1.0]];//设置字间距
-    [actionText setLineSpacing:8.0];//设置行间距
-    
-    return actionText;
+    [self normalLogicOperation:^{
+        NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithAttributedString:attributedText];
+        NSString *abString = attString.string;
+        NSInteger length = attString.length;
+        
+        NSMutableArray *rangeArray = [NSMutableArray array];
+        NSMutableArray *notRangeArray = [NSMutableArray array];
+        NSUInteger startIndex = 0;
+        NSUInteger endIndex = 0;
+        BOOL skipStartIndex = NO;
+        BOOL skipAdd = NO;
+        for (int index = 0; index < length; index++) {
+            char substring = [abString characterAtIndex:index];
+            if ((substring >= 'a' && substring <= 'z') || (substring >= 'A' && substring <= 'Z')) {
+                if (!skipStartIndex) {
+                    startIndex = index;
+                    skipStartIndex = YES;
+                    skipAdd = NO;
+                }
+            } else {
+                endIndex = index;
+                skipStartIndex = NO;
+                if (!skipAdd) {
+                    if (startIndex < endIndex) {
+                        [rangeArray addObject:[NSValue valueWithRange:NSMakeRange(startIndex, endIndex-startIndex)]];
+                        skipAdd = YES;
+                    }
+                }
+                
+                NSRange subRange = NSMakeRange(index, 1);
+                NSAttributedString *subString = [attString attributedSubstringFromRange:subRange];
+                NSMutableDictionary *attributed = [NSMutableDictionary dictionaryWithDictionary:[subString attributes]];
+                [attributed setValue:[UIFont fontWithName:@"Menlo-Regular" size:20.0] forKey:NSFontAttributeName];
+                [attString setAttributes:attributed range:subRange];
+            }
+        }
+        
+        for (NSValue *value in rangeArray) {
+            NSRange subRange = [value rangeValue];
+            NSAttributedString *subString = [attString attributedSubstringFromRange:subRange];
+            UIFont *font = [subString font];
+            CGFloat pointSize = [font pointSize];
+            NSMutableDictionary *attributed = [NSMutableDictionary dictionaryWithDictionary:[subString attributes]];
+            if (pointSize < 17.0) {
+//       NSArray *fonts = [UIFont fontNamesForFamilyName:@"Menlo"];
+                [attributed setValue:[UIFont fontWithName:@"Menlo-Regular" size:20.0] forKey:NSFontAttributeName];
+                [attString setAttributes:attributed range:subRange];
+            } else {
+                [attributed setValue:[UIFont fontWithName:@"Menlo-Regular" size:pointSize] forKey:NSFontAttributeName];
+                [attString setAttributes:attributed range:subRange];
+            }
+            
+            [attString setTextHighlightRange:subRange color:nil backgroundColor:[UIColor blueColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+                if ([weakSelf.delegate respondsToSelector:@selector(articleHelper:textDidTouch:)]) {
+                    [weakSelf.delegate articleHelper:weakSelf textDidTouch:[text attributedSubstringFromRange:range].string];
+                }
+            }];
+        }
+        
+        if ([weakSelf.delegate respondsToSelector:@selector(articleHelper:handleSuccessedWithActionText:)]) {
+            [weakSelf.delegate articleHelper:self handleSuccessedWithActionText:attString];
+        }
+    }];
 }
-
 
 - (NSString *)extractTextFromPDFWithFilePath:(NSString *)filePath {
     
@@ -446,55 +335,5 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"TET error" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil];
     [alertView show];
 }
-
-#pragma mark ----- UIWebViewDelegate
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSString *bodyText = [webView bodyText];
-    [self handleText:bodyText];
-    
-    //-------------------------------------------------------------------
-//    [[UIApplication sharedApplication].keyWindow addSubview:self.webView];
-//    self.webView.frame = [UIApplication sharedApplication].keyWindow.bounds;
-    
-//    NSError *error;
-//    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handleSpan" ofType:@"js"] encoding:NSUTF8StringEncoding error:&error]];
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    if ([self.delegate respondsToSelector:@selector(articleHelper:handleFailureWithError:)]) {
-        [self.delegate articleHelper:self handleFailureWithError:error];
-    }
-}
-
-#pragma mark ---- action
-- (void)textDidTouch:(NSString *)text {
-    if ([self.delegate respondsToSelector:@selector(articleHelper:textDidTouch:)]) {
-        [self.delegate articleHelper:self textDidTouch:text];
-    }
-}
-
-#pragma mark ----- getter
-
-- (NSInteger)totalPage {
-    return self.pageOfText.count;
-}
-
-- (UIWebView *)webView {
-    if (!_webView) {
-        _webView = [[UIWebView alloc] init];
-        _webView.delegate = self;
-    }
-    
-    return _webView;
-}
-
-- (NSMutableArray *)pageOfText {
-    if (!_pageOfText) {
-        _pageOfText = [NSMutableArray array];
-    }
-    
-    return _pageOfText;
-}
-
 
 @end

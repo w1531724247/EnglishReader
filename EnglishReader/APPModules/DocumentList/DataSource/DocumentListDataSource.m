@@ -83,26 +83,16 @@
     NSString *extension = [filePath pathExtension];
     extension = [extension lowercaseString];
     
-    if ([extension isEqualToString:@"docset"]) {
-        DocsetDetailListViewController *detailListVC = [[DocsetDetailListViewController alloc] initWithType:DocsetDetailListTypes];
-        detailListVC.filePath = filePath;
-        detailListVC.hidesBottomBarWhenPushed = YES;
-        if (detailListVC) {
-            [tableView.viewController.navigationController pushViewController:detailListVC animated:YES];
-        }
-        return;
-    }
-    
     DocumentDetailViewController *detailVC;
-    if ([extension isEqualToString:@"rtf"] || [extension isEqualToString:@"html"]) {
-        detailVC = [[WebViewDetailController alloc] init];
-    }
-    
-    if ([extension isEqualToString:@"txt"] || [extension isEqualToString:@"pdf"]) {
+    if ([extension isEqualToString:@"rtf"] || [extension isEqualToString:@"rtfd"]) {
         detailVC = [[TextViewDetailController alloc] init];
     }
     
-    if ([extension isEqualToString:@"doc"] || [extension isEqualToString:@"docx"]) {
+    if ([extension isEqualToString:@"txt"]) {
+        detailVC = [[TextViewDetailController alloc] init];
+    }
+    
+    if ([extension isEqualToString:@"html"]) {
         detailVC = [[TextViewDetailController alloc] init];
     }
     

@@ -26,6 +26,7 @@
 @end
 
 @protocol ArticleHelperDelegate <NSObject>
+
 //处理成功后的回调
 - (void)articleHelper:(ArticleHelper *)helper handleSuccessedWithActionText:(NSAttributedString *)actionText;
 

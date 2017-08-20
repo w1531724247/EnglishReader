@@ -15,18 +15,21 @@
 #import "NSString+Category.h"
 #import "StrangeWordTable.h"
 #import "NSObject+RunTime.h"
+#import "UITextView+Method.h"
 
 @interface InterpreterViewLocal ()
 
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) YYTextView *textView;
 @property (nonatomic, strong) UIReferenceLibraryViewController *reference;
 @property (nonatomic, copy) NSString *currentString;
+@property (nonatomic, assign) BOOL notFirstSet;
+
 @end
 
 @implementation InterpreterViewLocal
 
 - (void)dealloc {
-    [_webView restoreLoadHTMLStringMethod];
+    [[[UITextView alloc] init] restoreSetAttributeText];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -34,10 +37,10 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        [self.webView hookLoadHTMLStringMethod];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadReferenceHTMLString:) name:kLoadReferenceHTMLString object:nil];
+        [[[UITextView alloc] init] hookSetAttributeText];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewSetAttributedText:) name:@"textViewAttributedText" object:nil];
         
-        [self addSubview:self.webView];
+        [self addSubview:self.textView];
     }
     
     return self;
@@ -46,8 +49,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.webView.frame = self.bounds;
-    self.webView.backgroundColor = [UIColor whiteColor];
+    self.textView.frame = self.bounds;
+    self.textView.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)interpretWithText:(NSString *)text {
@@ -57,43 +60,36 @@
     }
     self.currentString = text;
     self.reference = [[UIReferenceLibraryViewController alloc] initWithTerm:text];
-    [self insertSubview:self.reference.view belowSubview:self.webView];
-    
-    // 创建从Bundle中来自HTML文件的URL
-    NSString *html = [[NSBundle mainBundle] pathForResource:@"Quartz2D for iOS" ofType:@"html"];
-    NSString *htmlString= [[NSString alloc] initWithContentsOfFile:html encoding:NSUTF8StringEncoding error:nil];
-    
-
-    [self.webView loadHTMLString:htmlString baseURL:nil];
+    [self insertSubview:self.reference.view belowSubview:self.textView];
+    if ([self.delegate respondsToSelector:@selector(interpreterSuccessed)]) {
+        [self.delegate interpreterSuccessed];
+    }
 }
 
 #pragma mark ---- Notification
 
-- (void)loadReferenceHTMLString:(NSNotification *)notification
+- (void)textViewSetAttributedText:(NSNotification *)notification
 {
-    NSString *html = [notification.userInfo objectForKey:@"html"];
-    [self.webView loadReferenceHTMLString:html baseURL:nil];
-    
-    if ([self.delegate respondsToSelector:@selector(interpreterSuccessed)]) {
-        [self.delegate interpreterSuccessed];
+    if (self.notFirstSet) {
+        return;
     }
     
-    NSString *chineseString = [html extractFirstChinsesStringFromRefrenceHTML];
-    if (chineseString.length > 0) {//存储中文含义
-        [[StrangeWordTable shareTable] updateWord:self.currentString withChineseInterpretation:chineseString];
-    }
-    
-    self.currentString = nil;
+    NSDictionary *userInfo = notification.userInfo;
+    NSAttributedString *attributedText = [userInfo valueForKey:@"attributedText"];
+    [self.textView setAttributedText:attributedText];
+    self.notFirstSet = YES;
 }
 
 #pragma mark ---- getter
 
-- (UIWebView *)webView {
-    if (!_webView) {
-        _webView = [[UIWebView alloc] init];
+- (YYTextView *)textView {
+    if (!_textView) {
+        _textView = [[YYTextView alloc] init];
+        _textView.editable = NO;
+        _textView.selectable = NO;
     }
     
-    return _webView;
+    return _textView;
 }
 
 @end
