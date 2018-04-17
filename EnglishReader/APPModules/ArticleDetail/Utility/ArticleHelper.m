@@ -56,7 +56,7 @@
 //处理txt文本
 - (void)handleTxtWithFilePath:(NSString *)filePath {
     NSError *error;
-    NSData *stringData = [NSData dataWithContentsOfFile:filePath];
+    NSData *stringData = [NSData dataWithContentsOfFile:[filePath stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSAttributedString *attributeString = [[NSAttributedString alloc] initWithData:stringData options:@{NSDocumentTypeDocumentAttribute:NSPlainTextDocumentType} documentAttributes:nil error:&error];
     
     if (error) {
@@ -74,7 +74,7 @@
 //处理rtf文本
 - (void)handleRTFTextWithFilePath:(NSString *)filePath {
     NSError *error;
-    NSData *stringData = [NSData dataWithContentsOfFile:filePath];
+    NSData *stringData = [NSData dataWithContentsOfFile:[filePath stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSAttributedString *attributeString = [[NSAttributedString alloc] initWithData:stringData options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType} documentAttributes:nil error:&error];
     
     if (error) {
@@ -90,18 +90,26 @@
 
 //处理rtfd文本
 - (void)handleRTFDTextWithFilePath:(NSString *)filePath {
-    NSError *error;
-    NSData *stringData = [NSData dataWithContentsOfFile:filePath];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *content = [fileManager contentsOfDirectoryAtPath:[filePath stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] error:nil];
+    NSString *textFilePath = [filePath stringByAppendingPathComponent:@"TXT.rtf"];//you can get the path component from the content; usually it is TXT.rtf
+    NSError *error = nil;
+    NSData *stringData = [NSData dataWithContentsOfFile:[textFilePath stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSAttributedString *attributeString = [[NSAttributedString alloc] initWithData:stringData options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType} documentAttributes:nil error:&error];
     
-    if (error) {
-        if ([self.delegate respondsToSelector:@selector(articleHelper:handleFailureWithError:)]) {
-            [self.delegate articleHelper:self handleFailureWithError:error];
-        }
-        
-        return;
-    }
-    
+//    NSError *error;
+//    NSData *stringData = [NSData dataWithContentsOfFile:[filePath stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+//    NSDictionary *dict = @{NSDocumentTypeDocumentAttribute:NSRTFDTextDocumentType};
+//    NSAttributedString *attributeString = [[NSAttributedString alloc] initWithData:stringData options:@{NSDocumentTypeDocumentAttribute:NSRTFDTextDocumentType} documentAttributes:&dict error:&error];
+//    
+//    if (error) {
+//        if ([self.delegate respondsToSelector:@selector(articleHelper:handleFailureWithError:)]) {
+//            [self.delegate articleHelper:self handleFailureWithError:error];
+//        }
+//        
+//        return;
+//    }
+//
     [self handleAttributedText:attributeString];
 }
 
